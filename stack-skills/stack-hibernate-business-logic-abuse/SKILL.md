@@ -1,0 +1,21 @@
+---
+name: stack-hibernate-business-logic-abuse
+description: >-
+  Implements security-business-logic-abuse rules using Hibernate / JPA. Use when building or reviewing Hibernate / JPA code for business logic and abuse prevention.
+disable-model-invocation: true
+---
+
+# Hibernate / JPA: Business logic and abuse prevention
+
+## When to use
+
+You are working in **Hibernate / JPA** and need concrete guidance for **business logic and abuse prevention**.
+
+1. Load domain skill `security-business-logic-abuse` for policy and full rule layers.
+2. Use [reference.md](reference.md) here for **Hibernate / JPA** APIs and patterns.
+
+## Workflow
+
+1. Match your feature to sub-areas in `reference.md`.
+2. Implement using stack-specific bullets under **How to do this in Hibernate / JPA**.
+3. Confirm verification steps before merge.

@@ -1,0 +1,21 @@
+---
+name: stack-aws-multi-tenancy-saas
+description: >-
+  Implements security-multi-tenancy-saas rules using Amazon Web Services. Use when building or reviewing Amazon Web Services code for multi-tenancy and saas isolation.
+disable-model-invocation: true
+---
+
+# Amazon Web Services: Multi-tenancy and SaaS isolation
+
+## When to use
+
+You are working in **Amazon Web Services** and need concrete guidance for **multi-tenancy and saas isolation**.
+
+1. Load domain skill `security-multi-tenancy-saas` for policy and full rule layers.
+2. Use [reference.md](reference.md) here for **Amazon Web Services** APIs and patterns.
+
+## Workflow
+
+1. Match your feature to sub-areas in `reference.md`.
+2. Implement using stack-specific bullets under **How to do this in Amazon Web Services**.
+3. Confirm verification steps before merge.

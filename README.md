@@ -5,123 +5,149 @@ Cover **secure coding**, **application security**, **cloud security**, **DevSecO
 
 Use of this repository is subject to the [LICENSE](LICENSE).
 
+## Two layers of skills
+
+| Layer | Folders | Purpose |
+|-------|---------|---------|
+| **Domain** (what) | `skills/<domain>/`, `secure-software-engineering/` | Technology-neutral rules: policy, design, implementation, verification, operations (e.g. prevent SQL injection, IDOR, prompt injection). |
+| **Stack** (how) | `stack-skills/stack-<tech>-<domain>/` | Same **34 domains** translated into concrete patterns for a specific technology (APIs, configs, libraries). |
+
+**Coverage:** 34 domains × **44 stacks** = **1,496** stack–domain skills, plus **44** stack orchestrators (`stack-skills/stack-react/`, etc.). Each stack skill links to its domain counterpart (`security-<domain>`).
+
+## Supported technologies (44 stacks)
+
+| Category | Technologies |
+|----------|----------------|
+| **Web UI** | React, Vue.js, Angular, Svelte, Next.js, Nuxt, SvelteKit, Remix, Astro |
+| **Node.js server** | Express.js, NestJS, Fastify |
+| **Python** | Django, FastAPI, Flask |
+| **Java** | Spring Boot |
+| **.NET** | ASP.NET Core |
+| **Ruby** | Ruby on Rails |
+| **PHP** | Laravel, Symfony |
+| **Go** | Gin |
+| **Rust** | Actix Web |
+| **Mobile** | React Native, Flutter, SwiftUI (iOS), Kotlin / Jetpack Compose |
+| **Database** | PostgreSQL, MySQL / MariaDB, MongoDB, Redis |
+| **ORM / data access** | Prisma, SQLAlchemy, TypeORM, Hibernate / JPA |
+| **Cloud** | AWS, Google Cloud, Microsoft Azure |
+| **Platform** | Vercel, Cloudflare Workers |
+| **Infrastructure** | Kubernetes, Docker, Terraform |
+| **AI** | LangChain / LangGraph, OpenAI API / Agents SDK |
+
+Full machine-readable list: [`stack-skills/manifest.json`](stack-skills/manifest.json).
+
 ## What you get
 
 | | |
 |--|--|
-| **34 security domains** | Frontend, backend, APIs, identity, data, crypto, network, cloud, Kubernetes, CI/CD, supply chain, privacy, mobile, AI/ML, payments, Web3, IoT, desktop, frameworks, and more |
-| **408 sub-areas** | Each with concrete topics (SQL injection, XSS, SSRF, IDOR, prompt injection, tenant isolation, presigned URLs, smart contract reentrancy, Electron hardening, etc.) |
-| **2,000+ fine-grained topics** | Five or more sub-topics per sub-area, each with layered rules |
-| **5 rule layers** | Policy, design, implementation, verification, and operations |
+| **34 security domains** | Frontend, backend, APIs, identity, data, crypto, network, cloud, Kubernetes, CI/CD, supply chain, privacy, mobile, AI/ML, payments, Web3, IoT, desktop, and more |
+| **408 sub-areas** | SQL injection, XSS, SSRF, IDOR, tenant isolation, smart contracts, etc. |
+| **2,000+ sub-topics** | Five or more per sub-area, each with layered rules |
+| **Stack implementations** | Every domain mirrored for every supported stack |
 
 ## Benefits
 
-- **Fewer missed vulnerabilities:** Agents get domain-specific rules instead of generic “write secure code” prompts.
-- **Faster reviews:** `reference.md` files work as PR checklists for humans and as context for agents.
-- **Consistent depth:** Same five-level structure across all domains.
-- **Stack-aware:** Dedicated skills for **React, Vue, Angular, Next.js**, **Django, Spring, .NET, Node**, and other common frameworks.
-- **Modern risks included:** LLM prompt injection, RAG ACLs, multi-tenant SaaS isolation, serverless denial-of-wallet, observability data leaks.
-- **Offline install:** Use the [skills zip](#install-from-zip-recommended) with no build step.
+- **Normative + practical:** Domain skills state what must hold; stack skills show how in your framework.
+- **Fewer missed vulnerabilities:** Agents use concrete APIs (ORM bindings, CSP headers, IAM roles) instead of vague advice.
+- **Faster reviews:** `reference.md` in each folder works as a checklist.
+- **Offline install:** Use the [skills zip](#install-from-zip-recommended); no build step.
 
 ## Skill format (Cursor Agent Skills)
 
-This package follows the open [Cursor Agent Skills](https://cursor.com/docs/context/skills) layout:
-
 | File | Role |
 |------|------|
-| `SKILL.md` | Required. YAML `name` and `description`, when to use, workflow (`disable-model-invocation: true` so skills load when you invoke them). |
-| `reference.md` | Detailed rules (progressive disclosure). Linked from `SKILL.md`. |
+| `SKILL.md` | YAML `name`, `description`, workflow (`disable-model-invocation: true`). |
+| `reference.md` | Full rules or stack-specific implementation detail. |
 
-**Coverage:** 34 top-level domains, each with **at least 12 sub-areas**; each sub-area has **at least 5 sub-topics** and **five rule levels** (policy through operations). One parent skill (`secure-software-engineering`) plus 34 domain skills.
+Domain skill names: `security-<domain>` (e.g. `security-backend-server`).  
+Stack skill names: `stack-<tech>-<domain>` (e.g. `stack-django-backend-server`).  
+Stack orchestrators: `stack-<tech>` (e.g. `stack-react`).
 
 ## Install from zip (recommended)
 
 Download **[`dist/secure-software-engineering-skills.zip`](dist/secure-software-engineering-skills.zip)** (personal use only; see LICENSE).
 
-The archive is laid out for a direct copy into your agent skills folder:
-
-1. Unzip the file.
-2. Copy **every top-level folder** from the zip into your personal skills directory:
+1. Unzip the archive.
+2. Copy **every top-level folder** into your personal skills directory:
    - **macOS / Linux:** `~/.cursor/skills/`
    - **Windows:** `%USERPROFILE%\.cursor\skills\`
-3. You should end up with folders such as `secure-software-engineering`, `frontend-client`, `backend-server`, … each containing `SKILL.md` and `reference.md`.  
-   Do **not** nest an extra `skills/` directory inside `.cursor/skills/`.
-4. Copy `LICENSE` from the zip somewhere you keep for your records (optional).
-5. Restart Cursor (or reload the window) so skills are picked up.
-6. In chat, invoke the parent skill or a domain by name, for example `secure-software-engineering` and `security-backend-server`.
+3. You should see domain folders (`backend-server`, `secure-software-engineering`, …) and stack folders (`stack-react`, `stack-django-backend-server`, …).  
+   Do **not** add an extra `skills/` nesting level.
+4. Restart Cursor (or reload the window).
+5. **Domain-only work:** invoke `secure-software-engineering` or `security-backend-server`.  
+   **Stack-specific work:** invoke `stack-react` or `stack-spring-boot-data-databases`.
 
-### Install from a git clone
+### Install from git clone
 
-If you cloned this repository instead of using the zip:
-
-1. Copy `secure-software-engineering/` into `~/.cursor/skills/`.
-2. Copy **each** subdirectory inside `skills/` (for example `skills/backend-server/`) into `~/.cursor/skills/` as `backend-server/`, not as `skills/backend-server/`.
+1. Copy `secure-software-engineering/` and each child of `skills/` into `~/.cursor/skills/`.
+2. Copy each child of `stack-skills/` into `~/.cursor/skills/` (or install only the `stack-<tech>*` folders you need).
 
 ## How to use
 
-1. **Scope** the change (UI, API, database, infra, third-party).
-2. **Pick** domain skills from the [index](#domain-index) below.
-3. **Read** `SKILL.md` for workflow, then `reference.md` for rules that match your task.
-4. **Cross-cut:** For auth, secrets, or logging, also use `identity-access`, `secrets-config`, and `logging-monitoring-ir`.
+1. **Scope** the change (UI, API, DB, infra).
+2. **Domain:** pick `security-<domain>` for requirements and tests.
+3. **Stack:** pick `stack-<your-tech>-<domain>` for implementation bullets.
+4. **Cross-cut:** `identity-access`, `secrets-config`, `logging-monitoring-ir` when auth, secrets, or logs are involved.
 
 ### Example prompts
 
-- “Use `security-frontend-client` while building this React form.”
-- “Review this PR with `security-api-integration` and `security-data-databases`.”
-- “Threat-model this SaaS feature with `security-multi-tenancy-saas` and `security-business-logic-abuse`.”
+- “Use `stack-nextjs-frontend-client` for this page.”
+- “Review with `security-api-integration` and `stack-fastapi-api-integration`.”
+- “`stack-prisma-data-databases` for this schema and queries.”
 
-## Domain index
+## Domain index (technology-neutral)
 
-| Folder (in zip or `skills/`) | Security focus |
-|-------------------------------|----------------|
-| `frontend-client` | Browser, SPA, SSR, CSP, XSS, CSRF |
-| `backend-server` | Injection, authz, sessions, file I/O, jobs |
-| `api-integration` | REST, GraphQL, gRPC, webhooks, OAuth APIs |
-| `identity-access` | Authn, MFA, SSO, RBAC, IDOR |
-| `data-databases` | SQL/NoSQL, encryption, backups, RLS |
-| `cryptography` | TLS, keys, JWT, hashing, KMS |
-| `network-transport` | SSRF, DNS, WAF, mTLS |
-| `cloud-infrastructure` | IAM, S3, VPC, IaC |
-| `containers-k8s` | Images, RBAC, network policy |
-| `devsecops-cicd` | SAST, DAST, secrets in CI |
-| `supply-chain` | Dependencies, SBOM, CVEs |
-| `secrets-config` | Env vars, rotation, feature flags |
-| `logging-monitoring-ir` | SIEM, audit, incident response |
-| `privacy-compliance` | GDPR, PCI, HIPAA-aligned controls |
-| `mobile-security` | iOS, Android, WebView |
-| `ai-ml-security` | Prompt injection, RAG, agents |
-| `business-logic-abuse` | Fraud, workflows, bots |
+| Folder | Security focus |
+|--------|----------------|
+| `frontend-client` | Browser, SPA, SSR, CSP, XSS |
+| `backend-server` | Injection, authz, sessions |
+| `api-integration` | REST, GraphQL, webhooks |
+| `identity-access` | Authn, MFA, SSO, RBAC |
+| `data-databases` | SQL/NoSQL, encryption, RLS |
+| `cryptography` | TLS, keys, JWT |
+| `network-transport` | SSRF, DNS, WAF |
+| `cloud-infrastructure` | IAM, storage, VPC |
+| `containers-k8s` | Images, RBAC, policies |
+| `devsecops-cicd` | SAST, DAST, CI secrets |
+| `supply-chain` | Dependencies, SBOM |
+| `secrets-config` | Env vars, rotation |
+| `logging-monitoring-ir` | SIEM, incident response |
+| `privacy-compliance` | GDPR, PCI |
+| `mobile-security` | iOS, Android |
+| `ai-ml-security` | Prompt injection, RAG |
+| `business-logic-abuse` | Fraud, IDOR |
 | `sdlc-threat-modeling` | STRIDE, secure design |
-| `email-notifications` | SPF/DKIM, templates, push |
-| `realtime-messaging` | WebSocket, Kafka, WebRTC |
-| `payments-fintech` | PCI, payment webhooks |
-| `observability-security` | Traces, APM, session replay |
-| `multi-tenancy-saas` | Tenant isolation, custom domains |
-| `serverless-edge` | Lambda, workers, event abuse |
+| `email-notifications` | SPF/DKIM |
+| `realtime-messaging` | WebSocket, Kafka |
+| `payments-fintech` | PCI, webhooks |
+| `observability-security` | Traces, APM |
+| `multi-tenancy-saas` | Tenant isolation |
+| `serverless-edge` | FaaS, workers |
 | `file-object-storage` | Uploads, presigned URLs |
 | `zero-trust-access` | ZTNA, device posture |
-| `blockchain-web3` | Smart contracts, wallets |
-| `embedded-iot-ot` | Firmware, MQTT, OT |
-| `desktop-native` | Electron, Tauri, updates |
-| `web-framework-security` | React, Vue, Angular, Next |
-| `server-framework-security` | Node, Django, Spring, .NET, Go |
-| `data-engineering-analytics` | Warehouses, ETL, BI |
-| `cms-content-platforms` | Headless CMS, WYSIWYG |
-| `human-factors-abuse` | Phishing, support takeover |
+| `blockchain-web3` | Smart contracts |
+| `embedded-iot-ot` | Firmware, MQTT |
+| `desktop-native` | Electron, Tauri |
+| `web-framework-security` | React, Vue, Angular |
+| `server-framework-security` | Node, Django, Spring |
+| `data-engineering-analytics` | Warehouses, ETL |
+| `cms-content-platforms` | Headless CMS |
+| `human-factors-abuse` | Phishing, support abuse |
 
-Parent orchestrator: **`secure-software-engineering`** (`name: secure-software-engineering` in `SKILL.md`).
+Parent: **`secure-software-engineering`**.
 
 ## Who this is for
 
-Developers using **AI pair programmers**, security champions, students, and anyone searching for **Cursor security skills**, **AI agent secure coding rules**, or **application security checklists**.
+Developers using **AI pair programmers**, security champions, and anyone searching for **Cursor security skills**, **stack-specific secure coding**, or **application security checklists**.
 
 ## FAQ
+
+**How are domain and stack skills different?**  
+Domain = what to enforce. Stack = how to enforce it in a named technology. Always align stack guidance with the domain `reference.md`.
 
 **Is this professional security or legal advice?**  
 No. See [LICENSE](LICENSE).
 
-**How are `SKILL.md` and `reference.md` different?**  
-`SKILL.md` is short: discovery metadata, when to use, and workflow. `reference.md` holds the full rule set so agents load detail only when needed.
-
 **Can I use this at work?**  
-See [LICENSE](LICENSE) for permitted use.
+See [LICENSE](LICENSE).

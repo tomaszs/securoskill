@@ -1,0 +1,84 @@
+{
+  "stacks": 44,
+  "domains": 34,
+  "pair_skills": 1496,
+  "orchestrators": 44,
+  "stacks_by_category": {
+    "Web UI": [
+      "React",
+      "Vue.js",
+      "Angular",
+      "Svelte",
+      "Next.js",
+      "Nuxt",
+      "SvelteKit",
+      "Remix",
+      "Astro"
+    ],
+    "Node.js server": [
+      "Express.js",
+      "NestJS",
+      "Fastify"
+    ],
+    "Python": [
+      "Django",
+      "FastAPI",
+      "Flask"
+    ],
+    "Java": [
+      "Spring Boot"
+    ],
+    ".NET": [
+      "ASP.NET Core"
+    ],
+    "Ruby": [
+      "Ruby on Rails"
+    ],
+    "PHP": [
+      "Laravel",
+      "Symfony"
+    ],
+    "Go": [
+      "Gin (Go)"
+    ],
+    "Rust": [
+      "Actix Web (Rust)"
+    ],
+    "Mobile": [
+      "React Native",
+      "Flutter",
+      "SwiftUI (iOS)",
+      "Kotlin / Jetpack Compose"
+    ],
+    "Database": [
+      "PostgreSQL",
+      "MySQL / MariaDB",
+      "MongoDB",
+      "Redis"
+    ],
+    "ORM / data access": [
+      "Prisma",
+      "SQLAlchemy",
+      "TypeORM",
+      "Hibernate / JPA"
+    ],
+    "Cloud": [
+      "Amazon Web Services",
+      "Google Cloud",
+      "Microsoft Azure"
+    ],
+    "Platform": [
+      "Vercel",
+      "Cloudflare Workers"
+    ],
+    "Infrastructure": [
+      "Kubernetes",
+      "Docker",
+      "Terraform"
+    ],
+    "AI": [
+      "LangChain / LangGraph",
+      "OpenAI API / Agents SDK"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+---
+name: stack-openai-api-network-transport
+description: >-
+  Implements security-network-transport rules using OpenAI API / Agents SDK. Use when building or reviewing OpenAI API / Agents SDK code for network and transport security.
+disable-model-invocation: true
+---
+
+# OpenAI API / Agents SDK: Network and transport security
+
+## When to use
+
+You are working in **OpenAI API / Agents SDK** and need concrete guidance for **network and transport security**.
+
+1. Load domain skill `security-network-transport` for policy and full rule layers.
+2. Use [reference.md](reference.md) here for **OpenAI API / Agents SDK** APIs and patterns.
+
+## Workflow
+
+1. Match your feature to sub-areas in `reference.md`.
+2. Implement using stack-specific bullets under **How to do this in OpenAI API / Agents SDK**.
+3. Confirm verification steps before merge.
