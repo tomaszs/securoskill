@@ -20,6 +20,7 @@ TO THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT USE THE MATERIALS.
    incorporating the Materials, or any combination of the Materials with other
    content, including modified skills, merged rule sets, or products or services
    built using the Materials.
+   "Copyright holder" means Tomasz Smykowski, the owner of the Materials.
 
 2. GRANT OF LICENSE (VERY LIMITED)
 
@@ -79,22 +80,85 @@ TO THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT USE THE MATERIALS.
    You must cease all use, destroy all copies of the Materials in Your
    possession or control, and certify destruction if requested.
 
-7. DISCLAIMER
+7. NO PROFESSIONAL OR COMPLIANCE RELIANCE
 
-   THE MATERIALS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. THE
-   COPYRIGHT HOLDER DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
-   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE MATERIALS ARE NOT
-   LEGAL ADVICE.
+   The Materials are general educational and reference content only. They do
+   not create any attorney-client, consultant-client, fiduciary, agency, or
+   other professional relationship between You and the copyright holder.
 
-8. GOVERNING LAW
+   The Materials are NOT legal advice, security advice, compliance advice,
+   audit opinion, penetration-test results, or certification of any system,
+   product, or organization. You must not rely on the Materials for PCI, HIPAA,
+   GDPR, SOC 2, ISO 27001, or any other regulatory or contractual obligation.
 
-   This agreement is governed by the laws applicable to the copyright holder's
-   place of residence, without regard to conflict-of-law rules. Exclusive venue
-   for disputes lies in courts of competent jurisdiction for that place, unless
-   mandatory law requires otherwise.
+   Use of the Materials with AI agents does not mean the copyright holder
+   endorses, reviews, or guarantees any code, configuration, or output produced
+   by You or by any model or tool.
 
-9. CONTACT
+8. DISCLAIMER OF WARRANTIES
 
-   For any permission request (commercial license, redistribution, or
-   Derivatives), contact the repository owner through the GitHub account that
-   publishes this repository.
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE MATERIALS ARE
+   PROVIDED "AS IS" AND "AS AVAILABLE" WITH ALL FAULTS. THE COPYRIGHT HOLDER
+   DISCLAIMS ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED, OR
+   STATUTORY, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY,
+   COMPLETENESS, CURRENTNESS, SECURITY, AND THAT USE WILL BE UNINTERRUPTED OR
+   ERROR-FREE.
+
+   The copyright holder does not warrant that the Materials will prevent
+   vulnerabilities, breaches, data loss, downtime, regulatory violations, or
+   any other harm.
+
+9. LIMITATION OF LIABILITY
+
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:
+
+   (a) IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE TO YOU OR ANY THIRD
+       PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+       EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA,
+       GOODWILL, BUSINESS INTERRUPTION, SECURITY INCIDENT, OR OTHER INTANGIBLE
+       LOSSES, ARISING OUT OF OR RELATED TO THE MATERIALS OR YOUR USE OF THEM,
+       WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT
+       LIABILITY, OR ANY OTHER THEORY, EVEN IF THE COPYRIGHT HOLDER HAS BEEN
+       ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+   (b) THE COPYRIGHT HOLDER'S TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS ARISING
+       OUT OF OR RELATED TO THE MATERIALS OR THIS AGREEMENT SHALL NOT EXCEED
+       ZERO UNITED STATES DOLLARS (USD $0).
+
+   (c) SOME JURISDICTIONS DO NOT ALLOW CERTAIN LIMITATIONS. IN SUCH CASES, THE
+       COPYRIGHT HOLDER'S LIABILITY SHALL BE LIMITED TO THE SMALLEST AMOUNT
+       PERMITTED BY LAW.
+
+10. YOUR ASSUMPTION OF RISK AND INDEMNITY
+
+    You assume all risk arising from Your access to or use of the Materials,
+    including reliance on rules, checklists, or AI-generated implementations
+    informed by the Materials.
+
+    You agree to defend, indemnify, and hold harmless the copyright holder and
+    his affiliates, successors, and assigns from and against any and all claims,
+    demands, damages, losses, liabilities, costs, and expenses (including
+    reasonable attorneys' fees) arising out of or related to: (i) Your use or
+    misuse of the Materials; (ii) Your breach of this agreement; (iii) any
+    product, service, or system You build or operate using or referencing the
+    Materials; or (iv) any claim by a third party connected to Your activities.
+
+11. GOVERNING LAW
+
+    This agreement is governed by the laws applicable to the copyright holder's
+    place of residence, without regard to conflict-of-law rules. Exclusive venue
+    for disputes lies in courts of competent jurisdiction for that place, unless
+    mandatory law requires otherwise.
+
+12. SEVERABILITY AND ENTIRE AGREEMENT
+
+    If any provision is held invalid or unenforceable, the remaining provisions
+    remain in full force. This agreement is the entire agreement regarding the
+    Materials and supersedes prior understandings on that subject.
+
+13. CONTACT
+
+    For any permission request (commercial license, redistribution, or
+    Derivatives), contact the repository owner through the GitHub account that
+    publishes this repository.

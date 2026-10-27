@@ -104,7 +104,10 @@ Parent orchestrator: [`secure-software-engineering/SKILL.md`](secure-software-en
 ## FAQ
 
 **Is this a replacement for a professional penetration test?**  
-No. These skills improve everyday coding and review; they do not replace legal advice, compliance audits, or hired security testing.
+No. These skills improve everyday coding and review. They are not legal, compliance, or professional security advice. The copyright holder disclaims all liability for your use; see [LICENSE](LICENSE).
+
+**Are the rules guaranteed to keep my software secure?**  
+No. The Materials are provided "as is" without warranties. You assume all risk. The author's liability is limited to the maximum extent permitted by law (including zero dollars where allowed).
 
 **Can I use this at work?**  
 The [LICENSE](LICENSE) allows **personal, non-commercial** use only. Commercial or team use requires separate permission from the copyright holder.
@@ -126,3 +129,5 @@ Each domain has `SKILL.md` (when to use, workflow) and `rules.md` (full rules fo
 | Keeping a private copy for that personal use | Selling, licensing, or offering **derivatives** |
 
 **Breach penalty:** USD **$5,000** per violation (plus other remedies). Request written permission for any use beyond personal AI-agent use.
+
+**Liability:** No warranty; no liability for damages or incidents arising from use of the Materials. You agree to indemnify the copyright holder as described in [LICENSE](LICENSE).
