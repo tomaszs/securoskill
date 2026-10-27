@@ -1,0 +1,100 @@
+Secure Software Engineering Skills — Restricted Use License
+Copyright (c) 2026 Tomasz Smykowski. All rights reserved.
+
+IMPORTANT: READ CAREFULLY BEFORE USING, COPYING, OR DISTRIBUTING ANY PART OF
+THIS REPOSITORY ("MATERIALS"). BY ACCESSING OR USING THE MATERIALS, YOU AGREE
+TO THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT USE THE MATERIALS.
+
+1. DEFINITIONS
+
+   "You" means any individual or legal entity.
+   "Personal use" means use by a natural person (human) solely for their own
+   non-commercial purposes, including configuring or instructing AI agents that
+   they personally operate for their own private learning, development, or
+   productivity. Personal use does not include use on behalf of an employer,
+   client, customer, or any organization, and does not include any commercial
+   activity.
+   "Materials" means all content in this repository, including skills, rules,
+   scripts, documentation, data files, and any copies or portions thereof.
+   "Derivative" means any work based on, adapted from, translated from, or
+   incorporating the Materials, or any combination of the Materials with other
+   content, including modified skills, merged rule sets, or products or services
+   built using the Materials.
+
+2. GRANT OF LICENSE (VERY LIMITED)
+
+   Subject to your ongoing compliance with this agreement, the copyright holder
+   grants You a revocable, non-exclusive, non-transferable, non-sublicensable
+   license to:
+
+   (a) download and retain one copy of the Materials for Personal use; and
+   (b) use the Materials with AI agents You personally operate, only for
+       Personal use as defined above.
+
+   No other rights are granted. All rights not expressly granted are reserved.
+
+3. PROHIBITED USES (ALL EXPRESSLY FORBIDDEN)
+
+   Without prior written permission from the copyright holder, You must not,
+   and must not permit any third party to:
+
+   (a) use the Materials for any commercial purpose, including internal business
+       use, consulting, training, SaaS, or providing services to others;
+   (b) sell, license, rent, lease, or otherwise charge for the Materials or
+       access to the Materials;
+   (c) redistribute, republish, reupload, mirror, host publicly, or make the
+       Materials available to any third party (including in git hosting, package
+       registries, marketplaces, or skill libraries);
+   (d) create, offer, distribute, or sell any Derivative, or offer any product or
+       service that is a Derivative or that is substantially derived from the
+       Materials;
+   (e) remove or alter copyright notices, license text, or attribution;
+   (f) use the Materials in any way that competes with or substitutes for the
+       Materials or any authorized offering of the copyright holder;
+   (g) use automated means to scrape, bulk-copy, or systematically reproduce the
+       Materials for redistribution or for training third-party models or
+       datasets for commercial or public redistribution purposes.
+
+4. NO OPEN-SOURCE / NO IMPLIED RIGHTS
+
+   The Materials are not open source. No patent, trademark, or other rights are
+   granted. There is no implied license. Failure to enforce a provision in one
+   instance does not waive the right to enforce it later.
+
+5. CONTRACTUAL PENALTY
+
+   If You breach Section 3 or otherwise use the Materials outside the Personal
+   use license in Section 2, You owe the copyright holder a contractual penalty
+   of Five Thousand United States Dollars (USD $5,000) per violation, payable
+   immediately upon demand. Each prohibited act (each upload, each sale, each
+   distribution of a Derivative, each commercial use, and each day a prohibited
+   public hosting continues) may be treated as a separate violation at the
+   copyright holder's discretion. This penalty is without prejudice to any other
+   remedies available at law or in equity, including injunctive relief, actual
+   damages, and recovery of attorneys' fees where permitted by law.
+
+6. TERMINATION
+
+   This license terminates automatically upon any breach. Upon termination,
+   You must cease all use, destroy all copies of the Materials in Your
+   possession or control, and certify destruction if requested.
+
+7. DISCLAIMER
+
+   THE MATERIALS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. THE
+   COPYRIGHT HOLDER DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+   MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE MATERIALS ARE NOT
+   LEGAL ADVICE.
+
+8. GOVERNING LAW
+
+   This agreement is governed by the laws applicable to the copyright holder's
+   place of residence, without regard to conflict-of-law rules. Exclusive venue
+   for disputes lies in courts of competent jurisdiction for that place, unless
+   mandatory law requires otherwise.
+
+9. CONTACT
+
+   For any permission request (commercial license, redistribution, or
+   Derivatives), contact the repository owner through the GitHub account that
+   publishes this repository.

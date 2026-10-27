@@ -1,0 +1,6 @@
+.local/
+.env
+.env.*
+*.pem
+*.key
+credentials.json
