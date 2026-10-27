@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Secure boot and trust anchor
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Device communications
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Default credentials
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Physical tamper resistance
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## RTOS and bare metal
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Industrial OT and SCADA
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Medical and safety devices
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Automotive and CAN
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## IoT cloud backends
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Botnet and abuse
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 
 ## Firmware supply chain
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `embedded-iot-ot` controls only in SwiftUI (iOS) config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-embedded-iot-ot`.
 

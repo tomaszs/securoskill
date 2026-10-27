@@ -8,17 +8,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Document how Terraform engineers report suspicious dependency or CI messages.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not merge urgent 'hotfix' PRs that only change lockfiles without review.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Annual phishing simulation includes fake package/CI scenarios.
 
 ## Customer support takeover
 
@@ -26,17 +24,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Align Terraform with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -44,17 +40,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Publish official Terraform on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Run vishing simulation targeting engineers who deploy Terraform.
 
 ## Insider threat
 
@@ -62,17 +58,16 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Remove kubeconfig / cloud CLI keys on offboarding; rotate CI deploy keys quarterly.
+- Use just-in-time elevation for production changes to Terraform clusters.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not leave former employees in `cluster-admin` or cloud Owner groups.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Access review export from IAM/K8s RBAC matched to HR terminations.
 
 ## Physical access to dev assets
 
@@ -80,17 +75,16 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Lock laptops running Terraform IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -98,17 +92,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Include Terraform-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 

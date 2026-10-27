@@ -8,17 +8,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
-- Run Slither/Mythril before deploy.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not use `tx.origin` for auth.
-- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Invariant tests with Foundry/Hardhat.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## On-chain access control
 
@@ -26,18 +26,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Oracles and external data
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Wallet and key security
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## dApp frontends
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Token standards
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## DeFi composability
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## NFTs and metadata
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## L2 and bridges
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Audit and formal methods
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## On-chain privacy
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Compliance and sanctions
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 

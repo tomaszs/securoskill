@@ -41,18 +41,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Apply domain skill `security-frontend-client` requirements using kotlin-compose supported APIs only.
-- Use the official kotlin-compose security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- Map `localStorage, sessionStorage, IndexedDB` controls to Kotlin / Jetpack Compose APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `localStorage, sessionStorage, IndexedDB` before merge.
 
 ### Don't
 
-- Do not disable security features of kotlin-compose for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `localStorage, sessionStorage, IndexedDB` work in Kotlin / Jetpack Compose with only happy-path tests.
+- Do not disable Kotlin / Jetpack Compose security defaults to unblock `localStorage, sessionStorage, IndexedDB`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kotlin-compose projects in CI.
+- Peer review `localStorage, sessionStorage, IndexedDB` against domain skill `security-frontend-client`.
 
 ## Content Security Policy and security headers
 

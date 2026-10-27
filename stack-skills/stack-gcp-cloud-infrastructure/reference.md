@@ -26,18 +26,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for object_storage controls.
-- Add automated tests for abuse cases before merging.
+- Map `Object storage buckets` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Object storage buckets` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Object storage buckets` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Object storage buckets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Object storage buckets` against domain skill `security-cloud-infrastructure`.
 
 ## Compute instances
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for cloud_compute controls.
-- Add automated tests for abuse cases before merging.
+- Map `Compute instances` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Compute instances` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Compute instances` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Compute instances`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Compute instances` against domain skill `security-cloud-infrastructure`.
 
 ## Managed serverless
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Managed serverless` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Managed serverless` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Managed serverless` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Managed serverless`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Managed serverless` against domain skill `security-cloud-infrastructure`.
 
 ## Secrets managers
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for secrets_manager controls.
-- Add automated tests for abuse cases before merging.
+- Map `Secrets managers` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Secrets managers` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Secrets managers` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Secrets managers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Secrets managers` against domain skill `security-cloud-infrastructure`.
 
 ## VPC and security groups
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for vpc controls.
-- Add automated tests for abuse cases before merging.
+- Map `VPC and security groups` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `VPC and security groups` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `VPC and security groups` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `VPC and security groups`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `VPC and security groups` against domain skill `security-cloud-infrastructure`.
 
 ## Cloud audit logs
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for cloud_audit controls.
-- Add automated tests for abuse cases before merging.
+- Map `Cloud audit logs` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Cloud audit logs` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Cloud audit logs` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Cloud audit logs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Cloud audit logs` against domain skill `security-cloud-infrastructure`.
 
 ## Infrastructure as code
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for terraform controls.
-- Add automated tests for abuse cases before merging.
+- Map `Infrastructure as code` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Infrastructure as code` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Infrastructure as code` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Infrastructure as code`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Infrastructure as code` against domain skill `security-cloud-infrastructure`.
 
 ## Multi-cloud identity
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for multi_cloud controls.
-- Add automated tests for abuse cases before merging.
+- Map `Multi-cloud identity` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Multi-cloud identity` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Multi-cloud identity` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `Multi-cloud identity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `Multi-cloud identity` against domain skill `security-cloud-infrastructure`.
 
 ## SaaS admin consoles
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for saas_admin controls.
-- Add automated tests for abuse cases before merging.
+- Map `SaaS admin consoles` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `SaaS admin consoles` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SaaS admin consoles` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `SaaS admin consoles`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `SaaS admin consoles` against domain skill `security-cloud-infrastructure`.
 
 ## CDN and edge
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for cdn controls.
-- Add automated tests for abuse cases before merging.
+- Map `CDN and edge` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `CDN and edge` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CDN and edge` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `CDN and edge`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `CDN and edge` against domain skill `security-cloud-infrastructure`.
 
 ## DR and regions
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for dr controls.
-- Add automated tests for abuse cases before merging.
+- Map `DR and regions` controls to Google Cloud APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `DR and regions` before merge.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `DR and regions` work in Google Cloud with only happy-path tests.
+- Do not disable Google Cloud security defaults to unblock `DR and regions`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Peer review `DR and regions` against domain skill `security-cloud-infrastructure`.
 

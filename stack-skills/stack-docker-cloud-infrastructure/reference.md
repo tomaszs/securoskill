@@ -8,18 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using docker supported APIs only.
-- Use the official docker security documentation for cloud_iam controls.
-- Add automated tests for abuse cases before merging.
+- Map `Cloud IAM` controls to Docker APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Cloud IAM` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Cloud IAM` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Cloud IAM`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Cloud IAM` against domain skill `security-cloud-infrastructure`.
 
 ## Object storage buckets
 
@@ -61,18 +60,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using docker supported APIs only.
-- Use the official docker security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Managed serverless` controls to Docker APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Managed serverless` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Managed serverless` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Managed serverless`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Managed serverless` against domain skill `security-cloud-infrastructure`.
 
 ## Secrets managers
 

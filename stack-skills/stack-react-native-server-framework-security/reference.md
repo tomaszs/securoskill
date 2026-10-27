@@ -187,16 +187,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-server-framework-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in React Native config while leaving security-server-framework-security misconfigured.
+- Do not assume React Native defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `security-server-framework-security`.
 

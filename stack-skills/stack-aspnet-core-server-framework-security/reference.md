@@ -217,16 +217,15 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-server-framework-security` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to ASP.NET Core APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in ASP.NET Core with only happy-path tests.
+- Do not disable ASP.NET Core security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

@@ -8,17 +8,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
-- Run Slither/Mythril before deploy.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `tx.origin` for auth.
-- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Invariant tests with Foundry/Hardhat.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## On-chain access control
 
@@ -26,18 +26,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for onchain_acl controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## Oracles and external data
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for oracles controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## Wallet and key security
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for wallet controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## dApp frontends
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for dapp controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## Token standards
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for tokens controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## DeFi composability
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for defi controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## NFTs and metadata
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for nft controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## L2 and bridges
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for l2 controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## Audit and formal methods
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for contract_audit controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## On-chain privacy
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for chain_privacy controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 
 ## Compliance and sanctions
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-blockchain-web3` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for web3_compliance controls.
-- Add automated tests for abuse cases before merging.
+- Vercel is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Vercel configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `blockchain-web3` controls only in Vercel config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Vercel defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Integration test the full path: Vercel plus the system covered by `security-blockchain-web3`.
 

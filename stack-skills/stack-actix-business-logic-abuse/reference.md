@@ -8,18 +8,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for payment_fraud controls.
-- Add automated tests for abuse cases before merging.
+- Map `Payment and checkout abuse` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Payment and checkout abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Payment and checkout abuse` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Payment and checkout abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Payment and checkout abuse` against domain skill `security-business-logic-abuse`.
 
 ## Workflow bypass
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Map `Workflow bypass` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Workflow bypass` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Workflow bypass` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Workflow bypass`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Workflow bypass` against domain skill `security-business-logic-abuse`.
 
 ## Insecure direct object references
 
@@ -57,6 +55,7 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run cargo audit + clippy on changes affecting `Insecure direct object references`.
 
 ## Mass assignment
 
@@ -75,6 +74,7 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run cargo audit + clippy on changes affecting `Mass assignment`.
 
 ## Bots and automation
 
@@ -82,18 +82,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for bots controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bots and automation` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Bots and automation` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bots and automation` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Bots and automation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Bots and automation` against domain skill `security-business-logic-abuse`.
 
 ## Referral and loyalty abuse
 
@@ -101,18 +100,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for referral controls.
-- Add automated tests for abuse cases before merging.
+- Map `Referral and loyalty abuse` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Referral and loyalty abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Referral and loyalty abuse` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Referral and loyalty abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Referral and loyalty abuse` against domain skill `security-business-logic-abuse`.
 
 ## Marketplace trust
 
@@ -120,18 +118,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for marketplace controls.
-- Add automated tests for abuse cases before merging.
+- Map `Marketplace trust` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Marketplace trust` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Marketplace trust` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Marketplace trust`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Marketplace trust` against domain skill `security-business-logic-abuse`.
 
 ## Content abuse
 
@@ -139,18 +136,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Content abuse` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Content abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Content abuse` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Content abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Content abuse` against domain skill `security-business-logic-abuse`.
 
 ## Quota and limit bypass
 
@@ -158,18 +154,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for quota controls.
-- Add automated tests for abuse cases before merging.
+- Map `Quota and limit bypass` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Quota and limit bypass` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Quota and limit bypass` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Quota and limit bypass`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Quota and limit bypass` against domain skill `security-business-logic-abuse`.
 
 ## Admin misuse
 
@@ -177,18 +172,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for admin_misuse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Admin misuse` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Admin misuse` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Admin misuse` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Admin misuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Admin misuse` against domain skill `security-business-logic-abuse`.
 
 ## Time-based logic
 
@@ -196,18 +190,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for time_logic controls.
-- Add automated tests for abuse cases before merging.
+- Map `Time-based logic` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Time-based logic` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Time-based logic` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Time-based logic`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Time-based logic` against domain skill `security-business-logic-abuse`.
 
 ## Feature gating bypass
 
@@ -215,16 +208,15 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-business-logic-abuse` requirements using actix supported APIs only.
-- Use the official actix security documentation for feature_gating controls.
-- Add automated tests for abuse cases before merging.
+- Map `Feature gating bypass` controls to Actix Web (Rust) APIs documented for `security-business-logic-abuse`.
+- Add an abuse-case test or check for `Feature gating bypass` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Feature gating bypass` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Feature gating bypass`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Feature gating bypass` against domain skill `security-business-logic-abuse`.
 

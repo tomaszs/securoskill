@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `data-engineering-analytics` controls only in Terraform config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Terraform defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-data-engineering-analytics`.
 

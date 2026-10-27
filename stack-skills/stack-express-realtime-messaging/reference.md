@@ -8,18 +8,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for ws_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `WebSocket authentication` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `WebSocket authentication` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `WebSocket authentication` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `WebSocket authentication`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `WebSocket authentication` against domain skill `security-realtime-messaging`.
 
 ## Room and channel authorization
 
@@ -38,6 +37,7 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run eslint-plugin-security on changes affecting `Room and channel authorization`.
 
 ## Message integrity
 
@@ -45,18 +45,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for message_integrity controls.
-- Add automated tests for abuse cases before merging.
+- Map `Message integrity` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Message integrity` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Message integrity` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Message integrity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Message integrity` against domain skill `security-realtime-messaging`.
 
 ## Presence leaks
 
@@ -64,18 +63,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for presence_leak controls.
-- Add automated tests for abuse cases before merging.
+- Map `Presence leaks` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Presence leaks` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Presence leaks` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Presence leaks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Presence leaks` against domain skill `security-realtime-messaging`.
 
 ## MQTT and IoT protocols
 
@@ -83,18 +81,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for mqtt controls.
-- Add automated tests for abuse cases before merging.
+- Map `MQTT and IoT protocols` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `MQTT and IoT protocols` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `MQTT and IoT protocols` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `MQTT and IoT protocols`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `MQTT and IoT protocols` against domain skill `security-realtime-messaging`.
 
 ## Kafka security
 
@@ -102,18 +99,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for kafka controls.
-- Add automated tests for abuse cases before merging.
+- Map `Kafka security` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Kafka security` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Kafka security` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Kafka security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Kafka security` against domain skill `security-realtime-messaging`.
 
 ## Redis pub/sub
 
@@ -121,18 +117,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for redis_pubsub controls.
-- Add automated tests for abuse cases before merging.
+- Map `Redis pub/sub` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Redis pub/sub` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Redis pub/sub` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Redis pub/sub`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Redis pub/sub` against domain skill `security-realtime-messaging`.
 
 ## Server-sent events
 
@@ -140,18 +135,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for sse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Server-sent events` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Server-sent events` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Server-sent events` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Server-sent events`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Server-sent events` against domain skill `security-realtime-messaging`.
 
 ## Collaborative editing
 
@@ -159,18 +153,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for collab controls.
-- Add automated tests for abuse cases before merging.
+- Map `Collaborative editing` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Collaborative editing` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Collaborative editing` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Collaborative editing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Collaborative editing` against domain skill `security-realtime-messaging`.
 
 ## WebRTC
 
@@ -178,18 +171,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for webrtc controls.
-- Add automated tests for abuse cases before merging.
+- Map `WebRTC` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `WebRTC` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `WebRTC` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `WebRTC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `WebRTC` against domain skill `security-realtime-messaging`.
 
 ## Fan-out abuse
 
@@ -197,18 +189,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for fanout controls.
-- Add automated tests for abuse cases before merging.
+- Map `Fan-out abuse` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Fan-out abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Fan-out abuse` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Fan-out abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Fan-out abuse` against domain skill `security-realtime-messaging`.
 
 ## Message retention
 
@@ -216,16 +207,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-realtime-messaging` requirements using express supported APIs only.
-- Use the official express security documentation for retention controls.
-- Add automated tests for abuse cases before merging.
+- Map `Message retention` controls to Express.js APIs documented for `security-realtime-messaging`.
+- Add an abuse-case test or check for `Message retention` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Message retention` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Message retention`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Message retention` against domain skill `security-realtime-messaging`.
 

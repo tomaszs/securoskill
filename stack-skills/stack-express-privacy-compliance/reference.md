@@ -8,18 +8,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for gdpr controls.
-- Add automated tests for abuse cases before merging.
+- Map `Data subject rights` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Data subject rights` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Data subject rights` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Data subject rights`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Data subject rights` against domain skill `security-privacy-compliance`.
 
 ## Consent management
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for consent controls.
-- Add automated tests for abuse cases before merging.
+- Map `Consent management` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Consent management` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Consent management` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Consent management`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Consent management` against domain skill `security-privacy-compliance`.
 
 ## DPIA and risk assessments
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for dpia controls.
-- Add automated tests for abuse cases before merging.
+- Map `DPIA and risk assessments` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `DPIA and risk assessments` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `DPIA and risk assessments` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `DPIA and risk assessments`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `DPIA and risk assessments` against domain skill `security-privacy-compliance`.
 
 ## Cross-border transfers
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for cross_border controls.
-- Add automated tests for abuse cases before merging.
+- Map `Cross-border transfers` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Cross-border transfers` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Cross-border transfers` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Cross-border transfers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Cross-border transfers` against domain skill `security-privacy-compliance`.
 
 ## PCI DSS scope
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for pci controls.
-- Add automated tests for abuse cases before merging.
+- Map `PCI DSS scope` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `PCI DSS scope` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `PCI DSS scope` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `PCI DSS scope`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `PCI DSS scope` against domain skill `security-privacy-compliance`.
 
 ## HIPAA-aligned controls
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for hipaa controls.
-- Add automated tests for abuse cases before merging.
+- Map `HIPAA-aligned controls` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `HIPAA-aligned controls` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `HIPAA-aligned controls` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `HIPAA-aligned controls`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `HIPAA-aligned controls` against domain skill `security-privacy-compliance`.
 
 ## SOC 2 trust principles
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for soc2 controls.
-- Add automated tests for abuse cases before merging.
+- Map `SOC 2 trust principles` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `SOC 2 trust principles` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SOC 2 trust principles` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `SOC 2 trust principles`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `SOC 2 trust principles` against domain skill `security-privacy-compliance`.
 
 ## Records of processing
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for ropa controls.
-- Add automated tests for abuse cases before merging.
+- Map `Records of processing` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Records of processing` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Records of processing` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Records of processing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Records of processing` against domain skill `security-privacy-compliance`.
 
 ## Children's data
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for children_data controls.
-- Add automated tests for abuse cases before merging.
+- Map `Children's data` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Children's data` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Children's data` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Children's data`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Children's data` against domain skill `security-privacy-compliance`.
 
 ## Marketing and tracking
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for marketing_tracking controls.
-- Add automated tests for abuse cases before merging.
+- Map `Marketing and tracking` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Marketing and tracking` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Marketing and tracking` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Marketing and tracking`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Marketing and tracking` against domain skill `security-privacy-compliance`.
 
 ## AI and profiling
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for ai_privacy controls.
-- Add automated tests for abuse cases before merging.
+- Map `AI and profiling` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `AI and profiling` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `AI and profiling` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `AI and profiling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `AI and profiling` against domain skill `security-privacy-compliance`.
 
 ## Breach notification
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-privacy-compliance` requirements using express supported APIs only.
-- Use the official express security documentation for breach_notify controls.
-- Add automated tests for abuse cases before merging.
+- Map `Breach notification` controls to Express.js APIs documented for `security-privacy-compliance`.
+- Add an abuse-case test or check for `Breach notification` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Breach notification` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Breach notification`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Breach notification` against domain skill `security-privacy-compliance`.
 

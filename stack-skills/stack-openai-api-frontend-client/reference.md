@@ -8,15 +8,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## CSRF and clickjacking
 
@@ -24,16 +26,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not rely on CORS alone to prevent CSRF.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Add automated abuse-case tests for CSRF and clickjacking in OpenAI API / Agents SDK.
-- Run SAST and dependency scans for AI in CI.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## localStorage, sessionStorage, IndexedDB
 
@@ -41,18 +44,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Apply domain skill `security-frontend-client` requirements using openai-api supported APIs only.
-- Use the official openai-api security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of openai-api for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on openai-api projects in CI.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Content Security Policy and security headers
 
@@ -60,18 +62,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## SSR and hydration security
 
@@ -79,18 +80,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Web Workers and WebAssembly
 
@@ -98,18 +98,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Third-party scripts and tags
 
@@ -117,18 +116,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend auth flows
 
@@ -136,18 +134,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Client-side file upload UX
 
@@ -155,18 +152,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Accessibility vs security UX
 
@@ -174,18 +170,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Mobile web and PWA
 
@@ -193,18 +188,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend dependency risk
 
@@ -212,16 +206,15 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `frontend-client` controls only in OpenAI API / Agents SDK config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 

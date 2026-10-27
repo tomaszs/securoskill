@@ -8,18 +8,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Email authentication` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Email authentication` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Email authentication` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Email authentication`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Email authentication` against domain skill `security-email-notifications`.
 
 ## Template injection in email
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for template_injection controls.
-- Add automated tests for abuse cases before merging.
+- Map `Template injection in email` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Template injection in email` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Template injection in email` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Template injection in email`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Template injection in email` against domain skill `security-email-notifications`.
 
 ## Links in email
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_links controls.
-- Add automated tests for abuse cases before merging.
+- Map `Links in email` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Links in email` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Links in email` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Links in email`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Links in email` against domain skill `security-email-notifications`.
 
 ## Bounce and webhook handling
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_bounce controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bounce and webhook handling` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Bounce and webhook handling` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bounce and webhook handling` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Bounce and webhook handling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Bounce and webhook handling` against domain skill `security-email-notifications`.
 
 ## List management
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_list controls.
-- Add automated tests for abuse cases before merging.
+- Map `List management` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `List management` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `List management` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `List management`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `List management` against domain skill `security-email-notifications`.
 
 ## Brand impersonation
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Map `Brand impersonation` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Brand impersonation` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Brand impersonation` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Brand impersonation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Brand impersonation` against domain skill `security-email-notifications`.
 
 ## Attachments
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_attach controls.
-- Add automated tests for abuse cases before merging.
+- Map `Attachments` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Attachments` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Attachments` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Attachments`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Attachments` against domain skill `security-email-notifications`.
 
 ## SMS and push
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for sms_push controls.
-- Add automated tests for abuse cases before merging.
+- Map `SMS and push` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `SMS and push` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SMS and push` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `SMS and push`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `SMS and push` against domain skill `security-email-notifications`.
 
 ## User inbox rules attacks
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for inbox_rules controls.
-- Add automated tests for abuse cases before merging.
+- Map `User inbox rules attacks` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `User inbox rules attacks` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `User inbox rules attacks` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `User inbox rules attacks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `User inbox rules attacks` against domain skill `security-email-notifications`.
 
 ## Email provider APIs
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_provider controls.
-- Add automated tests for abuse cases before merging.
+- Map `Email provider APIs` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Email provider APIs` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Email provider APIs` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Email provider APIs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Email provider APIs` against domain skill `security-email-notifications`.
 
 ## PII in email bodies
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_pii controls.
-- Add automated tests for abuse cases before merging.
+- Map `PII in email bodies` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `PII in email bodies` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `PII in email bodies` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `PII in email bodies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `PII in email bodies` against domain skill `security-email-notifications`.
 
 ## Email abuse
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-email-notifications` requirements using react supported APIs only.
-- Use the official react security documentation for email_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Email abuse` controls to React APIs documented for `security-email-notifications`.
+- Add an abuse-case test or check for `Email abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Email abuse` work in React with only happy-path tests.
+- Do not disable React security defaults to unblock `Email abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Peer review `Email abuse` against domain skill `security-email-notifications`.
 

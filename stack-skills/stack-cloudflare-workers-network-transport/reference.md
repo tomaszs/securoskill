@@ -8,18 +8,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for dns controls.
-- Add automated tests for abuse cases before merging.
+- Map `DNS security` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `DNS security` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `DNS security` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `DNS security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `DNS security` against domain skill `security-network-transport`.
 
 ## WAF and edge protection
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for waf controls.
-- Add automated tests for abuse cases before merging.
+- Map `WAF and edge protection` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `WAF and edge protection` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `WAF and edge protection` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `WAF and edge protection`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `WAF and edge protection` against domain skill `security-network-transport`.
 
 ## SSRF
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for ssrf controls.
-- Add automated tests for abuse cases before merging.
+- Map `SSRF` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `SSRF` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SSRF` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `SSRF`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `SSRF` against domain skill `security-network-transport`.
 
 ## Reverse proxies
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for reverse_proxy controls.
-- Add automated tests for abuse cases before merging.
+- Map `Reverse proxies` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `Reverse proxies` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Reverse proxies` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `Reverse proxies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `Reverse proxies` against domain skill `security-network-transport`.
 
 ## VPN and private networking
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Map `VPN and private networking` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `VPN and private networking` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `VPN and private networking` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `VPN and private networking`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `VPN and private networking` against domain skill `security-network-transport`.
 
 ## DDoS and volumetric attacks
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for ddos controls.
-- Add automated tests for abuse cases before merging.
+- Map `DDoS and volumetric attacks` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `DDoS and volumetric attacks` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `DDoS and volumetric attacks` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `DDoS and volumetric attacks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `DDoS and volumetric attacks` against domain skill `security-network-transport`.
 
 ## IP allowlisting pitfalls
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for ip_allowlist controls.
-- Add automated tests for abuse cases before merging.
+- Map `IP allowlisting pitfalls` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `IP allowlisting pitfalls` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `IP allowlisting pitfalls` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `IP allowlisting pitfalls`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `IP allowlisting pitfalls` against domain skill `security-network-transport`.
 
 ## HTTP request smuggling
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for http_smuggling controls.
-- Add automated tests for abuse cases before merging.
+- Map `HTTP request smuggling` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `HTTP request smuggling` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `HTTP request smuggling` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `HTTP request smuggling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `HTTP request smuggling` against domain skill `security-network-transport`.
 
 ## WebSocket transport
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for websocket controls.
-- Add automated tests for abuse cases before merging.
+- Map `WebSocket transport` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `WebSocket transport` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `WebSocket transport` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `WebSocket transport`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `WebSocket transport` against domain skill `security-network-transport`.
 
 ## SMTP security
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for smtp controls.
-- Add automated tests for abuse cases before merging.
+- Map `SMTP security` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `SMTP security` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SMTP security` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `SMTP security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `SMTP security` against domain skill `security-network-transport`.
 
 ## IPv6 and dual stack
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Map `IPv6 and dual stack` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `IPv6 and dual stack` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `IPv6 and dual stack` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `IPv6 and dual stack`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `IPv6 and dual stack` against domain skill `security-network-transport`.
 
 ## Service mesh mTLS
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-network-transport` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for service_mesh controls.
-- Add automated tests for abuse cases before merging.
+- Map `Service mesh mTLS` controls to Cloudflare Workers APIs documented for `security-network-transport`.
+- Add an abuse-case test or check for `Service mesh mTLS` before merge.
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Service mesh mTLS` work in Cloudflare Workers with only happy-path tests.
+- Do not disable Cloudflare Workers security defaults to unblock `Service mesh mTLS`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Peer review `Service mesh mTLS` against domain skill `security-network-transport`.
 

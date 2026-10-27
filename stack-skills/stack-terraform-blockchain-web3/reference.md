@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
-- Run Slither/Mythril before deploy.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `tx.origin` for auth.
-- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Invariant tests with Foundry/Hardhat.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## On-chain access control
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## Oracles and external data
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## Wallet and key security
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## dApp frontends
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## Token standards
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## DeFi composability
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## NFTs and metadata
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## L2 and bridges
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## Audit and formal methods
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## On-chain privacy
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 
 ## Compliance and sanctions
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `blockchain-web3` controls only in Terraform config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Terraform defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-blockchain-web3`.
 

@@ -8,18 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for cloud_iam controls.
-- Add automated tests for abuse cases before merging.
+- Map `Cloud IAM` controls to Terraform APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Cloud IAM` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Cloud IAM` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Cloud IAM`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Cloud IAM` against domain skill `security-cloud-infrastructure`.
 
 ## Object storage buckets
 
@@ -63,18 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Managed serverless` controls to Terraform APIs documented for `security-cloud-infrastructure`.
+- Add an abuse-case test or check for `Managed serverless` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Managed serverless` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Managed serverless`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Managed serverless` against domain skill `security-cloud-infrastructure`.
 
 ## Secrets managers
 

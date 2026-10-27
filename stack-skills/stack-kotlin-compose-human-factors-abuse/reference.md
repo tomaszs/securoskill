@@ -8,17 +8,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Document how Kotlin / Jetpack Compose engineers report suspicious dependency or CI messages.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not merge urgent 'hotfix' PRs that only change lockfiles without review.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Annual phishing simulation includes fake package/CI scenarios.
 
 ## Customer support takeover
 
@@ -26,17 +24,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Align Kotlin / Jetpack Compose with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -44,17 +40,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Publish official Kotlin / Jetpack Compose on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Run vishing simulation targeting engineers who deploy Kotlin / Jetpack Compose.
 
 ## Insider threat
 
@@ -62,17 +58,16 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Scope Kotlin / Jetpack Compose production credentials per engineer; no shared `.env` files in chat.
+- Monitor anomalous git pushes and package publishes from service accounts.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not leave production API keys in personal dotfiles repos.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- SIEM rule: first-time access to prod secrets from new workstation.
 
 ## Physical access to dev assets
 
@@ -80,17 +75,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Require device passcode/biometric; use MDM to remote-wipe lost dev phones with Kotlin / Jetpack Compose builds.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not leave TestFlight/APK builds on unlocked desks.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- MDM compliance report monthly.
 
 ## Security awareness
 
@@ -98,17 +91,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Include Kotlin / Jetpack Compose-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 

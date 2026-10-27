@@ -8,18 +8,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for cms_api controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## WYSIWYG editors
 
@@ -27,19 +26,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Set security headers in astro config (`headers()`, `nitro.routeRules`, `astro.config` middleware).
-- Keep secrets and admin logic in server-only modules (no `NEXT_PUBLIC_` for sensitive values on Next).
-- Validate and encode user content in server components / loaders before HTML emission.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not expose server env vars to client bundles via public config keys.
-- Do not render raw HTML from CMS in SSR without sanitization at the server boundary.
-- Do not skip auth checks in API routes / server actions assumed 'internal only'.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Scan SSR HTML output for unescaped script injection in integration tests.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Publish workflows
 
@@ -47,18 +44,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Plugins and themes
 
@@ -66,18 +62,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Comments and UGC moderation
 
@@ -85,18 +80,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## SEO and metadata injection
 
@@ -104,19 +98,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Set security headers in astro config (`headers()`, `nitro.routeRules`, `astro.config` middleware).
-- Keep secrets and admin logic in server-only modules (no `NEXT_PUBLIC_` for sensitive values on Next).
-- Validate and encode user content in server components / loaders before HTML emission.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not expose server env vars to client bundles via public config keys.
-- Do not render raw HTML from CMS in SSR without sanitization at the server boundary.
-- Do not skip auth checks in API routes / server actions assumed 'internal only'.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Scan SSR HTML output for unescaped script injection in integration tests.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Media libraries
 
@@ -124,18 +116,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Multi-site CMS
 
@@ -143,18 +134,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## CMS search
 
@@ -162,18 +152,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Marketing forms
 
@@ -181,17 +170,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
-- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
-- Do not store CSRF secrets only in JS-accessible storage without rotation.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Integration test cross-origin POST without token expects 403.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## Static site generators
 
@@ -199,18 +188,17 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 
@@ -218,16 +206,15 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Astro)
 
-- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
-- Use the official astro security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Astro is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Astro configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of astro for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Astro config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Astro defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on astro projects in CI.
+- Integration test the full path: Astro plus the system covered by `security-cms-content-platforms`.
 

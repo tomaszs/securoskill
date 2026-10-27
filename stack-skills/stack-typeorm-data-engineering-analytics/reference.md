@@ -8,18 +8,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for warehouse controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for etl controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -66,18 +64,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -85,18 +82,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for bi controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -104,18 +100,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for data_lake controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -123,18 +118,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for streaming controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -142,18 +136,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for feature_store controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -161,18 +154,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for notebooks controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -180,18 +172,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for data_contracts controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -199,18 +190,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for third_party_data controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -218,16 +208,15 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in TypeORM config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume TypeORM defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-data-engineering-analytics`.
 

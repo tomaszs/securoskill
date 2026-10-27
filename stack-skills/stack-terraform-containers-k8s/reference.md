@@ -26,18 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-containers-k8s` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Kubernetes RBAC` controls to Terraform APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Kubernetes RBAC` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Kubernetes RBAC` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Kubernetes RBAC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Kubernetes RBAC` against domain skill `security-containers-k8s`.
 
 ## Network policies
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-containers-k8s` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Network policies` controls to Terraform APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Network policies` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Network policies` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Network policies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Network policies` against domain skill `security-containers-k8s`.
 
 ## Kubernetes secrets
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-containers-k8s` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Kubernetes secrets` controls to Terraform APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Kubernetes secrets` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Kubernetes secrets` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Kubernetes secrets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Kubernetes secrets` against domain skill `security-containers-k8s`.
 
 ## Container runtime
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-containers-k8s` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Container runtime` controls to Terraform APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Container runtime` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Container runtime` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Container runtime`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Container runtime` against domain skill `security-containers-k8s`.
 
 ## Admission controllers
 
@@ -174,18 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-containers-k8s` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Windows containers` controls to Terraform APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Windows containers` before merge.
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Windows containers` work in Terraform with only happy-path tests.
+- Do not disable Terraform security defaults to unblock `Windows containers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Peer review `Windows containers` against domain skill `security-containers-k8s`.
 
 ## Docker Compose dev security
 

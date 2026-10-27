@@ -8,18 +8,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_auth controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Event source trust
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_events controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Secrets in serverless
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## VPC and network placement
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_network controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Edge workers (CDN)
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for edge_workers controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Denial of wallet
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_cost controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Idempotency and retries
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_idempotency controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Local dev parity
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_dev controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Multi-region functions
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_multi_region controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Wasm at edge
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for wasm_edge controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Orchestration workflows
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for orchestration controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 
 ## Platform limit abuse
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-serverless-edge` requirements using actix supported APIs only.
-- Use the official actix security documentation for faas_limits controls.
-- Add automated tests for abuse cases before merging.
+- Actix Web (Rust) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Actix Web (Rust) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Actix Web (Rust) config while leaving security-serverless-edge misconfigured.
+- Do not assume Actix Web (Rust) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Integration test the full path: Actix Web (Rust) plus the system covered by `security-serverless-edge`.
 

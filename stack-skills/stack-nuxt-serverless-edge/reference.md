@@ -8,18 +8,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Function authentication` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Function authentication` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Function authentication` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Function authentication`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Function authentication` against domain skill `security-serverless-edge`.
 
 ## Event source trust
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_events controls.
-- Add automated tests for abuse cases before merging.
+- Map `Event source trust` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Event source trust` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Event source trust` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Event source trust`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Event source trust` against domain skill `security-serverless-edge`.
 
 ## Secrets in serverless
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Map `Secrets in serverless` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Secrets in serverless` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Secrets in serverless` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Secrets in serverless`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Secrets in serverless` against domain skill `security-serverless-edge`.
 
 ## VPC and network placement
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_network controls.
-- Add automated tests for abuse cases before merging.
+- Map `VPC and network placement` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `VPC and network placement` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `VPC and network placement` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `VPC and network placement`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `VPC and network placement` against domain skill `security-serverless-edge`.
 
 ## Edge workers (CDN)
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for edge_workers controls.
-- Add automated tests for abuse cases before merging.
+- Map `Edge workers (CDN)` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Edge workers (CDN)` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Edge workers (CDN)` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Edge workers (CDN)`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Edge workers (CDN)` against domain skill `security-serverless-edge`.
 
 ## Denial of wallet
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_cost controls.
-- Add automated tests for abuse cases before merging.
+- Map `Denial of wallet` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Denial of wallet` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Denial of wallet` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Denial of wallet`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Denial of wallet` against domain skill `security-serverless-edge`.
 
 ## Idempotency and retries
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_idempotency controls.
-- Add automated tests for abuse cases before merging.
+- Map `Idempotency and retries` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Idempotency and retries` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Idempotency and retries` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Idempotency and retries`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Idempotency and retries` against domain skill `security-serverless-edge`.
 
 ## Local dev parity
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_dev controls.
-- Add automated tests for abuse cases before merging.
+- Map `Local dev parity` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Local dev parity` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Local dev parity` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Local dev parity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Local dev parity` against domain skill `security-serverless-edge`.
 
 ## Multi-region functions
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_multi_region controls.
-- Add automated tests for abuse cases before merging.
+- Map `Multi-region functions` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Multi-region functions` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Multi-region functions` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Multi-region functions`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Multi-region functions` against domain skill `security-serverless-edge`.
 
 ## Wasm at edge
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for wasm_edge controls.
-- Add automated tests for abuse cases before merging.
+- Map `Wasm at edge` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Wasm at edge` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Wasm at edge` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Wasm at edge`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Wasm at edge` against domain skill `security-serverless-edge`.
 
 ## Orchestration workflows
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for orchestration controls.
-- Add automated tests for abuse cases before merging.
+- Map `Orchestration workflows` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Orchestration workflows` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Orchestration workflows` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Orchestration workflows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Orchestration workflows` against domain skill `security-serverless-edge`.
 
 ## Platform limit abuse
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-serverless-edge` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for faas_limits controls.
-- Add automated tests for abuse cases before merging.
+- Map `Platform limit abuse` controls to Nuxt APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Platform limit abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Platform limit abuse` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Platform limit abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Platform limit abuse` against domain skill `security-serverless-edge`.
 

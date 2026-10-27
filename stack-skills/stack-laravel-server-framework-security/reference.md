@@ -187,16 +187,15 @@ Stack-specific implementation for **Laravel** (PHP). Normative rules: domain ski
 
 ### Do (use this in Laravel)
 
-- Apply domain skill `security-server-framework-security` requirements using laravel supported APIs only.
-- Use the official laravel security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Laravel APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of laravel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Laravel with only happy-path tests.
+- Do not disable Laravel security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on laravel projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

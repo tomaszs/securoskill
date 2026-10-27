@@ -8,18 +8,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for upload_validation controls.
-- Add automated tests for abuse cases before merging.
+- Map `Upload validation` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Upload validation` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Upload validation` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Upload validation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Upload validation` against domain skill `security-file-object-storage`.
 
 ## Malware scanning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for malware_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Malware scanning` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Malware scanning` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Malware scanning` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Malware scanning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Malware scanning` against domain skill `security-file-object-storage`.
 
 ## Presigned URLs
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for presigned controls.
-- Add automated tests for abuse cases before merging.
+- Map `Presigned URLs` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Presigned URLs` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Presigned URLs` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Presigned URLs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Presigned URLs` against domain skill `security-file-object-storage`.
 
 ## Bucket policies and ACLs
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for bucket_acl controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bucket policies and ACLs` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Bucket policies and ACLs` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bucket policies and ACLs` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Bucket policies and ACLs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Bucket policies and ACLs` against domain skill `security-file-object-storage`.
 
 ## CDN and origin access
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for cdn_origin controls.
-- Add automated tests for abuse cases before merging.
+- Map `CDN and origin access` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `CDN and origin access` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CDN and origin access` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `CDN and origin access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `CDN and origin access` against domain skill `security-file-object-storage`.
 
 ## Image and media processing
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for image_processing controls.
-- Add automated tests for abuse cases before merging.
+- Map `Image and media processing` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Image and media processing` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Image and media processing` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Image and media processing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Image and media processing` against domain skill `security-file-object-storage`.
 
 ## Document preview
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for doc_preview controls.
-- Add automated tests for abuse cases before merging.
+- Map `Document preview` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Document preview` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Document preview` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Document preview`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Document preview` against domain skill `security-file-object-storage`.
 
 ## User-generated content hosting
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for ugc_hosting controls.
-- Add automated tests for abuse cases before merging.
+- Map `User-generated content hosting` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `User-generated content hosting` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `User-generated content hosting` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `User-generated content hosting`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `User-generated content hosting` against domain skill `security-file-object-storage`.
 
 ## Versioning and lifecycle
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for object_versioning controls.
-- Add automated tests for abuse cases before merging.
+- Map `Versioning and lifecycle` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Versioning and lifecycle` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Versioning and lifecycle` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Versioning and lifecycle`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Versioning and lifecycle` against domain skill `security-file-object-storage`.
 
 ## Object encryption
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for object_encryption controls.
-- Add automated tests for abuse cases before merging.
+- Map `Object encryption` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Object encryption` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Object encryption` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Object encryption`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Object encryption` against domain skill `security-file-object-storage`.
 
 ## Metadata and headers
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for object_metadata controls.
-- Add automated tests for abuse cases before merging.
+- Map `Metadata and headers` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Metadata and headers` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Metadata and headers` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Metadata and headers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Metadata and headers` against domain skill `security-file-object-storage`.
 
 ## Archives and backups
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Microsoft Azure** (Cloud). Normative rules: 
 
 ### Do (use this in Microsoft Azure)
 
-- Apply domain skill `security-file-object-storage` requirements using azure supported APIs only.
-- Use the official azure security documentation for archive_security controls.
-- Add automated tests for abuse cases before merging.
+- Map `Archives and backups` controls to Microsoft Azure APIs documented for `security-file-object-storage`.
+- Add an abuse-case test or check for `Archives and backups` before merge.
 
 ### Don't
 
-- Do not disable security features of azure for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Archives and backups` work in Microsoft Azure with only happy-path tests.
+- Do not disable Microsoft Azure security defaults to unblock `Archives and backups`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on azure projects in CI.
+- Peer review `Archives and backups` against domain skill `security-file-object-storage`.
 

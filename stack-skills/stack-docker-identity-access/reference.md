@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## MFA and step-up auth
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## SSO and federation
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## RBAC
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## ABAC and policy engines
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Service accounts and workloads
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Break-glass and emergency access
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Account lifecycle
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Privilege escalation
 
@@ -144,17 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Zero trust access
 
@@ -162,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Biometrics and device binding
 
@@ -179,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 
 ## Guest and anonymous access
 
@@ -196,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `identity-access` controls only in Docker config while leaving security-identity-access misconfigured.
+- Do not assume Docker defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-identity-access`.
 

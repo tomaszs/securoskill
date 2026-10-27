@@ -8,15 +8,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## CSRF and clickjacking
 
@@ -24,16 +26,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not rely on CORS alone to prevent CSRF.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Add automated abuse-case tests for CSRF and clickjacking in ASP.NET Core.
-- Run SAST and dependency scans for .NET in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## localStorage, sessionStorage, IndexedDB
 
@@ -41,18 +44,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Content Security Policy and security headers
 
@@ -60,18 +62,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for csp controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## SSR and hydration security
 
@@ -79,18 +80,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Web Workers and WebAssembly
 
@@ -98,18 +98,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for workers controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Third-party scripts and tags
 
@@ -117,18 +116,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend auth flows
 
@@ -136,18 +134,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Client-side file upload UX
 
@@ -155,18 +152,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Accessibility vs security UX
 
@@ -174,18 +170,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Mobile web and PWA
 
@@ -193,18 +188,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for pwa controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend dependency risk
 
@@ -212,16 +206,15 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-frontend-client` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in ASP.NET Core config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 

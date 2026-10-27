@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Malware scanning
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Presigned URLs
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Bucket policies and ACLs
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## CDN and origin access
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Image and media processing
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Document preview
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## User-generated content hosting
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Versioning and lifecycle
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Object encryption
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Metadata and headers
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 
 ## Archives and backups
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `file-object-storage` controls only in SwiftUI (iOS) config while leaving security-file-object-storage misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-file-object-storage`.
 

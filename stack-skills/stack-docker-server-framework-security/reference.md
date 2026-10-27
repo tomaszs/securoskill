@@ -187,16 +187,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-server-framework-security` requirements using docker supported APIs only.
-- Use the official docker security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Docker is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Docker config while leaving security-server-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Integration test the full path: Docker plus the system covered by `security-server-framework-security`.
 

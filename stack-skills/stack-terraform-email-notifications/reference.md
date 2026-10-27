@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Template injection in email
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Links in email
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Bounce and webhook handling
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## List management
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Brand impersonation
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Attachments
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## SMS and push
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## User inbox rules attacks
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Email provider APIs
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## PII in email bodies
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 
 ## Email abuse
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `email-notifications` controls only in Terraform config while leaving security-email-notifications misconfigured.
+- Do not assume Terraform defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-email-notifications`.
 

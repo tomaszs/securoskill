@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## WebView bridges
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Push notifications
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## App attestation
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `mobile-security` controls only in Terraform config while leaving security-mobile-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-mobile-security`.
 

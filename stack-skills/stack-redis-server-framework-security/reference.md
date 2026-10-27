@@ -187,16 +187,15 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-server-framework-security` requirements using redis supported APIs only.
-- Use the official redis security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Redis config while leaving security-server-framework-security misconfigured.
+- Do not assume Redis defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-server-framework-security`.
 

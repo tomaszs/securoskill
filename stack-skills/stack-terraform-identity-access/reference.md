@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## MFA and step-up auth
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## SSO and federation
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## RBAC
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## ABAC and policy engines
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Service accounts and workloads
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Break-glass and emergency access
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Account lifecycle
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Privilege escalation
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Zero trust access
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Biometrics and device binding
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 
 ## Guest and anonymous access
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `identity-access` controls only in Terraform config while leaving security-identity-access misconfigured.
+- Do not assume Terraform defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-identity-access`.
 

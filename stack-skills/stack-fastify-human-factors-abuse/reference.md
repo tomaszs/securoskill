@@ -8,18 +8,18 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Use lockfile-only installs (`npm ci` / `pnpm i --frozen-lockfile`) in Fastify CI.
+- Enable Dependabot/Renovate with required status checks before merge.
+- Require code review for any dependency that adds `postinstall` scripts.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not install packages from typosquatted names (`react-domm`, `@types/nodee`).
+- Do not approve GitHub OAuth apps requesting `repo` or `workflow` from unknown vendors.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Run `npm audit --audit-level=high` (or pnpm equivalent) as a merge gate.
 
 ## Customer support takeover
 
@@ -27,18 +27,20 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for human_support controls.
-- Add automated tests for abuse cases before merging.
+- In Fastify, require step-up auth (MFA or fresh session) before email/phone/password changes.
+- Bind support actions to ticket IDs; log actor, customer id, and fields changed.
+- Use out-of-band confirmation (SMS to old number) for SIM-sensitive flows.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not reset MFA or passwords from a single inbound email without callback verification.
+- Do not expose full account recovery tokens in API JSON error messages.
+- Do not let support use shared admin passwords without per-user audit trails.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Integration tests: support endpoint without elevated role returns 403.
+- Alert on burst of password resets from one support account.
 
 ## Vishing and impersonation
 
@@ -46,18 +48,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Publish official Fastify on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Run vishing simulation targeting engineers who deploy Fastify.
 
 ## Insider threat
 
@@ -65,18 +66,16 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for human_insider controls.
-- Add automated tests for abuse cases before merging.
+- Scope Fastify production credentials per engineer; no shared `.env` files in chat.
+- Monitor anomalous git pushes and package publishes from service accounts.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not leave production API keys in personal dotfiles repos.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- SIEM rule: first-time access to prod secrets from new workstation.
 
 ## Physical access to dev assets
 
@@ -84,18 +83,16 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for human_physical controls.
-- Add automated tests for abuse cases before merging.
+- Lock laptops running Fastify IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -103,18 +100,15 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for education controls.
-- Add automated tests for abuse cases before merging.
+- Include Fastify-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for ir controls.
-- Add automated tests for abuse cases before merging.
+- Map `Incident communications` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Incident communications` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Incident communications` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Incident communications`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Incident communications` against domain skill `security-human-factors-abuse`.
 
 ## Bug bounty operations
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for bug_bounty controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bug bounty operations` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Bug bounty operations` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bug bounty operations` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Bug bounty operations`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Bug bounty operations` against domain skill `security-human-factors-abuse`.
 
 ## Law enforcement requests
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for lawful_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Law enforcement requests` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Law enforcement requests` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Law enforcement requests` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Law enforcement requests`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Law enforcement requests` against domain skill `security-human-factors-abuse`.
 
 ## Social engineering of login flows
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `Social engineering of login flows` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Social engineering of login flows` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Social engineering of login flows` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Social engineering of login flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Social engineering of login flows` against domain skill `security-human-factors-abuse`.
 
 ## Documentation and wiki leaks
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for secrets_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Documentation and wiki leaks` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Documentation and wiki leaks` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Documentation and wiki leaks` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Documentation and wiki leaks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Documentation and wiki leaks` against domain skill `security-human-factors-abuse`.
 
 ## BPO and outsourced access
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-human-factors-abuse` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for vendor controls.
-- Add automated tests for abuse cases before merging.
+- Map `BPO and outsourced access` controls to Fastify APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `BPO and outsourced access` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `BPO and outsourced access` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `BPO and outsourced access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `BPO and outsourced access` against domain skill `security-human-factors-abuse`.
 

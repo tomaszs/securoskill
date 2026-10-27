@@ -8,18 +8,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for logging controls.
-- Add automated tests for abuse cases before merging.
+- Map `Structured logging` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Structured logging` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Structured logging` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Structured logging`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Structured logging` against domain skill `security-logging-monitoring-ir`.
 
 ## SIEM and alerting
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for siem controls.
-- Add automated tests for abuse cases before merging.
+- Map `SIEM and alerting` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `SIEM and alerting` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SIEM and alerting` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `SIEM and alerting`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `SIEM and alerting` against domain skill `security-logging-monitoring-ir`.
 
 ## Audit trails
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for audit_trail controls.
-- Add automated tests for abuse cases before merging.
+- Map `Audit trails` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Audit trails` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Audit trails` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Audit trails`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Audit trails` against domain skill `security-logging-monitoring-ir`.
 
 ## Incident response playbooks
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for ir controls.
-- Add automated tests for abuse cases before merging.
+- Map `Incident response playbooks` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Incident response playbooks` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Incident response playbooks` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Incident response playbooks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Incident response playbooks` against domain skill `security-logging-monitoring-ir`.
 
 ## Forensics readiness
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for forensics controls.
-- Add automated tests for abuse cases before merging.
+- Map `Forensics readiness` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Forensics readiness` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Forensics readiness` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Forensics readiness`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Forensics readiness` against domain skill `security-logging-monitoring-ir`.
 
 ## Vulnerability disclosure
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for bug_bounty controls.
-- Add automated tests for abuse cases before merging.
+- Map `Vulnerability disclosure` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Vulnerability disclosure` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Vulnerability disclosure` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Vulnerability disclosure`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Vulnerability disclosure` against domain skill `security-logging-monitoring-ir`.
 
 ## Security on-call
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for on_call controls.
-- Add automated tests for abuse cases before merging.
+- Map `Security on-call` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Security on-call` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Security on-call` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Security on-call`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Security on-call` against domain skill `security-logging-monitoring-ir`.
 
 ## Security metrics
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for security_metrics controls.
-- Add automated tests for abuse cases before merging.
+- Map `Security metrics` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Security metrics` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Security metrics` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Security metrics`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Security metrics` against domain skill `security-logging-monitoring-ir`.
 
 ## Deception and honeypots
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for honeypots controls.
-- Add automated tests for abuse cases before merging.
+- Map `Deception and honeypots` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Deception and honeypots` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Deception and honeypots` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Deception and honeypots`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Deception and honeypots` against domain skill `security-logging-monitoring-ir`.
 
 ## UEBA
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for ueba controls.
-- Add automated tests for abuse cases before merging.
+- Map `UEBA` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `UEBA` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `UEBA` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `UEBA`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `UEBA` against domain skill `security-logging-monitoring-ir`.
 
 ## Post-incident review
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for post_incident controls.
-- Add automated tests for abuse cases before merging.
+- Map `Post-incident review` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Post-incident review` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Post-incident review` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Post-incident review`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Post-incident review` against domain skill `security-logging-monitoring-ir`.
 
 ## Lawful access logs
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-logging-monitoring-ir` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for lawful_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Lawful access logs` controls to Flutter APIs documented for `security-logging-monitoring-ir`.
+- Add an abuse-case test or check for `Lawful access logs` before merge.
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Lawful access logs` work in Flutter with only happy-path tests.
+- Do not disable Flutter security defaults to unblock `Lawful access logs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Peer review `Lawful access logs` against domain skill `security-logging-monitoring-ir`.
 

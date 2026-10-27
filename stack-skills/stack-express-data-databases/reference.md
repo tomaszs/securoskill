@@ -8,18 +8,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for sql_dba controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## NoSQL stores
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for nosql controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## ORM and query builders
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for orm controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Encryption at rest
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for encryption_at_rest controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Backup and restore
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Replication and CDC
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for replication controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Data minimization
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for data_minimization controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## PII and sensitive fields
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Schema migrations safety
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for migrations controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Connection strings and pooling
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for db_connections controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Row-level and column security
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for rls controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Search indexes
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-data-databases` requirements using express supported APIs only.
-- Use the official express security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-databases` controls only in Express.js config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Express.js defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 

@@ -207,16 +207,15 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-server-framework-security` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in MySQL / MariaDB config while leaving security-server-framework-security misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `security-server-framework-security`.
 

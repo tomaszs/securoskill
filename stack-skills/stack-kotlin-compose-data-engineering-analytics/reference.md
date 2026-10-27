@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-engineering-analytics` controls only in Kotlin / Jetpack Compose config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-data-engineering-analytics`.
 

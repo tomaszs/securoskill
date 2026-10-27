@@ -187,16 +187,15 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-server-framework-security` requirements using remix supported APIs only.
-- Use the official remix security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Remix APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

@@ -8,18 +8,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for passwords controls.
-- Add automated tests for abuse cases before merging.
+- Map `Passwords and credentials` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Passwords and credentials` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Passwords and credentials` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Passwords and credentials`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Passwords and credentials` against domain skill `security-identity-access`.
 
 ## MFA and step-up auth
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for mfa controls.
-- Add automated tests for abuse cases before merging.
+- Map `MFA and step-up auth` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `MFA and step-up auth` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `MFA and step-up auth` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `MFA and step-up auth`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `MFA and step-up auth` against domain skill `security-identity-access`.
 
 ## SSO and federation
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for sso controls.
-- Add automated tests for abuse cases before merging.
+- Map `SSO and federation` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `SSO and federation` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SSO and federation` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `SSO and federation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `SSO and federation` against domain skill `security-identity-access`.
 
 ## RBAC
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `RBAC` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `RBAC` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `RBAC` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `RBAC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `RBAC` against domain skill `security-identity-access`.
 
 ## ABAC and policy engines
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for abac controls.
-- Add automated tests for abuse cases before merging.
+- Map `ABAC and policy engines` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `ABAC and policy engines` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `ABAC and policy engines` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `ABAC and policy engines`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `ABAC and policy engines` against domain skill `security-identity-access`.
 
 ## Service accounts and workloads
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for service_accounts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Service accounts and workloads` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Service accounts and workloads` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Service accounts and workloads` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Service accounts and workloads`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Service accounts and workloads` against domain skill `security-identity-access`.
 
 ## Break-glass and emergency access
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for break_glass controls.
-- Add automated tests for abuse cases before merging.
+- Map `Break-glass and emergency access` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Break-glass and emergency access` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Break-glass and emergency access` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Break-glass and emergency access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Break-glass and emergency access` against domain skill `security-identity-access`.
 
 ## Account lifecycle
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for account_lifecycle controls.
-- Add automated tests for abuse cases before merging.
+- Map `Account lifecycle` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Account lifecycle` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Account lifecycle` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Account lifecycle`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Account lifecycle` against domain skill `security-identity-access`.
 
 ## Privilege escalation
 
@@ -171,6 +163,7 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run bandit on changes affecting `Privilege escalation`.
 
 ## Zero trust access
 
@@ -178,18 +171,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for zero_trust controls.
-- Add automated tests for abuse cases before merging.
+- Map `Zero trust access` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Zero trust access` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Zero trust access` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Zero trust access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Zero trust access` against domain skill `security-identity-access`.
 
 ## Biometrics and device binding
 
@@ -197,18 +189,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for biometrics controls.
-- Add automated tests for abuse cases before merging.
+- Map `Biometrics and device binding` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Biometrics and device binding` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Biometrics and device binding` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Biometrics and device binding`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Biometrics and device binding` against domain skill `security-identity-access`.
 
 ## Guest and anonymous access
 
@@ -216,16 +207,15 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-identity-access` requirements using flask supported APIs only.
-- Use the official flask security documentation for anonymous controls.
-- Add automated tests for abuse cases before merging.
+- Map `Guest and anonymous access` controls to Flask APIs documented for `security-identity-access`.
+- Add an abuse-case test or check for `Guest and anonymous access` before merge.
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Guest and anonymous access` work in Flask with only happy-path tests.
+- Do not disable Flask security defaults to unblock `Guest and anonymous access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Peer review `Guest and anonymous access` against domain skill `security-identity-access`.
 

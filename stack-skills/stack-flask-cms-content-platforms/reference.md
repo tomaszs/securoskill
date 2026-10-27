@@ -8,18 +8,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for cms_api controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## WYSIWYG editors
 
@@ -27,15 +26,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Publish workflows
 
@@ -43,18 +44,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Plugins and themes
 
@@ -62,18 +62,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Comments and UGC moderation
 
@@ -81,18 +80,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## SEO and metadata injection
 
@@ -100,15 +98,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Media libraries
 
@@ -116,18 +116,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Multi-site CMS
 
@@ -135,18 +134,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## CMS search
 
@@ -154,18 +152,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Marketing forms
 
@@ -173,15 +170,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Enable Django `CsrfViewMiddleware` / Flask-WTF CSRF for cookie sessions.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable CSRF globally for API routes that use session cookies.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- POST without CSRF token fails in tests.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## Static site generators
 
@@ -189,18 +188,17 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 
@@ -208,16 +206,15 @@ Stack-specific implementation for **Flask** (Python). Normative rules: domain sk
 
 ### Do (use this in Flask)
 
-- Apply domain skill `security-cms-content-platforms` requirements using flask supported APIs only.
-- Use the official flask security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Flask is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Flask configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flask for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Flask config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Flask defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flask projects in CI.
+- Integration test the full path: Flask plus the system covered by `security-cms-content-platforms`.
 

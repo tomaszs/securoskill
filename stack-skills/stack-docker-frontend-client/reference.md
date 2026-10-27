@@ -8,15 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## CSRF and clickjacking
 
@@ -24,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not rely on CORS alone to prevent CSRF.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Add automated abuse-case tests for CSRF and clickjacking in Docker.
-- Run SAST and dependency scans for Infrastructure in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## localStorage, sessionStorage, IndexedDB
 
@@ -41,18 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-frontend-client` requirements using docker supported APIs only.
-- Use the official docker security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Content Security Policy and security headers
 
@@ -60,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## SSR and hydration security
 
@@ -77,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Web Workers and WebAssembly
 
@@ -94,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Third-party scripts and tags
 
@@ -111,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend auth flows
 
@@ -128,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Client-side file upload UX
 
@@ -145,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Accessibility vs security UX
 
@@ -162,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Mobile web and PWA
 
@@ -179,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend dependency risk
 
@@ -196,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `frontend-client` controls only in Docker config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume Docker defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 

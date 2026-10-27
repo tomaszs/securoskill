@@ -8,17 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
-- Run Slither/Mythril before deploy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `tx.origin` for auth.
-- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Invariant tests with Foundry/Hardhat.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## On-chain access control
 
@@ -26,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## Oracles and external data
 
@@ -43,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## Wallet and key security
 
@@ -60,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## dApp frontends
 
@@ -77,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## Token standards
 
@@ -94,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## DeFi composability
 
@@ -111,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## NFTs and metadata
 
@@ -128,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## L2 and bridges
 
@@ -145,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## Audit and formal methods
 
@@ -162,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## On-chain privacy
 
@@ -179,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 
 ## Compliance and sanctions
 
@@ -196,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `blockchain-web3`; load stack skill `security-blockchain-web3` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-blockchain-web3` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `blockchain-web3` controls only in Docker config while leaving security-blockchain-web3 misconfigured.
+- Do not assume Docker defaults satisfy `security-blockchain-web3` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-blockchain-web3`.
 

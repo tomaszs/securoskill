@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Data isolation models
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant-scoped authorization
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Billing and plan enforcement
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Custom domains and TLS
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant export and backup
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Per-tenant integrations
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Noisy neighbor and quotas
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant onboarding
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant offboarding
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## Compliance per tenant
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 
 ## SaaS penetration patterns
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `multi-tenancy-saas` controls only in SwiftUI (iOS) config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-multi-tenancy-saas`.
 

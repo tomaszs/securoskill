@@ -41,18 +41,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-frontend-client` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- Map `localStorage, sessionStorage, IndexedDB` controls to SwiftUI (iOS) APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `localStorage, sessionStorage, IndexedDB` before merge.
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `localStorage, sessionStorage, IndexedDB` work in SwiftUI (iOS) with only happy-path tests.
+- Do not disable SwiftUI (iOS) security defaults to unblock `localStorage, sessionStorage, IndexedDB`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Peer review `localStorage, sessionStorage, IndexedDB` against domain skill `security-frontend-client`.
 
 ## Content Security Policy and security headers
 

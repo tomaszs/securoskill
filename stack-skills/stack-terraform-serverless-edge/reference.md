@@ -8,18 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-serverless-edge` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for faas_auth controls.
-- Add automated tests for abuse cases before merging.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Event source trust
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-serverless-edge` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for faas_events controls.
-- Add automated tests for abuse cases before merging.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Secrets in serverless
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-serverless-edge` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for faas_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## VPC and network placement
 
@@ -65,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Edge workers (CDN)
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Apply domain skill `security-serverless-edge` requirements using terraform supported APIs only.
-- Use the official terraform security documentation for edge_workers controls.
-- Add automated tests for abuse cases before merging.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of terraform for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on terraform projects in CI.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Denial of wallet
 
@@ -102,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Idempotency and retries
 
@@ -120,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Local dev parity
 
@@ -138,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Multi-region functions
 
@@ -156,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Wasm at edge
 
@@ -174,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Orchestration workflows
 
@@ -192,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 
 ## Platform limit abuse
 
@@ -210,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `serverless-edge` controls only in Terraform config while leaving security-serverless-edge misconfigured.
+- Do not assume Terraform defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-serverless-edge`.
 

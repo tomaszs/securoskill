@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Data isolation models
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant-scoped authorization
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Billing and plan enforcement
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Custom domains and TLS
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant export and backup
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Per-tenant integrations
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Noisy neighbor and quotas
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant onboarding
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant offboarding
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## Compliance per tenant
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 
 ## SaaS penetration patterns
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `multi-tenancy-saas` controls only in Terraform config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume Terraform defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-multi-tenancy-saas`.
 

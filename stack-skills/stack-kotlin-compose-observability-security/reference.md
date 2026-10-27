@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Metrics cardinality abuse
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## APM and session replay
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Production debugging
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Error trackers
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Log injection
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Dashboard access
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## OpenTelemetry exporters
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Continuous profiling
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Synthetic monitoring creds
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## RUM and client beacons
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 
 ## Alert routing secrets
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `observability-security` controls only in Kotlin / Jetpack Compose config while leaving security-observability-security misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-observability-security`.
 

@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Tauri and hybrid native
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Auto-update channels
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## OS sandbox and permissions
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Local privilege escalation
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Clipboard and screen capture
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## File handlers and URIs
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## IPC between components
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## OS credential storage
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Debug symbols and dumps
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Enterprise deployment
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 
 ## Offline-first apps
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `desktop-native` controls only in Docker config while leaving security-desktop-native misconfigured.
+- Do not assume Docker defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-desktop-native`.
 

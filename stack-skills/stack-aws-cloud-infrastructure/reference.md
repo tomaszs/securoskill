@@ -8,18 +8,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Use IAM roles for workloads (IRSA on EKS, instance profiles on EC2); no long-lived access keys in code.
-- Block public S3 access at account level; use bucket policies with least privilege.
-- Enable CloudTrail and GuardDuty in all regions in use.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not use `Principal: '*'` on S3 buckets or KMS keys for app data.
-- Do not embed access keys in Lambda environment variables without rotation.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run `tfsec` / Prowler / AWS Config rules on every IaC change.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Object storage buckets
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for object_storage controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Compute instances
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for cloud_compute controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Managed serverless
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Secrets managers
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for secrets_manager controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## VPC and security groups
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for vpc controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Cloud audit logs
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for cloud_audit controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Infrastructure as code
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for terraform controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## Multi-cloud identity
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for multi_cloud controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## SaaS admin consoles
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for saas_admin controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## CDN and edge
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for cdn controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 
 ## DR and regions
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using aws supported APIs only.
-- Use the official aws security documentation for dr controls.
-- Add automated tests for abuse cases before merging.
+- Attach IAM roles to Lambda/ECS/EKS workloads; no static `AWS_ACCESS_KEY_ID` in apps.
+- Enable S3 Block Public Access at account level.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not attach `AdministratorAccess` to CI users.
+- Do not open security group `0.0.0.0/0` on SSH/RDP.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- AWS Config rules + tfsec on every Terraform PR.
 

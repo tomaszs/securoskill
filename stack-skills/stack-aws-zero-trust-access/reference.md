@@ -8,18 +8,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for zt controls.
-- Add automated tests for abuse cases before merging.
+- Map `Zero trust principles` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Zero trust principles` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Zero trust principles` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Zero trust principles`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Zero trust principles` against domain skill `security-zero-trust-access`.
 
 ## Device posture
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for device_posture controls.
-- Add automated tests for abuse cases before merging.
+- Map `Device posture` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Device posture` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Device posture` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Device posture`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Device posture` against domain skill `security-zero-trust-access`.
 
 ## ZTNA and private access
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for ztna controls.
-- Add automated tests for abuse cases before merging.
+- Map `ZTNA and private access` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `ZTNA and private access` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `ZTNA and private access` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `ZTNA and private access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `ZTNA and private access` against domain skill `security-zero-trust-access`.
 
 ## Micro-segmentation
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for microseg controls.
-- Add automated tests for abuse cases before merging.
+- Map `Micro-segmentation` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Micro-segmentation` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Micro-segmentation` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Micro-segmentation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Micro-segmentation` against domain skill `security-zero-trust-access`.
 
 ## Service mesh identity
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for mesh_zt controls.
-- Add automated tests for abuse cases before merging.
+- Map `Service mesh identity` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Service mesh identity` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Service mesh identity` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Service mesh identity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Service mesh identity` against domain skill `security-zero-trust-access`.
 
 ## Privileged access management
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for pam controls.
-- Add automated tests for abuse cases before merging.
+- Map `Privileged access management` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Privileged access management` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Privileged access management` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Privileged access management`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Privileged access management` against domain skill `security-zero-trust-access`.
 
 ## Conditional access policies
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for conditional_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Conditional access policies` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Conditional access policies` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Conditional access policies` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Conditional access policies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Conditional access policies` against domain skill `security-zero-trust-access`.
 
 ## Bastion-less admin
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for bastionless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bastion-less admin` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Bastion-less admin` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bastion-less admin` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Bastion-less admin`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Bastion-less admin` against domain skill `security-zero-trust-access`.
 
 ## Workload identity federation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for workload_identity controls.
-- Add automated tests for abuse cases before merging.
+- Map `Workload identity federation` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Workload identity federation` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Workload identity federation` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Workload identity federation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Workload identity federation` against domain skill `security-zero-trust-access`.
 
 ## Network device trust
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for nac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Network device trust` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Network device trust` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Network device trust` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Network device trust`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Network device trust` against domain skill `security-zero-trust-access`.
 
 ## Remote work access
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for remote_work controls.
-- Add automated tests for abuse cases before merging.
+- Map `Remote work access` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Remote work access` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Remote work access` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Remote work access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Remote work access` against domain skill `security-zero-trust-access`.
 
 ## Zero trust measurement
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-zero-trust-access` requirements using aws supported APIs only.
-- Use the official aws security documentation for zt_metrics controls.
-- Add automated tests for abuse cases before merging.
+- Map `Zero trust measurement` controls to Amazon Web Services APIs documented for `security-zero-trust-access`.
+- Add an abuse-case test or check for `Zero trust measurement` before merge.
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Zero trust measurement` work in Amazon Web Services with only happy-path tests.
+- Do not disable Amazon Web Services security defaults to unblock `Zero trust measurement`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Peer review `Zero trust measurement` against domain skill `security-zero-trust-access`.
 

@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- In Kotlin / Jetpack Compose, verify Stripe signature with `stripe.Webhook.construct_event` and raw body.
+- Use idempotency keys on payment side effects.
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not parse webhook JSON before signature verification.
+- Do not trust `client_reference_id` without server-side ownership check.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Replay old webhook in test env must fail signature or timestamp check.
 
 ## Card data handling
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Refunds and disputes
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Currency and rounding
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## PCI scoping
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## 3-D Secure flows
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Digital wallets
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Payouts and KYC
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Internal ledger integrity
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Tax and invoicing
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Subscription logic
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 
 ## Fraud scoring
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `payments-fintech` controls only in Kotlin / Jetpack Compose config while leaving security-payments-fintech misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-payments-fintech`.
 

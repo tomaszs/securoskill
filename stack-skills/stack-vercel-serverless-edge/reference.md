@@ -59,18 +59,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_network controls.
-- Add automated tests for abuse cases before merging.
+- Map `VPC and network placement` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `VPC and network placement` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `VPC and network placement` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `VPC and network placement`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `VPC and network placement` against domain skill `security-serverless-edge`.
 
 ## Edge workers (CDN)
 
@@ -95,18 +94,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_cost controls.
-- Add automated tests for abuse cases before merging.
+- Map `Denial of wallet` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Denial of wallet` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Denial of wallet` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Denial of wallet`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Denial of wallet` against domain skill `security-serverless-edge`.
 
 ## Idempotency and retries
 
@@ -114,18 +112,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_idempotency controls.
-- Add automated tests for abuse cases before merging.
+- Map `Idempotency and retries` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Idempotency and retries` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Idempotency and retries` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Idempotency and retries`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Idempotency and retries` against domain skill `security-serverless-edge`.
 
 ## Local dev parity
 
@@ -133,18 +130,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_dev controls.
-- Add automated tests for abuse cases before merging.
+- Map `Local dev parity` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Local dev parity` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Local dev parity` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Local dev parity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Local dev parity` against domain skill `security-serverless-edge`.
 
 ## Multi-region functions
 
@@ -152,18 +148,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_multi_region controls.
-- Add automated tests for abuse cases before merging.
+- Map `Multi-region functions` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Multi-region functions` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Multi-region functions` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Multi-region functions`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Multi-region functions` against domain skill `security-serverless-edge`.
 
 ## Wasm at edge
 
@@ -171,18 +166,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for wasm_edge controls.
-- Add automated tests for abuse cases before merging.
+- Map `Wasm at edge` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Wasm at edge` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Wasm at edge` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Wasm at edge`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Wasm at edge` against domain skill `security-serverless-edge`.
 
 ## Orchestration workflows
 
@@ -190,18 +184,17 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for orchestration controls.
-- Add automated tests for abuse cases before merging.
+- Map `Orchestration workflows` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Orchestration workflows` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Orchestration workflows` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Orchestration workflows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Orchestration workflows` against domain skill `security-serverless-edge`.
 
 ## Platform limit abuse
 
@@ -209,16 +202,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-serverless-edge` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for faas_limits controls.
-- Add automated tests for abuse cases before merging.
+- Map `Platform limit abuse` controls to Vercel APIs documented for `security-serverless-edge`.
+- Add an abuse-case test or check for `Platform limit abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Platform limit abuse` work in Vercel with only happy-path tests.
+- Do not disable Vercel security defaults to unblock `Platform limit abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Peer review `Platform limit abuse` against domain skill `security-serverless-edge`.
 

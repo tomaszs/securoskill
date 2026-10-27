@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Kubernetes RBAC
 
@@ -26,18 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-containers-k8s` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Network policies
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-containers-k8s` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Kubernetes secrets
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-containers-k8s` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container runtime
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-containers-k8s` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Admission controllers
 
@@ -102,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Helm charts
 
@@ -120,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container registries
 
@@ -138,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Sidecars and service mesh
 
@@ -156,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Windows containers
 
@@ -174,18 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-containers-k8s` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Docker Compose dev security
 
@@ -193,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container escape vectors
 
@@ -211,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `containers-k8s` controls only in SwiftUI (iOS) config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-kubernetes-containers-k8s`.
 

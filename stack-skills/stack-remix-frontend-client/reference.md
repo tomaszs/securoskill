@@ -57,6 +57,7 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 ### Verify
 
 - Audit `localStorage.setItem` usage in frontend bundle.
+- Run eslint on changes affecting `localStorage, sessionStorage, IndexedDB`.
 
 ## Content Security Policy and security headers
 
@@ -64,18 +65,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for csp controls.
-- Add automated tests for abuse cases before merging.
+- Map `Content Security Policy and security headers` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Content Security Policy and security headers` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Content Security Policy and security headers` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Content Security Policy and security headers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Content Security Policy and security headers` against domain skill `security-frontend-client`.
 
 ## SSR and hydration security
 
@@ -83,18 +83,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Map `SSR and hydration security` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `SSR and hydration security` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SSR and hydration security` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `SSR and hydration security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `SSR and hydration security` against domain skill `security-frontend-client`.
 
 ## Web Workers and WebAssembly
 
@@ -102,18 +101,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for workers controls.
-- Add automated tests for abuse cases before merging.
+- Map `Web Workers and WebAssembly` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Web Workers and WebAssembly` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Web Workers and WebAssembly` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Web Workers and WebAssembly`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Web Workers and WebAssembly` against domain skill `security-frontend-client`.
 
 ## Third-party scripts and tags
 
@@ -121,18 +119,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Third-party scripts and tags` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Third-party scripts and tags` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Third-party scripts and tags` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Third-party scripts and tags`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Third-party scripts and tags` against domain skill `security-frontend-client`.
 
 ## Frontend auth flows
 
@@ -140,18 +137,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Frontend auth flows` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Frontend auth flows` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Frontend auth flows` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Frontend auth flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Frontend auth flows` against domain skill `security-frontend-client`.
 
 ## Client-side file upload UX
 
@@ -159,18 +155,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Map `Client-side file upload UX` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Client-side file upload UX` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Client-side file upload UX` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Client-side file upload UX`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Client-side file upload UX` against domain skill `security-frontend-client`.
 
 ## Accessibility vs security UX
 
@@ -178,18 +173,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- Map `Accessibility vs security UX` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Accessibility vs security UX` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Accessibility vs security UX` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Accessibility vs security UX`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Accessibility vs security UX` against domain skill `security-frontend-client`.
 
 ## Mobile web and PWA
 
@@ -197,18 +191,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for pwa controls.
-- Add automated tests for abuse cases before merging.
+- Map `Mobile web and PWA` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Mobile web and PWA` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Mobile web and PWA` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Mobile web and PWA`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Mobile web and PWA` against domain skill `security-frontend-client`.
 
 ## Frontend dependency risk
 
@@ -216,16 +209,15 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-frontend-client` requirements using remix supported APIs only.
-- Use the official remix security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Map `Frontend dependency risk` controls to Remix APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Frontend dependency risk` before merge.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Frontend dependency risk` work in Remix with only happy-path tests.
+- Do not disable Remix security defaults to unblock `Frontend dependency risk`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Peer review `Frontend dependency risk` against domain skill `security-frontend-client`.
 

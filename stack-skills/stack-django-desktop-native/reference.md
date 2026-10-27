@@ -8,18 +8,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for electron controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Tauri and hybrid native
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for tauri controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Auto-update channels
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for desktop_update controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## OS sandbox and permissions
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for os_sandbox controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Local privilege escalation
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for local_privesc controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Clipboard and screen capture
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for clipboard controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## File handlers and URIs
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for file_handlers controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## IPC between components
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for ipc controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## OS credential storage
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for os_credential controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Debug symbols and dumps
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for debug_symbols controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Enterprise deployment
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for enterprise_desktop controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 
 ## Offline-first apps
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-desktop-native` requirements using django supported APIs only.
-- Use the official django security documentation for offline_desktop controls.
-- Add automated tests for abuse cases before merging.
+- Django is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Django configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `desktop-native` controls only in Django config while leaving security-desktop-native misconfigured.
+- Do not assume Django defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration test the full path: Django plus the system covered by `security-desktop-native`.
 

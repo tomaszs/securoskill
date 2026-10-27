@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## WebView bridges
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Push notifications
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## App attestation
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `mobile-security` controls only in Docker config while leaving security-mobile-security misconfigured.
+- Do not assume Docker defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-mobile-security`.
 

@@ -227,16 +227,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-server-framework-security` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Spring Boot APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Spring Boot with only happy-path tests.
+- Do not disable Spring Boot security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

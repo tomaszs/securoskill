@@ -8,18 +8,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for env_vars controls.
-- Add automated tests for abuse cases before merging.
+- Map `Environment variables` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Environment variables` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Environment variables` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Environment variables`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Environment variables` against domain skill `security-secrets-config`.
 
 ## Config separation
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for config_separation controls.
-- Add automated tests for abuse cases before merging.
+- Map `Config separation` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Config separation` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Config separation` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Config separation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Config separation` against domain skill `security-secrets-config`.
 
 ## Feature flags
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for feature_flags controls.
-- Add automated tests for abuse cases before merging.
+- Map `Feature flags` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Feature flags` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Feature flags` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Feature flags`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Feature flags` against domain skill `security-secrets-config`.
 
 ## Secret rotation
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for secret_rotation controls.
-- Add automated tests for abuse cases before merging.
+- Map `Secret rotation` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Secret rotation` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Secret rotation` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Secret rotation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Secret rotation` against domain skill `security-secrets-config`.
 
 ## .env handling
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for dotenv controls.
-- Add automated tests for abuse cases before merging.
+- Map `.env handling` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `.env handling` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `.env handling` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `.env handling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `.env handling` against domain skill `security-secrets-config`.
 
 ## Config servers
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for config_servers controls.
-- Add automated tests for abuse cases before merging.
+- Map `Config servers` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Config servers` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Config servers` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Config servers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Config servers` against domain skill `security-secrets-config`.
 
 ## Hardcoded credentials
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for hardcoded_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Map `Hardcoded credentials` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Hardcoded credentials` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Hardcoded credentials` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Hardcoded credentials`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Hardcoded credentials` against domain skill `security-secrets-config`.
 
 ## Public vs confidential clients
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for public_clients controls.
-- Add automated tests for abuse cases before merging.
+- Map `Public vs confidential clients` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Public vs confidential clients` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Public vs confidential clients` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Public vs confidential clients`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Public vs confidential clients` against domain skill `security-secrets-config`.
 
 ## Bootstrap secrets
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for bootstrap_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bootstrap secrets` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Bootstrap secrets` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bootstrap secrets` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Bootstrap secrets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Bootstrap secrets` against domain skill `security-secrets-config`.
 
 ## Configuration audit
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for config_audit controls.
-- Add automated tests for abuse cases before merging.
+- Map `Configuration audit` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Configuration audit` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Configuration audit` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Configuration audit`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Configuration audit` against domain skill `security-secrets-config`.
 
 ## Insecure defaults
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for insecure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Map `Insecure defaults` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Insecure defaults` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Insecure defaults` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Insecure defaults`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Insecure defaults` against domain skill `security-secrets-config`.
 
 ## Split knowledge
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Gin (Go)** (Go). Normative rules: domain ski
 
 ### Do (use this in Gin (Go))
 
-- Apply domain skill `security-secrets-config` requirements using gin supported APIs only.
-- Use the official gin security documentation for split_knowledge controls.
-- Add automated tests for abuse cases before merging.
+- Map `Split knowledge` controls to Gin (Go) APIs documented for `security-secrets-config`.
+- Add an abuse-case test or check for `Split knowledge` before merge.
 
 ### Don't
 
-- Do not disable security features of gin for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Split knowledge` work in Gin (Go) with only happy-path tests.
+- Do not disable Gin (Go) security defaults to unblock `Split knowledge`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gin projects in CI.
+- Peer review `Split knowledge` against domain skill `security-secrets-config`.
 

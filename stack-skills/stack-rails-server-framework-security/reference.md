@@ -207,16 +207,15 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-server-framework-security` requirements using rails supported APIs only.
-- Use the official rails security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Ruby on Rails APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Ruby on Rails with only happy-path tests.
+- Do not disable Ruby on Rails security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

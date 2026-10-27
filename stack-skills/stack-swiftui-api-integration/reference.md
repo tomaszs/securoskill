@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## GraphQL security
 
@@ -45,17 +45,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## Webhooks outbound and inbound
 
@@ -63,17 +63,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## OAuth2/OIDC for APIs
 
@@ -81,17 +81,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## API keys and HMAC
 
@@ -99,17 +99,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## Pagination and filtering abuse
 
@@ -117,17 +117,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## CORS for APIs
 
@@ -135,17 +135,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## OpenAPI and documentation leakage
 
@@ -153,17 +153,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## Backend-for-frontend patterns
 
@@ -171,17 +171,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## Legacy SOAP/XML APIs
 
@@ -189,17 +189,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 
 ## Event buses and streaming
 
@@ -207,15 +207,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `api-integration` controls only in SwiftUI (iOS) config while leaving security-api-integration misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-api-integration`.
 

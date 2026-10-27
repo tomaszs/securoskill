@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## NoSQL stores
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## ORM and query builders
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Encryption at rest
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Backup and restore
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Replication and CDC
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Data minimization
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## PII and sensitive fields
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Schema migrations safety
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Connection strings and pooling
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Row-level and column security
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 
 ## Search indexes
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-data-databases` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `data-databases` controls only in Kotlin / Jetpack Compose config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-data-databases` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
 

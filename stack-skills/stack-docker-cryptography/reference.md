@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Symmetric encryption
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Asymmetric crypto
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Hashing and passwords
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Randomness and IDs
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## KMS and HSM
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## JWT and JOSE
 
@@ -110,17 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Use RS256 or ES256; validate `aud`, `iss`, `exp`; store keys in KMS.
-- Rotate signing keys with overlap.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not accept `alg: none` or HS256 with public client secrets.
-- Do not put PII in JWT payloads.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Use jwt lint tools in CI for sample tokens.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## PGP and email crypto
 
@@ -128,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Specialized crypto uses
 
@@ -145,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Crypto agility
 
@@ -162,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Secrets derivation
 
@@ -179,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 
 ## Side channels
 
@@ -196,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `cryptography` controls only in Docker config while leaving security-cryptography misconfigured.
+- Do not assume Docker defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-cryptography`.
 

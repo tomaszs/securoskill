@@ -8,18 +8,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for cms_api controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## WYSIWYG editors
 
@@ -27,22 +26,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Render user text only as JSX children: `<span>{userName}</span>`.
-- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
-- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
-- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
-- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
-- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
-- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Add component tests that assert script tags from user input are not rendered.
-- Run OWASP ZAP or similar against staging with authenticated flows.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Publish workflows
 
@@ -50,18 +44,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Plugins and themes
 
@@ -69,18 +62,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Comments and UGC moderation
 
@@ -88,18 +80,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## SEO and metadata injection
 
@@ -107,22 +98,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Render user text only as JSX children: `<span>{userName}</span>`.
-- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
-- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
-- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
-- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
-- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
-- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Add component tests that assert script tags from user input are not rendered.
-- Run OWASP ZAP or similar against staging with authenticated flows.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Media libraries
 
@@ -130,18 +116,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Multi-site CMS
 
@@ -149,18 +134,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## CMS search
 
@@ -168,18 +152,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Marketing forms
 
@@ -187,17 +170,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
-- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
-- Do not store CSRF secrets only in JS-accessible storage without rotation.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Integration test cross-origin POST without token expects 403.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## Static site generators
 
@@ -205,18 +188,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 
@@ -224,16 +206,15 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-cms-content-platforms` requirements using react supported APIs only.
-- Use the official react security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in React config while leaving security-cms-content-platforms misconfigured.
+- Do not assume React defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-cms-content-platforms`.
 

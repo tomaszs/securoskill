@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Config separation
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Feature flags
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Secret rotation
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## .env handling
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Config servers
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Hardcoded credentials
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Public vs confidential clients
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Bootstrap secrets
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Configuration audit
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Insecure defaults
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 
 ## Split knowledge
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `secrets-config` controls only in SwiftUI (iOS) config while leaving security-secrets-config misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-secrets-config`.
 

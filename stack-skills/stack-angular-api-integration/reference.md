@@ -8,18 +8,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for rest_api controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## GraphQL security
 
@@ -46,18 +45,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for grpc controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## Webhooks outbound and inbound
 
@@ -65,18 +63,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for webhooks controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## OAuth2/OIDC for APIs
 
@@ -84,18 +81,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## API keys and HMAC
 
@@ -103,18 +99,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for api_keys controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## Pagination and filtering abuse
 
@@ -122,18 +117,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for api_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## CORS for APIs
 
@@ -141,18 +135,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for cors controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## OpenAPI and documentation leakage
 
@@ -160,18 +153,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for openapi_leak controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## Backend-for-frontend patterns
 
@@ -179,18 +171,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for bff controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## Legacy SOAP/XML APIs
 
@@ -198,18 +189,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for xml_legacy controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 
 ## Event buses and streaming
 
@@ -217,16 +207,15 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-api-integration` requirements using angular supported APIs only.
-- Use the official angular security documentation for messaging controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-api-integration` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `api-integration` controls only in Angular config while leaving security-api-integration misconfigured.
+- Do not assume Angular defaults satisfy `security-api-integration` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-api-integration`.
 

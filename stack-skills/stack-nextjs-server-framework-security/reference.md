@@ -187,16 +187,15 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-server-framework-security` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Next.js APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

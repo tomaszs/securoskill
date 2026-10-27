@@ -187,16 +187,15 @@ Stack-specific implementation for **Nuxt** (Web UI). Normative rules: domain ski
 
 ### Do (use this in Nuxt)
 
-- Apply domain skill `security-server-framework-security` requirements using nuxt supported APIs only.
-- Use the official nuxt security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Nuxt APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of nuxt for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Nuxt with only happy-path tests.
+- Do not disable Nuxt security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nuxt projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

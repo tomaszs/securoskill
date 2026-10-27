@@ -8,15 +8,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## CSRF and clickjacking
 
@@ -24,15 +26,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Enable Django `CsrfViewMiddleware` / Flask-WTF CSRF for cookie sessions.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable CSRF globally for API routes that use session cookies.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- POST without CSRF token fails in tests.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## localStorage, sessionStorage, IndexedDB
 
@@ -40,18 +44,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Content Security Policy and security headers
 
@@ -59,18 +62,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for csp controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## SSR and hydration security
 
@@ -78,18 +80,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Web Workers and WebAssembly
 
@@ -97,18 +98,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for workers controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Third-party scripts and tags
 
@@ -116,18 +116,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend auth flows
 
@@ -135,18 +134,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Client-side file upload UX
 
@@ -154,18 +152,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Accessibility vs security UX
 
@@ -173,18 +170,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Mobile web and PWA
 
@@ -192,18 +188,17 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for pwa controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 
 ## Frontend dependency risk
 
@@ -211,16 +206,15 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-frontend-client` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- FastAPI is not the primary enforcement point for `frontend-client`; load stack skill `stack-react-frontend-client (or your UI stack)` when you touch that layer.
+- Keep FastAPI configuration aligned with requirements from `security-frontend-client` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `frontend-client` controls only in FastAPI config while leaving stack-react-frontend-client (or your UI stack) misconfigured.
+- Do not assume FastAPI defaults satisfy `security-frontend-client` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Integration test the full path: FastAPI plus the system covered by `stack-react-frontend-client (or your UI stack)`.
 

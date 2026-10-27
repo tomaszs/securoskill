@@ -207,16 +207,15 @@ Stack-specific implementation for **PostgreSQL** (Database). Normative rules: do
 
 ### Do (use this in PostgreSQL)
 
-- Apply domain skill `security-server-framework-security` requirements using postgresql supported APIs only.
-- Use the official postgresql security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- PostgreSQL is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep PostgreSQL configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of postgresql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in PostgreSQL config while leaving security-server-framework-security misconfigured.
+- Do not assume PostgreSQL defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on postgresql projects in CI.
+- Integration test the full path: PostgreSQL plus the system covered by `security-server-framework-security`.
 

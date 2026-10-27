@@ -8,18 +8,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Rotate MongoDB admin credentials via vault; never share superuser passwords in chat.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not click vendor emails asking to 'verify' database console login.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- MFA enforced on cloud DB console; alert on new admin users.
 
 ## Customer support takeover
 
@@ -27,18 +24,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for human_support controls.
-- Add automated tests for abuse cases before merging.
+- Align MongoDB with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -46,18 +40,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Publish official MongoDB on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Run vishing simulation targeting engineers who deploy MongoDB.
 
 ## Insider threat
 
@@ -65,18 +58,16 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for human_insider controls.
-- Add automated tests for abuse cases before merging.
+- Disable MongoDB logins on offboarding same day; revoke replication and backup roles.
+- Alert when DBA exports exceed normal row counts or run outside business hours.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not share one break-glass DB user across the team.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Monthly query: active DB users vs HR roster.
 
 ## Physical access to dev assets
 
@@ -84,18 +75,16 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for human_physical controls.
-- Add automated tests for abuse cases before merging.
+- Lock laptops running MongoDB IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -103,18 +92,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for education controls.
-- Add automated tests for abuse cases before merging.
+- Include MongoDB-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 
@@ -122,18 +108,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for ir controls.
-- Add automated tests for abuse cases before merging.
+- Map `Incident communications` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Incident communications` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Incident communications` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Incident communications`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Incident communications` against domain skill `security-human-factors-abuse`.
 
 ## Bug bounty operations
 
@@ -141,18 +126,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for bug_bounty controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bug bounty operations` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Bug bounty operations` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bug bounty operations` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Bug bounty operations`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Bug bounty operations` against domain skill `security-human-factors-abuse`.
 
 ## Law enforcement requests
 
@@ -160,18 +144,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for lawful_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Law enforcement requests` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Law enforcement requests` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Law enforcement requests` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Law enforcement requests`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Law enforcement requests` against domain skill `security-human-factors-abuse`.
 
 ## Social engineering of login flows
 
@@ -179,18 +162,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `Social engineering of login flows` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Social engineering of login flows` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Social engineering of login flows` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Social engineering of login flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Social engineering of login flows` against domain skill `security-human-factors-abuse`.
 
 ## Documentation and wiki leaks
 
@@ -198,18 +180,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for secrets_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Documentation and wiki leaks` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Documentation and wiki leaks` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Documentation and wiki leaks` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Documentation and wiki leaks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Documentation and wiki leaks` against domain skill `security-human-factors-abuse`.
 
 ## BPO and outsourced access
 
@@ -217,16 +198,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-human-factors-abuse` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for vendor controls.
-- Add automated tests for abuse cases before merging.
+- Map `BPO and outsourced access` controls to MongoDB APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `BPO and outsourced access` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `BPO and outsourced access` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `BPO and outsourced access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `BPO and outsourced access` against domain skill `security-human-factors-abuse`.
 

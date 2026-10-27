@@ -8,18 +8,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for env_vars controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Config separation
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for config_separation controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Feature flags
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for feature_flags controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Secret rotation
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for secret_rotation controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## .env handling
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for dotenv controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Config servers
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for config_servers controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Hardcoded credentials
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for hardcoded_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Public vs confidential clients
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for public_clients controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Bootstrap secrets
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for bootstrap_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Configuration audit
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for config_audit controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Insecure defaults
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for insecure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 
 ## Split knowledge
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-secrets-config` requirements using angular supported APIs only.
-- Use the official angular security documentation for split_knowledge controls.
-- Add automated tests for abuse cases before merging.
+- Angular is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Angular configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `secrets-config` controls only in Angular config while leaving security-secrets-config misconfigured.
+- Do not assume Angular defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Integration test the full path: Angular plus the system covered by `security-secrets-config`.
 

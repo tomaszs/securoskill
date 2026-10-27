@@ -8,18 +8,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for warehouse controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for etl controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for bi controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for data_lake controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for streaming controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for feature_store controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for notebooks controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for data_contracts controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for third_party_data controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using rails supported APIs only.
-- Use the official rails security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in Ruby on Rails config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-data-engineering-analytics`.
 

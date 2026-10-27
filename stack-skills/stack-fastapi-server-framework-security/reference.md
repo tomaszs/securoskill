@@ -217,16 +217,15 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 ### Do (use this in FastAPI)
 
-- Apply domain skill `security-server-framework-security` requirements using fastapi supported APIs only.
-- Use the official fastapi security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to FastAPI APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of fastapi for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in FastAPI with only happy-path tests.
+- Do not disable FastAPI security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastapi projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

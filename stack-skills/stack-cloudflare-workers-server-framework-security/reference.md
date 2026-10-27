@@ -187,16 +187,15 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-serverless-edge` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Cloudflare Workers config while leaving security-server-framework-security misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-server-framework-security`.
 

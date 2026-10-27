@@ -29,17 +29,15 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
-- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
+- Configure `xsrfCookieName` / `xsrfHeaderName` on axios defaults for Laravel/Spring backends.
 
 ### Don't
 
-- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
-- Do not store CSRF secrets only in JS-accessible storage without rotation.
+- Do not globally set `withCredentials: true` without CSRF pairing.
 
 ### Verify
 
-- Integration test cross-origin POST without token expects 403.
+- Vitest axios mock asserts CSRF header on POST.
 
 ## localStorage, sessionStorage, IndexedDB
 
@@ -58,6 +56,7 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 ### Verify
 
 - Audit `localStorage.setItem` usage in frontend bundle.
+- Run eslint-plugin-vue on changes affecting `localStorage, sessionStorage, IndexedDB`.
 
 ## Content Security Policy and security headers
 
@@ -65,18 +64,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for csp controls.
-- Add automated tests for abuse cases before merging.
+- Map `Content Security Policy and security headers` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Content Security Policy and security headers` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Content Security Policy and security headers` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Content Security Policy and security headers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Content Security Policy and security headers` against domain skill `security-frontend-client`.
 
 ## SSR and hydration security
 
@@ -84,18 +82,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Map `SSR and hydration security` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `SSR and hydration security` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SSR and hydration security` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `SSR and hydration security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `SSR and hydration security` against domain skill `security-frontend-client`.
 
 ## Web Workers and WebAssembly
 
@@ -103,18 +100,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for workers controls.
-- Add automated tests for abuse cases before merging.
+- Map `Web Workers and WebAssembly` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Web Workers and WebAssembly` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Web Workers and WebAssembly` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Web Workers and WebAssembly`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Web Workers and WebAssembly` against domain skill `security-frontend-client`.
 
 ## Third-party scripts and tags
 
@@ -122,18 +118,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Third-party scripts and tags` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Third-party scripts and tags` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Third-party scripts and tags` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Third-party scripts and tags`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Third-party scripts and tags` against domain skill `security-frontend-client`.
 
 ## Frontend auth flows
 
@@ -141,18 +136,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Frontend auth flows` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Frontend auth flows` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Frontend auth flows` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Frontend auth flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Frontend auth flows` against domain skill `security-frontend-client`.
 
 ## Client-side file upload UX
 
@@ -160,18 +154,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Map `Client-side file upload UX` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Client-side file upload UX` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Client-side file upload UX` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Client-side file upload UX`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Client-side file upload UX` against domain skill `security-frontend-client`.
 
 ## Accessibility vs security UX
 
@@ -179,18 +172,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- Map `Accessibility vs security UX` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Accessibility vs security UX` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Accessibility vs security UX` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Accessibility vs security UX`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Accessibility vs security UX` against domain skill `security-frontend-client`.
 
 ## Mobile web and PWA
 
@@ -198,18 +190,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for pwa controls.
-- Add automated tests for abuse cases before merging.
+- Map `Mobile web and PWA` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Mobile web and PWA` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Mobile web and PWA` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Mobile web and PWA`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Mobile web and PWA` against domain skill `security-frontend-client`.
 
 ## Frontend dependency risk
 
@@ -217,16 +208,15 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-frontend-client` requirements using vue supported APIs only.
-- Use the official vue security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Map `Frontend dependency risk` controls to Vue.js APIs documented for `security-frontend-client`.
+- Add an abuse-case test or check for `Frontend dependency risk` before merge.
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Frontend dependency risk` work in Vue.js with only happy-path tests.
+- Do not disable Vue.js security defaults to unblock `Frontend dependency risk`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Peer review `Frontend dependency risk` against domain skill `security-frontend-client`.
 

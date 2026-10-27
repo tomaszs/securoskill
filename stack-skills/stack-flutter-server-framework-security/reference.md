@@ -187,16 +187,15 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-server-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Flutter config while leaving security-server-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-server-framework-security`.
 

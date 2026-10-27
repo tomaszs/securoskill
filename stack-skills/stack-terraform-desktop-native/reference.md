@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Tauri and hybrid native
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Auto-update channels
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## OS sandbox and permissions
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Local privilege escalation
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Clipboard and screen capture
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## File handlers and URIs
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## IPC between components
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## OS credential storage
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Debug symbols and dumps
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Enterprise deployment
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 
 ## Offline-first apps
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `desktop-native`; load stack skill `security-desktop-native` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-desktop-native` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `desktop-native` controls only in Terraform config while leaving security-desktop-native misconfigured.
+- Do not assume Terraform defaults satisfy `security-desktop-native` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `security-desktop-native`.
 

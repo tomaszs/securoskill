@@ -8,18 +8,16 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Pin hashes in Poetry/pip-tools lockfiles; run `pip-audit` in CI.
+- Verify PyPI package owner matches your internal allowlist.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not `pip install` from arbitrary git URLs pasted into tickets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Bandit + dependency scan on every merge touching requirements.
 
 ## Customer support takeover
 
@@ -27,18 +25,20 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for human_support controls.
-- Add automated tests for abuse cases before merging.
+- In Django, require step-up auth (MFA or fresh session) before email/phone/password changes.
+- Bind support actions to ticket IDs; log actor, customer id, and fields changed.
+- Use out-of-band confirmation (SMS to old number) for SIM-sensitive flows.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not reset MFA or passwords from a single inbound email without callback verification.
+- Do not expose full account recovery tokens in API JSON error messages.
+- Do not let support use shared admin passwords without per-user audit trails.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Integration tests: support endpoint without elevated role returns 403.
+- Alert on burst of password resets from one support account.
 
 ## Vishing and impersonation
 
@@ -46,18 +46,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Publish official Django on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Run vishing simulation targeting engineers who deploy Django.
 
 ## Insider threat
 
@@ -65,18 +64,16 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for human_insider controls.
-- Add automated tests for abuse cases before merging.
+- Scope Django production credentials per engineer; no shared `.env` files in chat.
+- Monitor anomalous git pushes and package publishes from service accounts.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not leave production API keys in personal dotfiles repos.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- SIEM rule: first-time access to prod secrets from new workstation.
 
 ## Physical access to dev assets
 
@@ -84,18 +81,16 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for human_physical controls.
-- Add automated tests for abuse cases before merging.
+- Lock laptops running Django IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -103,18 +98,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for education controls.
-- Add automated tests for abuse cases before merging.
+- Include Django-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 
@@ -122,18 +114,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for ir controls.
-- Add automated tests for abuse cases before merging.
+- Map `Incident communications` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Incident communications` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Incident communications` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Incident communications`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Incident communications` against domain skill `security-human-factors-abuse`.
 
 ## Bug bounty operations
 
@@ -141,18 +132,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for bug_bounty controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bug bounty operations` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Bug bounty operations` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bug bounty operations` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Bug bounty operations`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Bug bounty operations` against domain skill `security-human-factors-abuse`.
 
 ## Law enforcement requests
 
@@ -160,18 +150,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for lawful_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Law enforcement requests` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Law enforcement requests` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Law enforcement requests` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Law enforcement requests`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Law enforcement requests` against domain skill `security-human-factors-abuse`.
 
 ## Social engineering of login flows
 
@@ -179,18 +168,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `Social engineering of login flows` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Social engineering of login flows` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Social engineering of login flows` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Social engineering of login flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Social engineering of login flows` against domain skill `security-human-factors-abuse`.
 
 ## Documentation and wiki leaks
 
@@ -198,18 +186,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for secrets_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Documentation and wiki leaks` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Documentation and wiki leaks` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Documentation and wiki leaks` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Documentation and wiki leaks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Documentation and wiki leaks` against domain skill `security-human-factors-abuse`.
 
 ## BPO and outsourced access
 
@@ -217,16 +204,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-human-factors-abuse` requirements using django supported APIs only.
-- Use the official django security documentation for vendor controls.
-- Add automated tests for abuse cases before merging.
+- Map `BPO and outsourced access` controls to Django APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `BPO and outsourced access` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `BPO and outsourced access` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `BPO and outsourced access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `BPO and outsourced access` against domain skill `security-human-factors-abuse`.
 

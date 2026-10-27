@@ -8,18 +8,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_id controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tenant identification` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Tenant identification` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tenant identification` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Tenant identification`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Tenant identification` against domain skill `security-multi-tenancy-saas`.
 
 ## Data isolation models
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_data controls.
-- Add automated tests for abuse cases before merging.
+- Map `Data isolation models` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Data isolation models` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Data isolation models` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Data isolation models`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Data isolation models` against domain skill `security-multi-tenancy-saas`.
 
 ## Tenant-scoped authorization
 
@@ -57,6 +55,7 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run eslint on changes affecting `Tenant-scoped authorization`.
 
 ## Billing and plan enforcement
 
@@ -64,18 +63,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_billing controls.
-- Add automated tests for abuse cases before merging.
+- Map `Billing and plan enforcement` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Billing and plan enforcement` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Billing and plan enforcement` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Billing and plan enforcement`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Billing and plan enforcement` against domain skill `security-multi-tenancy-saas`.
 
 ## Custom domains and TLS
 
@@ -83,18 +81,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for custom_domains controls.
-- Add automated tests for abuse cases before merging.
+- Map `Custom domains and TLS` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Custom domains and TLS` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Custom domains and TLS` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Custom domains and TLS`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Custom domains and TLS` against domain skill `security-multi-tenancy-saas`.
 
 ## Tenant export and backup
 
@@ -102,18 +99,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_export controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tenant export and backup` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Tenant export and backup` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tenant export and backup` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Tenant export and backup`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Tenant export and backup` against domain skill `security-multi-tenancy-saas`.
 
 ## Per-tenant integrations
 
@@ -121,18 +117,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_integrations controls.
-- Add automated tests for abuse cases before merging.
+- Map `Per-tenant integrations` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Per-tenant integrations` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Per-tenant integrations` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Per-tenant integrations`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Per-tenant integrations` against domain skill `security-multi-tenancy-saas`.
 
 ## Noisy neighbor and quotas
 
@@ -140,18 +135,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for noisy_neighbor controls.
-- Add automated tests for abuse cases before merging.
+- Map `Noisy neighbor and quotas` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Noisy neighbor and quotas` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Noisy neighbor and quotas` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Noisy neighbor and quotas`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Noisy neighbor and quotas` against domain skill `security-multi-tenancy-saas`.
 
 ## Tenant onboarding
 
@@ -159,18 +153,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_onboard controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tenant onboarding` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Tenant onboarding` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tenant onboarding` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Tenant onboarding`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Tenant onboarding` against domain skill `security-multi-tenancy-saas`.
 
 ## Tenant offboarding
 
@@ -178,18 +171,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_offboard controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tenant offboarding` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Tenant offboarding` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tenant offboarding` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Tenant offboarding`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Tenant offboarding` against domain skill `security-multi-tenancy-saas`.
 
 ## Compliance per tenant
 
@@ -197,18 +189,17 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for tenant_compliance controls.
-- Add automated tests for abuse cases before merging.
+- Map `Compliance per tenant` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `Compliance per tenant` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Compliance per tenant` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Compliance per tenant`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Compliance per tenant` against domain skill `security-multi-tenancy-saas`.
 
 ## SaaS penetration patterns
 
@@ -216,16 +207,15 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for saas_pentest controls.
-- Add automated tests for abuse cases before merging.
+- Map `SaaS penetration patterns` controls to Fastify APIs documented for `security-multi-tenancy-saas`.
+- Add an abuse-case test or check for `SaaS penetration patterns` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SaaS penetration patterns` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `SaaS penetration patterns`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `SaaS penetration patterns` against domain skill `security-multi-tenancy-saas`.
 

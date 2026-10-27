@@ -227,16 +227,15 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-server-framework-security` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Hibernate / JPA config while leaving security-server-framework-security misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-server-framework-security`.
 

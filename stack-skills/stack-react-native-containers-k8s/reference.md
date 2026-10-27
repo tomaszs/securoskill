@@ -8,18 +8,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for container_images controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Kubernetes RBAC
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Network policies
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Kubernetes secrets
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container runtime
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Admission controllers
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_admission controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Helm charts
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for helm controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container registries
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for registry controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Sidecars and service mesh
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for sidecars controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Windows containers
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Docker Compose dev security
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for docker_compose controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 
 ## Container escape vectors
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-containers-k8s` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for container_escape controls.
-- Add automated tests for abuse cases before merging.
+- React Native is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
+- Keep React Native configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `containers-k8s` controls only in React Native config while leaving stack-kubernetes-containers-k8s misconfigured.
+- Do not assume React Native defaults satisfy `security-containers-k8s` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Integration test the full path: React Native plus the system covered by `stack-kubernetes-containers-k8s`.
 

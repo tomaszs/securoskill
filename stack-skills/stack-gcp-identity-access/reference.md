@@ -8,18 +8,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for passwords controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## MFA and step-up auth
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for mfa controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## SSO and federation
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for sso controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## RBAC
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## ABAC and policy engines
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for abac controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Service accounts and workloads
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for service_accounts controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Break-glass and emergency access
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for break_glass controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Account lifecycle
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for account_lifecycle controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Privilege escalation
 
@@ -160,17 +152,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Zero trust access
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for zero_trust controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Biometrics and device binding
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for biometrics controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 
 ## Guest and anonymous access
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-identity-access` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for anonymous controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-identity-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `identity-access` controls only in Google Cloud config while leaving security-identity-access misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-identity-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-identity-access`.
 

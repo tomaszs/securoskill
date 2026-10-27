@@ -8,18 +8,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_id controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Data isolation models
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_data controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant-scoped authorization
 
@@ -46,17 +44,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Billing and plan enforcement
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_billing controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Custom domains and TLS
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for custom_domains controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant export and backup
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_export controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Per-tenant integrations
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_integrations controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Noisy neighbor and quotas
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for noisy_neighbor controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant onboarding
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_onboard controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Tenant offboarding
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_offboard controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## Compliance per tenant
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for tenant_compliance controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 
 ## SaaS penetration patterns
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 ### Do (use this in React)
 
-- Apply domain skill `security-multi-tenancy-saas` requirements using react supported APIs only.
-- Use the official react security documentation for saas_pentest controls.
-- Add automated tests for abuse cases before merging.
+- React is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
+- Keep React configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of react for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `multi-tenancy-saas` controls only in React config while leaving security-multi-tenancy-saas misconfigured.
+- Do not assume React defaults satisfy `security-multi-tenancy-saas` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react projects in CI.
+- Integration test the full path: React plus the system covered by `security-multi-tenancy-saas`.
 

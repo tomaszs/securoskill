@@ -8,15 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Vue.js
 
@@ -24,15 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Angular
 
@@ -40,15 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Next.js and Nuxt
 
@@ -56,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Svelte and SvelteKit
 
@@ -73,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Astro, Remix, and islands
 
@@ -90,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Client state libraries
 
@@ -107,18 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-frontend-client` requirements using docker supported APIs only.
-- Use the official docker security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Client routing security
 
@@ -126,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## i18n and locale
 
@@ -143,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Design system components
 
@@ -160,15 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Storybook and dev tools
 
@@ -176,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 
 ## Micro-frontends
 
@@ -193,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `web-framework-security` controls only in Docker config while leaving security-web-framework-security misconfigured.
+- Do not assume Docker defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-web-framework-security`.
 

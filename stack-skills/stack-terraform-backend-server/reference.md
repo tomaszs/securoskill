@@ -24,17 +24,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Session management on server
 
@@ -42,17 +42,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Error handling and information disclosure
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Concurrency and race conditions
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Server file I/O
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Deserialization and parsing
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Background jobs and queues
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Server-side caching
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Tenant isolation on server
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Rate limiting and abuse
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Health and debug endpoints
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `backend-server` controls only in Terraform config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume Terraform defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-express-backend-server (or your API stack)`.
 

@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Symmetric encryption
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Asymmetric crypto
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Hashing and passwords
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Randomness and IDs
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## KMS and HSM
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## JWT and JOSE
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Use RS256 or ES256; validate `aud`, `iss`, `exp`; store keys in KMS.
-- Rotate signing keys with overlap.
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not accept `alg: none` or HS256 with public client secrets.
-- Do not put PII in JWT payloads.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Use jwt lint tools in CI for sample tokens.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## PGP and email crypto
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Specialized crypto uses
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Crypto agility
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Secrets derivation
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 
 ## Side channels
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `cryptography` controls only in SwiftUI (iOS) config while leaving security-cryptography misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cryptography`.
 

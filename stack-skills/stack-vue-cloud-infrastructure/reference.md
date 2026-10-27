@@ -8,18 +8,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for cloud_iam controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Object storage buckets
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for object_storage controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Compute instances
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for cloud_compute controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Managed serverless
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Secrets managers
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for secrets_manager controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## VPC and security groups
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for vpc controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Cloud audit logs
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for cloud_audit controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Infrastructure as code
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for terraform controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## Multi-cloud identity
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for multi_cloud controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## SaaS admin consoles
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for saas_admin controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## CDN and edge
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for cdn controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 
 ## DR and regions
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cloud-infrastructure` requirements using vue supported APIs only.
-- Use the official vue security documentation for dr controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cloud-infrastructure` controls only in Vue.js config while leaving stack-aws-cloud-infrastructure misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cloud-infrastructure` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `stack-aws-cloud-infrastructure`.
 

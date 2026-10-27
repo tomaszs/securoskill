@@ -8,18 +8,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for env_vars controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Config separation
 
@@ -27,18 +24,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for config_separation controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Feature flags
 
@@ -46,18 +40,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for feature_flags controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Secret rotation
 
@@ -65,18 +56,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for secret_rotation controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## .env handling
 
@@ -84,18 +72,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for dotenv controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Config servers
 
@@ -103,18 +88,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for config_servers controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Hardcoded credentials
 
@@ -122,18 +104,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for hardcoded_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Public vs confidential clients
 
@@ -141,18 +120,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for public_clients controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Bootstrap secrets
 
@@ -160,18 +136,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for bootstrap_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Configuration audit
 
@@ -179,18 +152,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for config_audit controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Insecure defaults
 
@@ -198,18 +168,15 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for insecure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 
 ## Split knowledge
 
@@ -217,16 +184,13 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 ### Do (use this in Spring Boot)
 
-- Apply domain skill `security-secrets-config` requirements using spring-boot supported APIs only.
-- Use the official spring-boot security documentation for split_knowledge controls.
-- Add automated tests for abuse cases before merging.
+- Externalize secrets via Spring Cloud Config or Vault; use `@Value` injection.
 
 ### Don't
 
-- Do not disable security features of spring-boot for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `application-prod.yml` with real passwords.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
+- SpotBugs + secret scan on `src/main/resources`.
 

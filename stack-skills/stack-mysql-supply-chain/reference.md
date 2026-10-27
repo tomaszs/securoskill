@@ -8,18 +8,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for package_registries controls.
-- Add automated tests for abuse cases before merging.
+- Map `Package registries` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Package registries` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Package registries` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Package registries`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Package registries` against domain skill `security-supply-chain`.
 
 ## Lockfiles and reproducibility
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for lockfiles controls.
-- Add automated tests for abuse cases before merging.
+- Map `Lockfiles and reproducibility` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Lockfiles and reproducibility` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Lockfiles and reproducibility` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Lockfiles and reproducibility`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Lockfiles and reproducibility` against domain skill `security-supply-chain`.
 
 ## Vendoring
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for vendoring controls.
-- Add automated tests for abuse cases before merging.
+- Map `Vendoring` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Vendoring` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Vendoring` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Vendoring`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Vendoring` against domain skill `security-supply-chain`.
 
 ## Build integrity
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for build_integrity controls.
-- Add automated tests for abuse cases before merging.
+- Map `Build integrity` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Build integrity` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Build integrity` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Build integrity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Build integrity` against domain skill `security-supply-chain`.
 
 ## Third-party SaaS
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for third_party_saas controls.
-- Add automated tests for abuse cases before merging.
+- Map `Third-party SaaS` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Third-party SaaS` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Third-party SaaS` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Third-party SaaS`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Third-party SaaS` against domain skill `security-supply-chain`.
 
 ## License compliance
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for license controls.
-- Add automated tests for abuse cases before merging.
+- Map `License compliance` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `License compliance` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `License compliance` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `License compliance`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `License compliance` against domain skill `security-supply-chain`.
 
 ## Binary dependencies
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for binary_deps controls.
-- Add automated tests for abuse cases before merging.
+- Map `Binary dependencies` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Binary dependencies` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Binary dependencies` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Binary dependencies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Binary dependencies` against domain skill `security-supply-chain`.
 
 ## Git submodules
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for submodules controls.
-- Add automated tests for abuse cases before merging.
+- Map `Git submodules` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Git submodules` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Git submodules` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Git submodules`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Git submodules` against domain skill `security-supply-chain`.
 
 ## Internal packages
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for internal_packages controls.
-- Add automated tests for abuse cases before merging.
+- Map `Internal packages` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Internal packages` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Internal packages` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Internal packages`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Internal packages` against domain skill `security-supply-chain`.
 
 ## CVE response
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for cve controls.
-- Add automated tests for abuse cases before merging.
+- Map `CVE response` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `CVE response` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CVE response` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `CVE response`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `CVE response` against domain skill `security-supply-chain`.
 
 ## Malware in repos
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for malware_repo controls.
-- Add automated tests for abuse cases before merging.
+- Map `Malware in repos` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `Malware in repos` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Malware in repos` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `Malware in repos`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `Malware in repos` against domain skill `security-supply-chain`.
 
 ## SBOM distribution
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-supply-chain` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for sbom controls.
-- Add automated tests for abuse cases before merging.
+- Map `SBOM distribution` controls to MySQL / MariaDB APIs documented for `security-supply-chain`.
+- Add an abuse-case test or check for `SBOM distribution` before merge.
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SBOM distribution` work in MySQL / MariaDB with only happy-path tests.
+- Do not disable MySQL / MariaDB security defaults to unblock `SBOM distribution`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Peer review `SBOM distribution` against domain skill `security-supply-chain`.
 

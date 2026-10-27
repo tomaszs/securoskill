@@ -8,18 +8,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for container_images controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Kubernetes RBAC
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Use Namespace-scoped Roles; avoid cluster-admin for apps.
-- Enable NetworkPolicy default-deny egress/ingress per namespace.
-- Mount secrets via CSI / external secrets; rotate regularly.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not run pods as root or with `privileged: true` without isolation.
-- Do not expose Kubernetes API publicly.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- kube-score and polaris in CI; OPA/Gatekeeper policies on deploy.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Network policies
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Use Namespace-scoped Roles; avoid cluster-admin for apps.
-- Enable NetworkPolicy default-deny egress/ingress per namespace.
-- Mount secrets via CSI / external secrets; rotate regularly.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not run pods as root or with `privileged: true` without isolation.
-- Do not expose Kubernetes API publicly.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- kube-score and polaris in CI; OPA/Gatekeeper policies on deploy.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Kubernetes secrets
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Use Namespace-scoped Roles; avoid cluster-admin for apps.
-- Enable NetworkPolicy default-deny egress/ingress per namespace.
-- Mount secrets via CSI / external secrets; rotate regularly.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not run pods as root or with `privileged: true` without isolation.
-- Do not expose Kubernetes API publicly.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- kube-score and polaris in CI; OPA/Gatekeeper policies on deploy.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Container runtime
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Use Namespace-scoped Roles; avoid cluster-admin for apps.
-- Enable NetworkPolicy default-deny egress/ingress per namespace.
-- Mount secrets via CSI / external secrets; rotate regularly.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not run pods as root or with `privileged: true` without isolation.
-- Do not expose Kubernetes API publicly.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- kube-score and polaris in CI; OPA/Gatekeeper policies on deploy.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Admission controllers
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for k8s_admission controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Helm charts
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for helm controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Container registries
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for registry controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Sidecars and service mesh
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for sidecars controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Windows containers
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Use Namespace-scoped Roles; avoid cluster-admin for apps.
-- Enable NetworkPolicy default-deny egress/ingress per namespace.
-- Mount secrets via CSI / external secrets; rotate regularly.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not run pods as root or with `privileged: true` without isolation.
-- Do not expose Kubernetes API publicly.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- kube-score and polaris in CI; OPA/Gatekeeper policies on deploy.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Docker Compose dev security
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for docker_compose controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 
 ## Container escape vectors
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-containers-k8s` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for container_escape controls.
-- Add automated tests for abuse cases before merging.
+- Apply `PodSecurity` restricted profile or equivalent.
+- Use NetworkPolicy default-deny per namespace.
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not mount host `/` or Docker socket into app pods.
+- Do not store plaintext secrets in ConfigMaps.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- kube-score, polaris, and OPA policies in admission.
 

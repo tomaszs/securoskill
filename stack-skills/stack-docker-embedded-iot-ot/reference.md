@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Secure boot and trust anchor
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Device communications
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Default credentials
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Physical tamper resistance
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## RTOS and bare metal
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Industrial OT and SCADA
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Medical and safety devices
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Automotive and CAN
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## IoT cloud backends
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Botnet and abuse
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 
 ## Firmware supply chain
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `embedded-iot-ot` controls only in Docker config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Docker defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-embedded-iot-ot`.
 

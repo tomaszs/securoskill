@@ -187,16 +187,15 @@ Stack-specific implementation for **Actix Web (Rust)** (Rust). Normative rules: 
 
 ### Do (use this in Actix Web (Rust))
 
-- Apply domain skill `security-server-framework-security` requirements using actix supported APIs only.
-- Use the official actix security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Actix Web (Rust) APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of actix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Actix Web (Rust) with only happy-path tests.
+- Do not disable Actix Web (Rust) security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on actix projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

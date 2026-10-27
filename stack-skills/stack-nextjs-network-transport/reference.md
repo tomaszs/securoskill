@@ -8,18 +8,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for dns controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## WAF and edge protection
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for waf controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## SSRF
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for ssrf controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## Reverse proxies
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for reverse_proxy controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## VPN and private networking
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## DDoS and volumetric attacks
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for ddos controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## IP allowlisting pitfalls
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for ip_allowlist controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## HTTP request smuggling
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for http_smuggling controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## WebSocket transport
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for websocket controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## SMTP security
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for smtp controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## IPv6 and dual stack
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 
 ## Service mesh mTLS
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-network-transport` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for service_mesh controls.
-- Add automated tests for abuse cases before merging.
+- Next.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Next.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Next.js config while leaving security-network-transport misconfigured.
+- Do not assume Next.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Integration test the full path: Next.js plus the system covered by `security-network-transport`.
 

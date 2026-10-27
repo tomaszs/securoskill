@@ -227,16 +227,15 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-server-framework-security` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in TypeORM config while leaving security-server-framework-security misconfigured.
+- Do not assume TypeORM defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-server-framework-security`.
 

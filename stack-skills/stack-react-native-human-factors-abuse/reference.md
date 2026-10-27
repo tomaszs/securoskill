@@ -8,18 +8,18 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Use lockfile-only installs (`npm ci` / `pnpm i --frozen-lockfile`) in React Native CI.
+- Enable Dependabot/Renovate with required status checks before merge.
+- Require code review for any dependency that adds `postinstall` scripts.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not install packages from typosquatted names (`react-domm`, `@types/nodee`).
+- Do not approve GitHub OAuth apps requesting `repo` or `workflow` from unknown vendors.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Run `npm audit --audit-level=high` (or pnpm equivalent) as a merge gate.
 
 ## Customer support takeover
 
@@ -27,18 +27,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for human_support controls.
-- Add automated tests for abuse cases before merging.
+- Align React Native with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -46,18 +43,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for human_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Publish official React Native on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Run vishing simulation targeting engineers who deploy React Native.
 
 ## Insider threat
 
@@ -65,18 +61,16 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for human_insider controls.
-- Add automated tests for abuse cases before merging.
+- Scope React Native production credentials per engineer; no shared `.env` files in chat.
+- Monitor anomalous git pushes and package publishes from service accounts.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not leave production API keys in personal dotfiles repos.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- SIEM rule: first-time access to prod secrets from new workstation.
 
 ## Physical access to dev assets
 
@@ -84,18 +78,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for human_physical controls.
-- Add automated tests for abuse cases before merging.
+- Require device passcode/biometric; use MDM to remote-wipe lost dev phones with React Native builds.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not leave TestFlight/APK builds on unlocked desks.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- MDM compliance report monthly.
 
 ## Security awareness
 
@@ -103,18 +94,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for education controls.
-- Add automated tests for abuse cases before merging.
+- Include React Native-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 
@@ -122,18 +110,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for ir controls.
-- Add automated tests for abuse cases before merging.
+- Map `Incident communications` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Incident communications` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Incident communications` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Incident communications`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Incident communications` against domain skill `security-human-factors-abuse`.
 
 ## Bug bounty operations
 
@@ -141,18 +128,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for bug_bounty controls.
-- Add automated tests for abuse cases before merging.
+- Map `Bug bounty operations` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Bug bounty operations` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Bug bounty operations` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Bug bounty operations`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Bug bounty operations` against domain skill `security-human-factors-abuse`.
 
 ## Law enforcement requests
 
@@ -160,18 +146,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for lawful_access controls.
-- Add automated tests for abuse cases before merging.
+- Map `Law enforcement requests` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Law enforcement requests` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Law enforcement requests` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Law enforcement requests`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Law enforcement requests` against domain skill `security-human-factors-abuse`.
 
 ## Social engineering of login flows
 
@@ -179,18 +164,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `Social engineering of login flows` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Social engineering of login flows` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Social engineering of login flows` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Social engineering of login flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Social engineering of login flows` against domain skill `security-human-factors-abuse`.
 
 ## Documentation and wiki leaks
 
@@ -198,18 +182,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for secrets_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Documentation and wiki leaks` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `Documentation and wiki leaks` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Documentation and wiki leaks` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Documentation and wiki leaks`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Documentation and wiki leaks` against domain skill `security-human-factors-abuse`.
 
 ## BPO and outsourced access
 
@@ -217,16 +200,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-human-factors-abuse` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for vendor controls.
-- Add automated tests for abuse cases before merging.
+- Map `BPO and outsourced access` controls to React Native APIs documented for `security-human-factors-abuse`.
+- Add an abuse-case test or check for `BPO and outsourced access` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `BPO and outsourced access` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `BPO and outsourced access`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `BPO and outsourced access` against domain skill `security-human-factors-abuse`.
 

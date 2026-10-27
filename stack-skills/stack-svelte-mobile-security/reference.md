@@ -8,18 +8,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_storage controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_tls controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_re controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for deeplinks controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_auth controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_biometric controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## WebView bridges
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_webview controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Push notifications
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_push controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## App attestation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for app_attest controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for sideload controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for screenshot controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-mobile-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for mobile_supply controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Svelte config while leaving security-mobile-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-mobile-security`.
 

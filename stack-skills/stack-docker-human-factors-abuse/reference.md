@@ -8,16 +8,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Document how Docker engineers report suspicious dependency or CI messages.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not merge urgent 'hotfix' PRs that only change lockfiles without review.
 
 ### Verify
 
-- Image scan gate in CI.
+- Annual phishing simulation includes fake package/CI scenarios.
 
 ## Customer support takeover
 
@@ -25,16 +24,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Align Docker with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- Image scan gate in CI.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -42,16 +40,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Publish official Docker on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Image scan gate in CI.
+- Run vishing simulation targeting engineers who deploy Docker.
 
 ## Insider threat
 
@@ -59,16 +58,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Remove kubeconfig / cloud CLI keys on offboarding; rotate CI deploy keys quarterly.
+- Use just-in-time elevation for production changes to Docker clusters.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not leave former employees in `cluster-admin` or cloud Owner groups.
 
 ### Verify
 
-- Image scan gate in CI.
+- Access review export from IAM/K8s RBAC matched to HR terminations.
 
 ## Physical access to dev assets
 
@@ -76,16 +75,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Lock laptops running Docker IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- Image scan gate in CI.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -93,16 +92,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Include Docker-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Image scan gate in CI.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 

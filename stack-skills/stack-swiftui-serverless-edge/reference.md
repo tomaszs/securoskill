@@ -8,18 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-serverless-edge` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for faas_auth controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Event source trust
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-serverless-edge` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for faas_events controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Secrets in serverless
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-serverless-edge` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for faas_secrets controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## VPC and network placement
 
@@ -65,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Edge workers (CDN)
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Apply domain skill `security-serverless-edge` requirements using swiftui supported APIs only.
-- Use the official swiftui security documentation for edge_workers controls.
-- Add automated tests for abuse cases before merging.
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of swiftui for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on swiftui projects in CI.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Denial of wallet
 
@@ -102,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Idempotency and retries
 
@@ -120,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Local dev parity
 
@@ -138,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Multi-region functions
 
@@ -156,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Wasm at edge
 
@@ -174,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Orchestration workflows
 
@@ -192,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 
 ## Platform limit abuse
 
@@ -210,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
-- Use ATS (HTTPS).
+- SwiftUI (iOS) is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
+- Keep SwiftUI (iOS) configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
 
 ### Don't
 
-- Do not store secrets in UserDefaults.
-- Do not disable ATS globally.
+- Do not duplicate `serverless-edge` controls only in SwiftUI (iOS) config while leaving security-serverless-edge misconfigured.
+- Do not assume SwiftUI (iOS) defaults satisfy `security-serverless-edge` without verification.
 
 ### Verify
 
-- MobSF scan on IPA.
+- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-serverless-edge`.
 

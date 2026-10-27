@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Config separation
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Feature flags
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Secret rotation
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## .env handling
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Config servers
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Hardcoded credentials
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Public vs confidential clients
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Bootstrap secrets
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Configuration audit
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Insecure defaults
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 
 ## Split knowledge
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-secrets-config` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `secrets-config` controls only in Docker config while leaving security-secrets-config misconfigured.
+- Do not assume Docker defaults satisfy `security-secrets-config` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-secrets-config`.
 

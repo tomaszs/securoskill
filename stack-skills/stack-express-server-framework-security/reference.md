@@ -227,16 +227,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-server-framework-security` requirements using express supported APIs only.
-- Use the official express security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Express.js APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

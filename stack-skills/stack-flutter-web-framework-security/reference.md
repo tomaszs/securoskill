@@ -8,15 +8,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Prefer native `Text` components over WebView for untrusted content.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not enable `javaScriptEnabled` on WebView showing user HTML without a strict CSP and URL allowlist.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Static analysis with MobSF or platform linters on release builds.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Vue.js
 
@@ -24,15 +26,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Prefer native `Text` components over WebView for untrusted content.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not enable `javaScriptEnabled` on WebView showing user HTML without a strict CSP and URL allowlist.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Static analysis with MobSF or platform linters on release builds.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Angular
 
@@ -40,15 +44,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Prefer native `Text` components over WebView for untrusted content.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not enable `javaScriptEnabled` on WebView showing user HTML without a strict CSP and URL allowlist.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Static analysis with MobSF or platform linters on release builds.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Next.js and Nuxt
 
@@ -56,18 +62,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Svelte and SvelteKit
 
@@ -75,18 +80,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Astro, Remix, and islands
 
@@ -94,18 +98,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Client state libraries
 
@@ -113,18 +116,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-frontend-client` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Client routing security
 
@@ -132,18 +134,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## i18n and locale
 
@@ -151,18 +152,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Design system components
 
@@ -170,15 +170,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Prefer native `Text` components over WebView for untrusted content.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not enable `javaScriptEnabled` on WebView showing user HTML without a strict CSP and URL allowlist.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Static analysis with MobSF or platform linters on release builds.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Storybook and dev tools
 
@@ -186,18 +188,17 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for debug_endpoints controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 
 ## Micro-frontends
 
@@ -205,16 +206,15 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 ### Do (use this in Flutter)
 
-- Apply domain skill `security-web-framework-security` requirements using flutter supported APIs only.
-- Use the official flutter security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- Flutter is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep Flutter configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of flutter for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in Flutter config while leaving security-web-framework-security misconfigured.
+- Do not assume Flutter defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on flutter projects in CI.
+- Integration test the full path: Flutter plus the system covered by `security-web-framework-security`.
 

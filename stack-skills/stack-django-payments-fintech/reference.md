@@ -8,18 +8,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for stripe_webhooks controls.
-- Add automated tests for abuse cases before merging.
+- In Django, verify Stripe signature with `stripe.Webhook.construct_event` and raw body.
+- Use idempotency keys on payment side effects.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not parse webhook JSON before signature verification.
+- Do not trust `client_reference_id` without server-side ownership check.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Replay old webhook in test env must fail signature or timestamp check.
 
 ## Card data handling
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for card_data controls.
-- Add automated tests for abuse cases before merging.
+- Map `Card data handling` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Card data handling` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Card data handling` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Card data handling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Card data handling` against domain skill `security-payments-fintech`.
 
 ## Refunds and disputes
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for refunds controls.
-- Add automated tests for abuse cases before merging.
+- Map `Refunds and disputes` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Refunds and disputes` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Refunds and disputes` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Refunds and disputes`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Refunds and disputes` against domain skill `security-payments-fintech`.
 
 ## Currency and rounding
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for currency controls.
-- Add automated tests for abuse cases before merging.
+- Map `Currency and rounding` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Currency and rounding` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Currency and rounding` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Currency and rounding`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Currency and rounding` against domain skill `security-payments-fintech`.
 
 ## PCI scoping
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for pci_scope controls.
-- Add automated tests for abuse cases before merging.
+- Map `PCI scoping` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `PCI scoping` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `PCI scoping` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `PCI scoping`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `PCI scoping` against domain skill `security-payments-fintech`.
 
 ## 3-D Secure flows
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for three_ds controls.
-- Add automated tests for abuse cases before merging.
+- Map `3-D Secure flows` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `3-D Secure flows` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `3-D Secure flows` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `3-D Secure flows`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `3-D Secure flows` against domain skill `security-payments-fintech`.
 
 ## Digital wallets
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for wallet controls.
-- Add automated tests for abuse cases before merging.
+- Map `Digital wallets` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Digital wallets` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Digital wallets` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Digital wallets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Digital wallets` against domain skill `security-payments-fintech`.
 
 ## Payouts and KYC
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for payouts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Payouts and KYC` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Payouts and KYC` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Payouts and KYC` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Payouts and KYC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Payouts and KYC` against domain skill `security-payments-fintech`.
 
 ## Internal ledger integrity
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for ledger controls.
-- Add automated tests for abuse cases before merging.
+- Map `Internal ledger integrity` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Internal ledger integrity` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Internal ledger integrity` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Internal ledger integrity`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Internal ledger integrity` against domain skill `security-payments-fintech`.
 
 ## Tax and invoicing
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for tax controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tax and invoicing` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Tax and invoicing` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tax and invoicing` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Tax and invoicing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Tax and invoicing` against domain skill `security-payments-fintech`.
 
 ## Subscription logic
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for subscription controls.
-- Add automated tests for abuse cases before merging.
+- Map `Subscription logic` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Subscription logic` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Subscription logic` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Subscription logic`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Subscription logic` against domain skill `security-payments-fintech`.
 
 ## Fraud scoring
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-payments-fintech` requirements using django supported APIs only.
-- Use the official django security documentation for fraud_scoring controls.
-- Add automated tests for abuse cases before merging.
+- Map `Fraud scoring` controls to Django APIs documented for `security-payments-fintech`.
+- Add an abuse-case test or check for `Fraud scoring` before merge.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Fraud scoring` work in Django with only happy-path tests.
+- Do not disable Django security defaults to unblock `Fraud scoring`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- Peer review `Fraud scoring` against domain skill `security-payments-fintech`.
 

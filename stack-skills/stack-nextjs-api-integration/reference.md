@@ -8,18 +8,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for rest_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `REST API design security` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `REST API design security` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `REST API design security` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `REST API design security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `REST API design security` against domain skill `security-api-integration`.
 
 ## GraphQL security
 
@@ -46,18 +45,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for grpc controls.
-- Add automated tests for abuse cases before merging.
+- Map `gRPC and protobuf` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `gRPC and protobuf` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `gRPC and protobuf` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `gRPC and protobuf`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `gRPC and protobuf` against domain skill `security-api-integration`.
 
 ## Webhooks outbound and inbound
 
@@ -65,18 +63,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for webhooks controls.
-- Add automated tests for abuse cases before merging.
+- Map `Webhooks outbound and inbound` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `Webhooks outbound and inbound` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Webhooks outbound and inbound` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Webhooks outbound and inbound`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Webhooks outbound and inbound` against domain skill `security-api-integration`.
 
 ## OAuth2/OIDC for APIs
 
@@ -84,18 +81,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for oauth_api controls.
-- Add automated tests for abuse cases before merging.
+- Map `OAuth2/OIDC for APIs` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `OAuth2/OIDC for APIs` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `OAuth2/OIDC for APIs` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `OAuth2/OIDC for APIs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `OAuth2/OIDC for APIs` against domain skill `security-api-integration`.
 
 ## API keys and HMAC
 
@@ -103,18 +99,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for api_keys controls.
-- Add automated tests for abuse cases before merging.
+- Map `API keys and HMAC` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `API keys and HMAC` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `API keys and HMAC` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `API keys and HMAC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `API keys and HMAC` against domain skill `security-api-integration`.
 
 ## Pagination and filtering abuse
 
@@ -122,18 +117,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for api_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Pagination and filtering abuse` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `Pagination and filtering abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Pagination and filtering abuse` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Pagination and filtering abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Pagination and filtering abuse` against domain skill `security-api-integration`.
 
 ## CORS for APIs
 
@@ -141,18 +135,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for cors controls.
-- Add automated tests for abuse cases before merging.
+- Map `CORS for APIs` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `CORS for APIs` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CORS for APIs` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `CORS for APIs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `CORS for APIs` against domain skill `security-api-integration`.
 
 ## OpenAPI and documentation leakage
 
@@ -160,18 +153,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for openapi_leak controls.
-- Add automated tests for abuse cases before merging.
+- Map `OpenAPI and documentation leakage` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `OpenAPI and documentation leakage` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `OpenAPI and documentation leakage` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `OpenAPI and documentation leakage`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `OpenAPI and documentation leakage` against domain skill `security-api-integration`.
 
 ## Backend-for-frontend patterns
 
@@ -179,18 +171,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for bff controls.
-- Add automated tests for abuse cases before merging.
+- Map `Backend-for-frontend patterns` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `Backend-for-frontend patterns` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Backend-for-frontend patterns` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Backend-for-frontend patterns`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Backend-for-frontend patterns` against domain skill `security-api-integration`.
 
 ## Legacy SOAP/XML APIs
 
@@ -198,18 +189,17 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for xml_legacy controls.
-- Add automated tests for abuse cases before merging.
+- Map `Legacy SOAP/XML APIs` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `Legacy SOAP/XML APIs` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Legacy SOAP/XML APIs` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Legacy SOAP/XML APIs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Legacy SOAP/XML APIs` against domain skill `security-api-integration`.
 
 ## Event buses and streaming
 
@@ -217,16 +207,15 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 ### Do (use this in Next.js)
 
-- Apply domain skill `security-api-integration` requirements using nextjs supported APIs only.
-- Use the official nextjs security documentation for messaging controls.
-- Add automated tests for abuse cases before merging.
+- Map `Event buses and streaming` controls to Next.js APIs documented for `security-api-integration`.
+- Add an abuse-case test or check for `Event buses and streaming` before merge.
 
 ### Don't
 
-- Do not disable security features of nextjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Event buses and streaming` work in Next.js with only happy-path tests.
+- Do not disable Next.js security defaults to unblock `Event buses and streaming`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nextjs projects in CI.
+- Peer review `Event buses and streaming` against domain skill `security-api-integration`.
 

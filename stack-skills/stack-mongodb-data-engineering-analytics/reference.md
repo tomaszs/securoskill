@@ -8,18 +8,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for warehouse controls.
-- Add automated tests for abuse cases before merging.
+- Map `Warehouse access control` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Warehouse access control` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Warehouse access control` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Warehouse access control`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Warehouse access control` against domain skill `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for etl controls.
-- Add automated tests for abuse cases before merging.
+- Map `ETL credentials` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `ETL credentials` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `ETL credentials` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `ETL credentials`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `ETL credentials` against domain skill `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -63,18 +61,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- Map `PII in analytics` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `PII in analytics` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `PII in analytics` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `PII in analytics`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `PII in analytics` against domain skill `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -82,18 +79,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for bi controls.
-- Add automated tests for abuse cases before merging.
+- Map `BI and dashboards` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `BI and dashboards` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `BI and dashboards` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `BI and dashboards`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `BI and dashboards` against domain skill `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -101,18 +97,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for data_lake controls.
-- Add automated tests for abuse cases before merging.
+- Map `Data lakes` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Data lakes` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Data lakes` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Data lakes`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Data lakes` against domain skill `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -120,18 +115,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for streaming controls.
-- Add automated tests for abuse cases before merging.
+- Map `Streaming analytics` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Streaming analytics` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Streaming analytics` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Streaming analytics`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Streaming analytics` against domain skill `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -139,18 +133,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for feature_store controls.
-- Add automated tests for abuse cases before merging.
+- Map `Feature stores` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Feature stores` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Feature stores` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Feature stores`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Feature stores` against domain skill `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -158,18 +151,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for notebooks controls.
-- Add automated tests for abuse cases before merging.
+- Map `Notebooks and ad hoc SQL` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Notebooks and ad hoc SQL` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Notebooks and ad hoc SQL` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Notebooks and ad hoc SQL`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Notebooks and ad hoc SQL` against domain skill `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -177,18 +169,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for data_contracts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Data contracts and quality` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Data contracts and quality` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Data contracts and quality` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Data contracts and quality`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Data contracts and quality` against domain skill `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -196,18 +187,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for third_party_data controls.
-- Add automated tests for abuse cases before merging.
+- Map `Third-party data feeds` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Third-party data feeds` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Third-party data feeds` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Third-party data feeds`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Third-party data feeds` against domain skill `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -215,16 +205,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- Map `Analytics backups` controls to MongoDB APIs documented for `security-data-engineering-analytics`.
+- Add an abuse-case test or check for `Analytics backups` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Analytics backups` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Analytics backups`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Analytics backups` against domain skill `security-data-engineering-analytics`.
 

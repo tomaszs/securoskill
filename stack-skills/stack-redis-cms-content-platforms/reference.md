@@ -8,18 +8,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for cms_api controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## WYSIWYG editors
 
@@ -27,15 +26,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Publish workflows
 
@@ -43,18 +44,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Plugins and themes
 
@@ -62,18 +62,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Comments and UGC moderation
 
@@ -81,18 +80,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## SEO and metadata injection
 
@@ -100,15 +98,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Media libraries
 
@@ -116,18 +116,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Multi-site CMS
 
@@ -135,18 +134,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## CMS search
 
@@ -154,18 +152,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Marketing forms
 
@@ -173,16 +170,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not rely on CORS alone to prevent CSRF.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Add automated abuse-case tests for Marketing forms in Redis.
-- Run SAST and dependency scans for Database in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## Static site generators
 
@@ -190,18 +188,17 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 
@@ -209,16 +206,15 @@ Stack-specific implementation for **Redis** (Database). Normative rules: domain 
 
 ### Do (use this in Redis)
 
-- Apply domain skill `security-cms-content-platforms` requirements using redis supported APIs only.
-- Use the official redis security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Redis is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Redis configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of redis for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Redis config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Redis defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on redis projects in CI.
+- Integration test the full path: Redis plus the system covered by `security-cms-content-platforms`.
 

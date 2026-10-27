@@ -8,16 +8,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Use Vercel env vars for secrets; server-only in Route Handlers and Server Actions.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not prefix secrets with `NEXT_PUBLIC_`.
-- Do not commit `.env` to git.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Build fails if client bundle contains `sk-` patterns (secret scan).
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Config separation
 
@@ -25,18 +24,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for config_separation controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Feature flags
 
@@ -44,18 +40,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for feature_flags controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Secret rotation
 
@@ -63,18 +56,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for secret_rotation controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## .env handling
 
@@ -82,18 +72,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for dotenv controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Config servers
 
@@ -101,18 +88,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for config_servers controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Hardcoded credentials
 
@@ -120,18 +104,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for hardcoded_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Public vs confidential clients
 
@@ -139,18 +120,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for public_clients controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Bootstrap secrets
 
@@ -158,18 +136,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for bootstrap_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Configuration audit
 
@@ -177,18 +152,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for config_audit controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Insecure defaults
 
@@ -196,18 +168,15 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for insecure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 
 ## Split knowledge
 
@@ -215,16 +184,13 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Apply domain skill `security-secrets-config` requirements using vercel supported APIs only.
-- Use the official vercel security documentation for split_knowledge controls.
-- Add automated tests for abuse cases before merging.
+- Store secrets in Vercel Project Settings; reference via `process.env` only in server files.
 
 ### Don't
 
-- Do not disable security features of vercel for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not use `NEXT_PUBLIC_` for API keys, DB URLs, or signing secrets.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vercel projects in CI.
+- Build step fails if client bundle contains `sk-` patterns.
 

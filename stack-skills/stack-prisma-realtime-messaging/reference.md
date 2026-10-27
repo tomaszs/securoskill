@@ -8,18 +8,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for ws_auth controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Room and channel authorization
 
@@ -27,17 +26,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Message integrity
 
@@ -45,18 +44,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for message_integrity controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Presence leaks
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for presence_leak controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## MQTT and IoT protocols
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for mqtt controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Kafka security
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for kafka controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Redis pub/sub
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for redis_pubsub controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Server-sent events
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for sse controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Collaborative editing
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for collab controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## WebRTC
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for webrtc controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Fan-out abuse
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for fanout controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 
 ## Message retention
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-realtime-messaging` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for retention controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `realtime-messaging` controls only in Prisma config while leaving security-realtime-messaging misconfigured.
+- Do not assume Prisma defaults satisfy `security-realtime-messaging` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-realtime-messaging`.
 

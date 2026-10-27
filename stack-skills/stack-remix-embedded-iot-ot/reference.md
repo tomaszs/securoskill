@@ -8,18 +8,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for firmware controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Secure boot and trust anchor
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for secure_boot controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Device communications
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for iot_comm controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Default credentials
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for default_creds controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Physical tamper resistance
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for physical_tamper controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## RTOS and bare metal
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for rtos controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Industrial OT and SCADA
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for ot controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Medical and safety devices
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for medical controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Automotive and CAN
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for automotive controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## IoT cloud backends
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for iot_cloud controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Botnet and abuse
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for iot_botnet controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 
 ## Firmware supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-embedded-iot-ot` requirements using remix supported APIs only.
-- Use the official remix security documentation for firmware_supply controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `embedded-iot-ot` controls only in Remix config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Remix defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-embedded-iot-ot`.
 

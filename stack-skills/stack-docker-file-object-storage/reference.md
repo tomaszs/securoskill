@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Malware scanning
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Presigned URLs
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Bucket policies and ACLs
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## CDN and origin access
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Image and media processing
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Document preview
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## User-generated content hosting
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Versioning and lifecycle
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Object encryption
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Metadata and headers
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 
 ## Archives and backups
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `file-object-storage` controls only in Docker config while leaving security-file-object-storage misconfigured.
+- Do not assume Docker defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-file-object-storage`.
 

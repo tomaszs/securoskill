@@ -25,18 +25,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-containers-k8s` requirements using docker supported APIs only.
-- Use the official docker security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Kubernetes RBAC` controls to Docker APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Kubernetes RBAC` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Kubernetes RBAC` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Kubernetes RBAC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Kubernetes RBAC` against domain skill `security-containers-k8s`.
 
 ## Network policies
 
@@ -44,18 +43,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-containers-k8s` requirements using docker supported APIs only.
-- Use the official docker security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Network policies` controls to Docker APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Network policies` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Network policies` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Network policies`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Network policies` against domain skill `security-containers-k8s`.
 
 ## Kubernetes secrets
 
@@ -63,18 +61,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-containers-k8s` requirements using docker supported APIs only.
-- Use the official docker security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Kubernetes secrets` controls to Docker APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Kubernetes secrets` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Kubernetes secrets` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Kubernetes secrets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Kubernetes secrets` against domain skill `security-containers-k8s`.
 
 ## Container runtime
 
@@ -82,18 +79,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-containers-k8s` requirements using docker supported APIs only.
-- Use the official docker security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Container runtime` controls to Docker APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Container runtime` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Container runtime` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Container runtime`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Container runtime` against domain skill `security-containers-k8s`.
 
 ## Admission controllers
 
@@ -169,18 +165,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Apply domain skill `security-containers-k8s` requirements using docker supported APIs only.
-- Use the official docker security documentation for k8s_rbac controls.
-- Add automated tests for abuse cases before merging.
+- Map `Windows containers` controls to Docker APIs documented for `security-containers-k8s`.
+- Add an abuse-case test or check for `Windows containers` before merge.
 
 ### Don't
 
-- Do not disable security features of docker for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Windows containers` work in Docker with only happy-path tests.
+- Do not disable Docker security defaults to unblock `Windows containers`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on docker projects in CI.
+- Peer review `Windows containers` against domain skill `security-containers-k8s`.
 
 ## Docker Compose dev security
 

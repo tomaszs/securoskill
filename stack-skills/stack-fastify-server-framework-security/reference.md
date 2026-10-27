@@ -227,16 +227,15 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Apply domain skill `security-server-framework-security` requirements using fastify supported APIs only.
-- Use the official fastify security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to Fastify APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of fastify for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in Fastify with only happy-path tests.
+- Do not disable Fastify security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on fastify projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

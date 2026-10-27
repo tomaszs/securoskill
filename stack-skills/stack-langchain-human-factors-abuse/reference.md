@@ -8,18 +8,16 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Pin hashes in Poetry/pip-tools lockfiles; run `pip-audit` in CI.
+- Verify PyPI package owner matches your internal allowlist.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not `pip install` from arbitrary git URLs pasted into tickets.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Bandit + dependency scan on every merge touching requirements.
 
 ## Customer support takeover
 
@@ -27,18 +25,15 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Align LangChain / LangGraph with org support playbook: verify caller identity before account changes.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not train staff to bypass MFA for VIP customers.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Quarterly tabletop: fake support chat attempting account takeover.
 
 ## Vishing and impersonation
 
@@ -46,18 +41,17 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Publish official LangChain / LangGraph on-call and security contact channels on an internal wiki (not DMs).
+- Require callback to known numbers for wire transfers, production access, or secret rotation.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not share production credentials or break-glass codes on unverified phone or video calls.
+- Do not trust caller ID alone for vendor or 'CEO' urgent requests.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Run vishing simulation targeting engineers who deploy LangChain / LangGraph.
 
 ## Insider threat
 
@@ -65,18 +59,16 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Scope LangChain / LangGraph production credentials per engineer; no shared `.env` files in chat.
+- Monitor anomalous git pushes and package publishes from service accounts.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not leave production API keys in personal dotfiles repos.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- SIEM rule: first-time access to prod secrets from new workstation.
 
 ## Physical access to dev assets
 
@@ -84,18 +76,16 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Lock laptops running LangChain / LangGraph IDEs when away; use hardware security keys for git and cloud.
+- Shred or secure-wipe drives before hardware disposal.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not plug unknown USB devices into machines with production kubeconfig.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Office walk-through: unattended unlocked dev machines logged as findings.
 
 ## Security awareness
 
@@ -103,18 +93,15 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Include LangChain / LangGraph-specific abuse cases (not generic OWASP slides) in onboarding.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not treat security training as checkbox-only without stack examples.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Quiz includes a scenario tied to this stack's deployment model.
 
 ## Incident communications
 
@@ -122,18 +109,18 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 
 ## Bug bounty operations
 
@@ -141,18 +128,18 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 
 ## Law enforcement requests
 
@@ -160,18 +147,18 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 
 ## Social engineering of login flows
 
@@ -179,18 +166,18 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 
 ## Documentation and wiki leaks
 
@@ -198,18 +185,18 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 
 ## BPO and outsourced access
 
@@ -217,16 +204,16 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 

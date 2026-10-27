@@ -8,18 +8,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for ci_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Map `CI secrets` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `CI secrets` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CI secrets` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `CI secrets`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `CI secrets` against domain skill `security-devsecops-cicd`.
 
 ## Static analysis
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for sast controls.
-- Add automated tests for abuse cases before merging.
+- Map `Static analysis` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Static analysis` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Static analysis` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Static analysis`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Static analysis` against domain skill `security-devsecops-cicd`.
 
 ## Dynamic analysis
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for dast controls.
-- Add automated tests for abuse cases before merging.
+- Map `Dynamic analysis` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Dynamic analysis` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Dynamic analysis` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Dynamic analysis`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Dynamic analysis` against domain skill `security-devsecops-cicd`.
 
 ## Dependency scanning
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for dependency_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Dependency scanning` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Dependency scanning` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Dependency scanning` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Dependency scanning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Dependency scanning` against domain skill `security-devsecops-cicd`.
 
 ## Artifact signing
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for signing controls.
-- Add automated tests for abuse cases before merging.
+- Map `Artifact signing` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Artifact signing` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Artifact signing` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Artifact signing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Artifact signing` against domain skill `security-devsecops-cicd`.
 
 ## Branch protection
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for branch_protection controls.
-- Add automated tests for abuse cases before merging.
+- Map `Branch protection` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Branch protection` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Branch protection` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Branch protection`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Branch protection` against domain skill `security-devsecops-cicd`.
 
 ## Deployment gates
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for deploy_gates controls.
-- Add automated tests for abuse cases before merging.
+- Map `Deployment gates` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Deployment gates` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Deployment gates` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Deployment gates`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Deployment gates` against domain skill `security-devsecops-cicd`.
 
 ## IaC scanning
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for iac_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `IaC scanning` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `IaC scanning` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `IaC scanning` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `IaC scanning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `IaC scanning` against domain skill `security-devsecops-cicd`.
 
 ## Container scan in CI
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for container_scan_ci controls.
-- Add automated tests for abuse cases before merging.
+- Map `Container scan in CI` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Container scan in CI` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Container scan in CI` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Container scan in CI`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Container scan in CI` against domain skill `security-devsecops-cicd`.
 
 ## Secret scanning
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for secrets_scan controls.
-- Add automated tests for abuse cases before merging.
+- Map `Secret scanning` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Secret scanning` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Secret scanning` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Secret scanning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Secret scanning` against domain skill `security-devsecops-cicd`.
 
 ## Environment promotion
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for env_promotion controls.
-- Add automated tests for abuse cases before merging.
+- Map `Environment promotion` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `Environment promotion` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Environment promotion` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `Environment promotion`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `Environment promotion` against domain skill `security-devsecops-cicd`.
 
 ## CI supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **SvelteKit** (Web UI). Normative rules: domai
 
 ### Do (use this in SvelteKit)
 
-- Apply domain skill `security-devsecops-cicd` requirements using sveltekit supported APIs only.
-- Use the official sveltekit security documentation for supply_chain_ci controls.
-- Add automated tests for abuse cases before merging.
+- Map `CI supply chain` controls to SvelteKit APIs documented for `security-devsecops-cicd`.
+- Add an abuse-case test or check for `CI supply chain` before merge.
 
 ### Don't
 
-- Do not disable security features of sveltekit for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `CI supply chain` work in SvelteKit with only happy-path tests.
+- Do not disable SvelteKit security defaults to unblock `CI supply chain`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on sveltekit projects in CI.
+- Peer review `CI supply chain` against domain skill `security-devsecops-cicd`.
 

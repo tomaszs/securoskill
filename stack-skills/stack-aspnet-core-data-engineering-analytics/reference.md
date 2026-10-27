@@ -8,18 +8,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for warehouse controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## ETL credentials
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for etl controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Pipeline injection
 
@@ -65,18 +63,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## BI and dashboards
 
@@ -84,18 +81,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for bi controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Data lakes
 
@@ -103,18 +99,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for data_lake controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Streaming analytics
 
@@ -122,18 +117,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for streaming controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Feature stores
 
@@ -141,18 +135,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for feature_store controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Notebooks and ad hoc SQL
 
@@ -160,18 +153,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for notebooks controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Data contracts and quality
 
@@ -179,18 +171,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for data_contracts controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Third-party data feeds
 
@@ -198,18 +189,17 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for third_party_data controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 
 ## Analytics backups
 
@@ -217,16 +207,15 @@ Stack-specific implementation for **ASP.NET Core** (.NET). Normative rules: doma
 
 ### Do (use this in ASP.NET Core)
 
-- Apply domain skill `security-data-engineering-analytics` requirements using aspnet-core supported APIs only.
-- Use the official aspnet-core security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- ASP.NET Core is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
+- Keep ASP.NET Core configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aspnet-core for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `data-engineering-analytics` controls only in ASP.NET Core config while leaving security-data-engineering-analytics misconfigured.
+- Do not assume ASP.NET Core defaults satisfy `security-data-engineering-analytics` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aspnet-core projects in CI.
+- Integration test the full path: ASP.NET Core plus the system covered by `security-data-engineering-analytics`.
 

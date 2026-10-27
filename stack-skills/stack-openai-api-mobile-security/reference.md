@@ -8,18 +8,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## WebView bridges
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Push notifications
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## App attestation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `mobile-security` controls only in OpenAI API / Agents SDK config while leaving security-mobile-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-mobile-security`.
 

@@ -8,18 +8,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for tls controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Symmetric encryption
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for crypto_symmetric controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Asymmetric crypto
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for crypto_asymmetric controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Hashing and passwords
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for hashing controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Randomness and IDs
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for randomness controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## KMS and HSM
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for kms controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## JWT and JOSE
 
@@ -122,17 +116,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Use RS256 or ES256; validate `aud`, `iss`, `exp`; store keys in KMS.
-- Rotate signing keys with overlap.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not accept `alg: none` or HS256 with public client secrets.
-- Do not put PII in JWT payloads.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Use jwt lint tools in CI for sample tokens.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## PGP and email crypto
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for pgp controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Specialized crypto uses
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for crypto_generic controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Crypto agility
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for crypto_generic controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Secrets derivation
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for kdf controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 
 ## Side channels
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Ruby on Rails** (Ruby). Normative rules: dom
 
 ### Do (use this in Ruby on Rails)
 
-- Apply domain skill `security-cryptography` requirements using rails supported APIs only.
-- Use the official rails security documentation for side_channel controls.
-- Add automated tests for abuse cases before merging.
+- Ruby on Rails is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
+- Keep Ruby on Rails configuration aligned with requirements from `security-cryptography` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of rails for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cryptography` controls only in Ruby on Rails config while leaving security-cryptography misconfigured.
+- Do not assume Ruby on Rails defaults satisfy `security-cryptography` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on rails projects in CI.
+- Integration test the full path: Ruby on Rails plus the system covered by `security-cryptography`.
 

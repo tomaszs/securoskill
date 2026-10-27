@@ -8,18 +8,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_storage controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_tls controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_re controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for deeplinks controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_auth controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_biometric controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## WebView bridges
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_webview controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Push notifications
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_push controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## App attestation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for app_attest controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for sideload controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for screenshot controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Amazon Web Services** (Cloud). Normative rul
 
 ### Do (use this in Amazon Web Services)
 
-- Apply domain skill `security-mobile-security` requirements using aws supported APIs only.
-- Use the official aws security documentation for mobile_supply controls.
-- Add automated tests for abuse cases before merging.
+- Amazon Web Services is not the primary enforcement point for `mobile-security`; load stack skill `security-mobile-security` when you touch that layer.
+- Keep Amazon Web Services configuration aligned with requirements from `security-mobile-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of aws for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `mobile-security` controls only in Amazon Web Services config while leaving security-mobile-security misconfigured.
+- Do not assume Amazon Web Services defaults satisfy `security-mobile-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on aws projects in CI.
+- Integration test the full path: Amazon Web Services plus the system covered by `security-mobile-security`.
 

@@ -187,16 +187,15 @@ Stack-specific implementation for **Kubernetes** (Infrastructure). Normative rul
 
 ### Do (use this in Kubernetes)
 
-- Apply domain skill `security-server-framework-security` requirements using kubernetes supported APIs only.
-- Use the official kubernetes security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Kubernetes is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Kubernetes configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of kubernetes for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Kubernetes config while leaving security-server-framework-security misconfigured.
+- Do not assume Kubernetes defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on kubernetes projects in CI.
+- Integration test the full path: Kubernetes plus the system covered by `security-server-framework-security`.
 

@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Device posture
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## ZTNA and private access
 
@@ -42,16 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Micro-segmentation
 
@@ -59,16 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Service mesh identity
 
@@ -76,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Privileged access management
 
@@ -93,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Conditional access policies
 
@@ -110,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Bastion-less admin
 
@@ -127,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Workload identity federation
 
@@ -144,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Network device trust
 
@@ -161,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Remote work access
 
@@ -178,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 
 ## Zero trust measurement
 
@@ -195,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `zero-trust-access` controls only in Docker config while leaving security-zero-trust-access misconfigured.
+- Do not assume Docker defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-zero-trust-access`.
 

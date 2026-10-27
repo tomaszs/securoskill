@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Secure boot and trust anchor
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Device communications
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Default credentials
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Physical tamper resistance
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## RTOS and bare metal
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Industrial OT and SCADA
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Medical and safety devices
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Automotive and CAN
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## IoT cloud backends
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Botnet and abuse
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 
 ## Firmware supply chain
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Use EncryptedSharedPreferences or Keystore for secrets.
-- Set `android:usesCleartextTraffic=false`.
+- Kotlin / Jetpack Compose is not the primary enforcement point for `embedded-iot-ot`; load stack skill `security-embedded-iot-ot` when you touch that layer.
+- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-embedded-iot-ot` (domain reference.md).
 
 ### Don't
 
-- Do not store tokens in plain SharedPreferences.
-- Do not export components without permissions.
+- Do not duplicate `embedded-iot-ot` controls only in Kotlin / Jetpack Compose config while leaving security-embedded-iot-ot misconfigured.
+- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-embedded-iot-ot` without verification.
 
 ### Verify
 
-- MobSF scan on APK/AAB.
+- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-embedded-iot-ot`.
 

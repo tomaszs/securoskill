@@ -8,18 +8,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for payment_fraud controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Workflow bypass
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Insecure direct object references
 
@@ -46,17 +44,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Mass assignment
 
@@ -64,17 +62,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Bots and automation
 
@@ -82,18 +80,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for bots controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Referral and loyalty abuse
 
@@ -101,18 +98,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for referral controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Marketplace trust
 
@@ -120,18 +116,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for marketplace controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Content abuse
 
@@ -139,18 +134,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Quota and limit bypass
 
@@ -158,18 +152,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for quota controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Admin misuse
 
@@ -177,18 +170,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for admin_misuse controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Time-based logic
 
@@ -196,18 +188,17 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for time_logic controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 
 ## Feature gating bypass
 
@@ -215,16 +206,15 @@ Stack-specific implementation for **Cloudflare Workers** (Platform). Normative r
 
 ### Do (use this in Cloudflare Workers)
 
-- Apply domain skill `security-business-logic-abuse` requirements using cloudflare-workers supported APIs only.
-- Use the official cloudflare-workers security documentation for feature_gating controls.
-- Add automated tests for abuse cases before merging.
+- Cloudflare Workers is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Cloudflare Workers configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of cloudflare-workers for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `business-logic-abuse` controls only in Cloudflare Workers config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Cloudflare Workers defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on cloudflare-workers projects in CI.
+- Integration test the full path: Cloudflare Workers plus the system covered by `security-business-logic-abuse`.
 

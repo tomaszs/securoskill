@@ -27,17 +27,18 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Model abuse and cost
 
@@ -45,17 +46,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Training data poisoning
 
@@ -63,17 +64,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Model and weight exfiltration
 
@@ -81,17 +82,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Agent tool invocation
 
@@ -99,17 +100,18 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Unsafe outputs
 
@@ -117,17 +119,18 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Red teaming LLMs
 
@@ -135,17 +138,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Fine-tuning access
 
@@ -153,17 +156,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Embeddings privacy
 
@@ -171,17 +174,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## MCP and external tools
 
@@ -189,17 +192,18 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## AI governance
 
@@ -207,15 +211,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Pin module versions; store state in encrypted remote backend.
-- Use `terraform plan` in CI with policy checks.
+- Terraform is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Terraform configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not commit `terraform.tfstate` with secrets.
-- Do not use `0.0.0.0/0` security groups without review.
+- Do not duplicate `ai-ml-security` controls only in Terraform config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Terraform defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- tfsec/checkov on every PR.
+- Integration test the full path: Terraform plus the system covered by `stack-openai-api-ai-ml-security`.
 

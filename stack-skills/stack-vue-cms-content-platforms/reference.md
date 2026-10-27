@@ -8,18 +8,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for cms_api controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## WYSIWYG editors
 
@@ -27,20 +26,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Use `{{ }}` text interpolation for user data (escaped by default).
-- Use `v-text` instead of `v-html` when formatting is not required.
-- If `v-html` is required, sanitize with DOMPurify in a computed property first.
-- Configure CSP on the host (Nuxt `routeRules` / Vite plugin headers).
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not use `v-html` with CMS, comment, or API HTML without a sanitizer.
-- Do not bind `href` to unvalidated user URLs.
-- Do not inject user strings into `<style>` or `<script>` blocks in SFCs dynamically.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Add Vitest tests with typical XSS vectors in props and store state.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Publish workflows
 
@@ -48,18 +44,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for workflow controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Plugins and themes
 
@@ -67,18 +62,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for supply_chain controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Comments and UGC moderation
 
@@ -86,18 +80,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for content_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## SEO and metadata injection
 
@@ -105,20 +98,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Use `{{ }}` text interpolation for user data (escaped by default).
-- Use `v-text` instead of `v-html` when formatting is not required.
-- If `v-html` is required, sanitize with DOMPurify in a computed property first.
-- Configure CSP on the host (Nuxt `routeRules` / Vite plugin headers).
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not use `v-html` with CMS, comment, or API HTML without a sanitizer.
-- Do not bind `href` to unvalidated user URLs.
-- Do not inject user strings into `<style>` or `<script>` blocks in SFCs dynamically.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Add Vitest tests with typical XSS vectors in props and store state.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Media libraries
 
@@ -126,18 +116,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for file_upload_ui controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Multi-site CMS
 
@@ -145,18 +134,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## CMS search
 
@@ -164,18 +152,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Marketing forms
 
@@ -183,17 +170,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
-- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
-- Do not store CSRF secrets only in JS-accessible storage without rotation.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Integration test cross-origin POST without token expects 403.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## Static site generators
 
@@ -201,18 +188,17 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 
@@ -220,16 +206,15 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Apply domain skill `security-cms-content-platforms` requirements using vue supported APIs only.
-- Use the official vue security documentation for rbac controls.
-- Add automated tests for abuse cases before merging.
+- Vue.js is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
+- Keep Vue.js configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of vue for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `cms-content-platforms` controls only in Vue.js config while leaving security-cms-content-platforms misconfigured.
+- Do not assume Vue.js defaults satisfy `security-cms-content-platforms` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on vue projects in CI.
+- Integration test the full path: Vue.js plus the system covered by `security-cms-content-platforms`.
 

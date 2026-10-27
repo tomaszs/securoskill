@@ -8,18 +8,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for upload_validation controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Malware scanning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for malware_scan controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Presigned URLs
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for presigned controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Bucket policies and ACLs
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for bucket_acl controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## CDN and origin access
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for cdn_origin controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Image and media processing
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for image_processing controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Document preview
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for doc_preview controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## User-generated content hosting
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for ugc_hosting controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Versioning and lifecycle
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for object_versioning controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Object encryption
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for object_encryption controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Metadata and headers
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for object_metadata controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 
 ## Archives and backups
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-file-object-storage` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for archive_security controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `file-object-storage`; load stack skill `security-file-object-storage` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-file-object-storage` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `file-object-storage` controls only in Hibernate / JPA config while leaving security-file-object-storage misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-file-object-storage` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-file-object-storage`.
 

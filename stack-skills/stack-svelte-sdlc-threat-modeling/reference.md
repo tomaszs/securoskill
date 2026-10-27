@@ -8,18 +8,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for threat_model controls.
-- Add automated tests for abuse cases before merging.
+- Map `STRIDE and threat models` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `STRIDE and threat models` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `STRIDE and threat models` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `STRIDE and threat models`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `STRIDE and threat models` against domain skill `security-sdlc-threat-modeling`.
 
 ## Security requirements
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for sec_reqs controls.
-- Add automated tests for abuse cases before merging.
+- Map `Security requirements` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Security requirements` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Security requirements` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Security requirements`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Security requirements` against domain skill `security-sdlc-threat-modeling`.
 
 ## Design review
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for design_review controls.
-- Add automated tests for abuse cases before merging.
+- Map `Design review` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Design review` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Design review` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Design review`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Design review` against domain skill `security-sdlc-threat-modeling`.
 
 ## Security-focused code review
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for code_review controls.
-- Add automated tests for abuse cases before merging.
+- Map `Security-focused code review` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Security-focused code review` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Security-focused code review` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Security-focused code review`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Security-focused code review` against domain skill `security-sdlc-threat-modeling`.
 
 ## Security test planning
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for sec_testing controls.
-- Add automated tests for abuse cases before merging.
+- Map `Security test planning` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Security test planning` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Security test planning` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Security test planning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Security test planning` against domain skill `security-sdlc-threat-modeling`.
 
 ## Secure defaults culture
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for secure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Map `Secure defaults culture` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Secure defaults culture` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Secure defaults culture` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Secure defaults culture`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Secure defaults culture` against domain skill `security-sdlc-threat-modeling`.
 
 ## Developer education
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for education controls.
-- Add automated tests for abuse cases before merging.
+- Map `Developer education` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Developer education` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Developer education` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Developer education`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Developer education` against domain skill `security-sdlc-threat-modeling`.
 
 ## Vendor security assessment
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for vendor controls.
-- Add automated tests for abuse cases before merging.
+- Map `Vendor security assessment` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Vendor security assessment` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Vendor security assessment` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Vendor security assessment`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Vendor security assessment` against domain skill `security-sdlc-threat-modeling`.
 
 ## Architecture decision records
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for adr controls.
-- Add automated tests for abuse cases before merging.
+- Map `Architecture decision records` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Architecture decision records` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Architecture decision records` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Architecture decision records`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Architecture decision records` against domain skill `security-sdlc-threat-modeling`.
 
 ## Attack surface management
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for asm controls.
-- Add automated tests for abuse cases before merging.
+- Map `Attack surface management` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Attack surface management` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Attack surface management` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Attack surface management`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Attack surface management` against domain skill `security-sdlc-threat-modeling`.
 
 ## Purple team exercises
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for purple controls.
-- Add automated tests for abuse cases before merging.
+- Map `Purple team exercises` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `Purple team exercises` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Purple team exercises` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `Purple team exercises`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `Purple team exercises` against domain skill `security-sdlc-threat-modeling`.
 
 ## SDL metrics
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-sdlc-threat-modeling` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for sdlc_metrics controls.
-- Add automated tests for abuse cases before merging.
+- Map `SDL metrics` controls to Svelte APIs documented for `security-sdlc-threat-modeling`.
+- Add an abuse-case test or check for `SDL metrics` before merge.
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `SDL metrics` work in Svelte with only happy-path tests.
+- Do not disable Svelte security defaults to unblock `SDL metrics`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Peer review `SDL metrics` against domain skill `security-sdlc-threat-modeling`.
 

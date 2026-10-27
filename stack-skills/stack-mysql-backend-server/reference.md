@@ -26,17 +26,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Session management on server
 
@@ -44,18 +44,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for sessions controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Error handling and information disclosure
 
@@ -63,18 +62,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for error_disclosure controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Concurrency and race conditions
 
@@ -82,18 +80,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for concurrency controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Server file I/O
 
@@ -101,18 +98,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for path_traversal controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Deserialization and parsing
 
@@ -120,18 +116,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for deserialization controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Background jobs and queues
 
@@ -139,18 +134,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for jobs controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Server-side caching
 
@@ -158,18 +152,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for cache controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Tenant isolation on server
 
@@ -177,18 +170,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Rate limiting and abuse
 
@@ -196,18 +188,17 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for rate_limit controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 
 ## Health and debug endpoints
 
@@ -215,16 +206,15 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 ### Do (use this in MySQL / MariaDB)
 
-- Apply domain skill `security-backend-server` requirements using mysql supported APIs only.
-- Use the official mysql security documentation for debug_endpoints controls.
-- Add automated tests for abuse cases before merging.
+- MySQL / MariaDB is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
+- Keep MySQL / MariaDB configuration aligned with requirements from `security-backend-server` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of mysql for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `backend-server` controls only in MySQL / MariaDB config while leaving stack-express-backend-server (or your API stack) misconfigured.
+- Do not assume MySQL / MariaDB defaults satisfy `security-backend-server` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mysql projects in CI.
+- Integration test the full path: MySQL / MariaDB plus the system covered by `stack-express-backend-server (or your API stack)`.
 

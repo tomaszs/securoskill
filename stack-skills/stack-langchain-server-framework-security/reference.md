@@ -187,16 +187,16 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 ### Do (use this in LangChain / LangGraph)
 
-- Apply domain skill `security-server-framework-security` requirements using langchain supported APIs only.
-- Use the official langchain security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Wrap tools with `@tool` Pydantic schemas; reject extra fields.
+- Use LangGraph interrupt points before destructive tool calls.
+- Tag RAG documents with tenant_id metadata and filter retriever.
 
 ### Don't
 
-- Do not disable security features of langchain for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not pass raw webpage HTML into the system prompt as instructions.
+- Do not expose `shell` or `sql` tools without argument allowlists.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on langchain projects in CI.
+- Red-team corpus in CI with indirect injection in retrieved docs.
 

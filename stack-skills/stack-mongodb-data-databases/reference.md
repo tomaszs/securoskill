@@ -8,18 +8,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for sql_dba controls.
-- Add automated tests for abuse cases before merging.
+- Map `Relational databases` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Relational databases` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Relational databases` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Relational databases`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Relational databases` against domain skill `security-data-databases`.
 
 ## NoSQL stores
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for nosql controls.
-- Add automated tests for abuse cases before merging.
+- Map `NoSQL stores` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `NoSQL stores` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `NoSQL stores` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `NoSQL stores`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `NoSQL stores` against domain skill `security-data-databases`.
 
 ## ORM and query builders
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for orm controls.
-- Add automated tests for abuse cases before merging.
+- Map `ORM and query builders` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `ORM and query builders` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `ORM and query builders` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `ORM and query builders`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `ORM and query builders` against domain skill `security-data-databases`.
 
 ## Encryption at rest
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for encryption_at_rest controls.
-- Add automated tests for abuse cases before merging.
+- Map `Encryption at rest` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Encryption at rest` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Encryption at rest` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Encryption at rest`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Encryption at rest` against domain skill `security-data-databases`.
 
 ## Backup and restore
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for backups controls.
-- Add automated tests for abuse cases before merging.
+- Map `Backup and restore` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Backup and restore` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Backup and restore` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Backup and restore`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Backup and restore` against domain skill `security-data-databases`.
 
 ## Replication and CDC
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for replication controls.
-- Add automated tests for abuse cases before merging.
+- Map `Replication and CDC` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Replication and CDC` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Replication and CDC` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Replication and CDC`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Replication and CDC` against domain skill `security-data-databases`.
 
 ## Data minimization
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for data_minimization controls.
-- Add automated tests for abuse cases before merging.
+- Map `Data minimization` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Data minimization` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Data minimization` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Data minimization`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Data minimization` against domain skill `security-data-databases`.
 
 ## PII and sensitive fields
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for pii controls.
-- Add automated tests for abuse cases before merging.
+- Map `PII and sensitive fields` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `PII and sensitive fields` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `PII and sensitive fields` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `PII and sensitive fields`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `PII and sensitive fields` against domain skill `security-data-databases`.
 
 ## Schema migrations safety
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for migrations controls.
-- Add automated tests for abuse cases before merging.
+- Map `Schema migrations safety` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Schema migrations safety` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Schema migrations safety` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Schema migrations safety`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Schema migrations safety` against domain skill `security-data-databases`.
 
 ## Connection strings and pooling
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for db_connections controls.
-- Add automated tests for abuse cases before merging.
+- Map `Connection strings and pooling` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Connection strings and pooling` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Connection strings and pooling` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Connection strings and pooling`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Connection strings and pooling` against domain skill `security-data-databases`.
 
 ## Row-level and column security
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for rls controls.
-- Add automated tests for abuse cases before merging.
+- Map `Row-level and column security` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Row-level and column security` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Row-level and column security` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Row-level and column security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Row-level and column security` against domain skill `security-data-databases`.
 
 ## Search indexes
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 ### Do (use this in MongoDB)
 
-- Apply domain skill `security-data-databases` requirements using mongodb supported APIs only.
-- Use the official mongodb security documentation for search_index controls.
-- Add automated tests for abuse cases before merging.
+- Map `Search indexes` controls to MongoDB APIs documented for `security-data-databases`.
+- Add an abuse-case test or check for `Search indexes` before merge.
 
 ### Don't
 
-- Do not disable security features of mongodb for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Search indexes` work in MongoDB with only happy-path tests.
+- Do not disable MongoDB security defaults to unblock `Search indexes`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on mongodb projects in CI.
+- Peer review `Search indexes` against domain skill `security-data-databases`.
 

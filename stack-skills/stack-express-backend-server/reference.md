@@ -39,6 +39,7 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 ### Verify
 
 - Add tests for horizontal IDOR (user A cannot access user B ids).
+- Run eslint-plugin-security on changes affecting `Server-side authorization`.
 
 ## Session management on server
 
@@ -46,18 +47,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for sessions controls.
-- Add automated tests for abuse cases before merging.
+- Map `Session management on server` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Session management on server` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Session management on server` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Session management on server`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Session management on server` against domain skill `security-backend-server`.
 
 ## Error handling and information disclosure
 
@@ -65,18 +65,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for error_disclosure controls.
-- Add automated tests for abuse cases before merging.
+- Map `Error handling and information disclosure` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Error handling and information disclosure` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Error handling and information disclosure` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Error handling and information disclosure`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Error handling and information disclosure` against domain skill `security-backend-server`.
 
 ## Concurrency and race conditions
 
@@ -84,18 +83,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for concurrency controls.
-- Add automated tests for abuse cases before merging.
+- Map `Concurrency and race conditions` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Concurrency and race conditions` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Concurrency and race conditions` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Concurrency and race conditions`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Concurrency and race conditions` against domain skill `security-backend-server`.
 
 ## Server file I/O
 
@@ -103,18 +101,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for path_traversal controls.
-- Add automated tests for abuse cases before merging.
+- Map `Server file I/O` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Server file I/O` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Server file I/O` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Server file I/O`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Server file I/O` against domain skill `security-backend-server`.
 
 ## Deserialization and parsing
 
@@ -122,18 +119,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for deserialization controls.
-- Add automated tests for abuse cases before merging.
+- Map `Deserialization and parsing` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Deserialization and parsing` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Deserialization and parsing` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Deserialization and parsing`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Deserialization and parsing` against domain skill `security-backend-server`.
 
 ## Background jobs and queues
 
@@ -141,18 +137,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for jobs controls.
-- Add automated tests for abuse cases before merging.
+- Map `Background jobs and queues` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Background jobs and queues` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Background jobs and queues` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Background jobs and queues`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Background jobs and queues` against domain skill `security-backend-server`.
 
 ## Server-side caching
 
@@ -160,18 +155,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for cache controls.
-- Add automated tests for abuse cases before merging.
+- Map `Server-side caching` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Server-side caching` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Server-side caching` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Server-side caching`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Server-side caching` against domain skill `security-backend-server`.
 
 ## Tenant isolation on server
 
@@ -179,18 +173,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for multi_tenant controls.
-- Add automated tests for abuse cases before merging.
+- Map `Tenant isolation on server` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Tenant isolation on server` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Tenant isolation on server` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Tenant isolation on server`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Tenant isolation on server` against domain skill `security-backend-server`.
 
 ## Rate limiting and abuse
 
@@ -198,18 +191,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for rate_limit controls.
-- Add automated tests for abuse cases before merging.
+- Map `Rate limiting and abuse` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Rate limiting and abuse` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Rate limiting and abuse` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Rate limiting and abuse`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Rate limiting and abuse` against domain skill `security-backend-server`.
 
 ## Health and debug endpoints
 
@@ -217,16 +209,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-backend-server` requirements using express supported APIs only.
-- Use the official express security documentation for debug_endpoints controls.
-- Add automated tests for abuse cases before merging.
+- Map `Health and debug endpoints` controls to Express.js APIs documented for `security-backend-server`.
+- Add an abuse-case test or check for `Health and debug endpoints` before merge.
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Health and debug endpoints` work in Express.js with only happy-path tests.
+- Do not disable Express.js security defaults to unblock `Health and debug endpoints`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Peer review `Health and debug endpoints` against domain skill `security-backend-server`.
 

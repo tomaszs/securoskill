@@ -8,15 +8,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Vue.js
 
@@ -24,15 +26,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Angular
 
@@ -40,15 +44,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Next.js and Nuxt
 
@@ -56,18 +62,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Svelte and SvelteKit
 
@@ -75,18 +80,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Astro, Remix, and islands
 
@@ -94,18 +98,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Client state libraries
 
@@ -113,18 +116,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Apply domain skill `security-frontend-client` requirements using openai-api supported APIs only.
-- Use the official openai-api security documentation for browser_storage controls.
-- Add automated tests for abuse cases before merging.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of openai-api for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on openai-api projects in CI.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Client routing security
 
@@ -132,18 +134,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## i18n and locale
 
@@ -151,18 +152,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Design system components
 
@@ -170,15 +170,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Encode all user-controlled output at the UI sink for this stack.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not mix untrusted HTML with framework escape boundaries.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Manual XSS test cases on forms and rich text.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 
 ## Storybook and dev tools
 
@@ -186,18 +188,17 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
 ## Micro-frontends
 
@@ -205,16 +206,15 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
-- Allowlist tools; validate JSON arguments with a strict schema before execution.
-- Run privileged tools with service accounts scoped to the requesting user/tenant.
+- OpenAI API / Agents SDK is not the primary enforcement point for `web-framework-security`; load stack skill `security-web-framework-security` when you touch that layer.
+- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-web-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not pass raw user chat text directly into system prompts without separation.
-- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
+- Do not duplicate `web-framework-security` controls only in OpenAI API / Agents SDK config while leaving security-web-framework-security misconfigured.
+- Do not assume OpenAI API / Agents SDK defaults satisfy `security-web-framework-security` without verification.
 
 ### Verify
 
-- Red-team with indirect injection samples in RAG fixtures.
+- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-web-framework-security`.
 

@@ -8,18 +8,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for zt controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Device posture
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for device_posture controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## ZTNA and private access
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for ztna controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Micro-segmentation
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for microseg controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Service mesh identity
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for mesh_zt controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Privileged access management
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for pam controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Conditional access policies
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for conditional_access controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Bastion-less admin
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for bastionless controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Workload identity federation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for workload_identity controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Network device trust
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for nac controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Remote work access
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for remote_work controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 
 ## Zero trust measurement
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **TypeORM** (ORM / data access). Normative rul
 
 ### Do (use this in TypeORM)
 
-- Apply domain skill `security-zero-trust-access` requirements using typeorm supported APIs only.
-- Use the official typeorm security documentation for zt_metrics controls.
-- Add automated tests for abuse cases before merging.
+- TypeORM is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
+- Keep TypeORM configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of typeorm for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `zero-trust-access` controls only in TypeORM config while leaving security-zero-trust-access misconfigured.
+- Do not assume TypeORM defaults satisfy `security-zero-trust-access` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on typeorm projects in CI.
+- Integration test the full path: TypeORM plus the system covered by `security-zero-trust-access`.
 

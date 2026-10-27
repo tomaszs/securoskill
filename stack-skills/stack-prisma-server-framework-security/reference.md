@@ -207,16 +207,15 @@ Stack-specific implementation for **Prisma** (ORM / data access). Normative rule
 
 ### Do (use this in Prisma)
 
-- Apply domain skill `security-server-framework-security` requirements using prisma supported APIs only.
-- Use the official prisma security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Prisma is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Prisma configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of prisma for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Prisma config while leaving security-server-framework-security misconfigured.
+- Do not assume Prisma defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on prisma projects in CI.
+- Integration test the full path: Prisma plus the system covered by `security-server-framework-security`.
 

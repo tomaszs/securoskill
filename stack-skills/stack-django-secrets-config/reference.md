@@ -8,18 +8,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for env_vars controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Config separation
 
@@ -27,18 +24,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for config_separation controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Feature flags
 
@@ -46,18 +40,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for feature_flags controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Secret rotation
 
@@ -65,18 +56,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for secret_rotation controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## .env handling
 
@@ -84,18 +72,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for dotenv controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Config servers
 
@@ -103,18 +88,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for config_servers controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Hardcoded credentials
 
@@ -122,18 +104,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for hardcoded_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Public vs confidential clients
 
@@ -141,18 +120,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for public_clients controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Bootstrap secrets
 
@@ -160,18 +136,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for bootstrap_secrets controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Configuration audit
 
@@ -179,18 +152,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for config_audit controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Insecure defaults
 
@@ -198,18 +168,15 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for insecure_defaults controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 
 ## Split knowledge
 
@@ -217,16 +184,13 @@ Stack-specific implementation for **Django** (Python). Normative rules: domain s
 
 ### Do (use this in Django)
 
-- Apply domain skill `security-secrets-config` requirements using django supported APIs only.
-- Use the official django security documentation for split_knowledge controls.
-- Add automated tests for abuse cases before merging.
+- Keep secrets in `settings.py` from `django-environ`; split dev/prod settings modules.
 
 ### Don't
 
-- Do not disable security features of django for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not commit `SECRET_KEY` or `DATABASE_URL` to git.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on django projects in CI.
+- django-check --deploy in CI for production settings.
 

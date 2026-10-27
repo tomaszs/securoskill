@@ -8,18 +8,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_storage controls.
-- Add automated tests for abuse cases before merging.
+- Map `On-device storage` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `On-device storage` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `On-device storage` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `On-device storage`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `On-device storage` against domain skill `security-mobile-security`.
 
 ## Certificate pinning
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_tls controls.
-- Add automated tests for abuse cases before merging.
+- Map `Certificate pinning` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Certificate pinning` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Certificate pinning` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Certificate pinning`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Certificate pinning` against domain skill `security-mobile-security`.
 
 ## Reverse engineering resistance
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_re controls.
-- Add automated tests for abuse cases before merging.
+- Map `Reverse engineering resistance` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Reverse engineering resistance` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Reverse engineering resistance` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Reverse engineering resistance`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Reverse engineering resistance` against domain skill `security-mobile-security`.
 
 ## Deep links and intents
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for deeplinks controls.
-- Add automated tests for abuse cases before merging.
+- Map `Deep links and intents` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Deep links and intents` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Deep links and intents` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Deep links and intents`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Deep links and intents` against domain skill `security-mobile-security`.
 
 ## Mobile OAuth
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Mobile OAuth` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Mobile OAuth` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Mobile OAuth` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Mobile OAuth`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Mobile OAuth` against domain skill `security-mobile-security`.
 
 ## Biometric APIs
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_biometric controls.
-- Add automated tests for abuse cases before merging.
+- Map `Biometric APIs` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Biometric APIs` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Biometric APIs` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Biometric APIs`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Biometric APIs` against domain skill `security-mobile-security`.
 
 ## WebView bridges
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_webview controls.
-- Add automated tests for abuse cases before merging.
+- Map `WebView bridges` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `WebView bridges` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `WebView bridges` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `WebView bridges`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `WebView bridges` against domain skill `security-mobile-security`.
 
 ## Push notifications
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_push controls.
-- Add automated tests for abuse cases before merging.
+- Map `Push notifications` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Push notifications` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Push notifications` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Push notifications`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Push notifications` against domain skill `security-mobile-security`.
 
 ## App attestation
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for app_attest controls.
-- Add automated tests for abuse cases before merging.
+- Map `App attestation` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `App attestation` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `App attestation` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `App attestation`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `App attestation` against domain skill `security-mobile-security`.
 
 ## Sideloading and jailbreak
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for sideload controls.
-- Add automated tests for abuse cases before merging.
+- Map `Sideloading and jailbreak` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Sideloading and jailbreak` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Sideloading and jailbreak` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Sideloading and jailbreak`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Sideloading and jailbreak` against domain skill `security-mobile-security`.
 
 ## Screenshots and overlays
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for screenshot controls.
-- Add automated tests for abuse cases before merging.
+- Map `Screenshots and overlays` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Screenshots and overlays` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Screenshots and overlays` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Screenshots and overlays`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Screenshots and overlays` against domain skill `security-mobile-security`.
 
 ## Mobile SDK supply chain
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **React Native** (Mobile). Normative rules: do
 
 ### Do (use this in React Native)
 
-- Apply domain skill `security-mobile-security` requirements using react-native supported APIs only.
-- Use the official react-native security documentation for mobile_supply controls.
-- Add automated tests for abuse cases before merging.
+- Map `Mobile SDK supply chain` controls to React Native APIs documented for `security-mobile-security`.
+- Add an abuse-case test or check for `Mobile SDK supply chain` before merge.
 
 ### Don't
 
-- Do not disable security features of react-native for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Mobile SDK supply chain` work in React Native with only happy-path tests.
+- Do not disable React Native security defaults to unblock `Mobile SDK supply chain`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on react-native projects in CI.
+- Peer review `Mobile SDK supply chain` against domain skill `security-mobile-security`.
 

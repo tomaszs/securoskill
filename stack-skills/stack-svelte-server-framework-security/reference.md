@@ -187,16 +187,15 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 ### Do (use this in Svelte)
 
-- Apply domain skill `security-server-framework-security` requirements using svelte supported APIs only.
-- Use the official svelte security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Svelte is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
+- Keep Svelte configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of svelte for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `server-framework-security` controls only in Svelte config while leaving security-server-framework-security misconfigured.
+- Do not assume Svelte defaults satisfy `security-server-framework-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on svelte projects in CI.
+- Integration test the full path: Svelte plus the system covered by `security-server-framework-security`.
 

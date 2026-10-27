@@ -27,18 +27,18 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for rag controls.
-- Add automated tests for abuse cases before merging.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Model abuse and cost
 
@@ -46,18 +46,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for model_dos controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Training data poisoning
 
@@ -65,18 +64,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for training_data controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Model and weight exfiltration
 
@@ -84,18 +82,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for model_exfil controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Agent tool invocation
 
@@ -103,18 +100,18 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for agent_tools controls.
-- Add automated tests for abuse cases before merging.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Unsafe outputs
 
@@ -122,18 +119,18 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for llm_output controls.
-- Add automated tests for abuse cases before merging.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Red teaming LLMs
 
@@ -141,18 +138,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for redteam_llm controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Fine-tuning access
 
@@ -160,18 +156,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for fine_tune controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## Embeddings privacy
 
@@ -179,18 +174,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for embeddings controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 
 ## MCP and external tools
 
@@ -198,18 +192,18 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for mcp controls.
-- Add automated tests for abuse cases before merging.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## AI governance
 
@@ -217,16 +211,15 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-ai-ml-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for ai_governance controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `ai-ml-security` controls only in Google Cloud config while leaving stack-openai-api-ai-ml-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-ai-ml-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `stack-openai-api-ai-ml-security`.
 

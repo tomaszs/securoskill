@@ -8,18 +8,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for stripe_webhooks controls.
-- Add automated tests for abuse cases before merging.
+- In Remix, verify Stripe signature with `stripe.Webhook.construct_event` and raw body.
+- Use idempotency keys on payment side effects.
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not parse webhook JSON before signature verification.
+- Do not trust `client_reference_id` without server-side ownership check.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Replay old webhook in test env must fail signature or timestamp check.
 
 ## Card data handling
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for card_data controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Refunds and disputes
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for refunds controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Currency and rounding
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for currency controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## PCI scoping
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for pci_scope controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## 3-D Secure flows
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for three_ds controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Digital wallets
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for wallet controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Payouts and KYC
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for payouts controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Internal ledger integrity
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for ledger controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Tax and invoicing
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for tax controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Subscription logic
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for subscription controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 
 ## Fraud scoring
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Remix** (Web UI). Normative rules: domain sk
 
 ### Do (use this in Remix)
 
-- Apply domain skill `security-payments-fintech` requirements using remix supported APIs only.
-- Use the official remix security documentation for fraud_scoring controls.
-- Add automated tests for abuse cases before merging.
+- Remix is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
+- Keep Remix configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of remix for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `payments-fintech` controls only in Remix config while leaving security-payments-fintech misconfigured.
+- Do not assume Remix defaults satisfy `security-payments-fintech` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on remix projects in CI.
+- Integration test the full path: Remix plus the system covered by `security-payments-fintech`.
 

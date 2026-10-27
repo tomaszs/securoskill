@@ -8,16 +8,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Workflow bypass
 
@@ -25,16 +26,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Insecure direct object references
 
@@ -42,17 +44,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Mass assignment
 
@@ -60,17 +62,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Check authorization on every handler after authentication (object-level, not only route-level).
-- Centralize policy checks; reuse one guard/middleware pattern across routes.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not trust client-sent role flags or hidden form fields for authorization.
-- Do not skip authz on 'internal' JSON endpoints.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Add tests for horizontal IDOR (user A cannot access user B ids).
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Bots and automation
 
@@ -78,16 +80,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Referral and loyalty abuse
 
@@ -95,16 +98,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Marketplace trust
 
@@ -112,16 +116,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Content abuse
 
@@ -129,16 +134,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Quota and limit bypass
 
@@ -146,16 +152,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Admin misuse
 
@@ -163,16 +170,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Time-based logic
 
@@ -180,16 +188,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 
 ## Feature gating bypass
 
@@ -197,14 +206,15 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Run as non-root USER; use multi-stage builds; scan images with Trivy.
+- Docker is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
+- Keep Docker configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
 
 ### Don't
 
-- Do not use `--privileged` in production compose.
-- Do not bake secrets into image layers.
+- Do not duplicate `business-logic-abuse` controls only in Docker config while leaving security-business-logic-abuse misconfigured.
+- Do not assume Docker defaults satisfy `security-business-logic-abuse` without verification.
 
 ### Verify
 
-- Image scan gate in CI.
+- Integration test the full path: Docker plus the system covered by `security-business-logic-abuse`.
 

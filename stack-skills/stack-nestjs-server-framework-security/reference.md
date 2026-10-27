@@ -227,16 +227,15 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Apply domain skill `security-server-framework-security` requirements using nestjs supported APIs only.
-- Use the official nestjs security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Map `Serverless framework adapters` controls to NestJS APIs documented for `security-server-framework-security`.
+- Add an abuse-case test or check for `Serverless framework adapters` before merge.
 
 ### Don't
 
-- Do not disable security features of nestjs for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Serverless framework adapters` work in NestJS with only happy-path tests.
+- Do not disable NestJS security defaults to unblock `Serverless framework adapters`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on nestjs projects in CI.
+- Peer review `Serverless framework adapters` against domain skill `security-server-framework-security`.
 

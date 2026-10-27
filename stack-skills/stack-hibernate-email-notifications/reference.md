@@ -8,18 +8,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_auth controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Template injection in email
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for template_injection controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Links in email
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_links controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Bounce and webhook handling
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_bounce controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## List management
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_list controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Brand impersonation
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_phishing controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Attachments
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_attach controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## SMS and push
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for sms_push controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## User inbox rules attacks
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for inbox_rules controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Email provider APIs
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_provider controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## PII in email bodies
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_pii controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 
 ## Email abuse
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Hibernate / JPA** (ORM / data access). Norma
 
 ### Do (use this in Hibernate / JPA)
 
-- Apply domain skill `security-email-notifications` requirements using hibernate supported APIs only.
-- Use the official hibernate security documentation for email_abuse controls.
-- Add automated tests for abuse cases before merging.
+- Hibernate / JPA is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
+- Keep Hibernate / JPA configuration aligned with requirements from `security-email-notifications` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of hibernate for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `email-notifications` controls only in Hibernate / JPA config while leaving security-email-notifications misconfigured.
+- Do not assume Hibernate / JPA defaults satisfy `security-email-notifications` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on hibernate projects in CI.
+- Integration test the full path: Hibernate / JPA plus the system covered by `security-email-notifications`.
 

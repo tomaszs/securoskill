@@ -8,18 +8,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for dns controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## WAF and edge protection
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for waf controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## SSRF
 
@@ -46,17 +44,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Resolve URLs server-side with allowlisted hosts; block link-local and metadata IPs (169.254.169.254).
-- Use a dedicated HTTP client with redirects disabled or limited.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not fetch arbitrary user-supplied URLs without SSRF guards.
-- Do not trust DNS rebinding to reach internal services.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Unit-test SSRF payloads against your URL fetch helper.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## Reverse proxies
 
@@ -64,18 +62,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for reverse_proxy controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## VPN and private networking
 
@@ -83,18 +80,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## DDoS and volumetric attacks
 
@@ -102,18 +98,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for ddos controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## IP allowlisting pitfalls
 
@@ -121,18 +116,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for ip_allowlist controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## HTTP request smuggling
 
@@ -140,18 +134,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for http_smuggling controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## WebSocket transport
 
@@ -159,18 +152,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for websocket controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## SMTP security
 
@@ -178,18 +170,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for smtp controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## IPv6 and dual stack
 
@@ -197,18 +188,17 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for network_generic controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 
 ## Service mesh mTLS
 
@@ -216,16 +206,15 @@ Stack-specific implementation for **Express.js** (Node.js server). Normative rul
 
 ### Do (use this in Express.js)
 
-- Apply domain skill `security-network-transport` requirements using express supported APIs only.
-- Use the official express security documentation for service_mesh controls.
-- Add automated tests for abuse cases before merging.
+- Express.js is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
+- Keep Express.js configuration aligned with requirements from `security-network-transport` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of express for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `network-transport` controls only in Express.js config while leaving security-network-transport misconfigured.
+- Do not assume Express.js defaults satisfy `security-network-transport` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on express projects in CI.
+- Integration test the full path: Express.js plus the system covered by `security-network-transport`.
 

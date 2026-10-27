@@ -8,18 +8,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for trace_pii controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Metrics cardinality abuse
 
@@ -27,18 +26,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for metrics_cardinality controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## APM and session replay
 
@@ -46,18 +44,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for apm controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Production debugging
 
@@ -65,18 +62,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for debug_prod controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Error trackers
 
@@ -84,18 +80,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for error_tracking controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Log injection
 
@@ -103,18 +98,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for log_injection controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Dashboard access
 
@@ -122,18 +116,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for dashboards controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## OpenTelemetry exporters
 
@@ -141,18 +134,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for otel controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Continuous profiling
 
@@ -160,18 +152,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for profiling controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Synthetic monitoring creds
 
@@ -179,18 +170,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for synthetic controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## RUM and client beacons
 
@@ -198,18 +188,17 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for rum controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 
 ## Alert routing secrets
 
@@ -217,16 +206,15 @@ Stack-specific implementation for **Google Cloud** (Cloud). Normative rules: dom
 
 ### Do (use this in Google Cloud)
 
-- Apply domain skill `security-observability-security` requirements using gcp supported APIs only.
-- Use the official gcp security documentation for alerting controls.
-- Add automated tests for abuse cases before merging.
+- Google Cloud is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
+- Keep Google Cloud configuration aligned with requirements from `security-observability-security` (domain reference.md).
 
 ### Don't
 
-- Do not disable security features of gcp for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not duplicate `observability-security` controls only in Google Cloud config while leaving security-observability-security misconfigured.
+- Do not assume Google Cloud defaults satisfy `security-observability-security` without verification.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on gcp projects in CI.
+- Integration test the full path: Google Cloud plus the system covered by `security-observability-security`.
 

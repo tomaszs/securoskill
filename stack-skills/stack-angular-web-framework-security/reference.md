@@ -77,18 +77,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Map `Next.js and Nuxt` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Next.js and Nuxt` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Next.js and Nuxt` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Next.js and Nuxt`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Next.js and Nuxt` against domain skill `security-web-framework-security`.
 
 ## Svelte and SvelteKit
 
@@ -96,18 +95,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Map `Svelte and SvelteKit` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Svelte and SvelteKit` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Svelte and SvelteKit` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Svelte and SvelteKit`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Svelte and SvelteKit` against domain skill `security-web-framework-security`.
 
 ## Astro, Remix, and islands
 
@@ -115,18 +113,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for ssr controls.
-- Add automated tests for abuse cases before merging.
+- Map `Astro, Remix, and islands` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Astro, Remix, and islands` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Astro, Remix, and islands` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Astro, Remix, and islands`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Astro, Remix, and islands` against domain skill `security-web-framework-security`.
 
 ## Client state libraries
 
@@ -145,6 +142,7 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 ### Verify
 
 - Audit `localStorage.setItem` usage in frontend bundle.
+- Run @angular-eslint and security rules on changes affecting `Client state libraries`.
 
 ## Client routing security
 
@@ -152,18 +150,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for frontend_auth controls.
-- Add automated tests for abuse cases before merging.
+- Map `Client routing security` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Client routing security` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Client routing security` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Client routing security`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Client routing security` against domain skill `security-web-framework-security`.
 
 ## i18n and locale
 
@@ -171,18 +168,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for generic_frontend controls.
-- Add automated tests for abuse cases before merging.
+- Map `i18n and locale` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `i18n and locale` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `i18n and locale` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `i18n and locale`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `i18n and locale` against domain skill `security-web-framework-security`.
 
 ## Design system components
 
@@ -213,18 +209,17 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for debug_endpoints controls.
-- Add automated tests for abuse cases before merging.
+- Map `Storybook and dev tools` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Storybook and dev tools` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Storybook and dev tools` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Storybook and dev tools`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Storybook and dev tools` against domain skill `security-web-framework-security`.
 
 ## Micro-frontends
 
@@ -232,16 +227,15 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 ### Do (use this in Angular)
 
-- Apply domain skill `security-web-framework-security` requirements using angular supported APIs only.
-- Use the official angular security documentation for third_party_scripts controls.
-- Add automated tests for abuse cases before merging.
+- Map `Micro-frontends` controls to Angular APIs documented for `security-web-framework-security`.
+- Add an abuse-case test or check for `Micro-frontends` before merge.
 
 ### Don't
 
-- Do not disable security features of angular for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not ship `Micro-frontends` work in Angular with only happy-path tests.
+- Do not disable Angular security defaults to unblock `Micro-frontends`.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on angular projects in CI.
+- Peer review `Micro-frontends` against domain skill `security-web-framework-security`.
 

@@ -187,16 +187,15 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 ### Do (use this in OpenAI API / Agents SDK)
 
-- Apply domain skill `security-server-framework-security` requirements using openai-api supported APIs only.
-- Use the official openai-api security documentation for serverless controls.
-- Add automated tests for abuse cases before merging.
+- Use Structured Outputs / JSON schema for tool parameters.
+- Set per-user rate limits and `max_tokens` ceilings in API gateway.
 
 ### Don't
 
-- Do not disable security features of openai-api for convenience in production.
-- Do not copy generic examples from blogs that skip validation or authz.
+- Do not send API keys to browsers; proxy via your backend.
+- Do not auto-run tool results that contain `rm`, `DROP`, or `curl` without approval.
 
 ### Verify
 
-- Run stack-appropriate SAST/DAST on openai-api projects in CI.
+- Log prompt injections attempts; alert on repeated jailbreak patterns.
 
