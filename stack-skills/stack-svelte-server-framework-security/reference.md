@@ -181,21 +181,3 @@ Stack-specific implementation for **Svelte** (Web UI). Normative rules: domain s
 
 - Load-test GraphQL with deeply nested queries; expect rejection.
 
-## Serverless framework adapters
-
-**Sub-topics:** Chalice, Serverless.yml secrets, SAM templates, Cold start IAM, Local invoke creds
-
-### Do (use this in Svelte)
-
-- Svelte is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
-- Keep Svelte configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `server-framework-security` controls only in Svelte config while leaving security-server-framework-security misconfigured.
-- Do not assume Svelte defaults satisfy `security-server-framework-security` without verification.
-
-### Verify
-
-- Integration test the full path: Svelte plus the system covered by `security-server-framework-security`.
-

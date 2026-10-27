@@ -1,17 +1,16 @@
 ---
 name: stack-docker
 description: >-
-  Routes all 34 security domains to Docker-specific implementation skills. Use when developing or reviewing Docker applications.
+  Routes 28 security domains to Docker-specific implementation skills. Use when developing or reviewing Docker applications.
 disable-model-invocation: true
 ---
 
-# Docker security (all domains)
+# Docker security (stack domains)
 
-Orchestrator for **Docker** (Infrastructure). Each row mirrors one domain skill with stack-specific `reference.md`.
+Orchestrator for **Docker** (Infrastructure). Each row is a domain where this stack has concrete `reference.md` guidance.
 
 | Domain skill folder | Security domain |
 |---------------------|-----------------|
-| `stack-docker-frontend-client/` | Frontend and client-side security |
 | `stack-docker-backend-server/` | Backend and server-side security |
 | `stack-docker-api-integration/` | API and integration security |
 | `stack-docker-identity-access/` | Identity, authentication, and access control |
@@ -25,7 +24,6 @@ Orchestrator for **Docker** (Infrastructure). Each row mirrors one domain skill 
 | `stack-docker-secrets-config/` | Secrets and configuration |
 | `stack-docker-logging-monitoring-ir/` | Logging, monitoring, and incident response |
 | `stack-docker-privacy-compliance/` | Privacy and compliance |
-| `stack-docker-mobile-security/` | Mobile application security |
 | `stack-docker-ai-ml-security/` | AI and ML system security |
 | `stack-docker-business-logic-abuse/` | Business logic and abuse prevention |
 | `stack-docker-sdlc-threat-modeling/` | SDLC, threat modeling, and secure design |
@@ -37,10 +35,6 @@ Orchestrator for **Docker** (Infrastructure). Each row mirrors one domain skill 
 | `stack-docker-serverless-edge/` | Serverless, edge, and FaaS security |
 | `stack-docker-file-object-storage/` | File, blob, and object storage security |
 | `stack-docker-zero-trust-access/` | Zero trust and secure access |
-| `stack-docker-blockchain-web3/` | Blockchain, Web3, and smart contracts |
-| `stack-docker-embedded-iot-ot/` | Embedded, IoT, and operational technology |
-| `stack-docker-desktop-native/` | Desktop and native application security |
-| `stack-docker-web-framework-security/` | Web UI framework security |
 | `stack-docker-server-framework-security/` | Server framework and runtime security |
 | `stack-docker-data-engineering-analytics/` | Data engineering, analytics, and BI security |
 | `stack-docker-cms-content-platforms/` | CMS, content platforms, and publishing |

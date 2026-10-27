@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## NoSQL stores
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## ORM and query builders
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Encryption at rest
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Backup and restore
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Replication and CDC
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Data minimization
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## PII and sensitive fields
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Schema migrations safety
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Connection strings and pooling
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Row-level and column security
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 
 ## Search indexes
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in SwiftUI (iOS) config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-databases` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- MobSF scan on IPA.
 

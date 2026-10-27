@@ -8,35 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
-
-## WYSIWYG editors
-
-**Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## Publish workflows
 
@@ -44,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## Plugins and themes
 
@@ -62,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## Comments and UGC moderation
 
@@ -80,53 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
-
-## SEO and metadata injection
-
-**Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
-
-## Media libraries
-
-**Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## Multi-site CMS
 
@@ -134,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## CMS search
 
@@ -152,53 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
-
-## Marketing forms
-
-**Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
-
-## Static site generators
-
-**Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 
 ## CMS roles and SSO
 
@@ -206,15 +116,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in SwiftUI (iOS) config while leaving security-cms-content-platforms misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on IPA.
 

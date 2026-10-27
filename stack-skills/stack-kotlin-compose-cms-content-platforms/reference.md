@@ -8,35 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
-
-## WYSIWYG editors
-
-**Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## Publish workflows
 
@@ -44,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## Plugins and themes
 
@@ -62,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## Comments and UGC moderation
 
@@ -80,53 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
-
-## SEO and metadata injection
-
-**Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
-
-## Media libraries
-
-**Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## Multi-site CMS
 
@@ -134,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## CMS search
 
@@ -152,53 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
-
-## Marketing forms
-
-**Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
-
-## Static site generators
-
-**Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 
 ## CMS roles and SSO
 
@@ -206,15 +116,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Kotlin / Jetpack Compose config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cms-content-platforms` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cms-content-platforms`.
+- MobSF scan on APK/AAB.
 

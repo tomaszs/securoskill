@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## WAF and edge protection
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## SSRF
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## Reverse proxies
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## VPN and private networking
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## DDoS and volumetric attacks
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## IP allowlisting pitfalls
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## HTTP request smuggling
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## WebSocket transport
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## SMTP security
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## IPv6 and dual stack
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 
 ## Service mesh mTLS
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Terraform config while leaving security-network-transport misconfigured.
-- Do not assume Terraform defaults satisfy `security-network-transport` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-network-transport`.
+- tfsec/checkov on every PR.
 

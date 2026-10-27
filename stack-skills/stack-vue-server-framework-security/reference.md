@@ -181,21 +181,3 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 - Load-test GraphQL with deeply nested queries; expect rejection.
 
-## Serverless framework adapters
-
-**Sub-topics:** Chalice, Serverless.yml secrets, SAM templates, Cold start IAM, Local invoke creds
-
-### Do (use this in Vue.js)
-
-- Vue.js is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
-- Keep Vue.js configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `server-framework-security` controls only in Vue.js config while leaving security-server-framework-security misconfigured.
-- Do not assume Vue.js defaults satisfy `security-server-framework-security` without verification.
-
-### Verify
-
-- Integration test the full path: Vue.js plus the system covered by `security-server-framework-security`.
-

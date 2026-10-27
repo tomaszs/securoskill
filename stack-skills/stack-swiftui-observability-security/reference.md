@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Metrics cardinality abuse
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## APM and session replay
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Production debugging
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Error trackers
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Log injection
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Dashboard access
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## OpenTelemetry exporters
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Continuous profiling
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Synthetic monitoring creds
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## RUM and client beacons
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 
 ## Alert routing secrets
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in SwiftUI (iOS) config while leaving security-observability-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-observability-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-observability-security`.
+- MobSF scan on IPA.
 

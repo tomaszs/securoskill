@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Config separation
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Feature flags
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Secret rotation
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## .env handling
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Config servers
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Hardcoded credentials
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Public vs confidential clients
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Bootstrap secrets
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Configuration audit
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Insecure defaults
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 
 ## Split knowledge
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Kotlin / Jetpack Compose config while leaving security-secrets-config misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-secrets-config` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-secrets-config`.
+- MobSF scan on APK/AAB.
 

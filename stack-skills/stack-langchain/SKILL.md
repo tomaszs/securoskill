@@ -1,17 +1,16 @@
 ---
 name: stack-langchain
 description: >-
-  Routes all 34 security domains to LangChain / LangGraph-specific implementation skills. Use when developing or reviewing LangChain / LangGraph applications.
+  Routes 28 security domains to LangChain / LangGraph-specific implementation skills. Use when developing or reviewing LangChain / LangGraph applications.
 disable-model-invocation: true
 ---
 
-# LangChain / LangGraph security (all domains)
+# LangChain / LangGraph security (stack domains)
 
-Orchestrator for **LangChain / LangGraph** (AI). Each row mirrors one domain skill with stack-specific `reference.md`.
+Orchestrator for **LangChain / LangGraph** (AI). Each row is a domain where this stack has concrete `reference.md` guidance.
 
 | Domain skill folder | Security domain |
 |---------------------|-----------------|
-| `stack-langchain-frontend-client/` | Frontend and client-side security |
 | `stack-langchain-backend-server/` | Backend and server-side security |
 | `stack-langchain-api-integration/` | API and integration security |
 | `stack-langchain-identity-access/` | Identity, authentication, and access control |
@@ -25,7 +24,6 @@ Orchestrator for **LangChain / LangGraph** (AI). Each row mirrors one domain ski
 | `stack-langchain-secrets-config/` | Secrets and configuration |
 | `stack-langchain-logging-monitoring-ir/` | Logging, monitoring, and incident response |
 | `stack-langchain-privacy-compliance/` | Privacy and compliance |
-| `stack-langchain-mobile-security/` | Mobile application security |
 | `stack-langchain-ai-ml-security/` | AI and ML system security |
 | `stack-langchain-business-logic-abuse/` | Business logic and abuse prevention |
 | `stack-langchain-sdlc-threat-modeling/` | SDLC, threat modeling, and secure design |
@@ -37,10 +35,6 @@ Orchestrator for **LangChain / LangGraph** (AI). Each row mirrors one domain ski
 | `stack-langchain-serverless-edge/` | Serverless, edge, and FaaS security |
 | `stack-langchain-file-object-storage/` | File, blob, and object storage security |
 | `stack-langchain-zero-trust-access/` | Zero trust and secure access |
-| `stack-langchain-blockchain-web3/` | Blockchain, Web3, and smart contracts |
-| `stack-langchain-embedded-iot-ot/` | Embedded, IoT, and operational technology |
-| `stack-langchain-desktop-native/` | Desktop and native application security |
-| `stack-langchain-web-framework-security/` | Web UI framework security |
 | `stack-langchain-server-framework-security/` | Server framework and runtime security |
 | `stack-langchain-data-engineering-analytics/` | Data engineering, analytics, and BI security |
 | `stack-langchain-cms-content-platforms/` | CMS, content platforms, and publishing |

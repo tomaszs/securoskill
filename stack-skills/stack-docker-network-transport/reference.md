@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## WAF and edge protection
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## SSRF
 
@@ -44,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## Reverse proxies
 
@@ -62,17 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## VPN and private networking
 
@@ -80,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## DDoS and volumetric attacks
 
@@ -98,17 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## IP allowlisting pitfalls
 
@@ -116,17 +110,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## HTTP request smuggling
 
@@ -134,17 +127,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## WebSocket transport
 
@@ -152,17 +144,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## SMTP security
 
@@ -170,17 +161,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## IPv6 and dual stack
 
@@ -188,17 +178,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 
 ## Service mesh mTLS
 
@@ -206,15 +195,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Docker config while leaving security-network-transport misconfigured.
-- Do not assume Docker defaults satisfy `security-network-transport` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-network-transport`.
+- Image scan gate in CI.
 

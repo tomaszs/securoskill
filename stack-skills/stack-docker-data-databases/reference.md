@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## NoSQL stores
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## ORM and query builders
 
@@ -44,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Encryption at rest
 
@@ -62,17 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Backup and restore
 
@@ -80,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Replication and CDC
 
@@ -98,17 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Data minimization
 
@@ -116,17 +110,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## PII and sensitive fields
 
@@ -134,17 +127,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Schema migrations safety
 
@@ -152,17 +144,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Connection strings and pooling
 
@@ -170,17 +161,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Row-level and column security
 
@@ -188,17 +178,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 
 ## Search indexes
 
@@ -206,15 +195,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-databases`; load stack skill `stack-postgresql-data-databases (or your DB/ORM stack)` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-databases` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-databases` controls only in Docker config while leaving stack-postgresql-data-databases (or your DB/ORM stack) misconfigured.
-- Do not assume Docker defaults satisfy `security-data-databases` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `stack-postgresql-data-databases (or your DB/ORM stack)`.
+- Image scan gate in CI.
 

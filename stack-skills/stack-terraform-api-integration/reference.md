@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## GraphQL security
 
@@ -45,17 +45,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## Webhooks outbound and inbound
 
@@ -63,17 +63,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## OAuth2/OIDC for APIs
 
@@ -81,17 +81,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## API keys and HMAC
 
@@ -99,17 +99,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## Pagination and filtering abuse
 
@@ -117,17 +117,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## CORS for APIs
 
@@ -135,17 +135,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## OpenAPI and documentation leakage
 
@@ -153,17 +153,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## Backend-for-frontend patterns
 
@@ -171,17 +171,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## Legacy SOAP/XML APIs
 
@@ -189,17 +189,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 
 ## Event buses and streaming
 
@@ -207,15 +207,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Terraform config while leaving security-api-integration misconfigured.
-- Do not assume Terraform defaults satisfy `security-api-integration` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-api-integration`.
+- tfsec/checkov on every PR.
 

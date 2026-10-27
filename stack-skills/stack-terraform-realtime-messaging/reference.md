@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Room and channel authorization
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Message integrity
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Presence leaks
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## MQTT and IoT protocols
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Kafka security
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Redis pub/sub
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Server-sent events
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Collaborative editing
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## WebRTC
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Fan-out abuse
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 
 ## Message retention
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Terraform config while leaving security-realtime-messaging misconfigured.
-- Do not assume Terraform defaults satisfy `security-realtime-messaging` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-realtime-messaging`.
+- tfsec/checkov on every PR.
 

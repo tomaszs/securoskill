@@ -1,13 +1,13 @@
 ---
 name: stack-swiftui
 description: >-
-  Routes all 34 security domains to SwiftUI (iOS)-specific implementation skills. Use when developing or reviewing SwiftUI (iOS) applications.
+  Routes 30 security domains to SwiftUI (iOS)-specific implementation skills. Use when developing or reviewing SwiftUI (iOS) applications.
 disable-model-invocation: true
 ---
 
-# SwiftUI (iOS) security (all domains)
+# SwiftUI (iOS) security (stack domains)
 
-Orchestrator for **SwiftUI (iOS)** (Mobile). Each row mirrors one domain skill with stack-specific `reference.md`.
+Orchestrator for **SwiftUI (iOS)** (Mobile). Each row is a domain where this stack has concrete `reference.md` guidance.
 
 | Domain skill folder | Security domain |
 |---------------------|-----------------|
@@ -37,10 +37,6 @@ Orchestrator for **SwiftUI (iOS)** (Mobile). Each row mirrors one domain skill w
 | `stack-swiftui-serverless-edge/` | Serverless, edge, and FaaS security |
 | `stack-swiftui-file-object-storage/` | File, blob, and object storage security |
 | `stack-swiftui-zero-trust-access/` | Zero trust and secure access |
-| `stack-swiftui-blockchain-web3/` | Blockchain, Web3, and smart contracts |
-| `stack-swiftui-embedded-iot-ot/` | Embedded, IoT, and operational technology |
-| `stack-swiftui-desktop-native/` | Desktop and native application security |
-| `stack-swiftui-web-framework-security/` | Web UI framework security |
 | `stack-swiftui-server-framework-security/` | Server framework and runtime security |
 | `stack-swiftui-data-engineering-analytics/` | Data engineering, analytics, and BI security |
 | `stack-swiftui-cms-content-platforms/` | CMS, content platforms, and publishing |

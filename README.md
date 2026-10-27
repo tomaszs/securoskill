@@ -16,7 +16,7 @@ Use of this repository is subject to the [LICENSE](LICENSE).
 | **Domain** (what) | `skills/<domain>/`, `secure-software-engineering/` | Technology-neutral rules: policy, design, implementation, verification, operations (e.g. prevent SQL injection, IDOR, prompt injection). |
 | **Stack** (how) | `stack-skills/stack-<tech>-<domain>/` | Same **34 domains** translated into concrete patterns for a specific technology (APIs, configs, libraries). |
 
-**Coverage:** 34 domains × **44 stacks** = **1,496** stack–domain skills, plus **44** stack orchestrators (`stack-skills/stack-react/`, etc.). Each stack skill links to its domain counterpart (`security-<domain>`).
+**Coverage:** **34** technology-neutral domains and **44** stacks. Stack skills are generated only where a stack has real implementation guidance (no “wrong layer” placeholders). Each stack folder links to its domain counterpart (`security-<domain>`) when present.
 
 ## Supported technologies (44 stacks)
 
@@ -48,7 +48,7 @@ Full machine-readable list: [`stack-skills/manifest.json`](stack-skills/manifest
 | **34 security domains** | Frontend, backend, APIs, identity, data, crypto, network, cloud, Kubernetes, CI/CD, supply chain, privacy, mobile, AI/ML, payments, Web3, IoT, desktop, and more |
 | **408 sub-areas** | SQL injection, XSS, SSRF, IDOR, tenant isolation, smart contracts, etc. |
 | **2,000+ sub-topics** | Five or more per sub-area, each with layered rules |
-| **Stack implementations** | Every domain mirrored for every supported stack |
+| **Stack implementations** | Per-stack, per-domain skills only where that technology applies |
 
 ## Benefits
 
@@ -57,11 +57,21 @@ Full machine-readable list: [`stack-skills/manifest.json`](stack-skills/manifest
 - **Faster reviews:** `reference.md` in each folder works as a checklist.
 - **Offline install:** Use the [skills zip](#install-from-zip-recommended); no build step.
 
-## Skill format (Cursor Agent Skills)
+## Skill format (agent skills)
+
+Compatible with agents that load folder-based skills (`SKILL.md` + optional `reference.md`), including:
+
+| Agent / product | Typical skills directory |
+|-----------------|---------------------------|
+| **Cursor** | `~/.cursor/skills/` (Windows: `%USERPROFILE%\.cursor\skills\`) |
+| **Claude Code** | `~/.claude/skills/` |
+| **OpenAI Codex** | project or user skills path per your Codex setup |
+| **Windsurf** | `~/.codeium/windsurf/skills/` |
+| **Other agents** | Copy the same folders wherever your tool expects `SKILL.md` skills |
 
 | File | Role |
 |------|------|
-| `SKILL.md` | YAML `name`, `description`, workflow (`disable-model-invocation: true`). |
+| `SKILL.md` | YAML `name`, `description`, workflow (`disable-model-invocation: true` where supported). |
 | `reference.md` | Full rules or stack-specific implementation detail. |
 
 Domain skill names: `security-<domain>` (e.g. `security-backend-server`).  
@@ -73,19 +83,17 @@ Stack orchestrators: `stack-<tech>` (e.g. `stack-react`).
 Download **[`dist/secure-software-engineering-skills.zip`](dist/secure-software-engineering-skills.zip)** (personal use only; see LICENSE).
 
 1. Unzip the archive.
-2. Copy **every top-level folder** into your personal skills directory:
-   - **macOS / Linux:** `~/.cursor/skills/`
-   - **Windows:** `%USERPROFILE%\.cursor\skills\`
+2. Copy **every top-level folder** into your agent’s skills directory (see table above). On Cursor, that is `~/.cursor/skills/` or `%USERPROFILE%\.cursor\skills\`.
 3. You should see domain folders (`backend-server`, `secure-software-engineering`, …) and stack folders (`stack-react`, `stack-django-backend-server`, …).  
    Do **not** add an extra `skills/` nesting level.
-4. Restart Cursor (or reload the window).
+4. Restart or reload your agent so it picks up new skills.
 5. **Domain-only work:** invoke `secure-software-engineering` or `security-backend-server`.  
    **Stack-specific work:** invoke `stack-react` or `stack-spring-boot-data-databases`.
 
 ### Install from git clone
 
-1. Copy `secure-software-engineering/` and each child of `skills/` into `~/.cursor/skills/`.
-2. Copy each child of `stack-skills/` into `~/.cursor/skills/` (or install only the `stack-<tech>*` folders you need).
+1. Copy `secure-software-engineering/` and each child of `skills/` into your agent skills directory.
+2. Copy each child of `stack-skills/` into the same place (or install only the `stack-<tech>*` folders you need).
 
 ## How to use
 
@@ -143,7 +151,7 @@ Parent: **`secure-software-engineering`**.
 
 ## Who this is for
 
-Developers using **AI pair programmers**, security champions, and anyone searching for **Cursor security skills**, **stack-specific secure coding**, or **application security checklists**.
+Developers using **AI coding agents** (Cursor, Claude Code, Codex, Windsurf, and similar), security champions, and anyone searching for **agent security skills**, **stack-specific secure coding**, or **application security checklists**.
 
 ## FAQ
 

@@ -29,7 +29,8 @@ Stack-specific implementation for **Vue.js** (Web UI). Normative rules: domain s
 
 ### Do (use this in Vue.js)
 
-- Configure `xsrfCookieName` / `xsrfHeaderName` on axios defaults for Laravel/Spring backends.
+- Configure `xsrfCookieName` / `xsrfHeaderName` on axios defaults when the API uses cookie sessions.
+- Align with your API's CSRF cookie name and header (e.g. `X-XSRF-TOKEN`).
 
 ### Don't
 

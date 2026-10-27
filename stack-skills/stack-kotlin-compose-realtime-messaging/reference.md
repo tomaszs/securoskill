@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Room and channel authorization
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Message integrity
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Presence leaks
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## MQTT and IoT protocols
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Kafka security
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Redis pub/sub
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Server-sent events
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Collaborative editing
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## WebRTC
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Fan-out abuse
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 
 ## Message retention
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Kotlin / Jetpack Compose config while leaving security-realtime-messaging misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-realtime-messaging` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-realtime-messaging`.
+- MobSF scan on APK/AAB.
 

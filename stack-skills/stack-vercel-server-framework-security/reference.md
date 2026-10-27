@@ -187,15 +187,14 @@ Stack-specific implementation for **Vercel** (Platform). Normative rules: domain
 
 ### Do (use this in Vercel)
 
-- Vercel is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
-- Keep Vercel configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
+- Use Vercel env vars for secrets; server-only in Route Handlers and Server Actions.
 
 ### Don't
 
-- Do not duplicate `server-framework-security` controls only in Vercel config while leaving security-server-framework-security misconfigured.
-- Do not assume Vercel defaults satisfy `security-server-framework-security` without verification.
+- Do not prefix secrets with `NEXT_PUBLIC_`.
+- Do not commit `.env` to git.
 
 ### Verify
 
-- Integration test the full path: Vercel plus the system covered by `security-server-framework-security`.
+- Build fails if client bundle contains `sk-` patterns (secret scan).
 

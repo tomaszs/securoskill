@@ -2,41 +2,23 @@
 
 Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: domain skill `security-cloud-infrastructure` / `reference.md`.
 
-## Cloud IAM
-
-**Sub-topics:** Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
-
 ## Object storage buckets
 
 **Sub-topics:** Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## Compute instances
 
@@ -44,35 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
-
-## Managed serverless
-
-**Sub-topics:** Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
-
-### Do (use this in SwiftUI (iOS))
-
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
-
-### Verify
-
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## Secrets managers
 
@@ -80,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## VPC and security groups
 
@@ -98,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## Cloud audit logs
 
@@ -116,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## Infrastructure as code
 
@@ -134,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## Multi-cloud identity
 
@@ -152,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## SaaS admin consoles
 
@@ -170,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## CDN and edge
 
@@ -188,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 
 ## DR and regions
 
@@ -206,15 +170,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in SwiftUI (iOS) config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on IPA.
 

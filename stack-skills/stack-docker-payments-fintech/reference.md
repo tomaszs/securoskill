@@ -26,17 +26,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Refunds and disputes
 
@@ -44,17 +43,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Currency and rounding
 
@@ -62,17 +60,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## PCI scoping
 
@@ -80,17 +77,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## 3-D Secure flows
 
@@ -98,17 +94,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Digital wallets
 
@@ -116,17 +111,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Payouts and KYC
 
@@ -134,17 +128,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Internal ledger integrity
 
@@ -152,17 +145,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Tax and invoicing
 
@@ -170,17 +162,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Subscription logic
 
@@ -188,17 +179,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 
 ## Fraud scoring
 
@@ -206,15 +196,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Docker config while leaving security-payments-fintech misconfigured.
-- Do not assume Docker defaults satisfy `security-payments-fintech` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-payments-fintech`.
+- Image scan gate in CI.
 

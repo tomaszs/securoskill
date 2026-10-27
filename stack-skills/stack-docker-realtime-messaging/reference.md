@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Room and channel authorization
 
@@ -26,17 +25,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Message integrity
 
@@ -44,17 +43,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Presence leaks
 
@@ -62,17 +60,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## MQTT and IoT protocols
 
@@ -80,17 +77,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Kafka security
 
@@ -98,17 +94,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Redis pub/sub
 
@@ -116,17 +111,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Server-sent events
 
@@ -134,17 +128,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Collaborative editing
 
@@ -152,17 +145,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## WebRTC
 
@@ -170,17 +162,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Fan-out abuse
 
@@ -188,17 +179,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 
 ## Message retention
 
@@ -206,15 +196,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in Docker config while leaving security-realtime-messaging misconfigured.
-- Do not assume Docker defaults satisfy `security-realtime-messaging` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-realtime-messaging`.
+- Image scan gate in CI.
 

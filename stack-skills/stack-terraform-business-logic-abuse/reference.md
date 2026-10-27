@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Workflow bypass
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Insecure direct object references
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Mass assignment
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Bots and automation
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Referral and loyalty abuse
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Marketplace trust
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Content abuse
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Quota and limit bypass
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Admin misuse
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Time-based logic
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 
 ## Feature gating bypass
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in Terraform config while leaving security-business-logic-abuse misconfigured.
-- Do not assume Terraform defaults satisfy `security-business-logic-abuse` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-business-logic-abuse`.
+- tfsec/checkov on every PR.
 

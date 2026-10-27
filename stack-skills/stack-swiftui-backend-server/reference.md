@@ -24,17 +24,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Session management on server
 
@@ -42,17 +42,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Error handling and information disclosure
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Concurrency and race conditions
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Server file I/O
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Deserialization and parsing
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Background jobs and queues
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Server-side caching
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Tenant isolation on server
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Rate limiting and abuse
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 
 ## Health and debug endpoints
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in SwiftUI (iOS) config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-backend-server` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on IPA.
 

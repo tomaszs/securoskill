@@ -181,21 +181,3 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 - Load-test GraphQL with deeply nested queries; expect rejection.
 
-## Serverless framework adapters
-
-**Sub-topics:** Chalice, Serverless.yml secrets, SAM templates, Cold start IAM, Local invoke creds
-
-### Do (use this in Angular)
-
-- Angular is not the primary enforcement point for `server-framework-security`; load stack skill `security-server-framework-security` when you touch that layer.
-- Keep Angular configuration aligned with requirements from `security-server-framework-security` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `server-framework-security` controls only in Angular config while leaving security-server-framework-security misconfigured.
-- Do not assume Angular defaults satisfy `security-server-framework-security` without verification.
-
-### Verify
-
-- Integration test the full path: Angular plus the system covered by `security-server-framework-security`.
-

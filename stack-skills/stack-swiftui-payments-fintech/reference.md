@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Refunds and disputes
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Currency and rounding
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## PCI scoping
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## 3-D Secure flows
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Digital wallets
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Payouts and KYC
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Internal ledger integrity
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Tax and invoicing
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Subscription logic
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 
 ## Fraud scoring
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in SwiftUI (iOS) config while leaving security-payments-fintech misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-payments-fintech` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-payments-fintech`.
+- MobSF scan on IPA.
 

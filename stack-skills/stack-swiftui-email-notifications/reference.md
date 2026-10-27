@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Template injection in email
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Links in email
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Bounce and webhook handling
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## List management
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Brand impersonation
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Attachments
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## SMS and push
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## User inbox rules attacks
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Email provider APIs
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## PII in email bodies
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 
 ## Email abuse
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in SwiftUI (iOS) config while leaving security-email-notifications misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-email-notifications` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-email-notifications`.
+- MobSF scan on IPA.
 

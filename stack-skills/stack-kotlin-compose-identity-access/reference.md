@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## MFA and step-up auth
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## SSO and federation
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## RBAC
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## ABAC and policy engines
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Service accounts and workloads
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Break-glass and emergency access
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Account lifecycle
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Privilege escalation
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Zero trust access
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Biometrics and device binding
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 
 ## Guest and anonymous access
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `identity-access`; load stack skill `security-identity-access` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-identity-access` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `identity-access` controls only in Kotlin / Jetpack Compose config while leaving security-identity-access misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-identity-access` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-identity-access`.
+- MobSF scan on APK/AAB.
 

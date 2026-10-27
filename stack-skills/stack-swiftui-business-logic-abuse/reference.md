@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Workflow bypass
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Insecure direct object references
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Mass assignment
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Bots and automation
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Referral and loyalty abuse
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Marketplace trust
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Content abuse
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Quota and limit bypass
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Admin misuse
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Time-based logic
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 
 ## Feature gating bypass
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `business-logic-abuse`; load stack skill `security-business-logic-abuse` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-business-logic-abuse` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `business-logic-abuse` controls only in SwiftUI (iOS) config while leaving security-business-logic-abuse misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-business-logic-abuse` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-business-logic-abuse`.
+- MobSF scan on IPA.
 

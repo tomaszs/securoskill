@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Symmetric encryption
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Asymmetric crypto
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Hashing and passwords
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Randomness and IDs
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## KMS and HSM
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## JWT and JOSE
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use RS256 or ES256; validate `aud`, `iss`, `exp`; store keys in KMS.
+- Rotate signing keys with overlap.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not accept `alg: none` or HS256 with public client secrets.
+- Do not put PII in JWT payloads.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- Use jwt lint tools in CI for sample tokens.
 
 ## PGP and email crypto
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Specialized crypto uses
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Crypto agility
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Secrets derivation
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 
 ## Side channels
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Terraform config while leaving security-cryptography misconfigured.
-- Do not assume Terraform defaults satisfy `security-cryptography` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-cryptography`.
+- tfsec/checkov on every PR.
 

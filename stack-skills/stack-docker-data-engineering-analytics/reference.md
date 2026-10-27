@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## ETL credentials
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Pipeline injection
 
@@ -60,17 +58,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## BI and dashboards
 
@@ -78,17 +75,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Data lakes
 
@@ -96,17 +92,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Streaming analytics
 
@@ -114,17 +109,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Feature stores
 
@@ -132,17 +126,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Notebooks and ad hoc SQL
 
@@ -150,17 +143,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Data contracts and quality
 
@@ -168,17 +160,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Third-party data feeds
 
@@ -186,17 +177,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 
 ## Analytics backups
 
@@ -204,15 +194,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in Docker config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume Docker defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-data-engineering-analytics`.
+- Image scan gate in CI.
 

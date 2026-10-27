@@ -8,15 +8,13 @@ Stack-specific implementation for **Fastify** (Node.js server). Normative rules:
 
 ### Do (use this in Fastify)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use `pg` with bound parameters or `@fastify/postgres` with placeholders.
+- Validate route params as typed scalars before passing to queries.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
-- Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
+- Do not embed `request.query` fields in SQL template literals.
+- Do not use `eval` on database payloads.
 
 ### Verify
 

@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Metrics cardinality abuse
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## APM and session replay
 
@@ -44,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Production debugging
 
@@ -62,17 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Error trackers
 
@@ -80,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Log injection
 
@@ -98,17 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Dashboard access
 
@@ -116,17 +110,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## OpenTelemetry exporters
 
@@ -134,17 +127,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Continuous profiling
 
@@ -152,17 +144,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Synthetic monitoring creds
 
@@ -170,17 +161,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## RUM and client beacons
 
@@ -188,17 +178,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 
 ## Alert routing secrets
 
@@ -206,15 +195,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Docker config while leaving security-observability-security misconfigured.
-- Do not assume Docker defaults satisfy `security-observability-security` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-observability-security`.
+- Image scan gate in CI.
 

@@ -20,24 +20,6 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 - Log prompt injections attempts; alert on repeated jailbreak patterns.
 
-## WYSIWYG editors
-
-**Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
-
-### Do (use this in OpenAI API / Agents SDK)
-
-- OpenAI API / Agents SDK is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in OpenAI API / Agents SDK config while leaving security-cms-content-platforms misconfigured.
-- Do not assume OpenAI API / Agents SDK defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-cms-content-platforms`.
-
 ## Publish workflows
 
 **Sub-topics:** Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
@@ -92,42 +74,6 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 - Log prompt injections attempts; alert on repeated jailbreak patterns.
 
-## SEO and metadata injection
-
-**Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
-
-### Do (use this in OpenAI API / Agents SDK)
-
-- OpenAI API / Agents SDK is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in OpenAI API / Agents SDK config while leaving security-cms-content-platforms misconfigured.
-- Do not assume OpenAI API / Agents SDK defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-cms-content-platforms`.
-
-## Media libraries
-
-**Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
-
-### Do (use this in OpenAI API / Agents SDK)
-
-- OpenAI API / Agents SDK is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in OpenAI API / Agents SDK config while leaving security-cms-content-platforms misconfigured.
-- Do not assume OpenAI API / Agents SDK defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-cms-content-platforms`.
-
 ## Multi-site CMS
 
 **Sub-topics:** Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
@@ -163,42 +109,6 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 ### Verify
 
 - Log prompt injections attempts; alert on repeated jailbreak patterns.
-
-## Marketing forms
-
-**Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
-
-### Do (use this in OpenAI API / Agents SDK)
-
-- OpenAI API / Agents SDK is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in OpenAI API / Agents SDK config while leaving security-cms-content-platforms misconfigured.
-- Do not assume OpenAI API / Agents SDK defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-cms-content-platforms`.
-
-## Static site generators
-
-**Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
-
-### Do (use this in OpenAI API / Agents SDK)
-
-- OpenAI API / Agents SDK is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep OpenAI API / Agents SDK configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in OpenAI API / Agents SDK config while leaving security-cms-content-platforms misconfigured.
-- Do not assume OpenAI API / Agents SDK defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: OpenAI API / Agents SDK plus the system covered by `security-cms-content-platforms`.
 
 ## CMS roles and SSO
 

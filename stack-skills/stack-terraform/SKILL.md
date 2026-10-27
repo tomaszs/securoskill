@@ -1,17 +1,16 @@
 ---
 name: stack-terraform
 description: >-
-  Routes all 34 security domains to Terraform-specific implementation skills. Use when developing or reviewing Terraform applications.
+  Routes 28 security domains to Terraform-specific implementation skills. Use when developing or reviewing Terraform applications.
 disable-model-invocation: true
 ---
 
-# Terraform security (all domains)
+# Terraform security (stack domains)
 
-Orchestrator for **Terraform** (Infrastructure). Each row mirrors one domain skill with stack-specific `reference.md`.
+Orchestrator for **Terraform** (Infrastructure). Each row is a domain where this stack has concrete `reference.md` guidance.
 
 | Domain skill folder | Security domain |
 |---------------------|-----------------|
-| `stack-terraform-frontend-client/` | Frontend and client-side security |
 | `stack-terraform-backend-server/` | Backend and server-side security |
 | `stack-terraform-api-integration/` | API and integration security |
 | `stack-terraform-identity-access/` | Identity, authentication, and access control |
@@ -25,7 +24,6 @@ Orchestrator for **Terraform** (Infrastructure). Each row mirrors one domain ski
 | `stack-terraform-secrets-config/` | Secrets and configuration |
 | `stack-terraform-logging-monitoring-ir/` | Logging, monitoring, and incident response |
 | `stack-terraform-privacy-compliance/` | Privacy and compliance |
-| `stack-terraform-mobile-security/` | Mobile application security |
 | `stack-terraform-ai-ml-security/` | AI and ML system security |
 | `stack-terraform-business-logic-abuse/` | Business logic and abuse prevention |
 | `stack-terraform-sdlc-threat-modeling/` | SDLC, threat modeling, and secure design |
@@ -37,10 +35,6 @@ Orchestrator for **Terraform** (Infrastructure). Each row mirrors one domain ski
 | `stack-terraform-serverless-edge/` | Serverless, edge, and FaaS security |
 | `stack-terraform-file-object-storage/` | File, blob, and object storage security |
 | `stack-terraform-zero-trust-access/` | Zero trust and secure access |
-| `stack-terraform-blockchain-web3/` | Blockchain, Web3, and smart contracts |
-| `stack-terraform-embedded-iot-ot/` | Embedded, IoT, and operational technology |
-| `stack-terraform-desktop-native/` | Desktop and native application security |
-| `stack-terraform-web-framework-security/` | Web UI framework security |
 | `stack-terraform-server-framework-security/` | Server framework and runtime security |
 | `stack-terraform-data-engineering-analytics/` | Data engineering, analytics, and BI security |
 | `stack-terraform-cms-content-platforms/` | CMS, content platforms, and publishing |

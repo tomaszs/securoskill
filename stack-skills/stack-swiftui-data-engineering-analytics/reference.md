@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## ETL credentials
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Pipeline injection
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## BI and dashboards
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Data lakes
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Streaming analytics
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Feature stores
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Notebooks and ad hoc SQL
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Data contracts and quality
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Third-party data feeds
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 
 ## Analytics backups
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `data-engineering-analytics`; load stack skill `security-data-engineering-analytics` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-data-engineering-analytics` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `data-engineering-analytics` controls only in SwiftUI (iOS) config while leaving security-data-engineering-analytics misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-data-engineering-analytics` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-data-engineering-analytics`.
+- MobSF scan on IPA.
 

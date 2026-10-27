@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## GraphQL security
 
@@ -45,17 +45,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## Webhooks outbound and inbound
 
@@ -63,17 +63,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## OAuth2/OIDC for APIs
 
@@ -81,17 +81,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## API keys and HMAC
 
@@ -99,17 +99,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## Pagination and filtering abuse
 
@@ -117,17 +117,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## CORS for APIs
 
@@ -135,17 +135,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## OpenAPI and documentation leakage
 
@@ -153,17 +153,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## Backend-for-frontend patterns
 
@@ -171,17 +171,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## Legacy SOAP/XML APIs
 
@@ -189,17 +189,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 
 ## Event buses and streaming
 
@@ -207,15 +207,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Kotlin / Jetpack Compose config while leaving security-api-integration misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-api-integration` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-api-integration`.
+- MobSF scan on APK/AAB.
 

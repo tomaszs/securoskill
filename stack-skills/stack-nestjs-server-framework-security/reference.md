@@ -8,14 +8,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -28,14 +26,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -48,14 +44,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -68,14 +62,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -88,14 +80,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -108,14 +98,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -128,14 +116,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -148,14 +134,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -168,14 +152,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify
@@ -188,14 +170,12 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 ### Do (use this in NestJS)
 
-- Use `pg` / `mysql2` placeholders: `pool.query('SELECT * FROM users WHERE id = $1', [id])`.
-- In NestJS use TypeORM/Prisma repositories; avoid `query(` + string building.
-- In Prisma use `prisma.user.findUnique({ where: { id } })`; for raw use `$queryRaw` with tagged template or params.
+- Use TypeORM repositories or Prisma Client; avoid string-built `query(` calls.
+- Use `prisma.user.findUnique({ where: { id } })`; for raw SQL use `$queryRaw` with tagged templates.
 
 ### Don't
 
-- Do not use template literals to embed `req.query` / `req.body` fields into SQL.
-- Do not use `eval` or `Function` on database payloads.
+- Do not concatenate user input into SQL in `@Query()` strings.
 - Do not expose `$queryRawUnsafe` / `executeRaw` with user strings.
 
 ### Verify

@@ -2,95 +2,22 @@
 
 Stack-specific implementation for **Docker** (Infrastructure). Normative rules: domain skill `security-serverless-edge` / `reference.md`.
 
-## Function authentication
-
-**Sub-topics:** IAM roles, Function URLs, API Gateway authorizers, JWT at edge, Anonymous triggers
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
-
-## Event source trust
-
-**Sub-topics:** S3 notifications, SQS/SNS, EventBridge, Cron schedules, Webhook triggers
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
-
-## Secrets in serverless
-
-**Sub-topics:** Env vars, Parameter Store, KMS grants, Rotation, Leak in logs
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
-
 ## VPC and network placement
 
 **Sub-topics:** NAT costs, Public subnets, Private API, Egress SSRF, Peering
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
-
-## Edge workers (CDN)
-
-**Sub-topics:** KV stores, Request rewriting, Cache poisoning, Geo routing, WAF at edge
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Denial of wallet
 
@@ -98,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Idempotency and retries
 
@@ -116,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Local dev parity
 
@@ -134,17 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Multi-region functions
 
@@ -152,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Wasm at edge
 
@@ -170,17 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Orchestration workflows
 
@@ -188,17 +110,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 
 ## Platform limit abuse
 
@@ -206,15 +127,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Docker config while leaving security-serverless-edge misconfigured.
-- Do not assume Docker defaults satisfy `security-serverless-edge` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-serverless-edge`.
+- Image scan gate in CI.
 

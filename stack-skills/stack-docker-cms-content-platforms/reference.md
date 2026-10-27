@@ -8,35 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
-
-## WYSIWYG editors
-
-**Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## Publish workflows
 
@@ -44,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## Plugins and themes
 
@@ -62,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## Comments and UGC moderation
 
@@ -80,53 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
-
-## SEO and metadata injection
-
-**Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
-
-## Media libraries
-
-**Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## Multi-site CMS
 
@@ -134,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## CMS search
 
@@ -152,53 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
-
-## Marketing forms
-
-**Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
-
-## Static site generators
-
-**Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
-
-### Do (use this in Docker)
-
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
-
-### Verify
-
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 
 ## CMS roles and SSO
 
@@ -206,15 +110,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `cms-content-platforms`; load stack skill `security-cms-content-platforms` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-cms-content-platforms` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `cms-content-platforms` controls only in Docker config while leaving security-cms-content-platforms misconfigured.
-- Do not assume Docker defaults satisfy `security-cms-content-platforms` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-cms-content-platforms`.
+- Image scan gate in CI.
 

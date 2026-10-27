@@ -24,17 +24,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Session management on server
 
@@ -42,17 +42,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Error handling and information disclosure
 
@@ -60,17 +60,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Concurrency and race conditions
 
@@ -78,17 +78,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Server file I/O
 
@@ -96,17 +96,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Deserialization and parsing
 
@@ -114,17 +114,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Background jobs and queues
 
@@ -132,17 +132,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Server-side caching
 
@@ -150,17 +150,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Tenant isolation on server
 
@@ -168,17 +168,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Rate limiting and abuse
 
@@ -186,17 +186,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 
 ## Health and debug endpoints
 
@@ -204,15 +204,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `backend-server`; load stack skill `stack-express-backend-server (or your API stack)` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-backend-server` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `backend-server` controls only in Kotlin / Jetpack Compose config while leaving stack-express-backend-server (or your API stack) misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-backend-server` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-express-backend-server (or your API stack)`.
+- MobSF scan on APK/AAB.
 

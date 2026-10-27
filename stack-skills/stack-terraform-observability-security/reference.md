@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Metrics cardinality abuse
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## APM and session replay
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Production debugging
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Error trackers
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Log injection
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Dashboard access
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## OpenTelemetry exporters
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Continuous profiling
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Synthetic monitoring creds
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## RUM and client beacons
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 
 ## Alert routing secrets
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `observability-security`; load stack skill `security-observability-security` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-observability-security` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `observability-security` controls only in Terraform config while leaving security-observability-security misconfigured.
-- Do not assume Terraform defaults satisfy `security-observability-security` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-observability-security`.
+- tfsec/checkov on every PR.
 

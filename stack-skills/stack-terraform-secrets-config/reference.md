@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Config separation
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Feature flags
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Secret rotation
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## .env handling
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Config servers
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Hardcoded credentials
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Public vs confidential clients
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Bootstrap secrets
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Configuration audit
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Insecure defaults
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 
 ## Split knowledge
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `secrets-config`; load stack skill `security-secrets-config` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-secrets-config` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `secrets-config` controls only in Terraform config while leaving security-secrets-config misconfigured.
-- Do not assume Terraform defaults satisfy `security-secrets-config` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-secrets-config`.
+- tfsec/checkov on every PR.
 

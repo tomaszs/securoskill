@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## WAF and edge protection
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## SSRF
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## Reverse proxies
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## VPN and private networking
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## DDoS and volumetric attacks
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## IP allowlisting pitfalls
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## HTTP request smuggling
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## WebSocket transport
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## SMTP security
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## IPv6 and dual stack
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 
 ## Service mesh mTLS
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in Kotlin / Jetpack Compose config while leaving security-network-transport misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-network-transport` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-network-transport`.
+- MobSF scan on APK/AAB.
 

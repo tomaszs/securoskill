@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Data isolation models
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Tenant-scoped authorization
 
@@ -44,17 +42,17 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Billing and plan enforcement
 
@@ -62,17 +60,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Custom domains and TLS
 
@@ -80,17 +77,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Tenant export and backup
 
@@ -98,17 +94,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Per-tenant integrations
 
@@ -116,17 +111,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Noisy neighbor and quotas
 
@@ -134,17 +128,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Tenant onboarding
 
@@ -152,17 +145,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Tenant offboarding
 
@@ -170,17 +162,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## Compliance per tenant
 
@@ -188,17 +179,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 
 ## SaaS penetration patterns
 
@@ -206,15 +196,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `multi-tenancy-saas`; load stack skill `security-multi-tenancy-saas` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-multi-tenancy-saas` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `multi-tenancy-saas` controls only in Docker config while leaving security-multi-tenancy-saas misconfigured.
-- Do not assume Docker defaults satisfy `security-multi-tenancy-saas` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-multi-tenancy-saas`.
+- Image scan gate in CI.
 

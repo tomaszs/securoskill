@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Template injection in email
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Links in email
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Bounce and webhook handling
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## List management
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Brand impersonation
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Attachments
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## SMS and push
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## User inbox rules attacks
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Email provider APIs
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## PII in email bodies
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 
 ## Email abuse
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Kotlin / Jetpack Compose config while leaving security-email-notifications misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-email-notifications` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-email-notifications`.
+- MobSF scan on APK/AAB.
 

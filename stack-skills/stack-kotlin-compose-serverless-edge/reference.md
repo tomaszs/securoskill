@@ -2,95 +2,23 @@
 
 Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normative rules: domain skill `security-serverless-edge` / `reference.md`.
 
-## Function authentication
-
-**Sub-topics:** IAM roles, Function URLs, API Gateway authorizers, JWT at edge, Anonymous triggers
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
-
-## Event source trust
-
-**Sub-topics:** S3 notifications, SQS/SNS, EventBridge, Cron schedules, Webhook triggers
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
-
-## Secrets in serverless
-
-**Sub-topics:** Env vars, Parameter Store, KMS grants, Rotation, Leak in logs
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
-
 ## VPC and network placement
 
 **Sub-topics:** NAT costs, Public subnets, Private API, Egress SSRF, Peering
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
-
-## Edge workers (CDN)
-
-**Sub-topics:** KV stores, Request rewriting, Cache poisoning, Geo routing, WAF at edge
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Denial of wallet
 
@@ -98,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Idempotency and retries
 
@@ -116,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Local dev parity
 
@@ -134,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Multi-region functions
 
@@ -152,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Wasm at edge
 
@@ -170,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Orchestration workflows
 
@@ -188,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 
 ## Platform limit abuse
 
@@ -206,15 +134,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `serverless-edge`; load stack skill `security-serverless-edge` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-serverless-edge` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `serverless-edge` controls only in Kotlin / Jetpack Compose config while leaving security-serverless-edge misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-serverless-edge` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-serverless-edge`.
+- MobSF scan on APK/AAB.
 

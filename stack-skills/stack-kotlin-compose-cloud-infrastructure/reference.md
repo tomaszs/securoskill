@@ -2,41 +2,23 @@
 
 Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normative rules: domain skill `security-cloud-infrastructure` / `reference.md`.
 
-## Cloud IAM
-
-**Sub-topics:** Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
-
 ## Object storage buckets
 
 **Sub-topics:** Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## Compute instances
 
@@ -44,35 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
-
-## Managed serverless
-
-**Sub-topics:** Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## Secrets managers
 
@@ -80,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## VPC and security groups
 
@@ -98,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## Cloud audit logs
 
@@ -116,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## Infrastructure as code
 
@@ -134,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## Multi-cloud identity
 
@@ -152,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## SaaS admin consoles
 
@@ -170,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## CDN and edge
 
@@ -188,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 
 ## DR and regions
 
@@ -206,15 +170,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cloud-infrastructure`; load stack skill `stack-aws-cloud-infrastructure` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cloud-infrastructure` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cloud-infrastructure` controls only in Kotlin / Jetpack Compose config while leaving stack-aws-cloud-infrastructure misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cloud-infrastructure` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-aws-cloud-infrastructure`.
+- MobSF scan on APK/AAB.
 

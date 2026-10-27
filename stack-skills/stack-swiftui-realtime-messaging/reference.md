@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Room and channel authorization
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Message integrity
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Presence leaks
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## MQTT and IoT protocols
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Kafka security
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Redis pub/sub
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Server-sent events
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Collaborative editing
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## WebRTC
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Fan-out abuse
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 
 ## Message retention
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `realtime-messaging`; load stack skill `security-realtime-messaging` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-realtime-messaging` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `realtime-messaging` controls only in SwiftUI (iOS) config while leaving security-realtime-messaging misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-realtime-messaging` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-realtime-messaging`.
+- MobSF scan on IPA.
 

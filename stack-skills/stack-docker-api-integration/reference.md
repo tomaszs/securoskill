@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## GraphQL security
 
@@ -45,17 +44,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## Webhooks outbound and inbound
 
@@ -63,17 +61,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## OAuth2/OIDC for APIs
 
@@ -81,17 +78,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## API keys and HMAC
 
@@ -99,17 +95,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## Pagination and filtering abuse
 
@@ -117,17 +112,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## CORS for APIs
 
@@ -135,17 +129,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## OpenAPI and documentation leakage
 
@@ -153,17 +146,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## Backend-for-frontend patterns
 
@@ -171,17 +163,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## Legacy SOAP/XML APIs
 
@@ -189,17 +180,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 
 ## Event buses and streaming
 
@@ -207,15 +197,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `api-integration`; load stack skill `security-api-integration` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-api-integration` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `api-integration` controls only in Docker config while leaving security-api-integration misconfigured.
-- Do not assume Docker defaults satisfy `security-api-integration` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-api-integration`.
+- Image scan gate in CI.
 

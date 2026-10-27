@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Refunds and disputes
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Currency and rounding
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## PCI scoping
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## 3-D Secure flows
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Digital wallets
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Payouts and KYC
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Internal ledger integrity
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Tax and invoicing
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Subscription logic
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 
 ## Fraud scoring
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `payments-fintech`; load stack skill `security-payments-fintech` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-payments-fintech` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `payments-fintech` controls only in Terraform config while leaving security-payments-fintech misconfigured.
-- Do not assume Terraform defaults satisfy `security-payments-fintech` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-payments-fintech`.
+- tfsec/checkov on every PR.
 

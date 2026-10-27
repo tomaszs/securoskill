@@ -8,17 +8,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## WAF and edge protection
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## SSRF
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## Reverse proxies
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## VPN and private networking
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## DDoS and volumetric attacks
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## IP allowlisting pitfalls
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## HTTP request smuggling
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## WebSocket transport
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## SMTP security
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## IPv6 and dual stack
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 
 ## Service mesh mTLS
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `network-transport`; load stack skill `security-network-transport` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-network-transport` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `network-transport` controls only in SwiftUI (iOS) config while leaving security-network-transport misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-network-transport` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `security-network-transport`.
+- MobSF scan on IPA.
 

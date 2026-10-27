@@ -46,17 +46,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## Training data poisoning
 
@@ -64,17 +64,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## Model and weight exfiltration
 
@@ -82,17 +82,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## Agent tool invocation
 
@@ -138,17 +138,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## Fine-tuning access
 
@@ -156,17 +156,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## Embeddings privacy
 
@@ -174,17 +174,17 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 
 ## MCP and external tools
 
@@ -211,15 +211,15 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 ### Do (use this in SwiftUI (iOS))
 
-- SwiftUI (iOS) is not the primary enforcement point for `ai-ml-security`; load stack skill `stack-openai-api-ai-ml-security` when you touch that layer.
-- Keep SwiftUI (iOS) configuration aligned with requirements from `security-ai-ml-security` (domain reference.md).
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
 ### Don't
 
-- Do not duplicate `ai-ml-security` controls only in SwiftUI (iOS) config while leaving stack-openai-api-ai-ml-security misconfigured.
-- Do not assume SwiftUI (iOS) defaults satisfy `security-ai-ml-security` without verification.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Integration test the full path: SwiftUI (iOS) plus the system covered by `stack-openai-api-ai-ml-security`.
+- MobSF scan on IPA.
 

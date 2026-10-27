@@ -8,17 +8,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Template injection in email
 
@@ -26,17 +25,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Links in email
 
@@ -44,17 +42,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Bounce and webhook handling
 
@@ -62,17 +59,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## List management
 
@@ -80,17 +76,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Brand impersonation
 
@@ -98,17 +93,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Attachments
 
@@ -116,17 +110,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## SMS and push
 
@@ -134,17 +127,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## User inbox rules attacks
 
@@ -152,17 +144,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Email provider APIs
 
@@ -170,17 +161,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## PII in email bodies
 
@@ -188,17 +178,16 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 
 ## Email abuse
 
@@ -206,15 +195,14 @@ Stack-specific implementation for **Docker** (Infrastructure). Normative rules: 
 
 ### Do (use this in Docker)
 
-- Docker is not the primary enforcement point for `email-notifications`; load stack skill `security-email-notifications` when you touch that layer.
-- Keep Docker configuration aligned with requirements from `security-email-notifications` (domain reference.md).
+- Run as non-root USER; use multi-stage builds; scan images with Trivy.
 
 ### Don't
 
-- Do not duplicate `email-notifications` controls only in Docker config while leaving security-email-notifications misconfigured.
-- Do not assume Docker defaults satisfy `security-email-notifications` without verification.
+- Do not use `--privileged` in production compose.
+- Do not bake secrets into image layers.
 
 ### Verify
 
-- Integration test the full path: Docker plus the system covered by `security-email-notifications`.
+- Image scan gate in CI.
 

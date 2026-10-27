@@ -8,89 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
-
-## Kubernetes RBAC
-
-**Sub-topics:** Cluster-admin, Namespace isolation, Threat modeling and trust boundaries (Kubernetes RBAC), Abuse cases and adversarial testing (Kubernetes RBAC), Logging, audit, and detection (Kubernetes RBAC)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
-
-## Network policies
-
-**Sub-topics:** Default allow, Egress control, Threat modeling and trust boundaries (Network policies), Abuse cases and adversarial testing (Network policies), Logging, audit, and detection (Network policies)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
-
-## Kubernetes secrets
-
-**Sub-topics:** etcd encryption, External secrets, Threat modeling and trust boundaries (Kubernetes secrets), Abuse cases and adversarial testing (Kubernetes secrets), Logging, audit, and detection (Kubernetes secrets)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
-
-## Container runtime
-
-**Sub-topics:** Privileged pods, Host mounts, Threat modeling and trust boundaries (Container runtime), Abuse cases and adversarial testing (Container runtime), Logging, audit, and detection (Container runtime)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Admission controllers
 
@@ -98,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Helm charts
 
@@ -116,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Container registries
 
@@ -134,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Sidecars and service mesh
 
@@ -152,35 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
-
-## Windows containers
-
-**Sub-topics:** Isolation levels, Threat modeling and trust boundaries (Windows containers), Abuse cases and adversarial testing (Windows containers), Logging, audit, and detection (Windows containers), Access control and least privilege (Windows containers)
-
-### Do (use this in Kotlin / Jetpack Compose)
-
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
-
-### Don't
-
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
-
-### Verify
-
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Docker Compose dev security
 
@@ -188,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 
 ## Container escape vectors
 
@@ -206,15 +116,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `containers-k8s`; load stack skill `stack-kubernetes-containers-k8s` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-containers-k8s` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `containers-k8s` controls only in Kotlin / Jetpack Compose config while leaving stack-kubernetes-containers-k8s misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-containers-k8s` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `stack-kubernetes-containers-k8s`.
+- MobSF scan on APK/AAB.
 

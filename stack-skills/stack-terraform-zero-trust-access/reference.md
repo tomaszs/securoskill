@@ -8,17 +8,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Device posture
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## ZTNA and private access
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Micro-segmentation
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Service mesh identity
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Privileged access management
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Conditional access policies
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Bastion-less admin
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Workload identity federation
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Network device trust
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Remote work access
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 
 ## Zero trust measurement
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 ### Do (use this in Terraform)
 
-- Terraform is not the primary enforcement point for `zero-trust-access`; load stack skill `security-zero-trust-access` when you touch that layer.
-- Keep Terraform configuration aligned with requirements from `security-zero-trust-access` (domain reference.md).
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
 ### Don't
 
-- Do not duplicate `zero-trust-access` controls only in Terraform config while leaving security-zero-trust-access misconfigured.
-- Do not assume Terraform defaults satisfy `security-zero-trust-access` without verification.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Integration test the full path: Terraform plus the system covered by `security-zero-trust-access`.
+- tfsec/checkov on every PR.
 

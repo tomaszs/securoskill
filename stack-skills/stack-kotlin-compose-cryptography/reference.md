@@ -8,17 +8,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Symmetric encryption
 
@@ -26,17 +26,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Asymmetric crypto
 
@@ -44,17 +44,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Hashing and passwords
 
@@ -62,17 +62,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Randomness and IDs
 
@@ -80,17 +80,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## KMS and HSM
 
@@ -98,17 +98,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## JWT and JOSE
 
@@ -116,17 +116,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use RS256 or ES256; validate `aud`, `iss`, `exp`; store keys in KMS.
+- Rotate signing keys with overlap.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not accept `alg: none` or HS256 with public client secrets.
+- Do not put PII in JWT payloads.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- Use jwt lint tools in CI for sample tokens.
 
 ## PGP and email crypto
 
@@ -134,17 +134,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Specialized crypto uses
 
@@ -152,17 +152,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Crypto agility
 
@@ -170,17 +170,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Secrets derivation
 
@@ -188,17 +188,17 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
 ## Side channels
 
@@ -206,15 +206,15 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 ### Do (use this in Kotlin / Jetpack Compose)
 
-- Kotlin / Jetpack Compose is not the primary enforcement point for `cryptography`; load stack skill `security-cryptography` when you touch that layer.
-- Keep Kotlin / Jetpack Compose configuration aligned with requirements from `security-cryptography` (domain reference.md).
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
 ### Don't
 
-- Do not duplicate `cryptography` controls only in Kotlin / Jetpack Compose config while leaving security-cryptography misconfigured.
-- Do not assume Kotlin / Jetpack Compose defaults satisfy `security-cryptography` without verification.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Integration test the full path: Kotlin / Jetpack Compose plus the system covered by `security-cryptography`.
+- MobSF scan on APK/AAB.
 
