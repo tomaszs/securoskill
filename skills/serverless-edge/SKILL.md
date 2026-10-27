@@ -2,6 +2,7 @@
 name: security-serverless-edge
 description: >-
   Applies secure engineering rules for serverless, edge, and faas security: Lambda, workers, edge functions, and event-driven compute. Use when implementing, reviewing, or threat-modeling code in this domain (keywords: serverless-edge, security, Serverless, edge, and FaaS security).
+disable-model-invocation: true
 ---
 
 # Serverless, edge, and FaaS security
@@ -12,7 +13,7 @@ Load this skill when work touches **serverless, edge, and faas security**: desig
 
 ## Workflow
 
-1. Skim sub-areas in [rules.md](rules.md) and pick those that match the change.
+1. Skim sub-areas in [reference.md](reference.md) and pick those that match the change.
 2. Apply rules from **policy → design → implementation → verification → operations** for each matching sub-area.
 3. For SQL injection, XSS, SSRF, authz, secrets, or other classics, use the dedicated sub-section rather than generic advice.
 4. Record gaps as security requirements or tests before merge.
@@ -34,4 +35,4 @@ Load this skill when work touches **serverless, edge, and faas security**: desig
 
 ## Full rules
 
-See [rules.md](rules.md) for all sub-areas and rule levels.
+See [reference.md](reference.md) for all sub-areas and rule levels.

@@ -2,6 +2,7 @@
 name: secure-software-engineering
 description: >-
   Orchestrates secure software engineering across frontend, backend, APIs, identity, data, cloud, serverless, multi-tenancy, frameworks, databases, Web3, IoT, desktop, AI, payments, and SDLC. Use when building or reviewing software for security, threat modeling, or preparing security checklists for AI agents and human developers.
+disable-model-invocation: true
 ---
 
 # Secure software engineering
@@ -13,7 +14,7 @@ Structured security guidance for AI coding agents and engineers: **34 domains**,
 ## How to use
 
 1. Identify which domain(s) your change touches (see table below).
-2. Open the matching skill under `skills/<domain>/SKILL.md` and its `rules.md`.
+2. Open the matching skill under `skills/<domain>/SKILL.md` and its `reference.md`.
 3. Apply rules top-down: governance → design → code → tests → operations.
 4. For cross-cutting issues (auth, secrets, logging), also load **identity-access**, **secrets-config**, and **logging-monitoring-ir**.
 

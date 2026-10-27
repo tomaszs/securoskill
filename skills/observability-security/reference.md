@@ -4,7 +4,7 @@ Traces, metrics, APM, and debug tooling.
 
 ## PII in traces
 
-Sub-topics: Sampling, Scrubbing
+Sub-topics: Sampling, Scrubbing, Threat modeling and trust boundaries (PII in traces), Abuse cases and adversarial testing (PII in traces), Logging, audit, and detection (PII in traces)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Sampling, Scrubbing
 
 ## Metrics cardinality abuse
 
-Sub-topics: Label injection
+Sub-topics: Label injection, Threat modeling and trust boundaries (Metrics cardinality abuse), Abuse cases and adversarial testing (Metrics cardinality abuse), Logging, audit, and detection (Metrics cardinality abuse), Access control and least privilege (Metrics cardinality abuse)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Label injection
 
 ## APM and session replay
 
-Sub-topics: Recording secrets
+Sub-topics: Recording secrets, Threat modeling and trust boundaries (APM and session replay), Abuse cases and adversarial testing (APM and session replay), Logging, audit, and detection (APM and session replay), Access control and least privilege (APM and session replay)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Recording secrets
 
 ## Production debugging
 
-Sub-topics: Feature flags, Access
+Sub-topics: Feature flags, Access, Threat modeling and trust boundaries (Production debugging), Abuse cases and adversarial testing (Production debugging), Logging, audit, and detection (Production debugging)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Feature flags, Access
 
 ## Error trackers
 
-Sub-topics: Breadcrumbs with tokens
+Sub-topics: Breadcrumbs with tokens, Threat modeling and trust boundaries (Error trackers), Abuse cases and adversarial testing (Error trackers), Logging, audit, and detection (Error trackers), Access control and least privilege (Error trackers)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Breadcrumbs with tokens
 
 ## Log injection
 
-Sub-topics: CRLF, Forged entries
+Sub-topics: CRLF, Forged entries, Threat modeling and trust boundaries (Log injection), Abuse cases and adversarial testing (Log injection), Logging, audit, and detection (Log injection)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: CRLF, Forged entries
 
 ## Dashboard access
 
-Sub-topics: SSO, Embedding
+Sub-topics: SSO, Embedding, Threat modeling and trust boundaries (Dashboard access), Abuse cases and adversarial testing (Dashboard access), Logging, audit, and detection (Dashboard access)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: SSO, Embedding
 
 ## OpenTelemetry exporters
 
-Sub-topics: Endpoints, Auth
+Sub-topics: Endpoints, Auth, Threat modeling and trust boundaries (OpenTelemetry exporters), Abuse cases and adversarial testing (OpenTelemetry exporters), Logging, audit, and detection (OpenTelemetry exporters)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Endpoints, Auth
 
 ## Continuous profiling
 
-Sub-topics: Heap dumps
+Sub-topics: Heap dumps, Threat modeling and trust boundaries (Continuous profiling), Abuse cases and adversarial testing (Continuous profiling), Logging, audit, and detection (Continuous profiling), Access control and least privilege (Continuous profiling)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Heap dumps
 
 ## Synthetic monitoring creds
 
-Sub-topics: Stored passwords
+Sub-topics: Stored passwords, Threat modeling and trust boundaries (Synthetic monitoring creds), Abuse cases and adversarial testing (Synthetic monitoring creds), Logging, audit, and detection (Synthetic monitoring creds), Access control and least privilege (Synthetic monitoring creds)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Stored passwords
 
 ## RUM and client beacons
 
-Sub-topics: Data minimization
+Sub-topics: Data minimization, Threat modeling and trust boundaries (RUM and client beacons), Abuse cases and adversarial testing (RUM and client beacons), Logging, audit, and detection (RUM and client beacons), Access control and least privilege (RUM and client beacons)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Data minimization
 
 ## Alert routing secrets
 
-Sub-topics: Webhook URLs in alerts
+Sub-topics: Webhook URLs in alerts, Threat modeling and trust boundaries (Alert routing secrets), Abuse cases and adversarial testing (Alert routing secrets), Logging, audit, and detection (Alert routing secrets), Access control and least privilege (Alert routing secrets)
 
 ### Policy
 

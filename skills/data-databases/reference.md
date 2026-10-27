@@ -4,7 +4,7 @@ RDBMS, NoSQL, warehouses, backups, and encryption at rest.
 
 ## Relational databases
 
-Sub-topics: PostgreSQL, MySQL, Migrations
+Sub-topics: PostgreSQL, MySQL, Migrations, Threat modeling and trust boundaries (Relational databases), Abuse cases and adversarial testing (Relational databases)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: PostgreSQL, MySQL, Migrations
 
 ## NoSQL stores
 
-Sub-topics: MongoDB, DynamoDB, Redis
+Sub-topics: MongoDB, DynamoDB, Redis, Threat modeling and trust boundaries (NoSQL stores), Abuse cases and adversarial testing (NoSQL stores)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: MongoDB, DynamoDB, Redis
 
 ## ORM and query builders
 
-Sub-topics: N+1, Raw SQL escape hatches
+Sub-topics: N+1, Raw SQL escape hatches, Threat modeling and trust boundaries (ORM and query builders), Abuse cases and adversarial testing (ORM and query builders), Logging, audit, and detection (ORM and query builders)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: N+1, Raw SQL escape hatches
 
 ## Encryption at rest
 
-Sub-topics: TDE, Column-level, KMS integration
+Sub-topics: TDE, Column-level, KMS integration, Threat modeling and trust boundaries (Encryption at rest), Abuse cases and adversarial testing (Encryption at rest)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: TDE, Column-level, KMS integration
 
 ## Backup and restore
 
-Sub-topics: Ransomware, Test restores, Offsite
+Sub-topics: Ransomware, Test restores, Offsite, Threat modeling and trust boundaries (Backup and restore), Abuse cases and adversarial testing (Backup and restore)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Ransomware, Test restores, Offsite
 
 ## Replication and CDC
 
-Sub-topics: Lag, Read replica exposure
+Sub-topics: Lag, Read replica exposure, Threat modeling and trust boundaries (Replication and CDC), Abuse cases and adversarial testing (Replication and CDC), Logging, audit, and detection (Replication and CDC)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Lag, Read replica exposure
 
 ## Data minimization
 
-Sub-topics: Retention, Anonymization
+Sub-topics: Retention, Anonymization, Threat modeling and trust boundaries (Data minimization), Abuse cases and adversarial testing (Data minimization), Logging, audit, and detection (Data minimization)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Retention, Anonymization
 
 ## PII and sensitive fields
 
-Sub-topics: Tokenization, Masking in logs
+Sub-topics: Tokenization, Masking in logs, Threat modeling and trust boundaries (PII and sensitive fields), Abuse cases and adversarial testing (PII and sensitive fields), Logging, audit, and detection (PII and sensitive fields)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Tokenization, Masking in logs
 
 ## Schema migrations safety
 
-Sub-topics: Destructive changes, Locking
+Sub-topics: Destructive changes, Locking, Threat modeling and trust boundaries (Schema migrations safety), Abuse cases and adversarial testing (Schema migrations safety), Logging, audit, and detection (Schema migrations safety)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Destructive changes, Locking
 
 ## Connection strings and pooling
 
-Sub-topics: Credential rotation, TLS to DB
+Sub-topics: Credential rotation, TLS to DB, Threat modeling and trust boundaries (Connection strings and pooling), Abuse cases and adversarial testing (Connection strings and pooling), Logging, audit, and detection (Connection strings and pooling)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Credential rotation, TLS to DB
 
 ## Row-level and column security
 
-Sub-topics: RLS policies, Views
+Sub-topics: RLS policies, Views, Threat modeling and trust boundaries (Row-level and column security), Abuse cases and adversarial testing (Row-level and column security), Logging, audit, and detection (Row-level and column security)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: RLS policies, Views
 
 ## Search indexes
 
-Sub-topics: Elasticsearch exposure, Leaked fields
+Sub-topics: Elasticsearch exposure, Leaked fields, Threat modeling and trust boundaries (Search indexes), Abuse cases and adversarial testing (Search indexes), Logging, audit, and detection (Search indexes)
 
 ### Policy
 

@@ -4,7 +4,7 @@ How teams embed security before code ships.
 
 ## STRIDE and threat models
 
-Sub-topics: Diagrams, Trust boundaries
+Sub-topics: Diagrams, Trust boundaries, Threat modeling and trust boundaries (STRIDE and threat models), Abuse cases and adversarial testing (STRIDE and threat models), Logging, audit, and detection (STRIDE and threat models)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Diagrams, Trust boundaries
 
 ## Security requirements
 
-Sub-topics: Non-functionals, Acceptance
+Sub-topics: Non-functionals, Acceptance, Threat modeling and trust boundaries (Security requirements), Abuse cases and adversarial testing (Security requirements), Logging, audit, and detection (Security requirements)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Non-functionals, Acceptance
 
 ## Design review
 
-Sub-topics: Checklists, Sign-off
+Sub-topics: Checklists, Sign-off, Threat modeling and trust boundaries (Design review), Abuse cases and adversarial testing (Design review), Logging, audit, and detection (Design review)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Checklists, Sign-off
 
 ## Security-focused code review
 
-Sub-topics: Hotspots
+Sub-topics: Hotspots, Threat modeling and trust boundaries (Security-focused code review), Abuse cases and adversarial testing (Security-focused code review), Logging, audit, and detection (Security-focused code review), Access control and least privilege (Security-focused code review)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Hotspots
 
 ## Security test planning
 
-Sub-topics: Coverage maps
+Sub-topics: Coverage maps, Threat modeling and trust boundaries (Security test planning), Abuse cases and adversarial testing (Security test planning), Logging, audit, and detection (Security test planning), Access control and least privilege (Security test planning)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Coverage maps
 
 ## Secure defaults culture
 
-Sub-topics: Templates, Golden paths
+Sub-topics: Templates, Golden paths, Threat modeling and trust boundaries (Secure defaults culture), Abuse cases and adversarial testing (Secure defaults culture), Logging, audit, and detection (Secure defaults culture)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Templates, Golden paths
 
 ## Developer education
 
-Sub-topics: Labs, Phishing sims
+Sub-topics: Labs, Phishing sims, Threat modeling and trust boundaries (Developer education), Abuse cases and adversarial testing (Developer education), Logging, audit, and detection (Developer education)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Labs, Phishing sims
 
 ## Vendor security assessment
 
-Sub-topics: Questionnaires
+Sub-topics: Questionnaires, Threat modeling and trust boundaries (Vendor security assessment), Abuse cases and adversarial testing (Vendor security assessment), Logging, audit, and detection (Vendor security assessment), Access control and least privilege (Vendor security assessment)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Questionnaires
 
 ## Architecture decision records
 
-Sub-topics: Security ADRs
+Sub-topics: Security ADRs, Threat modeling and trust boundaries (Architecture decision records), Abuse cases and adversarial testing (Architecture decision records), Logging, audit, and detection (Architecture decision records), Access control and least privilege (Architecture decision records)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Security ADRs
 
 ## Attack surface management
 
-Sub-topics: Inventory, Exposure
+Sub-topics: Inventory, Exposure, Threat modeling and trust boundaries (Attack surface management), Abuse cases and adversarial testing (Attack surface management), Logging, audit, and detection (Attack surface management)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Inventory, Exposure
 
 ## Purple team exercises
 
-Sub-topics: Scenarios
+Sub-topics: Scenarios, Threat modeling and trust boundaries (Purple team exercises), Abuse cases and adversarial testing (Purple team exercises), Logging, audit, and detection (Purple team exercises), Access control and least privilege (Purple team exercises)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Scenarios
 
 ## SDL metrics
 
-Sub-topics: Defect density, Lead time
+Sub-topics: Defect density, Lead time, Threat modeling and trust boundaries (SDL metrics), Abuse cases and adversarial testing (SDL metrics), Logging, audit, and detection (SDL metrics)
 
 ### Policy
 

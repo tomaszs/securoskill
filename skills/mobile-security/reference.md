@@ -4,7 +4,7 @@ iOS, Android, hybrid, and mobile APIs.
 
 ## On-device storage
 
-Sub-topics: Keychain, Keystore, SQLite
+Sub-topics: Keychain, Keystore, SQLite, Threat modeling and trust boundaries (On-device storage), Abuse cases and adversarial testing (On-device storage)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Keychain, Keystore, SQLite
 
 ## Certificate pinning
 
-Sub-topics: Bypass tools, Rotation
+Sub-topics: Bypass tools, Rotation, Threat modeling and trust boundaries (Certificate pinning), Abuse cases and adversarial testing (Certificate pinning), Logging, audit, and detection (Certificate pinning)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Bypass tools, Rotation
 
 ## Reverse engineering resistance
 
-Sub-topics: Obfuscation limits
+Sub-topics: Obfuscation limits, Threat modeling and trust boundaries (Reverse engineering resistance), Abuse cases and adversarial testing (Reverse engineering resistance), Logging, audit, and detection (Reverse engineering resistance), Access control and least privilege (Reverse engineering resistance)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Obfuscation limits
 
 ## Deep links and intents
 
-Sub-topics: URL scheme hijack
+Sub-topics: URL scheme hijack, Threat modeling and trust boundaries (Deep links and intents), Abuse cases and adversarial testing (Deep links and intents), Logging, audit, and detection (Deep links and intents), Access control and least privilege (Deep links and intents)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: URL scheme hijack
 
 ## Mobile OAuth
 
-Sub-topics: PKCE, Custom URL schemes
+Sub-topics: PKCE, Custom URL schemes, Threat modeling and trust boundaries (Mobile OAuth), Abuse cases and adversarial testing (Mobile OAuth), Logging, audit, and detection (Mobile OAuth)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: PKCE, Custom URL schemes
 
 ## Biometric APIs
 
-Sub-topics: Fallback PIN
+Sub-topics: Fallback PIN, Threat modeling and trust boundaries (Biometric APIs), Abuse cases and adversarial testing (Biometric APIs), Logging, audit, and detection (Biometric APIs), Access control and least privilege (Biometric APIs)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Fallback PIN
 
 ## WebView bridges
 
-Sub-topics: JS interfaces
+Sub-topics: JS interfaces, Threat modeling and trust boundaries (WebView bridges), Abuse cases and adversarial testing (WebView bridges), Logging, audit, and detection (WebView bridges), Access control and least privilege (WebView bridges)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: JS interfaces
 
 ## Push notifications
 
-Sub-topics: Payload sensitivity
+Sub-topics: Payload sensitivity, Threat modeling and trust boundaries (Push notifications), Abuse cases and adversarial testing (Push notifications), Logging, audit, and detection (Push notifications), Access control and least privilege (Push notifications)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Payload sensitivity
 
 ## App attestation
 
-Sub-topics: DeviceCheck, Play Integrity
+Sub-topics: DeviceCheck, Play Integrity, Threat modeling and trust boundaries (App attestation), Abuse cases and adversarial testing (App attestation), Logging, audit, and detection (App attestation)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: DeviceCheck, Play Integrity
 
 ## Sideloading and jailbreak
 
-Sub-topics: Root detection limits
+Sub-topics: Root detection limits, Threat modeling and trust boundaries (Sideloading and jailbreak), Abuse cases and adversarial testing (Sideloading and jailbreak), Logging, audit, and detection (Sideloading and jailbreak), Access control and least privilege (Sideloading and jailbreak)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Root detection limits
 
 ## Screenshots and overlays
 
-Sub-topics: FLAG_SECURE, Overlay attacks
+Sub-topics: FLAG_SECURE, Overlay attacks, Threat modeling and trust boundaries (Screenshots and overlays), Abuse cases and adversarial testing (Screenshots and overlays), Logging, audit, and detection (Screenshots and overlays)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: FLAG_SECURE, Overlay attacks
 
 ## Mobile SDK supply chain
 
-Sub-topics: Third-party SDKs
+Sub-topics: Third-party SDKs, Threat modeling and trust boundaries (Mobile SDK supply chain), Abuse cases and adversarial testing (Mobile SDK supply chain), Logging, audit, and detection (Mobile SDK supply chain), Access control and least privilege (Mobile SDK supply chain)
 
 ### Policy
 

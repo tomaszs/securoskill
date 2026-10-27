@@ -4,7 +4,7 @@ Users, machines, roles, and federation.
 
 ## Passwords and credentials
 
-Sub-topics: Hashing, Pepper, Breached password checks
+Sub-topics: Hashing, Pepper, Breached password checks, Threat modeling and trust boundaries (Passwords and credentials), Abuse cases and adversarial testing (Passwords and credentials)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Hashing, Pepper, Breached password checks
 
 ## MFA and step-up auth
 
-Sub-topics: TOTP, WebAuthn, Recovery codes
+Sub-topics: TOTP, WebAuthn, Recovery codes, Threat modeling and trust boundaries (MFA and step-up auth), Abuse cases and adversarial testing (MFA and step-up auth)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: TOTP, WebAuthn, Recovery codes
 
 ## SSO and federation
 
-Sub-topics: SAML, OIDC, JIT provisioning
+Sub-topics: SAML, OIDC, JIT provisioning, Threat modeling and trust boundaries (SSO and federation), Abuse cases and adversarial testing (SSO and federation)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: SAML, OIDC, JIT provisioning
 
 ## RBAC
 
-Sub-topics: Role explosion, Default roles
+Sub-topics: Role explosion, Default roles, Threat modeling and trust boundaries (RBAC), Abuse cases and adversarial testing (RBAC), Logging, audit, and detection (RBAC)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Role explosion, Default roles
 
 ## ABAC and policy engines
 
-Sub-topics: OPA,  Cedar, Policy tests
+Sub-topics: OPA,  Cedar, Policy tests, Threat modeling and trust boundaries (ABAC and policy engines), Abuse cases and adversarial testing (ABAC and policy engines)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: OPA,  Cedar, Policy tests
 
 ## Service accounts and workloads
 
-Sub-topics: SPIFFE, IAM roles
+Sub-topics: SPIFFE, IAM roles, Threat modeling and trust boundaries (Service accounts and workloads), Abuse cases and adversarial testing (Service accounts and workloads), Logging, audit, and detection (Service accounts and workloads)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: SPIFFE, IAM roles
 
 ## Break-glass and emergency access
 
-Sub-topics: Audit, Time bounds
+Sub-topics: Audit, Time bounds, Threat modeling and trust boundaries (Break-glass and emergency access), Abuse cases and adversarial testing (Break-glass and emergency access), Logging, audit, and detection (Break-glass and emergency access)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Audit, Time bounds
 
 ## Account lifecycle
 
-Sub-topics: Joiner-mover-leaver, Orphan accounts
+Sub-topics: Joiner-mover-leaver, Orphan accounts, Threat modeling and trust boundaries (Account lifecycle), Abuse cases and adversarial testing (Account lifecycle), Logging, audit, and detection (Account lifecycle)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Joiner-mover-leaver, Orphan accounts
 
 ## Privilege escalation
 
-Sub-topics: Horizontal, Vertical, IDOR
+Sub-topics: Horizontal, Vertical, IDOR, Threat modeling and trust boundaries (Privilege escalation), Abuse cases and adversarial testing (Privilege escalation)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Horizontal, Vertical, IDOR
 
 ## Zero trust access
 
-Sub-topics: Device posture, Continuous auth
+Sub-topics: Device posture, Continuous auth, Threat modeling and trust boundaries (Zero trust access), Abuse cases and adversarial testing (Zero trust access), Logging, audit, and detection (Zero trust access)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Device posture, Continuous auth
 
 ## Biometrics and device binding
 
-Sub-topics: Liveness, Replay
+Sub-topics: Liveness, Replay, Threat modeling and trust boundaries (Biometrics and device binding), Abuse cases and adversarial testing (Biometrics and device binding), Logging, audit, and detection (Biometrics and device binding)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Liveness, Replay
 
 ## Guest and anonymous access
 
-Sub-topics: Scoped tokens, Rate limits
+Sub-topics: Scoped tokens, Rate limits, Threat modeling and trust boundaries (Guest and anonymous access), Abuse cases and adversarial testing (Guest and anonymous access), Logging, audit, and detection (Guest and anonymous access)
 
 ### Policy
 

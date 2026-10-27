@@ -4,7 +4,7 @@ REST, GraphQL, gRPC, webhooks, and partner APIs.
 
 ## REST API design security
 
-Sub-topics: Versioning, Idempotency, Mass assignment
+Sub-topics: Versioning, Idempotency, Mass assignment, Threat modeling and trust boundaries (REST API design security), Abuse cases and adversarial testing (REST API design security)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Versioning, Idempotency, Mass assignment
 
 ## GraphQL security
 
-Sub-topics: Depth limits, Introspection, Batching abuse
+Sub-topics: Depth limits, Introspection, Batching abuse, Threat modeling and trust boundaries (GraphQL security), Abuse cases and adversarial testing (GraphQL security)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Depth limits, Introspection, Batching abuse
 
 ## gRPC and protobuf
 
-Sub-topics: mTLS, Message size, Auth metadata
+Sub-topics: mTLS, Message size, Auth metadata, Threat modeling and trust boundaries (gRPC and protobuf), Abuse cases and adversarial testing (gRPC and protobuf)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: mTLS, Message size, Auth metadata
 
 ## Webhooks outbound and inbound
 
-Sub-topics: Signature verification, Replay, SSRF from callbacks
+Sub-topics: Signature verification, Replay, SSRF from callbacks, Threat modeling and trust boundaries (Webhooks outbound and inbound), Abuse cases and adversarial testing (Webhooks outbound and inbound)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Signature verification, Replay, SSRF from callbacks
 
 ## OAuth2/OIDC for APIs
 
-Sub-topics: Scopes, Client credentials, Token exchange
+Sub-topics: Scopes, Client credentials, Token exchange, Threat modeling and trust boundaries (OAuth2/OIDC for APIs), Abuse cases and adversarial testing (OAuth2/OIDC for APIs)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Scopes, Client credentials, Token exchange
 
 ## API keys and HMAC
 
-Sub-topics: Rotation, Per-tenant keys, Constant-time compare
+Sub-topics: Rotation, Per-tenant keys, Constant-time compare, Threat modeling and trust boundaries (API keys and HMAC), Abuse cases and adversarial testing (API keys and HMAC)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Rotation, Per-tenant keys, Constant-time compare
 
 ## Pagination and filtering abuse
 
-Sub-topics: Large offsets, Filter injection
+Sub-topics: Large offsets, Filter injection, Threat modeling and trust boundaries (Pagination and filtering abuse), Abuse cases and adversarial testing (Pagination and filtering abuse), Logging, audit, and detection (Pagination and filtering abuse)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Large offsets, Filter injection
 
 ## CORS for APIs
 
-Sub-topics: Credentials, Wildcard origins
+Sub-topics: Credentials, Wildcard origins, Threat modeling and trust boundaries (CORS for APIs), Abuse cases and adversarial testing (CORS for APIs), Logging, audit, and detection (CORS for APIs)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Credentials, Wildcard origins
 
 ## OpenAPI and documentation leakage
 
-Sub-topics: Hidden admin paths, Example secrets
+Sub-topics: Hidden admin paths, Example secrets, Threat modeling and trust boundaries (OpenAPI and documentation leakage), Abuse cases and adversarial testing (OpenAPI and documentation leakage), Logging, audit, and detection (OpenAPI and documentation leakage)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Hidden admin paths, Example secrets
 
 ## Backend-for-frontend patterns
 
-Sub-topics: Token handling, Aggregation leaks
+Sub-topics: Token handling, Aggregation leaks, Threat modeling and trust boundaries (Backend-for-frontend patterns), Abuse cases and adversarial testing (Backend-for-frontend patterns), Logging, audit, and detection (Backend-for-frontend patterns)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Token handling, Aggregation leaks
 
 ## Legacy SOAP/XML APIs
 
-Sub-topics: XXE, WS-Security misconfig
+Sub-topics: XXE, WS-Security misconfig, Threat modeling and trust boundaries (Legacy SOAP/XML APIs), Abuse cases and adversarial testing (Legacy SOAP/XML APIs), Logging, audit, and detection (Legacy SOAP/XML APIs)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: XXE, WS-Security misconfig
 
 ## Event buses and streaming
 
-Sub-topics: Schema evolution, Poison messages
+Sub-topics: Schema evolution, Poison messages, Threat modeling and trust boundaries (Event buses and streaming), Abuse cases and adversarial testing (Event buses and streaming), Logging, audit, and detection (Event buses and streaming)
 
 ### Policy
 

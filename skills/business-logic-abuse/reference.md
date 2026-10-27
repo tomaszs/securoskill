@@ -4,7 +4,7 @@ Fraud, workflows, and domain-specific attacks.
 
 ## Payment and checkout abuse
 
-Sub-topics: Coupon stacking, Currency
+Sub-topics: Coupon stacking, Currency, Threat modeling and trust boundaries (Payment and checkout abuse), Abuse cases and adversarial testing (Payment and checkout abuse), Logging, audit, and detection (Payment and checkout abuse)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Coupon stacking, Currency
 
 ## Workflow bypass
 
-Sub-topics: State machine skips
+Sub-topics: State machine skips, Threat modeling and trust boundaries (Workflow bypass), Abuse cases and adversarial testing (Workflow bypass), Logging, audit, and detection (Workflow bypass), Access control and least privilege (Workflow bypass)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: State machine skips
 
 ## Insecure direct object references
 
-Sub-topics: UUID guessing, IDOR in APIs
+Sub-topics: UUID guessing, IDOR in APIs, Threat modeling and trust boundaries (Insecure direct object references), Abuse cases and adversarial testing (Insecure direct object references), Logging, audit, and detection (Insecure direct object references)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: UUID guessing, IDOR in APIs
 
 ## Mass assignment
 
-Sub-topics: Hidden fields, DTO allowlists
+Sub-topics: Hidden fields, DTO allowlists, Threat modeling and trust boundaries (Mass assignment), Abuse cases and adversarial testing (Mass assignment), Logging, audit, and detection (Mass assignment)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Hidden fields, DTO allowlists
 
 ## Bots and automation
 
-Sub-topics: CAPTCHA alternatives, Behavior
+Sub-topics: CAPTCHA alternatives, Behavior, Threat modeling and trust boundaries (Bots and automation), Abuse cases and adversarial testing (Bots and automation), Logging, audit, and detection (Bots and automation)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: CAPTCHA alternatives, Behavior
 
 ## Referral and loyalty abuse
 
-Sub-topics: Self-referral
+Sub-topics: Self-referral, Threat modeling and trust boundaries (Referral and loyalty abuse), Abuse cases and adversarial testing (Referral and loyalty abuse), Logging, audit, and detection (Referral and loyalty abuse), Access control and least privilege (Referral and loyalty abuse)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Self-referral
 
 ## Marketplace trust
 
-Sub-topics: Chargeback, Escrow
+Sub-topics: Chargeback, Escrow, Threat modeling and trust boundaries (Marketplace trust), Abuse cases and adversarial testing (Marketplace trust), Logging, audit, and detection (Marketplace trust)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Chargeback, Escrow
 
 ## Content abuse
 
-Sub-topics: Spam, Illegal content
+Sub-topics: Spam, Illegal content, Threat modeling and trust boundaries (Content abuse), Abuse cases and adversarial testing (Content abuse), Logging, audit, and detection (Content abuse)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Spam, Illegal content
 
 ## Quota and limit bypass
 
-Sub-topics: Parallel requests
+Sub-topics: Parallel requests, Threat modeling and trust boundaries (Quota and limit bypass), Abuse cases and adversarial testing (Quota and limit bypass), Logging, audit, and detection (Quota and limit bypass), Access control and least privilege (Quota and limit bypass)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Parallel requests
 
 ## Admin misuse
 
-Sub-topics: Separation of duties
+Sub-topics: Separation of duties, Threat modeling and trust boundaries (Admin misuse), Abuse cases and adversarial testing (Admin misuse), Logging, audit, and detection (Admin misuse), Access control and least privilege (Admin misuse)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Separation of duties
 
 ## Time-based logic
 
-Sub-topics: Timezone, Leap seconds
+Sub-topics: Timezone, Leap seconds, Threat modeling and trust boundaries (Time-based logic), Abuse cases and adversarial testing (Time-based logic), Logging, audit, and detection (Time-based logic)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Timezone, Leap seconds
 
 ## Feature gating bypass
 
-Sub-topics: Client flags
+Sub-topics: Client flags, Threat modeling and trust boundaries (Feature gating bypass), Abuse cases and adversarial testing (Feature gating bypass), Logging, audit, and detection (Feature gating bypass), Access control and least privilege (Feature gating bypass)
 
 ### Policy
 

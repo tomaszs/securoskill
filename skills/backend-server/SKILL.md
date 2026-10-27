@@ -2,6 +2,7 @@
 name: security-backend-server
 description: >-
   Applies secure engineering rules for backend and server-side security: Application servers, business logic, and server runtime. Use when implementing, reviewing, or threat-modeling code in this domain (keywords: backend-server, security, Backend and server-side security).
+disable-model-invocation: true
 ---
 
 # Backend and server-side security
@@ -12,7 +13,7 @@ Load this skill when work touches **backend and server-side security**: design, 
 
 ## Workflow
 
-1. Skim sub-areas in [rules.md](rules.md) and pick those that match the change.
+1. Skim sub-areas in [reference.md](reference.md) and pick those that match the change.
 2. Apply rules from **policy → design → implementation → verification → operations** for each matching sub-area.
 3. For SQL injection, XSS, SSRF, authz, secrets, or other classics, use the dedicated sub-section rather than generic advice.
 4. Record gaps as security requirements or tests before merge.
@@ -27,11 +28,11 @@ Load this skill when work touches **backend and server-side security**: design, 
 - **Server file I/O**: Path traversal, Zip slip, Symlinks, …
 - **Deserialization and parsing**: JSON bombs, XML external entities, YAML unsafe load, …
 - **Background jobs and queues**: Job injection, Privilege of workers, Retry storms, …
-- **Server-side caching**: Cache key injection, Sensitive data in cache, …
-- **Tenant isolation on server**: Row-level security, Shared schema leaks, …
+- **Server-side caching**: Cache key injection, Sensitive data in cache, Threat modeling and trust boundaries (Server-side caching), …
+- **Tenant isolation on server**: Row-level security, Shared schema leaks, Threat modeling and trust boundaries (Tenant isolation on server), …
 - **Rate limiting and abuse**: Brute force, Scraping, Account enumeration, …
 - **Health and debug endpoints**: /metrics exposure, Actuator, phpinfo equivalents, …
 
 ## Full rules
 
-See [rules.md](rules.md) for all sub-areas and rule levels.
+See [reference.md](reference.md) for all sub-areas and rule levels.

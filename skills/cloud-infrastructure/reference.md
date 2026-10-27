@@ -4,7 +4,7 @@ IaaS/PaaS, IAM, storage, and networking in cloud.
 
 ## Cloud IAM
 
-Sub-topics: Overprivileged roles, IAM conditions
+Sub-topics: Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Overprivileged roles, IAM conditions
 
 ## Object storage buckets
 
-Sub-topics: Public ACLs, Policy mistakes
+Sub-topics: Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Public ACLs, Policy mistakes
 
 ## Compute instances
 
-Sub-topics: IMDSv2, SSH keys, Metadata
+Sub-topics: IMDSv2, SSH keys, Metadata, Threat modeling and trust boundaries (Compute instances), Abuse cases and adversarial testing (Compute instances)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: IMDSv2, SSH keys, Metadata
 
 ## Managed serverless
 
-Sub-topics: Function URLs, Concurrency
+Sub-topics: Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Function URLs, Concurrency
 
 ## Secrets managers
 
-Sub-topics: Rotation, Access policies
+Sub-topics: Rotation, Access policies, Threat modeling and trust boundaries (Secrets managers), Abuse cases and adversarial testing (Secrets managers), Logging, audit, and detection (Secrets managers)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Rotation, Access policies
 
 ## VPC and security groups
 
-Sub-topics: 0.0.0.0/0, Peering leaks
+Sub-topics: 0.0.0.0/0, Peering leaks, Threat modeling and trust boundaries (VPC and security groups), Abuse cases and adversarial testing (VPC and security groups), Logging, audit, and detection (VPC and security groups)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: 0.0.0.0/0, Peering leaks
 
 ## Cloud audit logs
 
-Sub-topics: Tampering, Retention
+Sub-topics: Tampering, Retention, Threat modeling and trust boundaries (Cloud audit logs), Abuse cases and adversarial testing (Cloud audit logs), Logging, audit, and detection (Cloud audit logs)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Tampering, Retention
 
 ## Infrastructure as code
 
-Sub-topics: State files, Drift
+Sub-topics: State files, Drift, Threat modeling and trust boundaries (Infrastructure as code), Abuse cases and adversarial testing (Infrastructure as code), Logging, audit, and detection (Infrastructure as code)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: State files, Drift
 
 ## Multi-cloud identity
 
-Sub-topics: Federation, Key sprawl
+Sub-topics: Federation, Key sprawl, Threat modeling and trust boundaries (Multi-cloud identity), Abuse cases and adversarial testing (Multi-cloud identity), Logging, audit, and detection (Multi-cloud identity)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Federation, Key sprawl
 
 ## SaaS admin consoles
 
-Sub-topics: MFA, SCIM
+Sub-topics: MFA, SCIM, Threat modeling and trust boundaries (SaaS admin consoles), Abuse cases and adversarial testing (SaaS admin consoles), Logging, audit, and detection (SaaS admin consoles)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: MFA, SCIM
 
 ## CDN and edge
 
-Sub-topics: Cache deception, Origin shield
+Sub-topics: Cache deception, Origin shield, Threat modeling and trust boundaries (CDN and edge), Abuse cases and adversarial testing (CDN and edge), Logging, audit, and detection (CDN and edge)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Cache deception, Origin shield
 
 ## DR and regions
 
-Sub-topics: Failover security, Data residency
+Sub-topics: Failover security, Data residency, Threat modeling and trust boundaries (DR and regions), Abuse cases and adversarial testing (DR and regions), Logging, audit, and detection (DR and regions)
 
 ### Policy
 

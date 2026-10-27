@@ -4,7 +4,7 @@ GDPR, consent, DPIA, and regulatory alignment.
 
 ## Data subject rights
 
-Sub-topics: Erasure, Export, Rectification
+Sub-topics: Erasure, Export, Rectification, Threat modeling and trust boundaries (Data subject rights), Abuse cases and adversarial testing (Data subject rights)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Erasure, Export, Rectification
 
 ## Consent management
 
-Sub-topics: Granularity, Withdrawal
+Sub-topics: Granularity, Withdrawal, Threat modeling and trust boundaries (Consent management), Abuse cases and adversarial testing (Consent management), Logging, audit, and detection (Consent management)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Granularity, Withdrawal
 
 ## DPIA and risk assessments
 
-Sub-topics: High-risk processing
+Sub-topics: High-risk processing, Threat modeling and trust boundaries (DPIA and risk assessments), Abuse cases and adversarial testing (DPIA and risk assessments), Logging, audit, and detection (DPIA and risk assessments), Access control and least privilege (DPIA and risk assessments)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: High-risk processing
 
 ## Cross-border transfers
 
-Sub-topics: SCCs, Adequacy
+Sub-topics: SCCs, Adequacy, Threat modeling and trust boundaries (Cross-border transfers), Abuse cases and adversarial testing (Cross-border transfers), Logging, audit, and detection (Cross-border transfers)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: SCCs, Adequacy
 
 ## PCI DSS scope
 
-Sub-topics: Card data, SAQ types
+Sub-topics: Card data, SAQ types, Threat modeling and trust boundaries (PCI DSS scope), Abuse cases and adversarial testing (PCI DSS scope), Logging, audit, and detection (PCI DSS scope)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Card data, SAQ types
 
 ## HIPAA-aligned controls
 
-Sub-topics: PHI, BAAs
+Sub-topics: PHI, BAAs, Threat modeling and trust boundaries (HIPAA-aligned controls), Abuse cases and adversarial testing (HIPAA-aligned controls), Logging, audit, and detection (HIPAA-aligned controls)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: PHI, BAAs
 
 ## SOC 2 trust principles
 
-Sub-topics: Evidence, Controls
+Sub-topics: Evidence, Controls, Threat modeling and trust boundaries (SOC 2 trust principles), Abuse cases and adversarial testing (SOC 2 trust principles), Logging, audit, and detection (SOC 2 trust principles)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Evidence, Controls
 
 ## Records of processing
 
-Sub-topics: ROPA, Vendor maps
+Sub-topics: ROPA, Vendor maps, Threat modeling and trust boundaries (Records of processing), Abuse cases and adversarial testing (Records of processing), Logging, audit, and detection (Records of processing)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: ROPA, Vendor maps
 
 ## Children's data
 
-Sub-topics: COPPA, Age gates
+Sub-topics: COPPA, Age gates, Threat modeling and trust boundaries (Children's data), Abuse cases and adversarial testing (Children's data), Logging, audit, and detection (Children's data)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: COPPA, Age gates
 
 ## Marketing and tracking
 
-Sub-topics: Cookies, Opt-out
+Sub-topics: Cookies, Opt-out, Threat modeling and trust boundaries (Marketing and tracking), Abuse cases and adversarial testing (Marketing and tracking), Logging, audit, and detection (Marketing and tracking)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Cookies, Opt-out
 
 ## AI and profiling
 
-Sub-topics: Automated decisions, Transparency
+Sub-topics: Automated decisions, Transparency, Threat modeling and trust boundaries (AI and profiling), Abuse cases and adversarial testing (AI and profiling), Logging, audit, and detection (AI and profiling)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Automated decisions, Transparency
 
 ## Breach notification
 
-Sub-topics: Timelines, Regulators
+Sub-topics: Timelines, Regulators, Threat modeling and trust boundaries (Breach notification), Abuse cases and adversarial testing (Breach notification), Logging, audit, and detection (Breach notification)
 
 ### Policy
 

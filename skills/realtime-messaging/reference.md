@@ -4,7 +4,7 @@ Chat, pub/sub, and live updates.
 
 ## WebSocket authentication
 
-Sub-topics: Cookie vs token, Reconnect
+Sub-topics: Cookie vs token, Reconnect, Threat modeling and trust boundaries (WebSocket authentication), Abuse cases and adversarial testing (WebSocket authentication), Logging, audit, and detection (WebSocket authentication)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Cookie vs token, Reconnect
 
 ## Room and channel authorization
 
-Sub-topics: Join tokens
+Sub-topics: Join tokens, Threat modeling and trust boundaries (Room and channel authorization), Abuse cases and adversarial testing (Room and channel authorization), Logging, audit, and detection (Room and channel authorization), Access control and least privilege (Room and channel authorization)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Join tokens
 
 ## Message integrity
 
-Sub-topics: Signing, Ordering
+Sub-topics: Signing, Ordering, Threat modeling and trust boundaries (Message integrity), Abuse cases and adversarial testing (Message integrity), Logging, audit, and detection (Message integrity)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Signing, Ordering
 
 ## Presence leaks
 
-Sub-topics: Online status, Typing
+Sub-topics: Online status, Typing, Threat modeling and trust boundaries (Presence leaks), Abuse cases and adversarial testing (Presence leaks), Logging, audit, and detection (Presence leaks)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Online status, Typing
 
 ## MQTT and IoT protocols
 
-Sub-topics: ACLs, TLS
+Sub-topics: ACLs, TLS, Threat modeling and trust boundaries (MQTT and IoT protocols), Abuse cases and adversarial testing (MQTT and IoT protocols), Logging, audit, and detection (MQTT and IoT protocols)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: ACLs, TLS
 
 ## Kafka security
 
-Sub-topics: ACLs, SASL
+Sub-topics: ACLs, SASL, Threat modeling and trust boundaries (Kafka security), Abuse cases and adversarial testing (Kafka security), Logging, audit, and detection (Kafka security)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: ACLs, SASL
 
 ## Redis pub/sub
 
-Sub-topics: Unauthenticated instances
+Sub-topics: Unauthenticated instances, Threat modeling and trust boundaries (Redis pub/sub), Abuse cases and adversarial testing (Redis pub/sub), Logging, audit, and detection (Redis pub/sub), Access control and least privilege (Redis pub/sub)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Unauthenticated instances
 
 ## Server-sent events
 
-Sub-topics: CSRF, Caching
+Sub-topics: CSRF, Caching, Threat modeling and trust boundaries (Server-sent events), Abuse cases and adversarial testing (Server-sent events), Logging, audit, and detection (Server-sent events)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: CSRF, Caching
 
 ## Collaborative editing
 
-Sub-topics: OT/CRDT authz
+Sub-topics: OT/CRDT authz, Threat modeling and trust boundaries (Collaborative editing), Abuse cases and adversarial testing (Collaborative editing), Logging, audit, and detection (Collaborative editing), Access control and least privilege (Collaborative editing)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: OT/CRDT authz
 
 ## WebRTC
 
-Sub-topics: ICE, TURN credentials
+Sub-topics: ICE, TURN credentials, Threat modeling and trust boundaries (WebRTC), Abuse cases and adversarial testing (WebRTC), Logging, audit, and detection (WebRTC)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: ICE, TURN credentials
 
 ## Fan-out abuse
 
-Sub-topics: Large rooms, Bots
+Sub-topics: Large rooms, Bots, Threat modeling and trust boundaries (Fan-out abuse), Abuse cases and adversarial testing (Fan-out abuse), Logging, audit, and detection (Fan-out abuse)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Large rooms, Bots
 
 ## Message retention
 
-Sub-topics: Legal hold, E2EE
+Sub-topics: Legal hold, E2EE, Threat modeling and trust boundaries (Message retention), Abuse cases and adversarial testing (Message retention), Logging, audit, and detection (Message retention)
 
 ### Policy
 

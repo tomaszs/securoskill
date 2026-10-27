@@ -4,7 +4,7 @@ DNS, firewalls, proxies, and protocol hardening.
 
 ## DNS security
 
-Sub-topics: DNSSEC, Subdomain takeover, CAA
+Sub-topics: DNSSEC, Subdomain takeover, CAA, Threat modeling and trust boundaries (DNS security), Abuse cases and adversarial testing (DNS security)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: DNSSEC, Subdomain takeover, CAA
 
 ## WAF and edge protection
 
-Sub-topics: Rule tuning, Bypass
+Sub-topics: Rule tuning, Bypass, Threat modeling and trust boundaries (WAF and edge protection), Abuse cases and adversarial testing (WAF and edge protection), Logging, audit, and detection (WAF and edge protection)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Rule tuning, Bypass
 
 ## SSRF
 
-Sub-topics: Metadata endpoints, URL parsers, Allowlists
+Sub-topics: Metadata endpoints, URL parsers, Allowlists, Threat modeling and trust boundaries (SSRF), Abuse cases and adversarial testing (SSRF)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Metadata endpoints, URL parsers, Allowlists
 
 ## Reverse proxies
 
-Sub-topics: Header injection, Path normalization
+Sub-topics: Header injection, Path normalization, Threat modeling and trust boundaries (Reverse proxies), Abuse cases and adversarial testing (Reverse proxies), Logging, audit, and detection (Reverse proxies)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Header injection, Path normalization
 
 ## VPN and private networking
 
-Sub-topics: Split tunnel, Peering
+Sub-topics: Split tunnel, Peering, Threat modeling and trust boundaries (VPN and private networking), Abuse cases and adversarial testing (VPN and private networking), Logging, audit, and detection (VPN and private networking)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Split tunnel, Peering
 
 ## DDoS and volumetric attacks
 
-Sub-topics: Rate limits, Anycast
+Sub-topics: Rate limits, Anycast, Threat modeling and trust boundaries (DDoS and volumetric attacks), Abuse cases and adversarial testing (DDoS and volumetric attacks), Logging, audit, and detection (DDoS and volumetric attacks)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Rate limits, Anycast
 
 ## IP allowlisting pitfalls
 
-Sub-topics: Spoofing, Shared NAT
+Sub-topics: Spoofing, Shared NAT, Threat modeling and trust boundaries (IP allowlisting pitfalls), Abuse cases and adversarial testing (IP allowlisting pitfalls), Logging, audit, and detection (IP allowlisting pitfalls)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Spoofing, Shared NAT
 
 ## HTTP request smuggling
 
-Sub-topics: Front/back desync
+Sub-topics: Front/back desync, Threat modeling and trust boundaries (HTTP request smuggling), Abuse cases and adversarial testing (HTTP request smuggling), Logging, audit, and detection (HTTP request smuggling), Access control and least privilege (HTTP request smuggling)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Front/back desync
 
 ## WebSocket transport
 
-Sub-topics: Origin checks, TLS
+Sub-topics: Origin checks, TLS, Threat modeling and trust boundaries (WebSocket transport), Abuse cases and adversarial testing (WebSocket transport), Logging, audit, and detection (WebSocket transport)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Origin checks, TLS
 
 ## SMTP security
 
-Sub-topics: STARTTLS, SPF/DKIM/DMARC
+Sub-topics: STARTTLS, SPF/DKIM/DMARC, Threat modeling and trust boundaries (SMTP security), Abuse cases and adversarial testing (SMTP security), Logging, audit, and detection (SMTP security)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: STARTTLS, SPF/DKIM/DMARC
 
 ## IPv6 and dual stack
 
-Sub-topics: Unexpected exposure
+Sub-topics: Unexpected exposure, Threat modeling and trust boundaries (IPv6 and dual stack), Abuse cases and adversarial testing (IPv6 and dual stack), Logging, audit, and detection (IPv6 and dual stack), Access control and least privilege (IPv6 and dual stack)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Unexpected exposure
 
 ## Service mesh mTLS
 
-Sub-topics: Identity, Policy
+Sub-topics: Identity, Policy, Threat modeling and trust boundaries (Service mesh mTLS), Abuse cases and adversarial testing (Service mesh mTLS), Logging, audit, and detection (Service mesh mTLS)
 
 ### Policy
 

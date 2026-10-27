@@ -4,7 +4,7 @@ PCI scope, webhooks, and money movement.
 
 ## Payment webhooks
 
-Sub-topics: Signature verify, Idempotency
+Sub-topics: Signature verify, Idempotency, Threat modeling and trust boundaries (Payment webhooks), Abuse cases and adversarial testing (Payment webhooks), Logging, audit, and detection (Payment webhooks)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Signature verify, Idempotency
 
 ## Card data handling
 
-Sub-topics: Tokenization, SAQ-A
+Sub-topics: Tokenization, SAQ-A, Threat modeling and trust boundaries (Card data handling), Abuse cases and adversarial testing (Card data handling), Logging, audit, and detection (Card data handling)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Tokenization, SAQ-A
 
 ## Refunds and disputes
 
-Sub-topics: Authorization
+Sub-topics: Authorization, Threat modeling and trust boundaries (Refunds and disputes), Abuse cases and adversarial testing (Refunds and disputes), Logging, audit, and detection (Refunds and disputes), Access control and least privilege (Refunds and disputes)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Authorization
 
 ## Currency and rounding
 
-Sub-topics: Manipulation
+Sub-topics: Manipulation, Threat modeling and trust boundaries (Currency and rounding), Abuse cases and adversarial testing (Currency and rounding), Logging, audit, and detection (Currency and rounding), Access control and least privilege (Currency and rounding)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Manipulation
 
 ## PCI scoping
 
-Sub-topics: Networks, Segmentation
+Sub-topics: Networks, Segmentation, Threat modeling and trust boundaries (PCI scoping), Abuse cases and adversarial testing (PCI scoping), Logging, audit, and detection (PCI scoping)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Networks, Segmentation
 
 ## 3-D Secure flows
 
-Sub-topics: Friction, Bypass
+Sub-topics: Friction, Bypass, Threat modeling and trust boundaries (3-D Secure flows), Abuse cases and adversarial testing (3-D Secure flows), Logging, audit, and detection (3-D Secure flows)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Friction, Bypass
 
 ## Digital wallets
 
-Sub-topics: Apple Pay, Google Pay
+Sub-topics: Apple Pay, Google Pay, Threat modeling and trust boundaries (Digital wallets), Abuse cases and adversarial testing (Digital wallets), Logging, audit, and detection (Digital wallets)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Apple Pay, Google Pay
 
 ## Payouts and KYC
 
-Sub-topics: AML hooks
+Sub-topics: AML hooks, Threat modeling and trust boundaries (Payouts and KYC), Abuse cases and adversarial testing (Payouts and KYC), Logging, audit, and detection (Payouts and KYC), Access control and least privilege (Payouts and KYC)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: AML hooks
 
 ## Internal ledger integrity
 
-Sub-topics: Double entry, Audit
+Sub-topics: Double entry, Audit, Threat modeling and trust boundaries (Internal ledger integrity), Abuse cases and adversarial testing (Internal ledger integrity), Logging, audit, and detection (Internal ledger integrity)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Double entry, Audit
 
 ## Tax and invoicing
 
-Sub-topics: Tampering
+Sub-topics: Tampering, Threat modeling and trust boundaries (Tax and invoicing), Abuse cases and adversarial testing (Tax and invoicing), Logging, audit, and detection (Tax and invoicing), Access control and least privilege (Tax and invoicing)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Tampering
 
 ## Subscription logic
 
-Sub-topics: Proration abuse
+Sub-topics: Proration abuse, Threat modeling and trust boundaries (Subscription logic), Abuse cases and adversarial testing (Subscription logic), Logging, audit, and detection (Subscription logic), Access control and least privilege (Subscription logic)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Proration abuse
 
 ## Fraud scoring
 
-Sub-topics: Bias, Explainability
+Sub-topics: Bias, Explainability, Threat modeling and trust boundaries (Fraud scoring), Abuse cases and adversarial testing (Fraud scoring), Logging, audit, and detection (Fraud scoring)
 
 ### Policy
 

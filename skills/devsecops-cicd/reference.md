@@ -4,7 +4,7 @@ Pipelines, artifacts, and secure delivery.
 
 ## CI secrets
 
-Sub-topics: Fork PR leaks, OIDC to cloud
+Sub-topics: Fork PR leaks, OIDC to cloud, Threat modeling and trust boundaries (CI secrets), Abuse cases and adversarial testing (CI secrets), Logging, audit, and detection (CI secrets)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Fork PR leaks, OIDC to cloud
 
 ## Static analysis
 
-Sub-topics: False positives, Gate policy
+Sub-topics: False positives, Gate policy, Threat modeling and trust boundaries (Static analysis), Abuse cases and adversarial testing (Static analysis), Logging, audit, and detection (Static analysis)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: False positives, Gate policy
 
 ## Dynamic analysis
 
-Sub-topics: Staging auth, Scope
+Sub-topics: Staging auth, Scope, Threat modeling and trust boundaries (Dynamic analysis), Abuse cases and adversarial testing (Dynamic analysis), Logging, audit, and detection (Dynamic analysis)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Staging auth, Scope
 
 ## Dependency scanning
 
-Sub-topics: SBOM, License risk
+Sub-topics: SBOM, License risk, Threat modeling and trust boundaries (Dependency scanning), Abuse cases and adversarial testing (Dependency scanning), Logging, audit, and detection (Dependency scanning)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: SBOM, License risk
 
 ## Artifact signing
 
-Sub-topics: Sigstore, Provenance
+Sub-topics: Sigstore, Provenance, Threat modeling and trust boundaries (Artifact signing), Abuse cases and adversarial testing (Artifact signing), Logging, audit, and detection (Artifact signing)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Sigstore, Provenance
 
 ## Branch protection
 
-Sub-topics: Required reviews, Signed commits
+Sub-topics: Required reviews, Signed commits, Threat modeling and trust boundaries (Branch protection), Abuse cases and adversarial testing (Branch protection), Logging, audit, and detection (Branch protection)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Required reviews, Signed commits
 
 ## Deployment gates
 
-Sub-topics: Canary, Rollback
+Sub-topics: Canary, Rollback, Threat modeling and trust boundaries (Deployment gates), Abuse cases and adversarial testing (Deployment gates), Logging, audit, and detection (Deployment gates)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Canary, Rollback
 
 ## IaC scanning
 
-Sub-topics: Terraform plan, Misconfig
+Sub-topics: Terraform plan, Misconfig, Threat modeling and trust boundaries (IaC scanning), Abuse cases and adversarial testing (IaC scanning), Logging, audit, and detection (IaC scanning)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: Terraform plan, Misconfig
 
 ## Container scan in CI
 
-Sub-topics: Blocking CVEs
+Sub-topics: Blocking CVEs, Threat modeling and trust boundaries (Container scan in CI), Abuse cases and adversarial testing (Container scan in CI), Logging, audit, and detection (Container scan in CI), Access control and least privilege (Container scan in CI)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Blocking CVEs
 
 ## Secret scanning
 
-Sub-topics: Pre-commit, History rewrite
+Sub-topics: Pre-commit, History rewrite, Threat modeling and trust boundaries (Secret scanning), Abuse cases and adversarial testing (Secret scanning), Logging, audit, and detection (Secret scanning)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Pre-commit, History rewrite
 
 ## Environment promotion
 
-Sub-topics: Prod data in lower envs
+Sub-topics: Prod data in lower envs, Threat modeling and trust boundaries (Environment promotion), Abuse cases and adversarial testing (Environment promotion), Logging, audit, and detection (Environment promotion), Access control and least privilege (Environment promotion)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Prod data in lower envs
 
 ## CI supply chain
 
-Sub-topics: Third-party actions, Pinning
+Sub-topics: Third-party actions, Pinning, Threat modeling and trust boundaries (CI supply chain), Abuse cases and adversarial testing (CI supply chain), Logging, audit, and detection (CI supply chain)
 
 ### Policy
 

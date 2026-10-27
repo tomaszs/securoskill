@@ -4,7 +4,7 @@ Detect, respond, and learn from security events.
 
 ## Structured logging
 
-Sub-topics: Correlation IDs, PII redaction
+Sub-topics: Correlation IDs, PII redaction, Threat modeling and trust boundaries (Structured logging), Abuse cases and adversarial testing (Structured logging), Logging, audit, and detection (Structured logging)
 
 ### Policy
 
@@ -39,7 +39,7 @@ Sub-topics: Correlation IDs, PII redaction
 
 ## SIEM and alerting
 
-Sub-topics: Noise, Tuning
+Sub-topics: Noise, Tuning, Threat modeling and trust boundaries (SIEM and alerting), Abuse cases and adversarial testing (SIEM and alerting), Logging, audit, and detection (SIEM and alerting)
 
 ### Policy
 
@@ -74,7 +74,7 @@ Sub-topics: Noise, Tuning
 
 ## Audit trails
 
-Sub-topics: Tamper evidence, Clock sync
+Sub-topics: Tamper evidence, Clock sync, Threat modeling and trust boundaries (Audit trails), Abuse cases and adversarial testing (Audit trails), Logging, audit, and detection (Audit trails)
 
 ### Policy
 
@@ -109,7 +109,7 @@ Sub-topics: Tamper evidence, Clock sync
 
 ## Incident response playbooks
 
-Sub-topics: Roles, Comms
+Sub-topics: Roles, Comms, Threat modeling and trust boundaries (Incident response playbooks), Abuse cases and adversarial testing (Incident response playbooks), Logging, audit, and detection (Incident response playbooks)
 
 ### Policy
 
@@ -144,7 +144,7 @@ Sub-topics: Roles, Comms
 
 ## Forensics readiness
 
-Sub-topics: Memory dumps, Chain of custody
+Sub-topics: Memory dumps, Chain of custody, Threat modeling and trust boundaries (Forensics readiness), Abuse cases and adversarial testing (Forensics readiness), Logging, audit, and detection (Forensics readiness)
 
 ### Policy
 
@@ -179,7 +179,7 @@ Sub-topics: Memory dumps, Chain of custody
 
 ## Vulnerability disclosure
 
-Sub-topics: Safe harbor, SLAs
+Sub-topics: Safe harbor, SLAs, Threat modeling and trust boundaries (Vulnerability disclosure), Abuse cases and adversarial testing (Vulnerability disclosure), Logging, audit, and detection (Vulnerability disclosure)
 
 ### Policy
 
@@ -214,7 +214,7 @@ Sub-topics: Safe harbor, SLAs
 
 ## Security on-call
 
-Sub-topics: Escalation, Paging hygiene
+Sub-topics: Escalation, Paging hygiene, Threat modeling and trust boundaries (Security on-call), Abuse cases and adversarial testing (Security on-call), Logging, audit, and detection (Security on-call)
 
 ### Policy
 
@@ -249,7 +249,7 @@ Sub-topics: Escalation, Paging hygiene
 
 ## Security metrics
 
-Sub-topics: MTTD, Patch latency
+Sub-topics: MTTD, Patch latency, Threat modeling and trust boundaries (Security metrics), Abuse cases and adversarial testing (Security metrics), Logging, audit, and detection (Security metrics)
 
 ### Policy
 
@@ -284,7 +284,7 @@ Sub-topics: MTTD, Patch latency
 
 ## Deception and honeypots
 
-Sub-topics: Legal, Scope
+Sub-topics: Legal, Scope, Threat modeling and trust boundaries (Deception and honeypots), Abuse cases and adversarial testing (Deception and honeypots), Logging, audit, and detection (Deception and honeypots)
 
 ### Policy
 
@@ -319,7 +319,7 @@ Sub-topics: Legal, Scope
 
 ## UEBA
 
-Sub-topics: Insider threat, False positives
+Sub-topics: Insider threat, False positives, Threat modeling and trust boundaries (UEBA), Abuse cases and adversarial testing (UEBA), Logging, audit, and detection (UEBA)
 
 ### Policy
 
@@ -354,7 +354,7 @@ Sub-topics: Insider threat, False positives
 
 ## Post-incident review
 
-Sub-topics: Blameless, Tracking
+Sub-topics: Blameless, Tracking, Threat modeling and trust boundaries (Post-incident review), Abuse cases and adversarial testing (Post-incident review), Logging, audit, and detection (Post-incident review)
 
 ### Policy
 
@@ -389,7 +389,7 @@ Sub-topics: Blameless, Tracking
 
 ## Lawful access logs
 
-Sub-topics: Subpoena, Customer notice
+Sub-topics: Subpoena, Customer notice, Threat modeling and trust boundaries (Lawful access logs), Abuse cases and adversarial testing (Lawful access logs), Logging, audit, and detection (Lawful access logs)
 
 ### Policy
 

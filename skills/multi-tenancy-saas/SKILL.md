@@ -2,6 +2,7 @@
 name: security-multi-tenancy-saas
 description: >-
   Applies secure engineering rules for multi-tenancy and saas isolation: Tenant boundaries, noisy neighbors, and B2B SaaS data separation. Use when implementing, reviewing, or threat-modeling code in this domain (keywords: multi-tenancy-saas, security, Multi-tenancy and SaaS isolation).
+disable-model-invocation: true
 ---
 
 # Multi-tenancy and SaaS isolation
@@ -12,7 +13,7 @@ Load this skill when work touches **multi-tenancy and saas isolation**: design, 
 
 ## Workflow
 
-1. Skim sub-areas in [rules.md](rules.md) and pick those that match the change.
+1. Skim sub-areas in [reference.md](reference.md) and pick those that match the change.
 2. Apply rules from **policy → design → implementation → verification → operations** for each matching sub-area.
 3. For SQL injection, XSS, SSRF, authz, secrets, or other classics, use the dedicated sub-section rather than generic advice.
 4. Record gaps as security requirements or tests before merge.
@@ -34,4 +35,4 @@ Load this skill when work touches **multi-tenancy and saas isolation**: design, 
 
 ## Full rules
 
-See [rules.md](rules.md) for all sub-areas and rule levels.
+See [reference.md](reference.md) for all sub-areas and rule levels.

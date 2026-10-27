@@ -2,6 +2,7 @@
 name: security-cms-content-platforms
 description: >-
   Applies secure engineering rules for cms, content platforms, and publishing: Headless CMS, WYSIWYG, and editorial workflows. Use when implementing, reviewing, or threat-modeling code in this domain (keywords: cms-content-platforms, security, CMS, content platforms, and publishing).
+disable-model-invocation: true
 ---
 
 # CMS, content platforms, and publishing
@@ -12,7 +13,7 @@ Load this skill when work touches **cms, content platforms, and publishing**: de
 
 ## Workflow
 
-1. Skim sub-areas in [rules.md](rules.md) and pick those that match the change.
+1. Skim sub-areas in [reference.md](reference.md) and pick those that match the change.
 2. Apply rules from **policy → design → implementation → verification → operations** for each matching sub-area.
 3. For SQL injection, XSS, SSRF, authz, secrets, or other classics, use the dedicated sub-section rather than generic advice.
 4. Record gaps as security requirements or tests before merge.
@@ -34,4 +35,4 @@ Load this skill when work touches **cms, content platforms, and publishing**: de
 
 ## Full rules
 
-See [rules.md](rules.md) for all sub-areas and rule levels.
+See [reference.md](reference.md) for all sub-areas and rule levels.
