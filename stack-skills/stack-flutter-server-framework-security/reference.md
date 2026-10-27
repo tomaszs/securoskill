@@ -6,275 +6,197 @@ Stack-specific implementation for **Flutter** (Mobile). Normative rules: domain 
 
 **Sub-topics:** Prototype pollution, Middleware order, JSON body limits, Cluster creds, vm module
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Node.js and Express; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Node.js and Express.
-- Keep dependencies patched; pin versions for Node.js and Express components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Node.js and Express before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Node.js and Express paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## NestJS and Fastify
 
 **Sub-topics:** Guards vs pipes, Validation decorators, GraphQL plugins, Microservices TCP, Swagger exposure
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching NestJS and Fastify; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NestJS and Fastify.
-- Keep dependencies patched; pin versions for NestJS and Fastify components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for NestJS and Fastify before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for NestJS and Fastify paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## Django and Flask
 
 **Sub-topics:** DEBUG=True, SECRET_KEY rotation, ORM extra(), Jinja autoescape, Admin URL
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Django and Flask; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Django and Flask.
-- Keep dependencies patched; pin versions for Django and Flask components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Django and Flask before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Django and Flask paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## FastAPI and Starlette
 
 **Sub-topics:** Dependency injection auth, OpenAPI public, Background tasks, Pydantic coercion, WebSocket routes
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching FastAPI and Starlette; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to FastAPI and Starlette.
-- Keep dependencies patched; pin versions for FastAPI and Starlette components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for FastAPI and Starlette before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for FastAPI and Starlette paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## Spring Boot and Java
 
 **Sub-topics:** Actuator endpoints, SpEL injection, Deserialization, JPA injection, Shiro defaults
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Spring Boot and Java; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Spring Boot and Java.
-- Keep dependencies patched; pin versions for Spring Boot and Java components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Spring Boot and Java before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Spring Boot and Java paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## ASP.NET Core
 
 **Sub-topics:** Mass assignment, DataProtection keys, Kestrel limits, Blazor Server state, Minimal APIs auth
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching ASP.NET Core; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ASP.NET Core.
-- Keep dependencies patched; pin versions for ASP.NET Core components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for ASP.NET Core before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for ASP.NET Core paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## Ruby on Rails and Laravel
 
 **Sub-topics:** Strong params, Mass assignment, Blade unescaped, Queue workers, Debug bar prod
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Ruby on Rails and Laravel; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Ruby on Rails and Laravel.
-- Keep dependencies patched; pin versions for Ruby on Rails and Laravel components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Ruby on Rails and Laravel before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Ruby on Rails and Laravel paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## Go net/http and Gin
 
 **Sub-topics:** Handler auth middleware, Template html/template, Race in handlers, pprof exposure, JWT libraries
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Go net/http and Gin; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Go net/http and Gin.
-- Keep dependencies patched; pin versions for Go net/http and Gin components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Go net/http and Gin before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Go net/http and Gin paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## Rust web stacks
 
 **Sub-topics:** unsafe blocks, SQLx literals, Tokio spawn abuse, Serde untagged, Cargo audit
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Rust web stacks; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Rust web stacks.
-- Keep dependencies patched; pin versions for Rust web stacks components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Rust web stacks before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Rust web stacks paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## PHP and WordPress class apps
 
 **Sub-topics:** include paths, unserialize, upload dirs, wp-admin hardening, Composer vendors
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching PHP and WordPress class apps; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PHP and WordPress class apps.
-- Keep dependencies patched; pin versions for PHP and WordPress class apps components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for PHP and WordPress class apps before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for PHP and WordPress class apps paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Static analysis for injection sinks.
 
 ## GraphQL server frameworks
 
 **Sub-topics:** Resolver authz, DataLoader leaks, Introspection prod, Query cost, Subscriptions
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching GraphQL server frameworks; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to GraphQL server frameworks.
-- Keep dependencies patched; pin versions for GraphQL server frameworks components.
+- Enforce max query depth and complexity limits.
+- Disable introspection in production unless required for trusted tools.
+- Authorize each resolver field (not only top-level entry).
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for GraphQL server frameworks before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not expose admin-only fields on the same schema without field-level auth.
+- Do not allow batch aliases to bypass rate limits.
 
 ### Verify
 
-- Add automated tests for GraphQL server frameworks paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Load-test GraphQL with deeply nested queries; expect rejection.
 
 ## Serverless framework adapters
 
 **Sub-topics:** Chalice, Serverless.yml secrets, SAM templates, Cold start IAM, Local invoke creds
 
-### Platform rules (summary)
+### Do (use this in Flutter)
 
-- Validate and canonicalize all inputs touching Serverless framework adapters; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Serverless framework adapters.
-- Keep dependencies patched; pin versions for Serverless framework adapters components.
+- Apply domain skill `security-server-framework-security` requirements using flutter supported APIs only.
+- Use the official flutter security documentation for serverless controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Flutter
+### Don't
 
-- Read normative rules in domain skill `security-server-framework-security` / `reference.md`, then apply them using Flutter APIs and deployment model.
-- Prefer framework-maintained security features in Flutter over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Serverless framework adapters before merge.
-- Pin Flutter dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of flutter for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Serverless framework adapters paths in Flutter.
-- Run SAST/dependency scan configured for Mobile.
+- Run stack-appropriate SAST/DAST on flutter projects in CI.
 

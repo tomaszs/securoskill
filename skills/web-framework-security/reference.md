@@ -6,6 +6,18 @@ React, Vue, Angular, Svelte, and meta-frameworks.
 
 Sub-topics: dangerouslySetInnerHTML, useEffect fetches, Server Components, RSC leaks, Third-party hooks
 
+### Do
+
+- Validate and canonicalize all inputs touching React; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to React.
+- Keep dependencies patched; pin versions for React components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat React in React as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: dangerouslySetInnerHTML, useEffect fetches, Server Components, RSC l
 ## Vue.js
 
 Sub-topics: v-html, Template compilation, Vuex persisted state, Nuxt SSR data, Dynamic components
+
+### Do
+
+- Validate and canonicalize all inputs touching Vue.js; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vue.js.
+- Keep dependencies patched; pin versions for Vue.js components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: v-html, Template compilation, Vuex persisted state, Nuxt SSR data, D
 
 Sub-topics: DomSanitizer bypass, bypassSecurityTrust*, HttpClient CSRF, SSR transfer state, NgZone XSS
 
+### Do
+
+- Validate and canonicalize all inputs touching Angular; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Angular.
+- Keep dependencies patched; pin versions for Angular components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Angular in Angular as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: DomSanitizer bypass, bypassSecurityTrust*, HttpClient CSRF, SSR tran
 ## Next.js and Nuxt
 
 Sub-topics: API routes auth, Middleware bypass, ISR cache poisoning, Env NEXT_PUBLIC_, Server actions
+
+### Do
+
+- Validate and canonicalize all inputs touching Next.js and Nuxt; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Next.js and Nuxt.
+- Keep dependencies patched; pin versions for Next.js and Nuxt components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: API routes auth, Middleware bypass, ISR cache poisoning, Env NEXT_PU
 
 Sub-topics: {@html}, Form actions, Hooks auth, Adapter configs, CSR-only secrets
 
+### Do
+
+- Validate and canonicalize all inputs touching Svelte and SvelteKit; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Svelte and SvelteKit.
+- Keep dependencies patched; pin versions for Svelte and SvelteKit components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Svelte and SvelteKit in Svelte and SvelteKit as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: {@html}, Form actions, Hooks auth, Adapter configs, CSR-only secrets
 ## Astro, Remix, and islands
 
 Sub-topics: Hybrid rendering, Endpoint auth, View transitions, MDX components, Edge configs
+
+### Do
+
+- Validate and canonicalize all inputs touching Astro, Remix, and islands; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Astro, Remix, and islands.
+- Keep dependencies patched; pin versions for Astro, Remix, and islands components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Hybrid rendering, Endpoint auth, View transitions, MDX components, E
 
 Sub-topics: Redux persist tokens, URL state secrets, TanStack Query cache, Zustand devtools, IndexedDB sync
 
+### Do
+
+- Validate and canonicalize all inputs touching Client state libraries; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client state libraries.
+- Keep dependencies patched; pin versions for Client state libraries components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Client state libraries in Client state libraries as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Redux persist tokens, URL state secrets, TanStack Query cache, Zusta
 ## Client routing security
 
 Sub-topics: Route guards only client, Lazy route leaks, Deep link auth, History state, Base href
+
+### Do
+
+- Validate and canonicalize all inputs touching Client routing security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client routing security.
+- Keep dependencies patched; pin versions for Client routing security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Route guards only client, Lazy route leaks, Deep link auth, History 
 
 Sub-topics: RTL injection, Locale switch CSRF, Translation XSS, Hreflang open redirect, Collation bugs
 
+### Do
+
+- Validate and canonicalize all inputs touching i18n and locale; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to i18n and locale.
+- Keep dependencies patched; pin versions for i18n and locale components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat i18n and locale in i18n and locale as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: RTL injection, Locale switch CSRF, Translation XSS, Hreflang open re
 ## Design system components
 
 Sub-topics: Slot content XSS, Icon SVG, Toast HTML, Modal focus trap bypass, Theme injection
+
+### Do
+
+- Validate and canonicalize all inputs touching Design system components; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Design system components.
+- Keep dependencies patched; pin versions for Design system components components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Slot content XSS, Icon SVG, Toast HTML, Modal focus trap bypass, The
 
 Sub-topics: Exposed Storybook, Mock auth in prod, Addon scripts, Source maps public, Chromatic tokens
 
+### Do
+
+- Validate and canonicalize all inputs touching Storybook and dev tools; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Storybook and dev tools.
+- Keep dependencies patched; pin versions for Storybook and dev tools components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Storybook and dev tools in Storybook and dev tools as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Exposed Storybook, Mock auth in prod, Addon scripts, Source maps pub
 ## Micro-frontends
 
 Sub-topics: Module federation trust, Shared dependencies, Cross-app postMessage, Shell auth, Style isolation
+
+### Do
+
+- Validate and canonicalize all inputs touching Micro-frontends; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Micro-frontends.
+- Keep dependencies patched; pin versions for Micro-frontends components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

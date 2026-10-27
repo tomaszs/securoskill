@@ -6,275 +6,213 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 **Sub-topics:** Snowflake RBAC, BigQuery IAM, Row access policies, Column masks, Shared datasets
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Warehouse access control; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Warehouse access control.
-- Keep dependencies patched; pin versions for Warehouse access control components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Warehouse access control before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Warehouse access control paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## ETL credentials
 
 **Sub-topics:** Airflow connections, dbt profiles, Spark keys in notebooks, Rotation, CI to prod
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching ETL credentials; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ETL credentials.
-- Keep dependencies patched; pin versions for ETL credentials components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for ETL credentials before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for ETL credentials paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Pipeline injection
 
 **Sub-topics:** SQL in dbt, Dynamic partitions, User-supplied SQL, Jinja in queries, UDF sandbox
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Pipeline injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Pipeline injection.
-- Keep dependencies patched; pin versions for Pipeline injection components.
+- Use parameterized queries or ORM equivalents for every database call.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Pipeline injection before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not build SQL/command strings with user input.
 
 ### Verify
 
-- Add automated tests for Pipeline injection paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- Static analysis for injection sinks.
 
 ## PII in analytics
 
 **Sub-topics:** Hashing vs encryption, Join keys, Re-identification, Sampling leaks, Aggregates
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching PII in analytics; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in analytics.
-- Keep dependencies patched; pin versions for PII in analytics components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for PII in analytics before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for PII in analytics paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## BI and dashboards
 
 **Sub-topics:** Embed tokens, RLS in Power BI, Export CSV, Scheduled email, Public links
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching BI and dashboards; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to BI and dashboards.
-- Keep dependencies patched; pin versions for BI and dashboards components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for BI and dashboards before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for BI and dashboards paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Data lakes
 
 **Sub-topics:** S3 path traversal, Parquet metadata, Glue catalog ACL, Lake Formation, Iceberg snapshots
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Data lakes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data lakes.
-- Keep dependencies patched; pin versions for Data lakes components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Data lakes before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Data lakes paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Streaming analytics
 
 **Sub-topics:** Flink state, Kafka Connect secrets, Exactly-once, Poison records, Schema registry ACL
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Streaming analytics; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Streaming analytics.
-- Keep dependencies patched; pin versions for Streaming analytics components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Streaming analytics before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Streaming analytics paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Feature stores
 
 **Sub-topics:** Point-in-time leaks, Training-serving skew, Offline online parity, PII in features, Access audit
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Feature stores; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Feature stores.
-- Keep dependencies patched; pin versions for Feature stores components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Feature stores before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Feature stores paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Notebooks and ad hoc SQL
 
 **Sub-topics:** Shared workspaces, Output history, Git sync secrets, Cell execution order, Public nbviewer
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Notebooks and ad hoc SQL; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Notebooks and ad hoc SQL.
-- Keep dependencies patched; pin versions for Notebooks and ad hoc SQL components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Notebooks and ad hoc SQL before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Notebooks and ad hoc SQL paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Data contracts and quality
 
 **Sub-topics:** Breaking schema, DQ alerts, Tampered sources, Lineage trust, SLA abuse
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Data contracts and quality; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data contracts and quality.
-- Keep dependencies patched; pin versions for Data contracts and quality components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Data contracts and quality before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Data contracts and quality paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Third-party data feeds
 
 **Sub-topics:** License scope, Resale restrictions, API keys shared, Poisoned feeds, Watermarking
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Third-party data feeds; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party data feeds.
-- Keep dependencies patched; pin versions for Third-party data feeds components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Third-party data feeds before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Third-party data feeds paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Analytics backups
 
 **Sub-topics:** Snapshot sharing, Cross-account, Restore to dev PII, Retention, Encryption
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Analytics backups; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Analytics backups.
-- Keep dependencies patched; pin versions for Analytics backups components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Analytics backups before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Analytics backups paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 

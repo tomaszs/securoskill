@@ -6,6 +6,18 @@ Browsers, SPAs, SSR, Web APIs, and client storage.
 
 Sub-topics: HTML injection in templates, dangerouslySetInnerHTML / v-html, URL fragment and postMessage handlers, Markdown and rich text renderers, SVG and MathML sinks
 
+### Do
+
+- Encode or escape output for the correct sink (HTML, attribute, URL, JavaScript).
+- Use framework auto-escaping by default for user-controlled text.
+- Deploy Content-Security-Policy to limit script execution.
+
+### Don't
+
+- Do not insert unsanitized HTML from users, APIs, or CMS into the DOM.
+- Do not use `javascript:` URLs or event-handler attributes with user data.
+- Do not disable escaping for convenience.
+
 ### Policy
 
 - Treat Cross-site scripting (reflected, stored, DOM) in Cross-site scripting (reflected, stored, DOM) as in-scope for threat modeling and security requirements before implementation.
@@ -43,6 +55,16 @@ Sub-topics: HTML injection in templates, dangerouslySetInnerHTML / v-html, URL f
 
 Sub-topics: Form posts, Cookie-based sessions, iframes, Cross-origin embeds, Threat modeling and trust boundaries (CSRF and clickjacking)
 
+### Do
+
+- Use SameSite cookies and anti-CSRF tokens for cookie-based session mutations.
+- Set frame-ancestors / X-Frame-Options to prevent clickjacking.
+
+### Don't
+
+- Do not rely on CORS alone to prevent CSRF.
+- Do not perform state-changing actions via GET with session cookies.
+
 ### Policy
 
 - Treat CSRF and clickjacking in CSRF and clickjacking as in-scope for threat modeling and security requirements before implementation.
@@ -79,6 +101,18 @@ Sub-topics: Form posts, Cookie-based sessions, iframes, Cross-origin embeds, Thr
 
 Sub-topics: Token storage, PII in browser, Cache poisoning, Threat modeling and trust boundaries (localStorage, sessionStorage, IndexedDB), Abuse cases and adversarial testing (localStorage, sessionStorage, IndexedDB)
 
+### Do
+
+- Validate and canonicalize all inputs touching localStorage, sessionStorage, IndexedDB; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to localStorage, sessionStorage, IndexedDB.
+- Keep dependencies patched; pin versions for localStorage, sessionStorage, IndexedDB components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat localStorage, sessionStorage, IndexedDB in localStorage, sessionStorage, IndexedDB as in-scope for threat modeling and security requirements before implementation.
@@ -113,6 +147,18 @@ Sub-topics: Token storage, PII in browser, Cache poisoning, Threat modeling and 
 ## Content Security Policy and security headers
 
 Sub-topics: CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, Threat modeling and trust boundaries (Content Security Policy and security headers)
+
+### Do
+
+- Validate and canonicalize all inputs touching Content Security Policy and security headers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Content Security Policy and security headers.
+- Keep dependencies patched; pin versions for Content Security Policy and security headers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -149,6 +195,18 @@ Sub-topics: CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, Threat mo
 
 Sub-topics: Serialized state, HTML injection at render, Islands architecture, Threat modeling and trust boundaries (SSR and hydration security), Abuse cases and adversarial testing (SSR and hydration security)
 
+### Do
+
+- Validate and canonicalize all inputs touching SSR and hydration security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SSR and hydration security.
+- Keep dependencies patched; pin versions for SSR and hydration security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat SSR and hydration security in SSR and hydration security as in-scope for threat modeling and security requirements before implementation.
@@ -183,6 +241,18 @@ Sub-topics: Serialized state, HTML injection at render, Islands architecture, Th
 ## Web Workers and WebAssembly
 
 Sub-topics: Shared memory, postMessage trust, Wasm module integrity, Threat modeling and trust boundaries (Web Workers and WebAssembly), Abuse cases and adversarial testing (Web Workers and WebAssembly)
+
+### Do
+
+- Validate and canonicalize all inputs touching Web Workers and WebAssembly; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Web Workers and WebAssembly.
+- Keep dependencies patched; pin versions for Web Workers and WebAssembly components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -219,6 +289,18 @@ Sub-topics: Shared memory, postMessage trust, Wasm module integrity, Threat mode
 
 Sub-topics: Analytics, Chat widgets, Tag managers, Subresource Integrity, Threat modeling and trust boundaries (Third-party scripts and tags)
 
+### Do
+
+- Validate and canonicalize all inputs touching Third-party scripts and tags; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party scripts and tags.
+- Keep dependencies patched; pin versions for Third-party scripts and tags components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Third-party scripts and tags in Third-party scripts and tags as in-scope for threat modeling and security requirements before implementation.
@@ -253,6 +335,18 @@ Sub-topics: Analytics, Chat widgets, Tag managers, Subresource Integrity, Threat
 ## Frontend auth flows
 
 Sub-topics: OAuth redirects, PKCE, Implicit flow avoidance, Token in URL, Threat modeling and trust boundaries (Frontend auth flows)
+
+### Do
+
+- Validate and canonicalize all inputs touching Frontend auth flows; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Frontend auth flows.
+- Keep dependencies patched; pin versions for Frontend auth flows components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -289,6 +383,18 @@ Sub-topics: OAuth redirects, PKCE, Implicit flow avoidance, Token in URL, Threat
 
 Sub-topics: Type sniffing, Preview gadgets, Size limits, Threat modeling and trust boundaries (Client-side file upload UX), Abuse cases and adversarial testing (Client-side file upload UX)
 
+### Do
+
+- Validate and canonicalize all inputs touching Client-side file upload UX; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client-side file upload UX.
+- Keep dependencies patched; pin versions for Client-side file upload UX components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Client-side file upload UX in Client-side file upload UX as in-scope for threat modeling and security requirements before implementation.
@@ -323,6 +429,18 @@ Sub-topics: Type sniffing, Preview gadgets, Size limits, Threat modeling and tru
 ## Accessibility vs security UX
 
 Sub-topics: Captcha, Rate limit messaging, Screen reader safe errors, Threat modeling and trust boundaries (Accessibility vs security UX), Abuse cases and adversarial testing (Accessibility vs security UX)
+
+### Do
+
+- Validate and canonicalize all inputs touching Accessibility vs security UX; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Accessibility vs security UX.
+- Keep dependencies patched; pin versions for Accessibility vs security UX components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -359,6 +477,18 @@ Sub-topics: Captcha, Rate limit messaging, Screen reader safe errors, Threat mod
 
 Sub-topics: Service workers, Web push, App shell caching, Threat modeling and trust boundaries (Mobile web and PWA), Abuse cases and adversarial testing (Mobile web and PWA)
 
+### Do
+
+- Validate and canonicalize all inputs touching Mobile web and PWA; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile web and PWA.
+- Keep dependencies patched; pin versions for Mobile web and PWA components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Mobile web and PWA in Mobile web and PWA as in-scope for threat modeling and security requirements before implementation.
@@ -393,6 +523,18 @@ Sub-topics: Service workers, Web push, App shell caching, Threat modeling and tr
 ## Frontend dependency risk
 
 Sub-topics: npm supply chain, Transitive packages, CDN compromise, Threat modeling and trust boundaries (Frontend dependency risk), Abuse cases and adversarial testing (Frontend dependency risk)
+
+### Do
+
+- Validate and canonicalize all inputs touching Frontend dependency risk; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Frontend dependency risk.
+- Keep dependencies patched; pin versions for Frontend dependency risk components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -6,275 +6,242 @@ Stack-specific implementation for **React** (Web UI). Normative rules: domain sk
 
 **Sub-topics:** dangerouslySetInnerHTML, useEffect fetches, Server Components, RSC leaks, Third-party hooks
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching React; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to React.
-- Keep dependencies patched; pin versions for React components.
+- Render user text only as JSX children: `<span>{userName}</span>`.
+- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
+- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
+- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for React before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
+- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
+- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
+- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
 
 ### Verify
 
-- Add automated tests for React paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Add component tests that assert script tags from user input are not rendered.
+- Run OWASP ZAP or similar against staging with authenticated flows.
 
 ## Vue.js
 
 **Sub-topics:** v-html, Template compilation, Vuex persisted state, Nuxt SSR data, Dynamic components
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Vue.js; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vue.js.
-- Keep dependencies patched; pin versions for Vue.js components.
+- Render user text only as JSX children: `<span>{userName}</span>`.
+- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
+- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
+- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Vue.js before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
+- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
+- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
+- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
 
 ### Verify
 
-- Add automated tests for Vue.js paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Add component tests that assert script tags from user input are not rendered.
+- Run OWASP ZAP or similar against staging with authenticated flows.
 
 ## Angular
 
 **Sub-topics:** DomSanitizer bypass, bypassSecurityTrust*, HttpClient CSRF, SSR transfer state, NgZone XSS
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Angular; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Angular.
-- Keep dependencies patched; pin versions for Angular components.
+- Render user text only as JSX children: `<span>{userName}</span>`.
+- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
+- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
+- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Angular before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
+- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
+- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
+- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
 
 ### Verify
 
-- Add automated tests for Angular paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Add component tests that assert script tags from user input are not rendered.
+- Run OWASP ZAP or similar against staging with authenticated flows.
 
 ## Next.js and Nuxt
 
 **Sub-topics:** API routes auth, Middleware bypass, ISR cache poisoning, Env NEXT_PUBLIC_, Server actions
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Next.js and Nuxt; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Next.js and Nuxt.
-- Keep dependencies patched; pin versions for Next.js and Nuxt components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Next.js and Nuxt before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Next.js and Nuxt paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## Svelte and SvelteKit
 
 **Sub-topics:** {@html}, Form actions, Hooks auth, Adapter configs, CSR-only secrets
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Svelte and SvelteKit; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Svelte and SvelteKit.
-- Keep dependencies patched; pin versions for Svelte and SvelteKit components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Svelte and SvelteKit before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Svelte and SvelteKit paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## Astro, Remix, and islands
 
 **Sub-topics:** Hybrid rendering, Endpoint auth, View transitions, MDX components, Edge configs
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Astro, Remix, and islands; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Astro, Remix, and islands.
-- Keep dependencies patched; pin versions for Astro, Remix, and islands components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Astro, Remix, and islands before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Astro, Remix, and islands paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## Client state libraries
 
 **Sub-topics:** Redux persist tokens, URL state secrets, TanStack Query cache, Zustand devtools, IndexedDB sync
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Client state libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client state libraries.
-- Keep dependencies patched; pin versions for Client state libraries components.
+- Store access tokens in memory or HttpOnly Secure SameSite cookies when possible.
+- Use short-lived tokens and refresh via backend.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Client state libraries before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not store refresh tokens or PII in localStorage/sessionStorage.
+- Do not read JWTs in client JS if they are only needed server-side.
 
 ### Verify
 
-- Add automated tests for Client state libraries paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Audit `localStorage.setItem` usage in frontend bundle.
 
 ## Client routing security
 
 **Sub-topics:** Route guards only client, Lazy route leaks, Deep link auth, History state, Base href
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Client routing security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client routing security.
-- Keep dependencies patched; pin versions for Client routing security components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for frontend_auth controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Client routing security before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Client routing security paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## i18n and locale
 
 **Sub-topics:** RTL injection, Locale switch CSRF, Translation XSS, Hreflang open redirect, Collation bugs
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching i18n and locale; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to i18n and locale.
-- Keep dependencies patched; pin versions for i18n and locale components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for generic_frontend controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for i18n and locale before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for i18n and locale paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## Design system components
 
 **Sub-topics:** Slot content XSS, Icon SVG, Toast HTML, Modal focus trap bypass, Theme injection
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Design system components; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Design system components.
-- Keep dependencies patched; pin versions for Design system components components.
+- Render user text only as JSX children: `<span>{userName}</span>`.
+- If HTML is required, sanitize with DOMPurify then pass to `dangerouslySetInnerHTML={{ __html: clean }}`.
+- Validate URLs before `href`: allowlist `https:` (and app-needed schemes); reject `javascript:`.
+- Use CSP with nonces for any inline script in CRA/Vite via hosting config or middleware.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Design system components before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not use `dangerouslySetInnerHTML` with API, markdown, or WYSIWYG output without sanitization.
+- Do not build HTML with string concatenation and assign to DOM (including refs and `innerHTML`).
+- Do not pass unsanitized user input into `react-markdown` custom components that render raw HTML.
+- Do not disable ESLint `react/no-danger` without a documented sanitizer boundary.
 
 ### Verify
 
-- Add automated tests for Design system components paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Add component tests that assert script tags from user input are not rendered.
+- Run OWASP ZAP or similar against staging with authenticated flows.
 
 ## Storybook and dev tools
 
 **Sub-topics:** Exposed Storybook, Mock auth in prod, Addon scripts, Source maps public, Chromatic tokens
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Storybook and dev tools; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Storybook and dev tools.
-- Keep dependencies patched; pin versions for Storybook and dev tools components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for debug_endpoints controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Storybook and dev tools before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Storybook and dev tools paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 
 ## Micro-frontends
 
 **Sub-topics:** Module federation trust, Shared dependencies, Cross-app postMessage, Shell auth, Style isolation
 
-### Platform rules (summary)
+### Do (use this in React)
 
-- Validate and canonicalize all inputs touching Micro-frontends; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Micro-frontends.
-- Keep dependencies patched; pin versions for Micro-frontends components.
+- Apply domain skill `security-web-framework-security` requirements using react supported APIs only.
+- Use the official react security documentation for third_party_scripts controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in React
+### Don't
 
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using React APIs and deployment model.
-- Prefer framework-maintained security features in React over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Micro-frontends before merge.
-- Pin React dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of react for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Micro-frontends paths in React.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on react projects in CI.
 

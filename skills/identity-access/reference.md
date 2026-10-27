@@ -6,6 +6,18 @@ Users, machines, roles, and federation.
 
 Sub-topics: Hashing, Pepper, Breached password checks, Threat modeling and trust boundaries (Passwords and credentials), Abuse cases and adversarial testing (Passwords and credentials)
 
+### Do
+
+- Validate and canonicalize all inputs touching Passwords and credentials; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Passwords and credentials.
+- Keep dependencies patched; pin versions for Passwords and credentials components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Passwords and credentials in Passwords and credentials as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Hashing, Pepper, Breached password checks, Threat modeling and trust
 ## MFA and step-up auth
 
 Sub-topics: TOTP, WebAuthn, Recovery codes, Threat modeling and trust boundaries (MFA and step-up auth), Abuse cases and adversarial testing (MFA and step-up auth)
+
+### Do
+
+- Validate and canonicalize all inputs touching MFA and step-up auth; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to MFA and step-up auth.
+- Keep dependencies patched; pin versions for MFA and step-up auth components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: TOTP, WebAuthn, Recovery codes, Threat modeling and trust boundaries
 
 Sub-topics: SAML, OIDC, JIT provisioning, Threat modeling and trust boundaries (SSO and federation), Abuse cases and adversarial testing (SSO and federation)
 
+### Do
+
+- Validate and canonicalize all inputs touching SSO and federation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SSO and federation.
+- Keep dependencies patched; pin versions for SSO and federation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat SSO and federation in SSO and federation as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: SAML, OIDC, JIT provisioning, Threat modeling and trust boundaries (
 ## RBAC
 
 Sub-topics: Role explosion, Default roles, Threat modeling and trust boundaries (RBAC), Abuse cases and adversarial testing (RBAC), Logging, audit, and detection (RBAC)
+
+### Do
+
+- Validate and canonicalize all inputs touching RBAC; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to RBAC.
+- Keep dependencies patched; pin versions for RBAC components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Role explosion, Default roles, Threat modeling and trust boundaries 
 
 Sub-topics: OPA,  Cedar, Policy tests, Threat modeling and trust boundaries (ABAC and policy engines), Abuse cases and adversarial testing (ABAC and policy engines)
 
+### Do
+
+- Validate and canonicalize all inputs touching ABAC and policy engines; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ABAC and policy engines.
+- Keep dependencies patched; pin versions for ABAC and policy engines components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat ABAC and policy engines in ABAC and policy engines as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: OPA,  Cedar, Policy tests, Threat modeling and trust boundaries (ABA
 ## Service accounts and workloads
 
 Sub-topics: SPIFFE, IAM roles, Threat modeling and trust boundaries (Service accounts and workloads), Abuse cases and adversarial testing (Service accounts and workloads), Logging, audit, and detection (Service accounts and workloads)
+
+### Do
+
+- Validate and canonicalize all inputs touching Service accounts and workloads; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Service accounts and workloads.
+- Keep dependencies patched; pin versions for Service accounts and workloads components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: SPIFFE, IAM roles, Threat modeling and trust boundaries (Service acc
 
 Sub-topics: Audit, Time bounds, Threat modeling and trust boundaries (Break-glass and emergency access), Abuse cases and adversarial testing (Break-glass and emergency access), Logging, audit, and detection (Break-glass and emergency access)
 
+### Do
+
+- Validate and canonicalize all inputs touching Break-glass and emergency access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Break-glass and emergency access.
+- Keep dependencies patched; pin versions for Break-glass and emergency access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Break-glass and emergency access in Break-glass and emergency access as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Audit, Time bounds, Threat modeling and trust boundaries (Break-glas
 ## Account lifecycle
 
 Sub-topics: Joiner-mover-leaver, Orphan accounts, Threat modeling and trust boundaries (Account lifecycle), Abuse cases and adversarial testing (Account lifecycle), Logging, audit, and detection (Account lifecycle)
+
+### Do
+
+- Validate and canonicalize all inputs touching Account lifecycle; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Account lifecycle.
+- Keep dependencies patched; pin versions for Account lifecycle components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Joiner-mover-leaver, Orphan accounts, Threat modeling and trust boun
 
 Sub-topics: Horizontal, Vertical, IDOR, Threat modeling and trust boundaries (Privilege escalation), Abuse cases and adversarial testing (Privilege escalation)
 
+### Do
+
+- Validate and canonicalize all inputs touching Privilege escalation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Privilege escalation.
+- Keep dependencies patched; pin versions for Privilege escalation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Privilege escalation in Privilege escalation as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Horizontal, Vertical, IDOR, Threat modeling and trust boundaries (Pr
 ## Zero trust access
 
 Sub-topics: Device posture, Continuous auth, Threat modeling and trust boundaries (Zero trust access), Abuse cases and adversarial testing (Zero trust access), Logging, audit, and detection (Zero trust access)
+
+### Do
+
+- Validate and canonicalize all inputs touching Zero trust access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Zero trust access.
+- Keep dependencies patched; pin versions for Zero trust access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Device posture, Continuous auth, Threat modeling and trust boundarie
 
 Sub-topics: Liveness, Replay, Threat modeling and trust boundaries (Biometrics and device binding), Abuse cases and adversarial testing (Biometrics and device binding), Logging, audit, and detection (Biometrics and device binding)
 
+### Do
+
+- Validate and canonicalize all inputs touching Biometrics and device binding; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Biometrics and device binding.
+- Keep dependencies patched; pin versions for Biometrics and device binding components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Biometrics and device binding in Biometrics and device binding as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Liveness, Replay, Threat modeling and trust boundaries (Biometrics a
 ## Guest and anonymous access
 
 Sub-topics: Scoped tokens, Rate limits, Threat modeling and trust boundaries (Guest and anonymous access), Abuse cases and adversarial testing (Guest and anonymous access), Logging, audit, and detection (Guest and anonymous access)
+
+### Do
+
+- Validate and canonicalize all inputs touching Guest and anonymous access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Guest and anonymous access.
+- Keep dependencies patched; pin versions for Guest and anonymous access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

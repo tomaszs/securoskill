@@ -6,6 +6,18 @@ Identity-aware access, device trust, and micro-segmentation.
 
 Sub-topics: Never trust network, Explicit verify, Least privilege session, Assume breach, Continuous validation
 
+### Do
+
+- Validate and canonicalize all inputs touching Zero trust principles; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Zero trust principles.
+- Keep dependencies patched; pin versions for Zero trust principles components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Zero trust principles in Zero trust principles as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Never trust network, Explicit verify, Least privilege session, Assum
 ## Device posture
 
 Sub-topics: MDM, Disk encryption, Jailbreak detection, Certificate device ID, BYOD
+
+### Do
+
+- Validate and canonicalize all inputs touching Device posture; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Device posture.
+- Keep dependencies patched; pin versions for Device posture components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: MDM, Disk encryption, Jailbreak detection, Certificate device ID, BY
 
 Sub-topics: App connectors, Split tunnel, Exposed admin, Lateral movement, Policy per app
 
+### Do
+
+- Validate and canonicalize all inputs touching ZTNA and private access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ZTNA and private access.
+- Keep dependencies patched; pin versions for ZTNA and private access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat ZTNA and private access in ZTNA and private access as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: App connectors, Split tunnel, Exposed admin, Lateral movement, Polic
 ## Micro-segmentation
 
 Sub-topics: East-west firewalls, Identity labels, Default deny, Policy drift, IPv6 gaps
+
+### Do
+
+- Validate and canonicalize all inputs touching Micro-segmentation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Micro-segmentation.
+- Keep dependencies patched; pin versions for Micro-segmentation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: East-west firewalls, Identity labels, Default deny, Policy drift, IP
 
 Sub-topics: SPIFFE IDs, mTLS STRICT, Authorization policies, Egress gateways, Waypoint proxies
 
+### Do
+
+- Validate and canonicalize all inputs touching Service mesh identity; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Service mesh identity.
+- Keep dependencies patched; pin versions for Service mesh identity components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Service mesh identity in Service mesh identity as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: SPIFFE IDs, mTLS STRICT, Authorization policies, Egress gateways, Wa
 ## Privileged access management
 
 Sub-topics: Just-in-time, Session recording, Break glass, Vaulted creds, Approval workflows
+
+### Do
+
+- Validate and canonicalize all inputs touching Privileged access management; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Privileged access management.
+- Keep dependencies patched; pin versions for Privileged access management components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Just-in-time, Session recording, Break glass, Vaulted creds, Approva
 
 Sub-topics: Geo block, Risk score, Compliant device, Legacy auth block, Token protection
 
+### Do
+
+- Validate and canonicalize all inputs touching Conditional access policies; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Conditional access policies.
+- Keep dependencies patched; pin versions for Conditional access policies components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Conditional access policies in Conditional access policies as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Geo block, Risk score, Compliant device, Legacy auth block, Token pr
 ## Bastion-less admin
 
 Sub-topics: SSO to cloud, IAM Identity Center, Short-lived creds, Audit trails, IP pinning pitfalls
+
+### Do
+
+- Validate and canonicalize all inputs touching Bastion-less admin; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bastion-less admin.
+- Keep dependencies patched; pin versions for Bastion-less admin components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: SSO to cloud, IAM Identity Center, Short-lived creds, Audit trails, 
 
 Sub-topics: OIDC to cloud, GitHub Actions, K8s service accounts, Token exchange, Audience binding
 
+### Do
+
+- Validate and canonicalize all inputs touching Workload identity federation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Workload identity federation.
+- Keep dependencies patched; pin versions for Workload identity federation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Workload identity federation in Workload identity federation as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: OIDC to cloud, GitHub Actions, K8s service accounts, Token exchange,
 ## Network device trust
 
 Sub-topics: 802.1X, NAC, Guest Wi-Fi isolation, Printer VLANs, IoT segmentation
+
+### Do
+
+- Validate and canonicalize all inputs touching Network device trust; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Network device trust.
+- Keep dependencies patched; pin versions for Network device trust components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: 802.1X, NAC, Guest Wi-Fi isolation, Printer VLANs, IoT segmentation
 
 Sub-topics: VPN alternatives, VDI, Clipboard exfil, Screen share, Home network risk
 
+### Do
+
+- Validate and canonicalize all inputs touching Remote work access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Remote work access.
+- Keep dependencies patched; pin versions for Remote work access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Remote work access in Remote work access as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: VPN alternatives, VDI, Clipboard exfil, Screen share, Home network r
 ## Zero trust measurement
 
 Sub-topics: Coverage metrics, Policy exceptions, Shadow IT, Unmanaged assets, Phishing resilience
+
+### Do
+
+- Validate and canonicalize all inputs touching Zero trust measurement; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Zero trust measurement.
+- Keep dependencies patched; pin versions for Zero trust measurement components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

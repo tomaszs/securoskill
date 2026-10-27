@@ -6,275 +6,226 @@ Stack-specific implementation for **NestJS** (Node.js server). Normative rules: 
 
 **Sub-topics:** Cookie vs token, Reconnect, Threat modeling and trust boundaries (WebSocket authentication), Abuse cases and adversarial testing (WebSocket authentication), Logging, audit, and detection (WebSocket authentication)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching WebSocket authentication; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebSocket authentication.
-- Keep dependencies patched; pin versions for WebSocket authentication components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for ws_auth controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WebSocket authentication before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for WebSocket authentication paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Room and channel authorization
 
 **Sub-topics:** Join tokens, Threat modeling and trust boundaries (Room and channel authorization), Abuse cases and adversarial testing (Room and channel authorization), Logging, audit, and detection (Room and channel authorization), Access control and least privilege (Room and channel authorization)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Room and channel authorization; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Room and channel authorization.
-- Keep dependencies patched; pin versions for Room and channel authorization components.
+- Check authorization on every handler after authentication (object-level, not only route-level).
+- Centralize policy checks; reuse one guard/middleware pattern across routes.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Room and channel authorization before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not trust client-sent role flags or hidden form fields for authorization.
+- Do not skip authz on 'internal' JSON endpoints.
 
 ### Verify
 
-- Add automated tests for Room and channel authorization paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Add tests for horizontal IDOR (user A cannot access user B ids).
 
 ## Message integrity
 
 **Sub-topics:** Signing, Ordering, Threat modeling and trust boundaries (Message integrity), Abuse cases and adversarial testing (Message integrity), Logging, audit, and detection (Message integrity)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Message integrity; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Message integrity.
-- Keep dependencies patched; pin versions for Message integrity components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for message_integrity controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Message integrity before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Message integrity paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Presence leaks
 
 **Sub-topics:** Online status, Typing, Threat modeling and trust boundaries (Presence leaks), Abuse cases and adversarial testing (Presence leaks), Logging, audit, and detection (Presence leaks)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Presence leaks; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Presence leaks.
-- Keep dependencies patched; pin versions for Presence leaks components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for presence_leak controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Presence leaks before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Presence leaks paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## MQTT and IoT protocols
 
 **Sub-topics:** ACLs, TLS, Threat modeling and trust boundaries (MQTT and IoT protocols), Abuse cases and adversarial testing (MQTT and IoT protocols), Logging, audit, and detection (MQTT and IoT protocols)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching MQTT and IoT protocols; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to MQTT and IoT protocols.
-- Keep dependencies patched; pin versions for MQTT and IoT protocols components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for mqtt controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for MQTT and IoT protocols before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for MQTT and IoT protocols paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Kafka security
 
 **Sub-topics:** ACLs, SASL, Threat modeling and trust boundaries (Kafka security), Abuse cases and adversarial testing (Kafka security), Logging, audit, and detection (Kafka security)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Kafka security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Kafka security.
-- Keep dependencies patched; pin versions for Kafka security components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for kafka controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Kafka security before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Kafka security paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Redis pub/sub
 
 **Sub-topics:** Unauthenticated instances, Threat modeling and trust boundaries (Redis pub/sub), Abuse cases and adversarial testing (Redis pub/sub), Logging, audit, and detection (Redis pub/sub), Access control and least privilege (Redis pub/sub)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Redis pub/sub; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Redis pub/sub.
-- Keep dependencies patched; pin versions for Redis pub/sub components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for redis_pubsub controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Redis pub/sub before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Redis pub/sub paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Server-sent events
 
 **Sub-topics:** CSRF, Caching, Threat modeling and trust boundaries (Server-sent events), Abuse cases and adversarial testing (Server-sent events), Logging, audit, and detection (Server-sent events)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Server-sent events; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Server-sent events.
-- Keep dependencies patched; pin versions for Server-sent events components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for sse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Server-sent events before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Server-sent events paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Collaborative editing
 
 **Sub-topics:** OT/CRDT authz, Threat modeling and trust boundaries (Collaborative editing), Abuse cases and adversarial testing (Collaborative editing), Logging, audit, and detection (Collaborative editing), Access control and least privilege (Collaborative editing)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Collaborative editing; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Collaborative editing.
-- Keep dependencies patched; pin versions for Collaborative editing components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for collab controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Collaborative editing before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Collaborative editing paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## WebRTC
 
 **Sub-topics:** ICE, TURN credentials, Threat modeling and trust boundaries (WebRTC), Abuse cases and adversarial testing (WebRTC), Logging, audit, and detection (WebRTC)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching WebRTC; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebRTC.
-- Keep dependencies patched; pin versions for WebRTC components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for webrtc controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WebRTC before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for WebRTC paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Fan-out abuse
 
 **Sub-topics:** Large rooms, Bots, Threat modeling and trust boundaries (Fan-out abuse), Abuse cases and adversarial testing (Fan-out abuse), Logging, audit, and detection (Fan-out abuse)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Fan-out abuse; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Fan-out abuse.
-- Keep dependencies patched; pin versions for Fan-out abuse components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for fanout controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Fan-out abuse before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Fan-out abuse paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 
 ## Message retention
 
 **Sub-topics:** Legal hold, E2EE, Threat modeling and trust boundaries (Message retention), Abuse cases and adversarial testing (Message retention), Logging, audit, and detection (Message retention)
 
-### Platform rules (summary)
+### Do (use this in NestJS)
 
-- Validate and canonicalize all inputs touching Message retention; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Message retention.
-- Keep dependencies patched; pin versions for Message retention components.
+- Apply domain skill `security-realtime-messaging` requirements using nestjs supported APIs only.
+- Use the official nestjs security documentation for retention controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in NestJS
+### Don't
 
-- Read normative rules in domain skill `security-realtime-messaging` / `reference.md`, then apply them using NestJS APIs and deployment model.
-- Prefer framework-maintained security features in NestJS over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Message retention before merge.
-- Pin NestJS dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nestjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Message retention paths in NestJS.
-- Run SAST/dependency scan configured for Node.js server.
+- Run stack-appropriate SAST/DAST on nestjs projects in CI.
 

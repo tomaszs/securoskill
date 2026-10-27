@@ -6,6 +6,18 @@ Transactional email, templates, and messaging.
 
 Sub-topics: SPF, DKIM, DMARC, Threat modeling and trust boundaries (Email authentication), Abuse cases and adversarial testing (Email authentication)
 
+### Do
+
+- Validate and canonicalize all inputs touching Email authentication; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email authentication.
+- Keep dependencies patched; pin versions for Email authentication components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Email authentication in Email authentication as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: SPF, DKIM, DMARC, Threat modeling and trust boundaries (Email authen
 ## Template injection in email
 
 Sub-topics: SSTI in mailers, Threat modeling and trust boundaries (Template injection in email), Abuse cases and adversarial testing (Template injection in email), Logging, audit, and detection (Template injection in email), Access control and least privilege (Template injection in email)
+
+### Do
+
+- Validate and canonicalize all inputs touching Template injection in email; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Template injection in email.
+- Keep dependencies patched; pin versions for Template injection in email components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: SSTI in mailers, Threat modeling and trust boundaries (Template inje
 
 Sub-topics: Open redirect, Tracking, Threat modeling and trust boundaries (Links in email), Abuse cases and adversarial testing (Links in email), Logging, audit, and detection (Links in email)
 
+### Do
+
+- Validate and canonicalize all inputs touching Links in email; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Links in email.
+- Keep dependencies patched; pin versions for Links in email components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Links in email in Links in email as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Open redirect, Tracking, Threat modeling and trust boundaries (Links
 ## Bounce and webhook handling
 
 Sub-topics: Forged events, Threat modeling and trust boundaries (Bounce and webhook handling), Abuse cases and adversarial testing (Bounce and webhook handling), Logging, audit, and detection (Bounce and webhook handling), Access control and least privilege (Bounce and webhook handling)
+
+### Do
+
+- Validate and canonicalize all inputs touching Bounce and webhook handling; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bounce and webhook handling.
+- Keep dependencies patched; pin versions for Bounce and webhook handling components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Forged events, Threat modeling and trust boundaries (Bounce and webh
 
 Sub-topics: Header injection, Threat modeling and trust boundaries (List management), Abuse cases and adversarial testing (List management), Logging, audit, and detection (List management), Access control and least privilege (List management)
 
+### Do
+
+- Validate and canonicalize all inputs touching List management; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to List management.
+- Keep dependencies patched; pin versions for List management components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat List management in List management as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Header injection, Threat modeling and trust boundaries (List managem
 ## Brand impersonation
 
 Sub-topics: From addresses, BIMI, Threat modeling and trust boundaries (Brand impersonation), Abuse cases and adversarial testing (Brand impersonation), Logging, audit, and detection (Brand impersonation)
+
+### Do
+
+- Validate and canonicalize all inputs touching Brand impersonation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Brand impersonation.
+- Keep dependencies patched; pin versions for Brand impersonation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: From addresses, BIMI, Threat modeling and trust boundaries (Brand im
 
 Sub-topics: Malware scanning, Threat modeling and trust boundaries (Attachments), Abuse cases and adversarial testing (Attachments), Logging, audit, and detection (Attachments), Access control and least privilege (Attachments)
 
+### Do
+
+- Validate and canonicalize all inputs touching Attachments; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Attachments.
+- Keep dependencies patched; pin versions for Attachments components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Attachments in Attachments as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Malware scanning, Threat modeling and trust boundaries (Attachments)
 ## SMS and push
 
 Sub-topics: OTP leakage, SIM swap awareness, Threat modeling and trust boundaries (SMS and push), Abuse cases and adversarial testing (SMS and push), Logging, audit, and detection (SMS and push)
+
+### Do
+
+- Validate and canonicalize all inputs touching SMS and push; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SMS and push.
+- Keep dependencies patched; pin versions for SMS and push components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: OTP leakage, SIM swap awareness, Threat modeling and trust boundarie
 
 Sub-topics: Forwarding rules, Threat modeling and trust boundaries (User inbox rules attacks), Abuse cases and adversarial testing (User inbox rules attacks), Logging, audit, and detection (User inbox rules attacks), Access control and least privilege (User inbox rules attacks)
 
+### Do
+
+- Validate and canonicalize all inputs touching User inbox rules attacks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to User inbox rules attacks.
+- Keep dependencies patched; pin versions for User inbox rules attacks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat User inbox rules attacks in User inbox rules attacks as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Forwarding rules, Threat modeling and trust boundaries (User inbox r
 ## Email provider APIs
 
 Sub-topics: API keys, Send-as, Threat modeling and trust boundaries (Email provider APIs), Abuse cases and adversarial testing (Email provider APIs), Logging, audit, and detection (Email provider APIs)
+
+### Do
+
+- Validate and canonicalize all inputs touching Email provider APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email provider APIs.
+- Keep dependencies patched; pin versions for Email provider APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: API keys, Send-as, Threat modeling and trust boundaries (Email provi
 
 Sub-topics: Encryption, Retention, Threat modeling and trust boundaries (PII in email bodies), Abuse cases and adversarial testing (PII in email bodies), Logging, audit, and detection (PII in email bodies)
 
+### Do
+
+- Validate and canonicalize all inputs touching PII in email bodies; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in email bodies.
+- Keep dependencies patched; pin versions for PII in email bodies components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat PII in email bodies in PII in email bodies as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Encryption, Retention, Threat modeling and trust boundaries (PII in 
 ## Email abuse
 
 Sub-topics: Forgot password spam, Threat modeling and trust boundaries (Email abuse), Abuse cases and adversarial testing (Email abuse), Logging, audit, and detection (Email abuse), Access control and least privilege (Email abuse)
+
+### Do
+
+- Validate and canonicalize all inputs touching Email abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email abuse.
+- Keep dependencies patched; pin versions for Email abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

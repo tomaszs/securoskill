@@ -6,6 +6,18 @@ Application servers, business logic, and server runtime.
 
 Sub-topics: SQL injection, ORM raw queries, Shell invocation, Server-side template injection, XPath and LDAP
 
+### Do
+
+- Use parameterized queries, prepared statements, or ORM bindings for every SQL/NoSQL call.
+- Validate and type-cast inputs before they reach queries or shell commands.
+- Run with least-privilege DB credentials (no DDL/admin for app role).
+
+### Don't
+
+- Do not build SQL or shell commands by concatenating, formatting, or templating user input.
+- Do not use `eval`, `exec`, or shell interpreters on request data.
+- Do not expose raw SQL debug endpoints in production.
+
 ### Policy
 
 - Treat Injection (SQL, NoSQL, command, LDAP, template) in Injection (SQL, NoSQL, command, LDAP, template) as in-scope for threat modeling and security requirements before implementation.
@@ -43,6 +55,18 @@ Sub-topics: SQL injection, ORM raw queries, Shell invocation, Server-side templa
 
 Sub-topics: RBAC, ABAC, Object-level checks, Admin routes, Threat modeling and trust boundaries (Server-side authorization)
 
+### Do
+
+- Validate and canonicalize all inputs touching Server-side authorization; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Server-side authorization.
+- Keep dependencies patched; pin versions for Server-side authorization components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Server-side authorization in Server-side authorization as in-scope for threat modeling and security requirements before implementation.
@@ -77,6 +101,18 @@ Sub-topics: RBAC, ABAC, Object-level checks, Admin routes, Threat modeling and t
 ## Session management on server
 
 Sub-topics: Session fixation, Rotation, Idle timeout, Concurrent sessions, Threat modeling and trust boundaries (Session management on server)
+
+### Do
+
+- Validate and canonicalize all inputs touching Session management on server; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Session management on server.
+- Keep dependencies patched; pin versions for Session management on server components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -113,6 +149,18 @@ Sub-topics: Session fixation, Rotation, Idle timeout, Concurrent sessions, Threa
 
 Sub-topics: Stack traces, Debug endpoints, Verbose validation errors, Threat modeling and trust boundaries (Error handling and information disclosure), Abuse cases and adversarial testing (Error handling and information disclosure)
 
+### Do
+
+- Validate and canonicalize all inputs touching Error handling and information disclosure; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Error handling and information disclosure.
+- Keep dependencies patched; pin versions for Error handling and information disclosure components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Error handling and information disclosure in Error handling and information disclosure as in-scope for threat modeling and security requirements before implementation.
@@ -147,6 +195,18 @@ Sub-topics: Stack traces, Debug endpoints, Verbose validation errors, Threat mod
 ## Concurrency and race conditions
 
 Sub-topics: TOCTOU, Double spend, Inventory races, Threat modeling and trust boundaries (Concurrency and race conditions), Abuse cases and adversarial testing (Concurrency and race conditions)
+
+### Do
+
+- Validate and canonicalize all inputs touching Concurrency and race conditions; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Concurrency and race conditions.
+- Keep dependencies patched; pin versions for Concurrency and race conditions components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -183,6 +243,18 @@ Sub-topics: TOCTOU, Double spend, Inventory races, Threat modeling and trust bou
 
 Sub-topics: Path traversal, Zip slip, Symlinks, Temp files, Threat modeling and trust boundaries (Server file I/O)
 
+### Do
+
+- Validate and canonicalize all inputs touching Server file I/O; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Server file I/O.
+- Keep dependencies patched; pin versions for Server file I/O components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Server file I/O in Server file I/O as in-scope for threat modeling and security requirements before implementation.
@@ -217,6 +289,18 @@ Sub-topics: Path traversal, Zip slip, Symlinks, Temp files, Threat modeling and 
 ## Deserialization and parsing
 
 Sub-topics: JSON bombs, XML external entities, YAML unsafe load, Threat modeling and trust boundaries (Deserialization and parsing), Abuse cases and adversarial testing (Deserialization and parsing)
+
+### Do
+
+- Validate and canonicalize all inputs touching Deserialization and parsing; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Deserialization and parsing.
+- Keep dependencies patched; pin versions for Deserialization and parsing components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -253,6 +337,18 @@ Sub-topics: JSON bombs, XML external entities, YAML unsafe load, Threat modeling
 
 Sub-topics: Job injection, Privilege of workers, Retry storms, Threat modeling and trust boundaries (Background jobs and queues), Abuse cases and adversarial testing (Background jobs and queues)
 
+### Do
+
+- Validate and canonicalize all inputs touching Background jobs and queues; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Background jobs and queues.
+- Keep dependencies patched; pin versions for Background jobs and queues components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Background jobs and queues in Background jobs and queues as in-scope for threat modeling and security requirements before implementation.
@@ -287,6 +383,18 @@ Sub-topics: Job injection, Privilege of workers, Retry storms, Threat modeling a
 ## Server-side caching
 
 Sub-topics: Cache key injection, Sensitive data in cache, Threat modeling and trust boundaries (Server-side caching), Abuse cases and adversarial testing (Server-side caching), Logging, audit, and detection (Server-side caching)
+
+### Do
+
+- Validate and canonicalize all inputs touching Server-side caching; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Server-side caching.
+- Keep dependencies patched; pin versions for Server-side caching components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -323,6 +431,18 @@ Sub-topics: Cache key injection, Sensitive data in cache, Threat modeling and tr
 
 Sub-topics: Row-level security, Shared schema leaks, Threat modeling and trust boundaries (Tenant isolation on server), Abuse cases and adversarial testing (Tenant isolation on server), Logging, audit, and detection (Tenant isolation on server)
 
+### Do
+
+- Validate and canonicalize all inputs touching Tenant isolation on server; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant isolation on server.
+- Keep dependencies patched; pin versions for Tenant isolation on server components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Tenant isolation on server in Tenant isolation on server as in-scope for threat modeling and security requirements before implementation.
@@ -358,6 +478,18 @@ Sub-topics: Row-level security, Shared schema leaks, Threat modeling and trust b
 
 Sub-topics: Brute force, Scraping, Account enumeration, Threat modeling and trust boundaries (Rate limiting and abuse), Abuse cases and adversarial testing (Rate limiting and abuse)
 
+### Do
+
+- Validate and canonicalize all inputs touching Rate limiting and abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Rate limiting and abuse.
+- Keep dependencies patched; pin versions for Rate limiting and abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Rate limiting and abuse in Rate limiting and abuse as in-scope for threat modeling and security requirements before implementation.
@@ -392,6 +524,18 @@ Sub-topics: Brute force, Scraping, Account enumeration, Threat modeling and trus
 ## Health and debug endpoints
 
 Sub-topics: /metrics exposure, Actuator, phpinfo equivalents, Threat modeling and trust boundaries (Health and debug endpoints), Abuse cases and adversarial testing (Health and debug endpoints)
+
+### Do
+
+- Validate and canonicalize all inputs touching Health and debug endpoints; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Health and debug endpoints.
+- Keep dependencies patched; pin versions for Health and debug endpoints components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -6,6 +6,18 @@ Headless CMS, WYSIWYG, and editorial workflows.
 
 Sub-topics: Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL CMS
 
+### Do
+
+- Validate and canonicalize all inputs touching Headless CMS APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Headless CMS APIs.
+- Keep dependencies patched; pin versions for Headless CMS APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Headless CMS APIs in Headless CMS APIs as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL 
 ## WYSIWYG editors
 
 Sub-topics: Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
+
+### Do
+
+- Validate and canonicalize all inputs touching WYSIWYG editors; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WYSIWYG editors.
+- Keep dependencies patched; pin versions for WYSIWYG editors components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborat
 
 Sub-topics: Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
 
+### Do
+
+- Validate and canonicalize all inputs touching Publish workflows; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Publish workflows.
+- Keep dependencies patched; pin versions for Publish workflows components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Publish workflows in Publish workflows as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache 
 ## Plugins and themes
 
 Sub-topics: Third-party PHP, npm theme scripts, Update channels, Supply chain, Sandbox
+
+### Do
+
+- Validate and canonicalize all inputs touching Plugins and themes; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Plugins and themes.
+- Keep dependencies patched; pin versions for Plugins and themes components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Third-party PHP, npm theme scripts, Update channels, Supply chain, S
 
 Sub-topics: Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 
+### Do
+
+- Validate and canonicalize all inputs touching Comments and UGC moderation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Comments and UGC moderation.
+- Keep dependencies patched; pin versions for Comments and UGC moderation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Comments and UGC moderation in Comments and UGC moderation as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 ## SEO and metadata injection
 
 Sub-topics: OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
+
+### Do
+
+- Validate and canonicalize all inputs touching SEO and metadata injection; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SEO and metadata injection.
+- Keep dependencies patched; pin versions for SEO and metadata injection components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Struct
 
 Sub-topics: SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 
+### Do
+
+- Validate and canonicalize all inputs touching Media libraries; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Media libraries.
+- Keep dependencies patched; pin versions for Media libraries components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Media libraries in Media libraries as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 ## Multi-site CMS
 
 Sub-topics: Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
+
+### Do
+
+- Validate and canonicalize all inputs touching Multi-site CMS; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-site CMS.
+- Keep dependencies patched; pin versions for Multi-site CMS components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
 
 Sub-topics: Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Query injection
 
+### Do
+
+- Validate and canonicalize all inputs touching CMS search; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS search.
+- Keep dependencies patched; pin versions for CMS search components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat CMS search in CMS search as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Q
 ## Marketing forms
 
 Sub-topics: Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
+
+### Do
+
+- Validate and canonicalize all inputs touching Marketing forms; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Marketing forms.
+- Keep dependencies patched; pin versions for Marketing forms components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDP
 
 Sub-topics: Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
 
+### Do
+
+- Validate and canonicalize all inputs touching Static site generators; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static site generators.
+- Keep dependencies patched; pin versions for Static site generators components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Static site generators in Static site generators as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview s
 ## CMS roles and SSO
 
 Sub-topics: Editor vs admin, SSO mis-map, API users, Impersonation, Audit trail
+
+### Do
+
+- Validate and canonicalize all inputs touching CMS roles and SSO; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS roles and SSO.
+- Keep dependencies patched; pin versions for CMS roles and SSO components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

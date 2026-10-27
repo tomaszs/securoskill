@@ -6,275 +6,227 @@ Stack-specific implementation for **Spring Boot** (Java). Normative rules: domai
 
 **Sub-topics:** SPF, DKIM, DMARC, Threat modeling and trust boundaries (Email authentication), Abuse cases and adversarial testing (Email authentication)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Email authentication; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email authentication.
-- Keep dependencies patched; pin versions for Email authentication components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_auth controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Email authentication before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Email authentication paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Template injection in email
 
 **Sub-topics:** SSTI in mailers, Threat modeling and trust boundaries (Template injection in email), Abuse cases and adversarial testing (Template injection in email), Logging, audit, and detection (Template injection in email), Access control and least privilege (Template injection in email)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Template injection in email; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Template injection in email.
-- Keep dependencies patched; pin versions for Template injection in email components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for template_injection controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Template injection in email before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Template injection in email paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Links in email
 
 **Sub-topics:** Open redirect, Tracking, Threat modeling and trust boundaries (Links in email), Abuse cases and adversarial testing (Links in email), Logging, audit, and detection (Links in email)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Links in email; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Links in email.
-- Keep dependencies patched; pin versions for Links in email components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_links controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Links in email before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Links in email paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Bounce and webhook handling
 
 **Sub-topics:** Forged events, Threat modeling and trust boundaries (Bounce and webhook handling), Abuse cases and adversarial testing (Bounce and webhook handling), Logging, audit, and detection (Bounce and webhook handling), Access control and least privilege (Bounce and webhook handling)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Bounce and webhook handling; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bounce and webhook handling.
-- Keep dependencies patched; pin versions for Bounce and webhook handling components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_bounce controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Bounce and webhook handling before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Bounce and webhook handling paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## List management
 
 **Sub-topics:** Header injection, Threat modeling and trust boundaries (List management), Abuse cases and adversarial testing (List management), Logging, audit, and detection (List management), Access control and least privilege (List management)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching List management; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to List management.
-- Keep dependencies patched; pin versions for List management components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_list controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for List management before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for List management paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Brand impersonation
 
 **Sub-topics:** From addresses, BIMI, Threat modeling and trust boundaries (Brand impersonation), Abuse cases and adversarial testing (Brand impersonation), Logging, audit, and detection (Brand impersonation)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Brand impersonation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Brand impersonation.
-- Keep dependencies patched; pin versions for Brand impersonation components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_phishing controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Brand impersonation before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Brand impersonation paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Attachments
 
 **Sub-topics:** Malware scanning, Threat modeling and trust boundaries (Attachments), Abuse cases and adversarial testing (Attachments), Logging, audit, and detection (Attachments), Access control and least privilege (Attachments)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Attachments; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Attachments.
-- Keep dependencies patched; pin versions for Attachments components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_attach controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Attachments before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Attachments paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## SMS and push
 
 **Sub-topics:** OTP leakage, SIM swap awareness, Threat modeling and trust boundaries (SMS and push), Abuse cases and adversarial testing (SMS and push), Logging, audit, and detection (SMS and push)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching SMS and push; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SMS and push.
-- Keep dependencies patched; pin versions for SMS and push components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for sms_push controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SMS and push before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for SMS and push paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## User inbox rules attacks
 
 **Sub-topics:** Forwarding rules, Threat modeling and trust boundaries (User inbox rules attacks), Abuse cases and adversarial testing (User inbox rules attacks), Logging, audit, and detection (User inbox rules attacks), Access control and least privilege (User inbox rules attacks)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching User inbox rules attacks; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to User inbox rules attacks.
-- Keep dependencies patched; pin versions for User inbox rules attacks components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for inbox_rules controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for User inbox rules attacks before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for User inbox rules attacks paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Email provider APIs
 
 **Sub-topics:** API keys, Send-as, Threat modeling and trust boundaries (Email provider APIs), Abuse cases and adversarial testing (Email provider APIs), Logging, audit, and detection (Email provider APIs)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Email provider APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email provider APIs.
-- Keep dependencies patched; pin versions for Email provider APIs components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_provider controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Email provider APIs before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Email provider APIs paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## PII in email bodies
 
 **Sub-topics:** Encryption, Retention, Threat modeling and trust boundaries (PII in email bodies), Abuse cases and adversarial testing (PII in email bodies), Logging, audit, and detection (PII in email bodies)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching PII in email bodies; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in email bodies.
-- Keep dependencies patched; pin versions for PII in email bodies components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_pii controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for PII in email bodies before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for PII in email bodies paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 
 ## Email abuse
 
 **Sub-topics:** Forgot password spam, Threat modeling and trust boundaries (Email abuse), Abuse cases and adversarial testing (Email abuse), Logging, audit, and detection (Email abuse), Access control and least privilege (Email abuse)
 
-### Platform rules (summary)
+### Do (use this in Spring Boot)
 
-- Validate and canonicalize all inputs touching Email abuse; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Email abuse.
-- Keep dependencies patched; pin versions for Email abuse components.
+- Apply domain skill `security-email-notifications` requirements using spring-boot supported APIs only.
+- Use the official spring-boot security documentation for email_abuse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Spring Boot
+### Don't
 
-- Read normative rules in domain skill `security-email-notifications` / `reference.md`, then apply them using Spring Boot APIs and deployment model.
-- Prefer framework-maintained security features in Spring Boot over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Email abuse before merge.
-- Pin Spring Boot dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of spring-boot for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Email abuse paths in Spring Boot.
-- Run SAST/dependency scan configured for Java.
+- Run stack-appropriate SAST/DAST on spring-boot projects in CI.
 

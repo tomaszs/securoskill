@@ -6,299 +6,227 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 **Sub-topics:** Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Cloud IAM; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud IAM.
-- Keep dependencies patched; pin versions for Cloud IAM components.
+- Apply domain skill `security-cloud-infrastructure` requirements using langchain supported APIs only.
+- Use the official langchain security documentation for cloud_iam controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Cloud IAM before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of langchain for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Cloud IAM paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Run stack-appropriate SAST/DAST on langchain projects in CI.
 
 ## Object storage buckets
 
 **Sub-topics:** Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Object storage buckets; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Object storage buckets.
-- Keep dependencies patched; pin versions for Object storage buckets components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Object storage buckets before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Object storage buckets paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Compute instances
 
 **Sub-topics:** IMDSv2, SSH keys, Metadata, Threat modeling and trust boundaries (Compute instances), Abuse cases and adversarial testing (Compute instances)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Compute instances; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compute instances.
-- Keep dependencies patched; pin versions for Compute instances components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Compute instances before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Compute instances paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Managed serverless
 
 **Sub-topics:** Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Managed serverless; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Managed serverless.
-- Keep dependencies patched; pin versions for Managed serverless components.
+- Apply domain skill `security-cloud-infrastructure` requirements using langchain supported APIs only.
+- Use the official langchain security documentation for serverless controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Managed serverless before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of langchain for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Managed serverless paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Run stack-appropriate SAST/DAST on langchain projects in CI.
 
 ## Secrets managers
 
 **Sub-topics:** Rotation, Access policies, Threat modeling and trust boundaries (Secrets managers), Abuse cases and adversarial testing (Secrets managers), Logging, audit, and detection (Secrets managers)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Secrets managers; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secrets managers.
-- Keep dependencies patched; pin versions for Secrets managers components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Secrets managers before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Secrets managers paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## VPC and security groups
 
 **Sub-topics:** 0.0.0.0/0, Peering leaks, Threat modeling and trust boundaries (VPC and security groups), Abuse cases and adversarial testing (VPC and security groups), Logging, audit, and detection (VPC and security groups)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching VPC and security groups; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to VPC and security groups.
-- Keep dependencies patched; pin versions for VPC and security groups components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for VPC and security groups before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for VPC and security groups paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Cloud audit logs
 
 **Sub-topics:** Tampering, Retention, Threat modeling and trust boundaries (Cloud audit logs), Abuse cases and adversarial testing (Cloud audit logs), Logging, audit, and detection (Cloud audit logs)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Cloud audit logs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud audit logs.
-- Keep dependencies patched; pin versions for Cloud audit logs components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Cloud audit logs before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Cloud audit logs paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Infrastructure as code
 
 **Sub-topics:** State files, Drift, Threat modeling and trust boundaries (Infrastructure as code), Abuse cases and adversarial testing (Infrastructure as code), Logging, audit, and detection (Infrastructure as code)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Infrastructure as code; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Infrastructure as code.
-- Keep dependencies patched; pin versions for Infrastructure as code components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Infrastructure as code before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Infrastructure as code paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Multi-cloud identity
 
 **Sub-topics:** Federation, Key sprawl, Threat modeling and trust boundaries (Multi-cloud identity), Abuse cases and adversarial testing (Multi-cloud identity), Logging, audit, and detection (Multi-cloud identity)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Multi-cloud identity; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-cloud identity.
-- Keep dependencies patched; pin versions for Multi-cloud identity components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-cloud identity before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Multi-cloud identity paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## SaaS admin consoles
 
 **Sub-topics:** MFA, SCIM, Threat modeling and trust boundaries (SaaS admin consoles), Abuse cases and adversarial testing (SaaS admin consoles), Logging, audit, and detection (SaaS admin consoles)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching SaaS admin consoles; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SaaS admin consoles.
-- Keep dependencies patched; pin versions for SaaS admin consoles components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SaaS admin consoles before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for SaaS admin consoles paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## CDN and edge
 
 **Sub-topics:** Cache deception, Origin shield, Threat modeling and trust boundaries (CDN and edge), Abuse cases and adversarial testing (CDN and edge), Logging, audit, and detection (CDN and edge)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching CDN and edge; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CDN and edge.
-- Keep dependencies patched; pin versions for CDN and edge components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CDN and edge before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for CDN and edge paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## DR and regions
 
 **Sub-topics:** Failover security, Data residency, Threat modeling and trust boundaries (DR and regions), Abuse cases and adversarial testing (DR and regions), Logging, audit, and detection (DR and regions)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching DR and regions; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DR and regions.
-- Keep dependencies patched; pin versions for DR and regions components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for DR and regions before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for DR and regions paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 

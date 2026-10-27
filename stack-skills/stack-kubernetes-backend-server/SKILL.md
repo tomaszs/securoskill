@@ -17,5 +17,5 @@ You are working in **Kubernetes** and need concrete guidance for **backend and s
 ## Workflow
 
 1. Match your feature to sub-areas in `reference.md`.
-2. Implement using stack-specific bullets under **How to do this in Kubernetes**.
-3. Confirm verification steps before merge.
+2. Follow **Do** / **Don't** lists in `reference.md` for this stack.
+3. Confirm **Verify** steps before merge.

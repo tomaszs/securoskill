@@ -6,6 +6,18 @@ Uploads, downloads, signed URLs, and media pipelines.
 
 Sub-topics: MIME sniffing, Double extensions, Polyglot files, Size limits, Magic bytes
 
+### Do
+
+- Validate and canonicalize all inputs touching Upload validation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Upload validation.
+- Keep dependencies patched; pin versions for Upload validation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Upload validation in Upload validation as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: MIME sniffing, Double extensions, Polyglot files, Size limits, Magic
 ## Malware scanning
 
 Sub-topics: Async scan, Quarantine buckets, Bypass timing, ZIP bombs, Macro docs
+
+### Do
+
+- Validate and canonicalize all inputs touching Malware scanning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Malware scanning.
+- Keep dependencies patched; pin versions for Malware scanning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Async scan, Quarantine buckets, Bypass timing, ZIP bombs, Macro docs
 
 Sub-topics: TTL, Method restriction, Object key guessing, Header signing, Revocation
 
+### Do
+
+- Validate and canonicalize all inputs touching Presigned URLs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Presigned URLs.
+- Keep dependencies patched; pin versions for Presigned URLs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Presigned URLs in Presigned URLs as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: TTL, Method restriction, Object key guessing, Header signing, Revoca
 ## Bucket policies and ACLs
 
 Sub-topics: Public read, ListBucket, AuthenticatedUsers, Policy wildcards, Cross-account
+
+### Do
+
+- Validate and canonicalize all inputs touching Bucket policies and ACLs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bucket policies and ACLs.
+- Keep dependencies patched; pin versions for Bucket policies and ACLs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Public read, ListBucket, AuthenticatedUsers, Policy wildcards, Cross
 
 Sub-topics: OAC/OAI, Hotlinking, Cache key abuse, Range requests, Signed cookies
 
+### Do
+
+- Validate and canonicalize all inputs touching CDN and origin access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CDN and origin access.
+- Keep dependencies patched; pin versions for CDN and origin access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat CDN and origin access in CDN and origin access as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: OAC/OAI, Hotlinking, Cache key abuse, Range requests, Signed cookies
 ## Image and media processing
 
 Sub-topics: ImageTragick class bugs, SVG uploads, EXIF leaks, Thumbnails, Server-side render
+
+### Do
+
+- Validate and canonicalize all inputs touching Image and media processing; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Image and media processing.
+- Keep dependencies patched; pin versions for Image and media processing components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: ImageTragick class bugs, SVG uploads, EXIF leaks, Thumbnails, Server
 
 Sub-topics: PDF JS, Office macros, HTML conversion, Sandbox viewers, SSRF fetchers
 
+### Do
+
+- Validate and canonicalize all inputs touching Document preview; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Document preview.
+- Keep dependencies patched; pin versions for Document preview components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Document preview in Document preview as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: PDF JS, Office macros, HTML conversion, Sandbox viewers, SSRF fetche
 ## User-generated content hosting
 
 Sub-topics: Separate domain, CSP on static, COEP/COOP, Phishing pages, DMCA
+
+### Do
+
+- Validate and canonicalize all inputs touching User-generated content hosting; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to User-generated content hosting.
+- Keep dependencies patched; pin versions for User-generated content hosting components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Separate domain, CSP on static, COEP/COOP, Phishing pages, DMCA
 
 Sub-topics: Deleted object recovery, Retention locks, Legal hold, Ransomware, Replication
 
+### Do
+
+- Validate and canonicalize all inputs touching Versioning and lifecycle; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Versioning and lifecycle.
+- Keep dependencies patched; pin versions for Versioning and lifecycle components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Versioning and lifecycle in Versioning and lifecycle as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Deleted object recovery, Retention locks, Legal hold, Ransomware, Re
 ## Object encryption
 
 Sub-topics: SSE-KMS, Client-side keys, Bucket keys, Key policy, Cross-region keys
+
+### Do
+
+- Validate and canonicalize all inputs touching Object encryption; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Object encryption.
+- Keep dependencies patched; pin versions for Object encryption components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: SSE-KMS, Client-side keys, Bucket keys, Key policy, Cross-region key
 
 Sub-topics: x-amz-meta PII, Directory listings, Error XML, ETag leaks, Object tags
 
+### Do
+
+- Validate and canonicalize all inputs touching Metadata and headers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Metadata and headers.
+- Keep dependencies patched; pin versions for Metadata and headers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Metadata and headers in Metadata and headers as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: x-amz-meta PII, Directory listings, Error XML, ETag leaks, Object ta
 ## Archives and backups
 
 Sub-topics: Tar paths, Encrypted backups, Offsite sync, Restore testing, Access logging
+
+### Do
+
+- Validate and canonicalize all inputs touching Archives and backups; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Archives and backups.
+- Keep dependencies patched; pin versions for Archives and backups components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

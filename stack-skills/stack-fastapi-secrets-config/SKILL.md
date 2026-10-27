@@ -17,5 +17,5 @@ You are working in **FastAPI** and need concrete guidance for **secrets and conf
 ## Workflow
 
 1. Match your feature to sub-areas in `reference.md`.
-2. Implement using stack-specific bullets under **How to do this in FastAPI**.
-3. Confirm verification steps before merge.
+2. Follow **Do** / **Don't** lists in `reference.md` for this stack.
+3. Confirm **Verify** steps before merge.

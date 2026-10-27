@@ -6,299 +6,227 @@ Stack-specific implementation for **LangChain / LangGraph** (AI). Normative rule
 
 **Sub-topics:** Typosquatting, Maintainer takeover, Threat modeling and trust boundaries (Package registries), Abuse cases and adversarial testing (Package registries), Logging, audit, and detection (Package registries)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Package registries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Package registries.
-- Keep dependencies patched; pin versions for Package registries components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Package registries before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Package registries paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Lockfiles and reproducibility
 
 **Sub-topics:** Integrity hashes, Threat modeling and trust boundaries (Lockfiles and reproducibility), Abuse cases and adversarial testing (Lockfiles and reproducibility), Logging, audit, and detection (Lockfiles and reproducibility), Access control and least privilege (Lockfiles and reproducibility)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Lockfiles and reproducibility; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Lockfiles and reproducibility.
-- Keep dependencies patched; pin versions for Lockfiles and reproducibility components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Lockfiles and reproducibility before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Lockfiles and reproducibility paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Vendoring
 
 **Sub-topics:** Fork drift, Patch review, Threat modeling and trust boundaries (Vendoring), Abuse cases and adversarial testing (Vendoring), Logging, audit, and detection (Vendoring)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Vendoring; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vendoring.
-- Keep dependencies patched; pin versions for Vendoring components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Vendoring before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Vendoring paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Build integrity
 
 **Sub-topics:** SLSA levels, Hermetic builds, Threat modeling and trust boundaries (Build integrity), Abuse cases and adversarial testing (Build integrity), Logging, audit, and detection (Build integrity)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Build integrity; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Build integrity.
-- Keep dependencies patched; pin versions for Build integrity components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Build integrity before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Build integrity paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Third-party SaaS
 
 **Sub-topics:** DPAs, Subprocessors, Threat modeling and trust boundaries (Third-party SaaS), Abuse cases and adversarial testing (Third-party SaaS), Logging, audit, and detection (Third-party SaaS)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Third-party SaaS; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party SaaS.
-- Keep dependencies patched; pin versions for Third-party SaaS components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Third-party SaaS before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Third-party SaaS paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## License compliance
 
 **Sub-topics:** Copyleft in SaaS, Threat modeling and trust boundaries (License compliance), Abuse cases and adversarial testing (License compliance), Logging, audit, and detection (License compliance), Access control and least privilege (License compliance)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching License compliance; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to License compliance.
-- Keep dependencies patched; pin versions for License compliance components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for License compliance before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for License compliance paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Binary dependencies
 
 **Sub-topics:** Provenance, Checksums, Threat modeling and trust boundaries (Binary dependencies), Abuse cases and adversarial testing (Binary dependencies), Logging, audit, and detection (Binary dependencies)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Binary dependencies; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Binary dependencies.
-- Keep dependencies patched; pin versions for Binary dependencies components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Binary dependencies before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Binary dependencies paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Git submodules
 
 **Sub-topics:** Pinned refs, URL hijack, Threat modeling and trust boundaries (Git submodules), Abuse cases and adversarial testing (Git submodules), Logging, audit, and detection (Git submodules)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Git submodules; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Git submodules.
-- Keep dependencies patched; pin versions for Git submodules components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Git submodules before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Git submodules paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Internal packages
 
 **Sub-topics:** Namespace, Publishing tokens, Threat modeling and trust boundaries (Internal packages), Abuse cases and adversarial testing (Internal packages), Logging, audit, and detection (Internal packages)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Internal packages; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Internal packages.
-- Keep dependencies patched; pin versions for Internal packages components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Internal packages before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Internal packages paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## CVE response
 
 **Sub-topics:** Triage, Emergency patches, Threat modeling and trust boundaries (CVE response), Abuse cases and adversarial testing (CVE response), Logging, audit, and detection (CVE response)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching CVE response; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CVE response.
-- Keep dependencies patched; pin versions for CVE response components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CVE response before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for CVE response paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Malware in repos
 
 **Sub-topics:** Obfuscated scripts, Postinstall, Threat modeling and trust boundaries (Malware in repos), Abuse cases and adversarial testing (Malware in repos), Logging, audit, and detection (Malware in repos)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching Malware in repos; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Malware in repos.
-- Keep dependencies patched; pin versions for Malware in repos components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Malware in repos before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Malware in repos paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## SBOM distribution
 
 **Sub-topics:** VEX, Consumer updates, Threat modeling and trust boundaries (SBOM distribution), Abuse cases and adversarial testing (SBOM distribution), Logging, audit, and detection (SBOM distribution)
 
-### Platform rules (summary)
+### Do (use this in LangChain / LangGraph)
 
-- Validate and canonicalize all inputs touching SBOM distribution; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SBOM distribution.
-- Keep dependencies patched; pin versions for SBOM distribution components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in LangChain / LangGraph
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from LangChain / LangGraph.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-supply-chain` / `reference.md`, then apply them using LangChain / LangGraph APIs and deployment model.
-- Prefer framework-maintained security features in LangChain / LangGraph over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SBOM distribution before merge.
-- Pin LangChain / LangGraph dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for SBOM distribution paths in LangChain / LangGraph.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 

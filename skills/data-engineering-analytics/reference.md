@@ -6,6 +6,18 @@ ETL, warehouses, lakes, and reporting pipelines.
 
 Sub-topics: Snowflake RBAC, BigQuery IAM, Row access policies, Column masks, Shared datasets
 
+### Do
+
+- Validate and canonicalize all inputs touching Warehouse access control; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Warehouse access control.
+- Keep dependencies patched; pin versions for Warehouse access control components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Warehouse access control in Warehouse access control as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Snowflake RBAC, BigQuery IAM, Row access policies, Column masks, Sha
 ## ETL credentials
 
 Sub-topics: Airflow connections, dbt profiles, Spark keys in notebooks, Rotation, CI to prod
+
+### Do
+
+- Validate and canonicalize all inputs touching ETL credentials; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ETL credentials.
+- Keep dependencies patched; pin versions for ETL credentials components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Airflow connections, dbt profiles, Spark keys in notebooks, Rotation
 
 Sub-topics: SQL in dbt, Dynamic partitions, User-supplied SQL, Jinja in queries, UDF sandbox
 
+### Do
+
+- Validate and canonicalize all inputs touching Pipeline injection; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Pipeline injection.
+- Keep dependencies patched; pin versions for Pipeline injection components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Pipeline injection in Pipeline injection as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: SQL in dbt, Dynamic partitions, User-supplied SQL, Jinja in queries,
 ## PII in analytics
 
 Sub-topics: Hashing vs encryption, Join keys, Re-identification, Sampling leaks, Aggregates
+
+### Do
+
+- Validate and canonicalize all inputs touching PII in analytics; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in analytics.
+- Keep dependencies patched; pin versions for PII in analytics components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Hashing vs encryption, Join keys, Re-identification, Sampling leaks,
 
 Sub-topics: Embed tokens, RLS in Power BI, Export CSV, Scheduled email, Public links
 
+### Do
+
+- Validate and canonicalize all inputs touching BI and dashboards; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to BI and dashboards.
+- Keep dependencies patched; pin versions for BI and dashboards components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat BI and dashboards in BI and dashboards as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Embed tokens, RLS in Power BI, Export CSV, Scheduled email, Public l
 ## Data lakes
 
 Sub-topics: S3 path traversal, Parquet metadata, Glue catalog ACL, Lake Formation, Iceberg snapshots
+
+### Do
+
+- Validate and canonicalize all inputs touching Data lakes; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data lakes.
+- Keep dependencies patched; pin versions for Data lakes components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: S3 path traversal, Parquet metadata, Glue catalog ACL, Lake Formatio
 
 Sub-topics: Flink state, Kafka Connect secrets, Exactly-once, Poison records, Schema registry ACL
 
+### Do
+
+- Validate and canonicalize all inputs touching Streaming analytics; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Streaming analytics.
+- Keep dependencies patched; pin versions for Streaming analytics components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Streaming analytics in Streaming analytics as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Flink state, Kafka Connect secrets, Exactly-once, Poison records, Sc
 ## Feature stores
 
 Sub-topics: Point-in-time leaks, Training-serving skew, Offline online parity, PII in features, Access audit
+
+### Do
+
+- Validate and canonicalize all inputs touching Feature stores; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Feature stores.
+- Keep dependencies patched; pin versions for Feature stores components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Point-in-time leaks, Training-serving skew, Offline online parity, P
 
 Sub-topics: Shared workspaces, Output history, Git sync secrets, Cell execution order, Public nbviewer
 
+### Do
+
+- Validate and canonicalize all inputs touching Notebooks and ad hoc SQL; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Notebooks and ad hoc SQL.
+- Keep dependencies patched; pin versions for Notebooks and ad hoc SQL components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Notebooks and ad hoc SQL in Notebooks and ad hoc SQL as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Shared workspaces, Output history, Git sync secrets, Cell execution 
 ## Data contracts and quality
 
 Sub-topics: Breaking schema, DQ alerts, Tampered sources, Lineage trust, SLA abuse
+
+### Do
+
+- Validate and canonicalize all inputs touching Data contracts and quality; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data contracts and quality.
+- Keep dependencies patched; pin versions for Data contracts and quality components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Breaking schema, DQ alerts, Tampered sources, Lineage trust, SLA abu
 
 Sub-topics: License scope, Resale restrictions, API keys shared, Poisoned feeds, Watermarking
 
+### Do
+
+- Validate and canonicalize all inputs touching Third-party data feeds; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party data feeds.
+- Keep dependencies patched; pin versions for Third-party data feeds components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Third-party data feeds in Third-party data feeds as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: License scope, Resale restrictions, API keys shared, Poisoned feeds,
 ## Analytics backups
 
 Sub-topics: Snapshot sharing, Cross-account, Restore to dev PII, Retention, Encryption
+
+### Do
+
+- Validate and canonicalize all inputs touching Analytics backups; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Analytics backups.
+- Keep dependencies patched; pin versions for Analytics backups components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

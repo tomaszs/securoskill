@@ -6,6 +6,18 @@ Lambda, workers, edge functions, and event-driven compute.
 
 Sub-topics: IAM roles, Function URLs, API Gateway authorizers, JWT at edge, Anonymous triggers
 
+### Do
+
+- Validate and canonicalize all inputs touching Function authentication; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Function authentication.
+- Keep dependencies patched; pin versions for Function authentication components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Function authentication in Function authentication as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: IAM roles, Function URLs, API Gateway authorizers, JWT at edge, Anon
 ## Event source trust
 
 Sub-topics: S3 notifications, SQS/SNS, EventBridge, Cron schedules, Webhook triggers
+
+### Do
+
+- Validate and canonicalize all inputs touching Event source trust; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Event source trust.
+- Keep dependencies patched; pin versions for Event source trust components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: S3 notifications, SQS/SNS, EventBridge, Cron schedules, Webhook trig
 
 Sub-topics: Env vars, Parameter Store, KMS grants, Rotation, Leak in logs
 
+### Do
+
+- Validate and canonicalize all inputs touching Secrets in serverless; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secrets in serverless.
+- Keep dependencies patched; pin versions for Secrets in serverless components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Secrets in serverless in Secrets in serverless as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Env vars, Parameter Store, KMS grants, Rotation, Leak in logs
 ## VPC and network placement
 
 Sub-topics: NAT costs, Public subnets, Private API, Egress SSRF, Peering
+
+### Do
+
+- Validate and canonicalize all inputs touching VPC and network placement; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to VPC and network placement.
+- Keep dependencies patched; pin versions for VPC and network placement components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: NAT costs, Public subnets, Private API, Egress SSRF, Peering
 
 Sub-topics: KV stores, Request rewriting, Cache poisoning, Geo routing, WAF at edge
 
+### Do
+
+- Validate and canonicalize all inputs touching Edge workers (CDN); never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Edge workers (CDN).
+- Keep dependencies patched; pin versions for Edge workers (CDN) components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Edge workers (CDN) in Edge workers (CDN) as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: KV stores, Request rewriting, Cache poisoning, Geo routing, WAF at e
 ## Denial of wallet
 
 Sub-topics: Unbounded invocations, Recursive triggers, Large payloads, Concurrency limits, Cost alerts
+
+### Do
+
+- Validate and canonicalize all inputs touching Denial of wallet; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Denial of wallet.
+- Keep dependencies patched; pin versions for Denial of wallet components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Unbounded invocations, Recursive triggers, Large payloads, Concurren
 
 Sub-topics: Duplicate charges, Partial failures, DLQ handling, Poison messages, Exactly-once myths
 
+### Do
+
+- Validate and canonicalize all inputs touching Idempotency and retries; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Idempotency and retries.
+- Keep dependencies patched; pin versions for Idempotency and retries components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Idempotency and retries in Idempotency and retries as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Duplicate charges, Partial failures, DLQ handling, Poison messages, 
 ## Local dev parity
 
 Sub-topics: sam local, Serverless offline, Prod creds in dev, Shared stages, Debug endpoints
+
+### Do
+
+- Validate and canonicalize all inputs touching Local dev parity; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Local dev parity.
+- Keep dependencies patched; pin versions for Local dev parity components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: sam local, Serverless offline, Prod creds in dev, Shared stages, Deb
 
 Sub-topics: Replication lag, Regional secrets, Failover auth, Data sovereignty, Routing
 
+### Do
+
+- Validate and canonicalize all inputs touching Multi-region functions; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-region functions.
+- Keep dependencies patched; pin versions for Multi-region functions components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Multi-region functions in Multi-region functions as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Replication lag, Regional secrets, Failover auth, Data sovereignty, 
 ## Wasm at edge
 
 Sub-topics: Sandbox escapes, Memory limits, Module signing, Third-party modules, CPU time
+
+### Do
+
+- Validate and canonicalize all inputs touching Wasm at edge; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Wasm at edge.
+- Keep dependencies patched; pin versions for Wasm at edge components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Sandbox escapes, Memory limits, Module signing, Third-party modules,
 
 Sub-topics: State injection, IAM chaining, Long-running abuse, Input size, Observability
 
+### Do
+
+- Validate and canonicalize all inputs touching Orchestration workflows; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Orchestration workflows.
+- Keep dependencies patched; pin versions for Orchestration workflows components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Orchestration workflows in Orchestration workflows as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: State injection, IAM chaining, Long-running abuse, Input size, Obser
 ## Platform limit abuse
 
 Sub-topics: Timeout extension, Memory exhaustion, Tmp storage, Layer injection, Runtime deprecation
+
+### Do
+
+- Validate and canonicalize all inputs touching Platform limit abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Platform limit abuse.
+- Keep dependencies patched; pin versions for Platform limit abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

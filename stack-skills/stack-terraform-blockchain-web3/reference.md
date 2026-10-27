@@ -6,275 +6,215 @@ Stack-specific implementation for **Terraform** (Infrastructure). Normative rule
 
 **Sub-topics:** Reentrancy, Integer overflow, Unchecked calls, Delegatecall, Tx.origin auth
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Smart contract vulnerabilities; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Smart contract vulnerabilities.
-- Keep dependencies patched; pin versions for Smart contract vulnerabilities components.
+- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
+- Run Slither/Mythril before deploy.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Smart contract vulnerabilities before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not use `tx.origin` for auth.
+- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
 
 ### Verify
 
-- Add automated tests for Smart contract vulnerabilities paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- Invariant tests with Foundry/Hardhat.
 
 ## On-chain access control
 
 **Sub-topics:**  Ownable, Roles, Timelocks, Multisig, Upgrade proxies
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching On-chain access control; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain access control.
-- Keep dependencies patched; pin versions for On-chain access control components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for On-chain access control before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for On-chain access control paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Oracles and external data
 
 **Sub-topics:** Price manipulation, Stale data, Flash loans, Bridge trust, Signature replay
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Oracles and external data; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Oracles and external data.
-- Keep dependencies patched; pin versions for Oracles and external data components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Oracles and external data before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Oracles and external data paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Wallet and key security
 
 **Sub-topics:** Seed phrases, Hardware wallets, Browser extensions, Phishing sites, Clipboard malware
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Wallet and key security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Wallet and key security.
-- Keep dependencies patched; pin versions for Wallet and key security components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Wallet and key security before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Wallet and key security paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## dApp frontends
 
 **Sub-topics:** RPC endpoints, Chain ID, Wallet connect, Transaction preview, Malicious approvals
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching dApp frontends; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to dApp frontends.
-- Keep dependencies patched; pin versions for dApp frontends components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for dApp frontends before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for dApp frontends paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Token standards
 
 **Sub-topics:** ERC-20 quirks, ERC-721 callbacks, Permit signatures, Infinite approve, Fee-on-transfer
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Token standards; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Token standards.
-- Keep dependencies patched; pin versions for Token standards components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Token standards before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Token standards paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## DeFi composability
 
 **Sub-topics:** Liquidity pools, Governance attacks, MEV, Sandwiching, Rug patterns
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching DeFi composability; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DeFi composability.
-- Keep dependencies patched; pin versions for DeFi composability components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for DeFi composability before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for DeFi composability paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## NFTs and metadata
 
 **Sub-topics:** Off-chain metadata, IPFS pinning, Royalty bypass, Signature mint, Open redirects
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching NFTs and metadata; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NFTs and metadata.
-- Keep dependencies patched; pin versions for NFTs and metadata components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for NFTs and metadata before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for NFTs and metadata paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## L2 and bridges
 
 **Sub-topics:** Withdrawal delays, Sequencer trust, Bridge exploits, Finality, Replay across chains
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching L2 and bridges; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to L2 and bridges.
-- Keep dependencies patched; pin versions for L2 and bridges components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for L2 and bridges before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for L2 and bridges paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Audit and formal methods
 
 **Sub-topics:** Slither, Mythril, Invariant tests, Bug bounty, Immunefi
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Audit and formal methods; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Audit and formal methods.
-- Keep dependencies patched; pin versions for Audit and formal methods components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Audit and formal methods before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Audit and formal methods paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## On-chain privacy
 
 **Sub-topics:** Address linking, Mixer legal risk, ZK proofs, Metadata leaks, KYC on ramps
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching On-chain privacy; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain privacy.
-- Keep dependencies patched; pin versions for On-chain privacy components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for On-chain privacy before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for On-chain privacy paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 
 ## Compliance and sanctions
 
 **Sub-topics:** OFAC lists, Travel rule, Geoblocking, Securities law, Tax reporting
 
-### Platform rules (summary)
+### Do (use this in Terraform)
 
-- Validate and canonicalize all inputs touching Compliance and sanctions; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compliance and sanctions.
-- Keep dependencies patched; pin versions for Compliance and sanctions components.
+- Pin module versions; store state in encrypted remote backend.
+- Use `terraform plan` in CI with policy checks.
 
-### How to do this in Terraform
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using Terraform APIs and deployment model.
-- Prefer framework-maintained security features in Terraform over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Compliance and sanctions before merge.
-- Pin Terraform dependencies; monitor CVE advisories for your stack.
+- Do not commit `terraform.tfstate` with secrets.
+- Do not use `0.0.0.0/0` security groups without review.
 
 ### Verify
 
-- Add automated tests for Compliance and sanctions paths in Terraform.
-- Run SAST/dependency scan configured for Infrastructure.
+- tfsec/checkov on every PR.
 

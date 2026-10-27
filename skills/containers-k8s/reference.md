@@ -6,6 +6,18 @@ Images, orchestration, and runtime isolation.
 
 Sub-topics: Base images, SBOM, Signing, Threat modeling and trust boundaries (Container image security), Abuse cases and adversarial testing (Container image security)
 
+### Do
+
+- Validate and canonicalize all inputs touching Container image security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Container image security.
+- Keep dependencies patched; pin versions for Container image security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Container image security in Container image security as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Base images, SBOM, Signing, Threat modeling and trust boundaries (Co
 ## Kubernetes RBAC
 
 Sub-topics: Cluster-admin, Namespace isolation, Threat modeling and trust boundaries (Kubernetes RBAC), Abuse cases and adversarial testing (Kubernetes RBAC), Logging, audit, and detection (Kubernetes RBAC)
+
+### Do
+
+- Validate and canonicalize all inputs touching Kubernetes RBAC; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Kubernetes RBAC.
+- Keep dependencies patched; pin versions for Kubernetes RBAC components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Cluster-admin, Namespace isolation, Threat modeling and trust bounda
 
 Sub-topics: Default allow, Egress control, Threat modeling and trust boundaries (Network policies), Abuse cases and adversarial testing (Network policies), Logging, audit, and detection (Network policies)
 
+### Do
+
+- Validate and canonicalize all inputs touching Network policies; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Network policies.
+- Keep dependencies patched; pin versions for Network policies components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Network policies in Network policies as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Default allow, Egress control, Threat modeling and trust boundaries 
 ## Kubernetes secrets
 
 Sub-topics: etcd encryption, External secrets, Threat modeling and trust boundaries (Kubernetes secrets), Abuse cases and adversarial testing (Kubernetes secrets), Logging, audit, and detection (Kubernetes secrets)
+
+### Do
+
+- Validate and canonicalize all inputs touching Kubernetes secrets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Kubernetes secrets.
+- Keep dependencies patched; pin versions for Kubernetes secrets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: etcd encryption, External secrets, Threat modeling and trust boundar
 
 Sub-topics: Privileged pods, Host mounts, Threat modeling and trust boundaries (Container runtime), Abuse cases and adversarial testing (Container runtime), Logging, audit, and detection (Container runtime)
 
+### Do
+
+- Validate and canonicalize all inputs touching Container runtime; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Container runtime.
+- Keep dependencies patched; pin versions for Container runtime components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Container runtime in Container runtime as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Privileged pods, Host mounts, Threat modeling and trust boundaries (
 ## Admission controllers
 
 Sub-topics: OPA/Gatekeeper, Pod security, Threat modeling and trust boundaries (Admission controllers), Abuse cases and adversarial testing (Admission controllers), Logging, audit, and detection (Admission controllers)
+
+### Do
+
+- Validate and canonicalize all inputs touching Admission controllers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Admission controllers.
+- Keep dependencies patched; pin versions for Admission controllers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: OPA/Gatekeeper, Pod security, Threat modeling and trust boundaries (
 
 Sub-topics: Templated secrets, Chart provenance, Threat modeling and trust boundaries (Helm charts), Abuse cases and adversarial testing (Helm charts), Logging, audit, and detection (Helm charts)
 
+### Do
+
+- Validate and canonicalize all inputs touching Helm charts; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Helm charts.
+- Keep dependencies patched; pin versions for Helm charts components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Helm charts in Helm charts as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Templated secrets, Chart provenance, Threat modeling and trust bound
 ## Container registries
 
 Sub-topics: Pull secrets, Retention, Threat modeling and trust boundaries (Container registries), Abuse cases and adversarial testing (Container registries), Logging, audit, and detection (Container registries)
+
+### Do
+
+- Validate and canonicalize all inputs touching Container registries; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Container registries.
+- Keep dependencies patched; pin versions for Container registries components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Pull secrets, Retention, Threat modeling and trust boundaries (Conta
 
 Sub-topics: Token theft, Localhost trust, Threat modeling and trust boundaries (Sidecars and service mesh), Abuse cases and adversarial testing (Sidecars and service mesh), Logging, audit, and detection (Sidecars and service mesh)
 
+### Do
+
+- Validate and canonicalize all inputs touching Sidecars and service mesh; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Sidecars and service mesh.
+- Keep dependencies patched; pin versions for Sidecars and service mesh components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Sidecars and service mesh in Sidecars and service mesh as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Token theft, Localhost trust, Threat modeling and trust boundaries (
 ## Windows containers
 
 Sub-topics: Isolation levels, Threat modeling and trust boundaries (Windows containers), Abuse cases and adversarial testing (Windows containers), Logging, audit, and detection (Windows containers), Access control and least privilege (Windows containers)
+
+### Do
+
+- Validate and canonicalize all inputs touching Windows containers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Windows containers.
+- Keep dependencies patched; pin versions for Windows containers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Isolation levels, Threat modeling and trust boundaries (Windows cont
 
 Sub-topics: Published ports, Volume mounts, Threat modeling and trust boundaries (Docker Compose dev security), Abuse cases and adversarial testing (Docker Compose dev security), Logging, audit, and detection (Docker Compose dev security)
 
+### Do
+
+- Validate and canonicalize all inputs touching Docker Compose dev security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Docker Compose dev security.
+- Keep dependencies patched; pin versions for Docker Compose dev security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Docker Compose dev security in Docker Compose dev security as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Published ports, Volume mounts, Threat modeling and trust boundaries
 ## Container escape vectors
 
 Sub-topics: Kernel CVEs, Capabilities, Threat modeling and trust boundaries (Container escape vectors), Abuse cases and adversarial testing (Container escape vectors), Logging, audit, and detection (Container escape vectors)
+
+### Do
+
+- Validate and canonicalize all inputs touching Container escape vectors; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Container escape vectors.
+- Keep dependencies patched; pin versions for Container escape vectors components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

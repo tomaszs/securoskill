@@ -6,275 +6,226 @@ Stack-specific implementation for **FastAPI** (Python). Normative rules: domain 
 
 **Sub-topics:** Reentrancy, Integer overflow, Unchecked calls, Delegatecall, Tx.origin auth
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Smart contract vulnerabilities; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Smart contract vulnerabilities.
-- Keep dependencies patched; pin versions for Smart contract vulnerabilities components.
+- Use Checks-Effects-Interactions; OpenZeppelin `ReentrancyGuard`.
+- Run Slither/Mythril before deploy.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Smart contract vulnerabilities before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not use `tx.origin` for auth.
+- Do not leave unprotected `selfdestruct` or `delegatecall` to user addresses.
 
 ### Verify
 
-- Add automated tests for Smart contract vulnerabilities paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Invariant tests with Foundry/Hardhat.
 
 ## On-chain access control
 
 **Sub-topics:**  Ownable, Roles, Timelocks, Multisig, Upgrade proxies
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching On-chain access control; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain access control.
-- Keep dependencies patched; pin versions for On-chain access control components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for onchain_acl controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for On-chain access control before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for On-chain access control paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## Oracles and external data
 
 **Sub-topics:** Price manipulation, Stale data, Flash loans, Bridge trust, Signature replay
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Oracles and external data; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Oracles and external data.
-- Keep dependencies patched; pin versions for Oracles and external data components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for oracles controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Oracles and external data before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Oracles and external data paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## Wallet and key security
 
 **Sub-topics:** Seed phrases, Hardware wallets, Browser extensions, Phishing sites, Clipboard malware
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Wallet and key security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Wallet and key security.
-- Keep dependencies patched; pin versions for Wallet and key security components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for wallet controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Wallet and key security before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Wallet and key security paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## dApp frontends
 
 **Sub-topics:** RPC endpoints, Chain ID, Wallet connect, Transaction preview, Malicious approvals
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching dApp frontends; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to dApp frontends.
-- Keep dependencies patched; pin versions for dApp frontends components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for dapp controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for dApp frontends before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for dApp frontends paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## Token standards
 
 **Sub-topics:** ERC-20 quirks, ERC-721 callbacks, Permit signatures, Infinite approve, Fee-on-transfer
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Token standards; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Token standards.
-- Keep dependencies patched; pin versions for Token standards components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for tokens controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Token standards before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Token standards paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## DeFi composability
 
 **Sub-topics:** Liquidity pools, Governance attacks, MEV, Sandwiching, Rug patterns
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching DeFi composability; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DeFi composability.
-- Keep dependencies patched; pin versions for DeFi composability components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for defi controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for DeFi composability before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for DeFi composability paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## NFTs and metadata
 
 **Sub-topics:** Off-chain metadata, IPFS pinning, Royalty bypass, Signature mint, Open redirects
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching NFTs and metadata; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NFTs and metadata.
-- Keep dependencies patched; pin versions for NFTs and metadata components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for nft controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for NFTs and metadata before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for NFTs and metadata paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## L2 and bridges
 
 **Sub-topics:** Withdrawal delays, Sequencer trust, Bridge exploits, Finality, Replay across chains
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching L2 and bridges; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to L2 and bridges.
-- Keep dependencies patched; pin versions for L2 and bridges components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for l2 controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for L2 and bridges before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for L2 and bridges paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## Audit and formal methods
 
 **Sub-topics:** Slither, Mythril, Invariant tests, Bug bounty, Immunefi
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Audit and formal methods; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Audit and formal methods.
-- Keep dependencies patched; pin versions for Audit and formal methods components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for contract_audit controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Audit and formal methods before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Audit and formal methods paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## On-chain privacy
 
 **Sub-topics:** Address linking, Mixer legal risk, ZK proofs, Metadata leaks, KYC on ramps
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching On-chain privacy; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain privacy.
-- Keep dependencies patched; pin versions for On-chain privacy components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for chain_privacy controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for On-chain privacy before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for On-chain privacy paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 
 ## Compliance and sanctions
 
 **Sub-topics:** OFAC lists, Travel rule, Geoblocking, Securities law, Tax reporting
 
-### Platform rules (summary)
+### Do (use this in FastAPI)
 
-- Validate and canonicalize all inputs touching Compliance and sanctions; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compliance and sanctions.
-- Keep dependencies patched; pin versions for Compliance and sanctions components.
+- Apply domain skill `security-blockchain-web3` requirements using fastapi supported APIs only.
+- Use the official fastapi security documentation for web3_compliance controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in FastAPI
+### Don't
 
-- Read normative rules in domain skill `security-blockchain-web3` / `reference.md`, then apply them using FastAPI APIs and deployment model.
-- Prefer framework-maintained security features in FastAPI over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Compliance and sanctions before merge.
-- Pin FastAPI dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of fastapi for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Compliance and sanctions paths in FastAPI.
-- Run SAST/dependency scan configured for Python.
+- Run stack-appropriate SAST/DAST on fastapi projects in CI.
 

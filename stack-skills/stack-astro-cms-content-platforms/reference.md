@@ -6,275 +6,228 @@ Stack-specific implementation for **Astro** (Web UI). Normative rules: domain sk
 
 **Sub-topics:** Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL CMS
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Headless CMS APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Headless CMS APIs.
-- Keep dependencies patched; pin versions for Headless CMS APIs components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for cms_api controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Headless CMS APIs before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Headless CMS APIs paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## WYSIWYG editors
 
 **Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching WYSIWYG editors; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WYSIWYG editors.
-- Keep dependencies patched; pin versions for WYSIWYG editors components.
+- Set security headers in astro config (`headers()`, `nitro.routeRules`, `astro.config` middleware).
+- Keep secrets and admin logic in server-only modules (no `NEXT_PUBLIC_` for sensitive values on Next).
+- Validate and encode user content in server components / loaders before HTML emission.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WYSIWYG editors before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not expose server env vars to client bundles via public config keys.
+- Do not render raw HTML from CMS in SSR without sanitization at the server boundary.
+- Do not skip auth checks in API routes / server actions assumed 'internal only'.
 
 ### Verify
 
-- Add automated tests for WYSIWYG editors paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Scan SSR HTML output for unescaped script injection in integration tests.
 
 ## Publish workflows
 
 **Sub-topics:** Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Publish workflows; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Publish workflows.
-- Keep dependencies patched; pin versions for Publish workflows components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for workflow controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Publish workflows before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Publish workflows paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## Plugins and themes
 
 **Sub-topics:** Third-party PHP, npm theme scripts, Update channels, Supply chain, Sandbox
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Plugins and themes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Plugins and themes.
-- Keep dependencies patched; pin versions for Plugins and themes components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for supply_chain controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Plugins and themes before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Plugins and themes paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## Comments and UGC moderation
 
 **Sub-topics:** Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Comments and UGC moderation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Comments and UGC moderation.
-- Keep dependencies patched; pin versions for Comments and UGC moderation components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for content_abuse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Comments and UGC moderation before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Comments and UGC moderation paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## SEO and metadata injection
 
 **Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching SEO and metadata injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SEO and metadata injection.
-- Keep dependencies patched; pin versions for SEO and metadata injection components.
+- Set security headers in astro config (`headers()`, `nitro.routeRules`, `astro.config` middleware).
+- Keep secrets and admin logic in server-only modules (no `NEXT_PUBLIC_` for sensitive values on Next).
+- Validate and encode user content in server components / loaders before HTML emission.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SEO and metadata injection before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not expose server env vars to client bundles via public config keys.
+- Do not render raw HTML from CMS in SSR without sanitization at the server boundary.
+- Do not skip auth checks in API routes / server actions assumed 'internal only'.
 
 ### Verify
 
-- Add automated tests for SEO and metadata injection paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Scan SSR HTML output for unescaped script injection in integration tests.
 
 ## Media libraries
 
 **Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Media libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Media libraries.
-- Keep dependencies patched; pin versions for Media libraries components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for file_upload_ui controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Media libraries before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Media libraries paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## Multi-site CMS
 
 **Sub-topics:** Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Multi-site CMS; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-site CMS.
-- Keep dependencies patched; pin versions for Multi-site CMS components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for multi_tenant controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-site CMS before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Multi-site CMS paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## CMS search
 
 **Sub-topics:** Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Query injection
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching CMS search; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS search.
-- Keep dependencies patched; pin versions for CMS search components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for search_index controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS search before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS search paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## Marketing forms
 
 **Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Marketing forms; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Marketing forms.
-- Keep dependencies patched; pin versions for Marketing forms components.
+- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
+- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Marketing forms before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
+- Do not store CSRF secrets only in JS-accessible storage without rotation.
 
 ### Verify
 
-- Add automated tests for Marketing forms paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Integration test cross-origin POST without token expects 403.
 
 ## Static site generators
 
 **Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching Static site generators; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static site generators.
-- Keep dependencies patched; pin versions for Static site generators components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Static site generators before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Static site generators paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 
 ## CMS roles and SSO
 
 **Sub-topics:** Editor vs admin, SSO mis-map, API users, Impersonation, Audit trail
 
-### Platform rules (summary)
+### Do (use this in Astro)
 
-- Validate and canonicalize all inputs touching CMS roles and SSO; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS roles and SSO.
-- Keep dependencies patched; pin versions for CMS roles and SSO components.
+- Apply domain skill `security-cms-content-platforms` requirements using astro supported APIs only.
+- Use the official astro security documentation for rbac controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Astro
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Astro APIs and deployment model.
-- Prefer framework-maintained security features in Astro over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS roles and SSO before merge.
-- Pin Astro dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of astro for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS roles and SSO paths in Astro.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on astro projects in CI.
 

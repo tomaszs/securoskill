@@ -6,299 +6,219 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 **Sub-topics:** Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL CMS
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Headless CMS APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Headless CMS APIs.
-- Keep dependencies patched; pin versions for Headless CMS APIs components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Headless CMS APIs before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Headless CMS APIs paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## WYSIWYG editors
 
 **Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching WYSIWYG editors; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WYSIWYG editors.
-- Keep dependencies patched; pin versions for WYSIWYG editors components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WYSIWYG editors before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for WYSIWYG editors paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Publish workflows
 
 **Sub-topics:** Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Publish workflows; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Publish workflows.
-- Keep dependencies patched; pin versions for Publish workflows components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Publish workflows before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Publish workflows paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Plugins and themes
 
 **Sub-topics:** Third-party PHP, npm theme scripts, Update channels, Supply chain, Sandbox
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Plugins and themes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Plugins and themes.
-- Keep dependencies patched; pin versions for Plugins and themes components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Plugins and themes before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Plugins and themes paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Comments and UGC moderation
 
 **Sub-topics:** Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Comments and UGC moderation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Comments and UGC moderation.
-- Keep dependencies patched; pin versions for Comments and UGC moderation components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Comments and UGC moderation before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Comments and UGC moderation paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## SEO and metadata injection
 
 **Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching SEO and metadata injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SEO and metadata injection.
-- Keep dependencies patched; pin versions for SEO and metadata injection components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SEO and metadata injection before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for SEO and metadata injection paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Media libraries
 
 **Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Media libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Media libraries.
-- Keep dependencies patched; pin versions for Media libraries components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Media libraries before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Media libraries paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Multi-site CMS
 
 **Sub-topics:** Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Multi-site CMS; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-site CMS.
-- Keep dependencies patched; pin versions for Multi-site CMS components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-site CMS before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Multi-site CMS paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## CMS search
 
 **Sub-topics:** Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Query injection
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching CMS search; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS search.
-- Keep dependencies patched; pin versions for CMS search components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS search before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for CMS search paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Marketing forms
 
 **Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Marketing forms; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Marketing forms.
-- Keep dependencies patched; pin versions for Marketing forms components.
+- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Marketing forms before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not rely on CORS alone to prevent CSRF.
 
 ### Verify
 
-- Add automated tests for Marketing forms paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Add automated abuse-case tests for Marketing forms in OpenAI API / Agents SDK.
+- Run SAST and dependency scans for AI in CI.
 
 ## Static site generators
 
 **Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Static site generators; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static site generators.
-- Keep dependencies patched; pin versions for Static site generators components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Static site generators before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Static site generators paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## CMS roles and SSO
 
 **Sub-topics:** Editor vs admin, SSO mis-map, API users, Impersonation, Audit trail
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching CMS roles and SSO; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS roles and SSO.
-- Keep dependencies patched; pin versions for CMS roles and SSO components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS roles and SSO before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for CMS roles and SSO paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 

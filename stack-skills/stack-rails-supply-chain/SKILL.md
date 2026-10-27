@@ -17,5 +17,5 @@ You are working in **Ruby on Rails** and need concrete guidance for **software s
 ## Workflow
 
 1. Match your feature to sub-areas in `reference.md`.
-2. Implement using stack-specific bullets under **How to do this in Ruby on Rails**.
-3. Confirm verification steps before merge.
+2. Follow **Do** / **Don't** lists in `reference.md` for this stack.
+3. Confirm **Verify** steps before merge.

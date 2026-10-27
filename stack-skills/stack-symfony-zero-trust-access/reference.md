@@ -6,275 +6,227 @@ Stack-specific implementation for **Symfony** (PHP). Normative rules: domain ski
 
 **Sub-topics:** Never trust network, Explicit verify, Least privilege session, Assume breach, Continuous validation
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Zero trust principles; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Zero trust principles.
-- Keep dependencies patched; pin versions for Zero trust principles components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for zt controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Zero trust principles before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Zero trust principles paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Device posture
 
 **Sub-topics:** MDM, Disk encryption, Jailbreak detection, Certificate device ID, BYOD
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Device posture; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Device posture.
-- Keep dependencies patched; pin versions for Device posture components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for device_posture controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Device posture before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Device posture paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## ZTNA and private access
 
 **Sub-topics:** App connectors, Split tunnel, Exposed admin, Lateral movement, Policy per app
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching ZTNA and private access; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ZTNA and private access.
-- Keep dependencies patched; pin versions for ZTNA and private access components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for ztna controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for ZTNA and private access before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for ZTNA and private access paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Micro-segmentation
 
 **Sub-topics:** East-west firewalls, Identity labels, Default deny, Policy drift, IPv6 gaps
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Micro-segmentation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Micro-segmentation.
-- Keep dependencies patched; pin versions for Micro-segmentation components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for microseg controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Micro-segmentation before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Micro-segmentation paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Service mesh identity
 
 **Sub-topics:** SPIFFE IDs, mTLS STRICT, Authorization policies, Egress gateways, Waypoint proxies
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Service mesh identity; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Service mesh identity.
-- Keep dependencies patched; pin versions for Service mesh identity components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for mesh_zt controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Service mesh identity before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Service mesh identity paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Privileged access management
 
 **Sub-topics:** Just-in-time, Session recording, Break glass, Vaulted creds, Approval workflows
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Privileged access management; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Privileged access management.
-- Keep dependencies patched; pin versions for Privileged access management components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for pam controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Privileged access management before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Privileged access management paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Conditional access policies
 
 **Sub-topics:** Geo block, Risk score, Compliant device, Legacy auth block, Token protection
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Conditional access policies; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Conditional access policies.
-- Keep dependencies patched; pin versions for Conditional access policies components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for conditional_access controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Conditional access policies before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Conditional access policies paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Bastion-less admin
 
 **Sub-topics:** SSO to cloud, IAM Identity Center, Short-lived creds, Audit trails, IP pinning pitfalls
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Bastion-less admin; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bastion-less admin.
-- Keep dependencies patched; pin versions for Bastion-less admin components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for bastionless controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Bastion-less admin before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Bastion-less admin paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Workload identity federation
 
 **Sub-topics:** OIDC to cloud, GitHub Actions, K8s service accounts, Token exchange, Audience binding
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Workload identity federation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Workload identity federation.
-- Keep dependencies patched; pin versions for Workload identity federation components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for workload_identity controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Workload identity federation before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Workload identity federation paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Network device trust
 
 **Sub-topics:** 802.1X, NAC, Guest Wi-Fi isolation, Printer VLANs, IoT segmentation
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Network device trust; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Network device trust.
-- Keep dependencies patched; pin versions for Network device trust components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for nac controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Network device trust before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Network device trust paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Remote work access
 
 **Sub-topics:** VPN alternatives, VDI, Clipboard exfil, Screen share, Home network risk
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Remote work access; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Remote work access.
-- Keep dependencies patched; pin versions for Remote work access components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for remote_work controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Remote work access before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Remote work access paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 
 ## Zero trust measurement
 
 **Sub-topics:** Coverage metrics, Policy exceptions, Shadow IT, Unmanaged assets, Phishing resilience
 
-### Platform rules (summary)
+### Do (use this in Symfony)
 
-- Validate and canonicalize all inputs touching Zero trust measurement; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Zero trust measurement.
-- Keep dependencies patched; pin versions for Zero trust measurement components.
+- Apply domain skill `security-zero-trust-access` requirements using symfony supported APIs only.
+- Use the official symfony security documentation for zt_metrics controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Symfony
+### Don't
 
-- Read normative rules in domain skill `security-zero-trust-access` / `reference.md`, then apply them using Symfony APIs and deployment model.
-- Prefer framework-maintained security features in Symfony over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Zero trust measurement before merge.
-- Pin Symfony dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of symfony for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Zero trust measurement paths in Symfony.
-- Run SAST/dependency scan configured for PHP.
+- Run stack-appropriate SAST/DAST on symfony projects in CI.
 

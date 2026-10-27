@@ -6,6 +6,18 @@ Firmware, devices, industrial systems, and constrained environments.
 
 Sub-topics: Signed images, Rollback protection, OTA channels, Brick attacks, Dual bank
 
+### Do
+
+- Validate and canonicalize all inputs touching Firmware update security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Firmware update security.
+- Keep dependencies patched; pin versions for Firmware update security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Firmware update security in Firmware update security as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Signed images, Rollback protection, OTA channels, Brick attacks, Dua
 ## Secure boot and trust anchor
 
 Sub-topics: TPM, eFuse, Chain of trust, JTAG disable, Debug ports
+
+### Do
+
+- Validate and canonicalize all inputs touching Secure boot and trust anchor; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secure boot and trust anchor.
+- Keep dependencies patched; pin versions for Secure boot and trust anchor components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: TPM, eFuse, Chain of trust, JTAG disable, Debug ports
 
 Sub-topics: MQTT TLS, CoAP, BLE pairing, Zigbee keys, LoRaWAN
 
+### Do
+
+- Validate and canonicalize all inputs touching Device communications; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Device communications.
+- Keep dependencies patched; pin versions for Device communications components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Device communications in Device communications as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: MQTT TLS, CoAP, BLE pairing, Zigbee keys, LoRaWAN
 ## Default credentials
 
 Sub-topics: UART shells, Telnet, Hardcoded passwords, SNMP public, Web admin
+
+### Do
+
+- Validate and canonicalize all inputs touching Default credentials; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Default credentials.
+- Keep dependencies patched; pin versions for Default credentials components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: UART shells, Telnet, Hardcoded passwords, SNMP public, Web admin
 
 Sub-topics: Glitching, Side channels, Enclosures, Tamper switches, Key extraction
 
+### Do
+
+- Validate and canonicalize all inputs touching Physical tamper resistance; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Physical tamper resistance.
+- Keep dependencies patched; pin versions for Physical tamper resistance components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Physical tamper resistance in Physical tamper resistance as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Glitching, Side channels, Enclosures, Tamper switches, Key extractio
 ## RTOS and bare metal
 
 Sub-topics: Stack overflows, MPU config, ISR safety, Heap fragmentation, Watchdog
+
+### Do
+
+- Validate and canonicalize all inputs touching RTOS and bare metal; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to RTOS and bare metal.
+- Keep dependencies patched; pin versions for RTOS and bare metal components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Stack overflows, MPU config, ISR safety, Heap fragmentation, Watchdo
 
 Sub-topics: Modbus exposure, PLC programming, Safety systems, Air gap myths, Engineering workstations
 
+### Do
+
+- Validate and canonicalize all inputs touching Industrial OT and SCADA; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Industrial OT and SCADA.
+- Keep dependencies patched; pin versions for Industrial OT and SCADA components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Industrial OT and SCADA in Industrial OT and SCADA as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Modbus exposure, PLC programming, Safety systems, Air gap myths, Eng
 ## Medical and safety devices
 
 Sub-topics: FDA cyber, Patient harm, Update windows, SBOM, Recall
+
+### Do
+
+- Validate and canonicalize all inputs touching Medical and safety devices; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Medical and safety devices.
+- Keep dependencies patched; pin versions for Medical and safety devices components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: FDA cyber, Patient harm, Update windows, SBOM, Recall
 
 Sub-topics: CAN injection, OBD ports, OTA vehicles, Infotainment bridge, Key fobs
 
+### Do
+
+- Validate and canonicalize all inputs touching Automotive and CAN; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Automotive and CAN.
+- Keep dependencies patched; pin versions for Automotive and CAN components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Automotive and CAN in Automotive and CAN as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: CAN injection, OBD ports, OTA vehicles, Infotainment bridge, Key fob
 ## IoT cloud backends
 
 Sub-topics: Device provisioning, Certificate lifecycle, Fleet management, Shadow devices, Tenant isolation
+
+### Do
+
+- Validate and canonicalize all inputs touching IoT cloud backends; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to IoT cloud backends.
+- Keep dependencies patched; pin versions for IoT cloud backends components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Device provisioning, Certificate lifecycle, Fleet management, Shadow
 
 Sub-topics: Mirai patterns, Telnet scanning, Credential stuffing C2, DDoS enlistment, Cryptomining
 
+### Do
+
+- Validate and canonicalize all inputs touching Botnet and abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Botnet and abuse.
+- Keep dependencies patched; pin versions for Botnet and abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Botnet and abuse in Botnet and abuse as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Mirai patterns, Telnet scanning, Credential stuffing C2, DDoS enlist
 ## Firmware supply chain
 
 Sub-topics: Third-party SDKs, Chip vendor blobs, CI for embedded, Binary reproducibility, CVE in BSP
+
+### Do
+
+- Validate and canonicalize all inputs touching Firmware supply chain; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Firmware supply chain.
+- Keep dependencies patched; pin versions for Firmware supply chain components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

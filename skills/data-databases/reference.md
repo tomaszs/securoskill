@@ -6,6 +6,18 @@ RDBMS, NoSQL, warehouses, backups, and encryption at rest.
 
 Sub-topics: PostgreSQL, MySQL, Migrations, Threat modeling and trust boundaries (Relational databases), Abuse cases and adversarial testing (Relational databases)
 
+### Do
+
+- Validate and canonicalize all inputs touching Relational databases; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Relational databases.
+- Keep dependencies patched; pin versions for Relational databases components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Relational databases in Relational databases as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: PostgreSQL, MySQL, Migrations, Threat modeling and trust boundaries 
 ## NoSQL stores
 
 Sub-topics: MongoDB, DynamoDB, Redis, Threat modeling and trust boundaries (NoSQL stores), Abuse cases and adversarial testing (NoSQL stores)
+
+### Do
+
+- Validate and canonicalize all inputs touching NoSQL stores; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NoSQL stores.
+- Keep dependencies patched; pin versions for NoSQL stores components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: MongoDB, DynamoDB, Redis, Threat modeling and trust boundaries (NoSQ
 
 Sub-topics: N+1, Raw SQL escape hatches, Threat modeling and trust boundaries (ORM and query builders), Abuse cases and adversarial testing (ORM and query builders), Logging, audit, and detection (ORM and query builders)
 
+### Do
+
+- Validate and canonicalize all inputs touching ORM and query builders; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ORM and query builders.
+- Keep dependencies patched; pin versions for ORM and query builders components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat ORM and query builders in ORM and query builders as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: N+1, Raw SQL escape hatches, Threat modeling and trust boundaries (O
 ## Encryption at rest
 
 Sub-topics: TDE, Column-level, KMS integration, Threat modeling and trust boundaries (Encryption at rest), Abuse cases and adversarial testing (Encryption at rest)
+
+### Do
+
+- Validate and canonicalize all inputs touching Encryption at rest; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Encryption at rest.
+- Keep dependencies patched; pin versions for Encryption at rest components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: TDE, Column-level, KMS integration, Threat modeling and trust bounda
 
 Sub-topics: Ransomware, Test restores, Offsite, Threat modeling and trust boundaries (Backup and restore), Abuse cases and adversarial testing (Backup and restore)
 
+### Do
+
+- Validate and canonicalize all inputs touching Backup and restore; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Backup and restore.
+- Keep dependencies patched; pin versions for Backup and restore components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Backup and restore in Backup and restore as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Ransomware, Test restores, Offsite, Threat modeling and trust bounda
 ## Replication and CDC
 
 Sub-topics: Lag, Read replica exposure, Threat modeling and trust boundaries (Replication and CDC), Abuse cases and adversarial testing (Replication and CDC), Logging, audit, and detection (Replication and CDC)
+
+### Do
+
+- Validate and canonicalize all inputs touching Replication and CDC; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Replication and CDC.
+- Keep dependencies patched; pin versions for Replication and CDC components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Lag, Read replica exposure, Threat modeling and trust boundaries (Re
 
 Sub-topics: Retention, Anonymization, Threat modeling and trust boundaries (Data minimization), Abuse cases and adversarial testing (Data minimization), Logging, audit, and detection (Data minimization)
 
+### Do
+
+- Validate and canonicalize all inputs touching Data minimization; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data minimization.
+- Keep dependencies patched; pin versions for Data minimization components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Data minimization in Data minimization as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Retention, Anonymization, Threat modeling and trust boundaries (Data
 ## PII and sensitive fields
 
 Sub-topics: Tokenization, Masking in logs, Threat modeling and trust boundaries (PII and sensitive fields), Abuse cases and adversarial testing (PII and sensitive fields), Logging, audit, and detection (PII and sensitive fields)
+
+### Do
+
+- Validate and canonicalize all inputs touching PII and sensitive fields; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII and sensitive fields.
+- Keep dependencies patched; pin versions for PII and sensitive fields components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Tokenization, Masking in logs, Threat modeling and trust boundaries 
 
 Sub-topics: Destructive changes, Locking, Threat modeling and trust boundaries (Schema migrations safety), Abuse cases and adversarial testing (Schema migrations safety), Logging, audit, and detection (Schema migrations safety)
 
+### Do
+
+- Validate and canonicalize all inputs touching Schema migrations safety; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Schema migrations safety.
+- Keep dependencies patched; pin versions for Schema migrations safety components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Schema migrations safety in Schema migrations safety as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Destructive changes, Locking, Threat modeling and trust boundaries (
 ## Connection strings and pooling
 
 Sub-topics: Credential rotation, TLS to DB, Threat modeling and trust boundaries (Connection strings and pooling), Abuse cases and adversarial testing (Connection strings and pooling), Logging, audit, and detection (Connection strings and pooling)
+
+### Do
+
+- Validate and canonicalize all inputs touching Connection strings and pooling; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Connection strings and pooling.
+- Keep dependencies patched; pin versions for Connection strings and pooling components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Credential rotation, TLS to DB, Threat modeling and trust boundaries
 
 Sub-topics: RLS policies, Views, Threat modeling and trust boundaries (Row-level and column security), Abuse cases and adversarial testing (Row-level and column security), Logging, audit, and detection (Row-level and column security)
 
+### Do
+
+- Validate and canonicalize all inputs touching Row-level and column security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Row-level and column security.
+- Keep dependencies patched; pin versions for Row-level and column security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Row-level and column security in Row-level and column security as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: RLS policies, Views, Threat modeling and trust boundaries (Row-level
 ## Search indexes
 
 Sub-topics: Elasticsearch exposure, Leaked fields, Threat modeling and trust boundaries (Search indexes), Abuse cases and adversarial testing (Search indexes), Logging, audit, and detection (Search indexes)
+
+### Do
+
+- Validate and canonicalize all inputs touching Search indexes; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Search indexes.
+- Keep dependencies patched; pin versions for Search indexes components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

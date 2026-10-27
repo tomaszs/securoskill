@@ -6,275 +6,227 @@ Stack-specific implementation for **Next.js** (Web UI). Normative rules: domain 
 
 **Sub-topics:** MIME sniffing, Double extensions, Polyglot files, Size limits, Magic bytes
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Upload validation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Upload validation.
-- Keep dependencies patched; pin versions for Upload validation components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for upload_validation controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Upload validation before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Upload validation paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Malware scanning
 
 **Sub-topics:** Async scan, Quarantine buckets, Bypass timing, ZIP bombs, Macro docs
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Malware scanning; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Malware scanning.
-- Keep dependencies patched; pin versions for Malware scanning components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for malware_scan controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Malware scanning before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Malware scanning paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Presigned URLs
 
 **Sub-topics:** TTL, Method restriction, Object key guessing, Header signing, Revocation
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Presigned URLs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Presigned URLs.
-- Keep dependencies patched; pin versions for Presigned URLs components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for presigned controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Presigned URLs before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Presigned URLs paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Bucket policies and ACLs
 
 **Sub-topics:** Public read, ListBucket, AuthenticatedUsers, Policy wildcards, Cross-account
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Bucket policies and ACLs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bucket policies and ACLs.
-- Keep dependencies patched; pin versions for Bucket policies and ACLs components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for bucket_acl controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Bucket policies and ACLs before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Bucket policies and ACLs paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## CDN and origin access
 
 **Sub-topics:** OAC/OAI, Hotlinking, Cache key abuse, Range requests, Signed cookies
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching CDN and origin access; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CDN and origin access.
-- Keep dependencies patched; pin versions for CDN and origin access components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for cdn_origin controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CDN and origin access before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CDN and origin access paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Image and media processing
 
 **Sub-topics:** ImageTragick class bugs, SVG uploads, EXIF leaks, Thumbnails, Server-side render
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Image and media processing; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Image and media processing.
-- Keep dependencies patched; pin versions for Image and media processing components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for image_processing controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Image and media processing before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Image and media processing paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Document preview
 
 **Sub-topics:** PDF JS, Office macros, HTML conversion, Sandbox viewers, SSRF fetchers
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Document preview; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Document preview.
-- Keep dependencies patched; pin versions for Document preview components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for doc_preview controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Document preview before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Document preview paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## User-generated content hosting
 
 **Sub-topics:** Separate domain, CSP on static, COEP/COOP, Phishing pages, DMCA
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching User-generated content hosting; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to User-generated content hosting.
-- Keep dependencies patched; pin versions for User-generated content hosting components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for ugc_hosting controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for User-generated content hosting before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for User-generated content hosting paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Versioning and lifecycle
 
 **Sub-topics:** Deleted object recovery, Retention locks, Legal hold, Ransomware, Replication
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Versioning and lifecycle; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Versioning and lifecycle.
-- Keep dependencies patched; pin versions for Versioning and lifecycle components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for object_versioning controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Versioning and lifecycle before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Versioning and lifecycle paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Object encryption
 
 **Sub-topics:** SSE-KMS, Client-side keys, Bucket keys, Key policy, Cross-region keys
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Object encryption; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Object encryption.
-- Keep dependencies patched; pin versions for Object encryption components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for object_encryption controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Object encryption before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Object encryption paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Metadata and headers
 
 **Sub-topics:** x-amz-meta PII, Directory listings, Error XML, ETag leaks, Object tags
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Metadata and headers; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Metadata and headers.
-- Keep dependencies patched; pin versions for Metadata and headers components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for object_metadata controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Metadata and headers before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Metadata and headers paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 
 ## Archives and backups
 
 **Sub-topics:** Tar paths, Encrypted backups, Offsite sync, Restore testing, Access logging
 
-### Platform rules (summary)
+### Do (use this in Next.js)
 
-- Validate and canonicalize all inputs touching Archives and backups; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Archives and backups.
-- Keep dependencies patched; pin versions for Archives and backups components.
+- Apply domain skill `security-file-object-storage` requirements using nextjs supported APIs only.
+- Use the official nextjs security documentation for archive_security controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Next.js
+### Don't
 
-- Read normative rules in domain skill `security-file-object-storage` / `reference.md`, then apply them using Next.js APIs and deployment model.
-- Prefer framework-maintained security features in Next.js over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Archives and backups before merge.
-- Pin Next.js dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of nextjs for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Archives and backups paths in Next.js.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on nextjs projects in CI.
 

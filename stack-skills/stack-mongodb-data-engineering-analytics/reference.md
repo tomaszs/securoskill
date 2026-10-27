@@ -6,275 +6,225 @@ Stack-specific implementation for **MongoDB** (Database). Normative rules: domai
 
 **Sub-topics:** Snowflake RBAC, BigQuery IAM, Row access policies, Column masks, Shared datasets
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Warehouse access control; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Warehouse access control.
-- Keep dependencies patched; pin versions for Warehouse access control components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for warehouse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Warehouse access control before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Warehouse access control paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## ETL credentials
 
 **Sub-topics:** Airflow connections, dbt profiles, Spark keys in notebooks, Rotation, CI to prod
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching ETL credentials; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ETL credentials.
-- Keep dependencies patched; pin versions for ETL credentials components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for etl controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for ETL credentials before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for ETL credentials paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Pipeline injection
 
 **Sub-topics:** SQL in dbt, Dynamic partitions, User-supplied SQL, Jinja in queries, UDF sandbox
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Pipeline injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Pipeline injection.
-- Keep dependencies patched; pin versions for Pipeline injection components.
+- Use typed filters with BSON builders; validate ObjectId strings before queries.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Pipeline injection before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not use `$where` with JavaScript from user input.
+- Do not pass raw user objects into query operators without schema validation.
 
 ### Verify
 
-- Add automated tests for Pipeline injection paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Test NoSQL injection payloads on REST filters.
 
 ## PII in analytics
 
 **Sub-topics:** Hashing vs encryption, Join keys, Re-identification, Sampling leaks, Aggregates
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching PII in analytics; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in analytics.
-- Keep dependencies patched; pin versions for PII in analytics components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for pii controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for PII in analytics before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for PII in analytics paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## BI and dashboards
 
 **Sub-topics:** Embed tokens, RLS in Power BI, Export CSV, Scheduled email, Public links
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching BI and dashboards; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to BI and dashboards.
-- Keep dependencies patched; pin versions for BI and dashboards components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for bi controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for BI and dashboards before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for BI and dashboards paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Data lakes
 
 **Sub-topics:** S3 path traversal, Parquet metadata, Glue catalog ACL, Lake Formation, Iceberg snapshots
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Data lakes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data lakes.
-- Keep dependencies patched; pin versions for Data lakes components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for data_lake controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Data lakes before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Data lakes paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Streaming analytics
 
 **Sub-topics:** Flink state, Kafka Connect secrets, Exactly-once, Poison records, Schema registry ACL
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Streaming analytics; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Streaming analytics.
-- Keep dependencies patched; pin versions for Streaming analytics components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for streaming controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Streaming analytics before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Streaming analytics paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Feature stores
 
 **Sub-topics:** Point-in-time leaks, Training-serving skew, Offline online parity, PII in features, Access audit
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Feature stores; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Feature stores.
-- Keep dependencies patched; pin versions for Feature stores components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for feature_store controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Feature stores before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Feature stores paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Notebooks and ad hoc SQL
 
 **Sub-topics:** Shared workspaces, Output history, Git sync secrets, Cell execution order, Public nbviewer
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Notebooks and ad hoc SQL; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Notebooks and ad hoc SQL.
-- Keep dependencies patched; pin versions for Notebooks and ad hoc SQL components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for notebooks controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Notebooks and ad hoc SQL before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Notebooks and ad hoc SQL paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Data contracts and quality
 
 **Sub-topics:** Breaking schema, DQ alerts, Tampered sources, Lineage trust, SLA abuse
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Data contracts and quality; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data contracts and quality.
-- Keep dependencies patched; pin versions for Data contracts and quality components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for data_contracts controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Data contracts and quality before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Data contracts and quality paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Third-party data feeds
 
 **Sub-topics:** License scope, Resale restrictions, API keys shared, Poisoned feeds, Watermarking
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Third-party data feeds; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party data feeds.
-- Keep dependencies patched; pin versions for Third-party data feeds components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for third_party_data controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Third-party data feeds before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Third-party data feeds paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 
 ## Analytics backups
 
 **Sub-topics:** Snapshot sharing, Cross-account, Restore to dev PII, Retention, Encryption
 
-### Platform rules (summary)
+### Do (use this in MongoDB)
 
-- Validate and canonicalize all inputs touching Analytics backups; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Analytics backups.
-- Keep dependencies patched; pin versions for Analytics backups components.
+- Apply domain skill `security-data-engineering-analytics` requirements using mongodb supported APIs only.
+- Use the official mongodb security documentation for backups controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MongoDB
+### Don't
 
-- Read normative rules in domain skill `security-data-engineering-analytics` / `reference.md`, then apply them using MongoDB APIs and deployment model.
-- Prefer framework-maintained security features in MongoDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Analytics backups before merge.
-- Pin MongoDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mongodb for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Analytics backups paths in MongoDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mongodb projects in CI.
 

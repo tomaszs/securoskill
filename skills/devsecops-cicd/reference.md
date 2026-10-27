@@ -6,6 +6,18 @@ Pipelines, artifacts, and secure delivery.
 
 Sub-topics: Fork PR leaks, OIDC to cloud, Threat modeling and trust boundaries (CI secrets), Abuse cases and adversarial testing (CI secrets), Logging, audit, and detection (CI secrets)
 
+### Do
+
+- Validate and canonicalize all inputs touching CI secrets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CI secrets.
+- Keep dependencies patched; pin versions for CI secrets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat CI secrets in CI secrets as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Fork PR leaks, OIDC to cloud, Threat modeling and trust boundaries (
 ## Static analysis
 
 Sub-topics: False positives, Gate policy, Threat modeling and trust boundaries (Static analysis), Abuse cases and adversarial testing (Static analysis), Logging, audit, and detection (Static analysis)
+
+### Do
+
+- Validate and canonicalize all inputs touching Static analysis; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static analysis.
+- Keep dependencies patched; pin versions for Static analysis components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: False positives, Gate policy, Threat modeling and trust boundaries (
 
 Sub-topics: Staging auth, Scope, Threat modeling and trust boundaries (Dynamic analysis), Abuse cases and adversarial testing (Dynamic analysis), Logging, audit, and detection (Dynamic analysis)
 
+### Do
+
+- Validate and canonicalize all inputs touching Dynamic analysis; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Dynamic analysis.
+- Keep dependencies patched; pin versions for Dynamic analysis components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Dynamic analysis in Dynamic analysis as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Staging auth, Scope, Threat modeling and trust boundaries (Dynamic a
 ## Dependency scanning
 
 Sub-topics: SBOM, License risk, Threat modeling and trust boundaries (Dependency scanning), Abuse cases and adversarial testing (Dependency scanning), Logging, audit, and detection (Dependency scanning)
+
+### Do
+
+- Validate and canonicalize all inputs touching Dependency scanning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Dependency scanning.
+- Keep dependencies patched; pin versions for Dependency scanning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: SBOM, License risk, Threat modeling and trust boundaries (Dependency
 
 Sub-topics: Sigstore, Provenance, Threat modeling and trust boundaries (Artifact signing), Abuse cases and adversarial testing (Artifact signing), Logging, audit, and detection (Artifact signing)
 
+### Do
+
+- Validate and canonicalize all inputs touching Artifact signing; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Artifact signing.
+- Keep dependencies patched; pin versions for Artifact signing components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Artifact signing in Artifact signing as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Sigstore, Provenance, Threat modeling and trust boundaries (Artifact
 ## Branch protection
 
 Sub-topics: Required reviews, Signed commits, Threat modeling and trust boundaries (Branch protection), Abuse cases and adversarial testing (Branch protection), Logging, audit, and detection (Branch protection)
+
+### Do
+
+- Validate and canonicalize all inputs touching Branch protection; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Branch protection.
+- Keep dependencies patched; pin versions for Branch protection components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Required reviews, Signed commits, Threat modeling and trust boundari
 
 Sub-topics: Canary, Rollback, Threat modeling and trust boundaries (Deployment gates), Abuse cases and adversarial testing (Deployment gates), Logging, audit, and detection (Deployment gates)
 
+### Do
+
+- Validate and canonicalize all inputs touching Deployment gates; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Deployment gates.
+- Keep dependencies patched; pin versions for Deployment gates components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Deployment gates in Deployment gates as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Canary, Rollback, Threat modeling and trust boundaries (Deployment g
 ## IaC scanning
 
 Sub-topics: Terraform plan, Misconfig, Threat modeling and trust boundaries (IaC scanning), Abuse cases and adversarial testing (IaC scanning), Logging, audit, and detection (IaC scanning)
+
+### Do
+
+- Validate and canonicalize all inputs touching IaC scanning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to IaC scanning.
+- Keep dependencies patched; pin versions for IaC scanning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Terraform plan, Misconfig, Threat modeling and trust boundaries (IaC
 
 Sub-topics: Blocking CVEs, Threat modeling and trust boundaries (Container scan in CI), Abuse cases and adversarial testing (Container scan in CI), Logging, audit, and detection (Container scan in CI), Access control and least privilege (Container scan in CI)
 
+### Do
+
+- Validate and canonicalize all inputs touching Container scan in CI; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Container scan in CI.
+- Keep dependencies patched; pin versions for Container scan in CI components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Container scan in CI in Container scan in CI as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Blocking CVEs, Threat modeling and trust boundaries (Container scan 
 ## Secret scanning
 
 Sub-topics: Pre-commit, History rewrite, Threat modeling and trust boundaries (Secret scanning), Abuse cases and adversarial testing (Secret scanning), Logging, audit, and detection (Secret scanning)
+
+### Do
+
+- Validate and canonicalize all inputs touching Secret scanning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secret scanning.
+- Keep dependencies patched; pin versions for Secret scanning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Pre-commit, History rewrite, Threat modeling and trust boundaries (S
 
 Sub-topics: Prod data in lower envs, Threat modeling and trust boundaries (Environment promotion), Abuse cases and adversarial testing (Environment promotion), Logging, audit, and detection (Environment promotion), Access control and least privilege (Environment promotion)
 
+### Do
+
+- Validate and canonicalize all inputs touching Environment promotion; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Environment promotion.
+- Keep dependencies patched; pin versions for Environment promotion components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Environment promotion in Environment promotion as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Prod data in lower envs, Threat modeling and trust boundaries (Envir
 ## CI supply chain
 
 Sub-topics: Third-party actions, Pinning, Threat modeling and trust boundaries (CI supply chain), Abuse cases and adversarial testing (CI supply chain), Logging, audit, and detection (CI supply chain)
+
+### Do
+
+- Validate and canonicalize all inputs touching CI supply chain; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CI supply chain.
+- Keep dependencies patched; pin versions for CI supply chain components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

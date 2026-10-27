@@ -6,6 +6,18 @@ REST, GraphQL, gRPC, webhooks, and partner APIs.
 
 Sub-topics: Versioning, Idempotency, Mass assignment, Threat modeling and trust boundaries (REST API design security), Abuse cases and adversarial testing (REST API design security)
 
+### Do
+
+- Validate and canonicalize all inputs touching REST API design security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to REST API design security.
+- Keep dependencies patched; pin versions for REST API design security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat REST API design security in REST API design security as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Versioning, Idempotency, Mass assignment, Threat modeling and trust 
 ## GraphQL security
 
 Sub-topics: Depth limits, Introspection, Batching abuse, Threat modeling and trust boundaries (GraphQL security), Abuse cases and adversarial testing (GraphQL security)
+
+### Do
+
+- Validate and canonicalize all inputs touching GraphQL security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to GraphQL security.
+- Keep dependencies patched; pin versions for GraphQL security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Depth limits, Introspection, Batching abuse, Threat modeling and tru
 
 Sub-topics: mTLS, Message size, Auth metadata, Threat modeling and trust boundaries (gRPC and protobuf), Abuse cases and adversarial testing (gRPC and protobuf)
 
+### Do
+
+- Validate and canonicalize all inputs touching gRPC and protobuf; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to gRPC and protobuf.
+- Keep dependencies patched; pin versions for gRPC and protobuf components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat gRPC and protobuf in gRPC and protobuf as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: mTLS, Message size, Auth metadata, Threat modeling and trust boundar
 ## Webhooks outbound and inbound
 
 Sub-topics: Signature verification, Replay, SSRF from callbacks, Threat modeling and trust boundaries (Webhooks outbound and inbound), Abuse cases and adversarial testing (Webhooks outbound and inbound)
+
+### Do
+
+- Validate and canonicalize all inputs touching Webhooks outbound and inbound; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Webhooks outbound and inbound.
+- Keep dependencies patched; pin versions for Webhooks outbound and inbound components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Signature verification, Replay, SSRF from callbacks, Threat modeling
 
 Sub-topics: Scopes, Client credentials, Token exchange, Threat modeling and trust boundaries (OAuth2/OIDC for APIs), Abuse cases and adversarial testing (OAuth2/OIDC for APIs)
 
+### Do
+
+- Validate and canonicalize all inputs touching OAuth2/OIDC for APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to OAuth2/OIDC for APIs.
+- Keep dependencies patched; pin versions for OAuth2/OIDC for APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat OAuth2/OIDC for APIs in OAuth2/OIDC for APIs as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Scopes, Client credentials, Token exchange, Threat modeling and trus
 ## API keys and HMAC
 
 Sub-topics: Rotation, Per-tenant keys, Constant-time compare, Threat modeling and trust boundaries (API keys and HMAC), Abuse cases and adversarial testing (API keys and HMAC)
+
+### Do
+
+- Validate and canonicalize all inputs touching API keys and HMAC; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to API keys and HMAC.
+- Keep dependencies patched; pin versions for API keys and HMAC components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Rotation, Per-tenant keys, Constant-time compare, Threat modeling an
 
 Sub-topics: Large offsets, Filter injection, Threat modeling and trust boundaries (Pagination and filtering abuse), Abuse cases and adversarial testing (Pagination and filtering abuse), Logging, audit, and detection (Pagination and filtering abuse)
 
+### Do
+
+- Validate and canonicalize all inputs touching Pagination and filtering abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Pagination and filtering abuse.
+- Keep dependencies patched; pin versions for Pagination and filtering abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Pagination and filtering abuse in Pagination and filtering abuse as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Large offsets, Filter injection, Threat modeling and trust boundarie
 ## CORS for APIs
 
 Sub-topics: Credentials, Wildcard origins, Threat modeling and trust boundaries (CORS for APIs), Abuse cases and adversarial testing (CORS for APIs), Logging, audit, and detection (CORS for APIs)
+
+### Do
+
+- Validate and canonicalize all inputs touching CORS for APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CORS for APIs.
+- Keep dependencies patched; pin versions for CORS for APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Credentials, Wildcard origins, Threat modeling and trust boundaries 
 
 Sub-topics: Hidden admin paths, Example secrets, Threat modeling and trust boundaries (OpenAPI and documentation leakage), Abuse cases and adversarial testing (OpenAPI and documentation leakage), Logging, audit, and detection (OpenAPI and documentation leakage)
 
+### Do
+
+- Validate and canonicalize all inputs touching OpenAPI and documentation leakage; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to OpenAPI and documentation leakage.
+- Keep dependencies patched; pin versions for OpenAPI and documentation leakage components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat OpenAPI and documentation leakage in OpenAPI and documentation leakage as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Hidden admin paths, Example secrets, Threat modeling and trust bound
 ## Backend-for-frontend patterns
 
 Sub-topics: Token handling, Aggregation leaks, Threat modeling and trust boundaries (Backend-for-frontend patterns), Abuse cases and adversarial testing (Backend-for-frontend patterns), Logging, audit, and detection (Backend-for-frontend patterns)
+
+### Do
+
+- Validate and canonicalize all inputs touching Backend-for-frontend patterns; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Backend-for-frontend patterns.
+- Keep dependencies patched; pin versions for Backend-for-frontend patterns components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Token handling, Aggregation leaks, Threat modeling and trust boundar
 
 Sub-topics: XXE, WS-Security misconfig, Threat modeling and trust boundaries (Legacy SOAP/XML APIs), Abuse cases and adversarial testing (Legacy SOAP/XML APIs), Logging, audit, and detection (Legacy SOAP/XML APIs)
 
+### Do
+
+- Validate and canonicalize all inputs touching Legacy SOAP/XML APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Legacy SOAP/XML APIs.
+- Keep dependencies patched; pin versions for Legacy SOAP/XML APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Legacy SOAP/XML APIs in Legacy SOAP/XML APIs as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: XXE, WS-Security misconfig, Threat modeling and trust boundaries (Le
 ## Event buses and streaming
 
 Sub-topics: Schema evolution, Poison messages, Threat modeling and trust boundaries (Event buses and streaming), Abuse cases and adversarial testing (Event buses and streaming), Logging, audit, and detection (Event buses and streaming)
+
+### Do
+
+- Validate and canonicalize all inputs touching Event buses and streaming; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Event buses and streaming.
+- Keep dependencies patched; pin versions for Event buses and streaming components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

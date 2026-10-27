@@ -6,275 +6,219 @@ Stack-specific implementation for **MySQL / MariaDB** (Database). Normative rule
 
 **Sub-topics:** Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL CMS
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Headless CMS APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Headless CMS APIs.
-- Keep dependencies patched; pin versions for Headless CMS APIs components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for cms_api controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Headless CMS APIs before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Headless CMS APIs paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## WYSIWYG editors
 
 **Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching WYSIWYG editors; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WYSIWYG editors.
-- Keep dependencies patched; pin versions for WYSIWYG editors components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WYSIWYG editors before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for WYSIWYG editors paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Manual XSS test cases on forms and rich text.
 
 ## Publish workflows
 
 **Sub-topics:** Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Publish workflows; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Publish workflows.
-- Keep dependencies patched; pin versions for Publish workflows components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for workflow controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Publish workflows before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Publish workflows paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## Plugins and themes
 
 **Sub-topics:** Third-party PHP, npm theme scripts, Update channels, Supply chain, Sandbox
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Plugins and themes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Plugins and themes.
-- Keep dependencies patched; pin versions for Plugins and themes components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for supply_chain controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Plugins and themes before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Plugins and themes paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## Comments and UGC moderation
 
 **Sub-topics:** Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Comments and UGC moderation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Comments and UGC moderation.
-- Keep dependencies patched; pin versions for Comments and UGC moderation components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for content_abuse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Comments and UGC moderation before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Comments and UGC moderation paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## SEO and metadata injection
 
 **Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching SEO and metadata injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SEO and metadata injection.
-- Keep dependencies patched; pin versions for SEO and metadata injection components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SEO and metadata injection before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for SEO and metadata injection paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Manual XSS test cases on forms and rich text.
 
 ## Media libraries
 
 **Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Media libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Media libraries.
-- Keep dependencies patched; pin versions for Media libraries components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for file_upload_ui controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Media libraries before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Media libraries paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## Multi-site CMS
 
 **Sub-topics:** Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Multi-site CMS; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-site CMS.
-- Keep dependencies patched; pin versions for Multi-site CMS components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for multi_tenant controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-site CMS before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Multi-site CMS paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## CMS search
 
 **Sub-topics:** Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Query injection
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching CMS search; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS search.
-- Keep dependencies patched; pin versions for CMS search components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for search_index controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS search before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS search paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## Marketing forms
 
 **Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Marketing forms; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Marketing forms.
-- Keep dependencies patched; pin versions for Marketing forms components.
+- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Marketing forms before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not rely on CORS alone to prevent CSRF.
 
 ### Verify
 
-- Add automated tests for Marketing forms paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Add automated abuse-case tests for Marketing forms in MySQL / MariaDB.
+- Run SAST and dependency scans for Database in CI.
 
 ## Static site generators
 
 **Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching Static site generators; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static site generators.
-- Keep dependencies patched; pin versions for Static site generators components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Static site generators before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Static site generators paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 
 ## CMS roles and SSO
 
 **Sub-topics:** Editor vs admin, SSO mis-map, API users, Impersonation, Audit trail
 
-### Platform rules (summary)
+### Do (use this in MySQL / MariaDB)
 
-- Validate and canonicalize all inputs touching CMS roles and SSO; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS roles and SSO.
-- Keep dependencies patched; pin versions for CMS roles and SSO components.
+- Apply domain skill `security-cms-content-platforms` requirements using mysql supported APIs only.
+- Use the official mysql security documentation for rbac controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in MySQL / MariaDB
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using MySQL / MariaDB APIs and deployment model.
-- Prefer framework-maintained security features in MySQL / MariaDB over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS roles and SSO before merge.
-- Pin MySQL / MariaDB dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of mysql for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS roles and SSO paths in MySQL / MariaDB.
-- Run SAST/dependency scan configured for Database.
+- Run stack-appropriate SAST/DAST on mysql projects in CI.
 

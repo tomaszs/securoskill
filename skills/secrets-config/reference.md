@@ -6,6 +6,18 @@ Env vars, config files, and feature flags.
 
 Sub-topics: Leaks in logs, Client exposure, Threat modeling and trust boundaries (Environment variables), Abuse cases and adversarial testing (Environment variables), Logging, audit, and detection (Environment variables)
 
+### Do
+
+- Validate and canonicalize all inputs touching Environment variables; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Environment variables.
+- Keep dependencies patched; pin versions for Environment variables components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Environment variables in Environment variables as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Leaks in logs, Client exposure, Threat modeling and trust boundaries
 ## Config separation
 
 Sub-topics: Per-env files, Gitignore, Threat modeling and trust boundaries (Config separation), Abuse cases and adversarial testing (Config separation), Logging, audit, and detection (Config separation)
+
+### Do
+
+- Validate and canonicalize all inputs touching Config separation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Config separation.
+- Keep dependencies patched; pin versions for Config separation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Per-env files, Gitignore, Threat modeling and trust boundaries (Conf
 
 Sub-topics: Kill switches, Privileged features, Threat modeling and trust boundaries (Feature flags), Abuse cases and adversarial testing (Feature flags), Logging, audit, and detection (Feature flags)
 
+### Do
+
+- Validate and canonicalize all inputs touching Feature flags; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Feature flags.
+- Keep dependencies patched; pin versions for Feature flags components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Feature flags in Feature flags as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Kill switches, Privileged features, Threat modeling and trust bounda
 ## Secret rotation
 
 Sub-topics: Dual-write, Breakage windows, Threat modeling and trust boundaries (Secret rotation), Abuse cases and adversarial testing (Secret rotation), Logging, audit, and detection (Secret rotation)
+
+### Do
+
+- Validate and canonicalize all inputs touching Secret rotation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secret rotation.
+- Keep dependencies patched; pin versions for Secret rotation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Dual-write, Breakage windows, Threat modeling and trust boundaries (
 
 Sub-topics: Committed secrets, CI injection, Threat modeling and trust boundaries (.env handling), Abuse cases and adversarial testing (.env handling), Logging, audit, and detection (.env handling)
 
+### Do
+
+- Validate and canonicalize all inputs touching .env handling.env handling; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to .env handling.
+- Keep dependencies patched; pin versions for .env handling.env handling components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat .env handling in .env handling as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Committed secrets, CI injection, Threat modeling and trust boundarie
 ## Config servers
 
 Sub-topics: ACLs, Encryption, Threat modeling and trust boundaries (Config servers), Abuse cases and adversarial testing (Config servers), Logging, audit, and detection (Config servers)
+
+### Do
+
+- Validate and canonicalize all inputs touching Config servers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Config servers.
+- Keep dependencies patched; pin versions for Config servers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: ACLs, Encryption, Threat modeling and trust boundaries (Config serve
 
 Sub-topics: Scanning, Prevention, Threat modeling and trust boundaries (Hardcoded credentials), Abuse cases and adversarial testing (Hardcoded credentials), Logging, audit, and detection (Hardcoded credentials)
 
+### Do
+
+- Validate and canonicalize all inputs touching Hardcoded credentials; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Hardcoded credentials.
+- Keep dependencies patched; pin versions for Hardcoded credentials components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Hardcoded credentials in Hardcoded credentials as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Scanning, Prevention, Threat modeling and trust boundaries (Hardcode
 ## Public vs confidential clients
 
 Sub-topics: Mobile apps, SPAs, Threat modeling and trust boundaries (Public vs confidential clients), Abuse cases and adversarial testing (Public vs confidential clients), Logging, audit, and detection (Public vs confidential clients)
+
+### Do
+
+- Validate and canonicalize all inputs touching Public vs confidential clients; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Public vs confidential clients.
+- Keep dependencies patched; pin versions for Public vs confidential clients components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Mobile apps, SPAs, Threat modeling and trust boundaries (Public vs c
 
 Sub-topics: First deploy, Init containers, Threat modeling and trust boundaries (Bootstrap secrets), Abuse cases and adversarial testing (Bootstrap secrets), Logging, audit, and detection (Bootstrap secrets)
 
+### Do
+
+- Validate and canonicalize all inputs touching Bootstrap secrets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bootstrap secrets.
+- Keep dependencies patched; pin versions for Bootstrap secrets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Bootstrap secrets in Bootstrap secrets as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: First deploy, Init containers, Threat modeling and trust boundaries 
 ## Configuration audit
 
 Sub-topics: Drift detection, Threat modeling and trust boundaries (Configuration audit), Abuse cases and adversarial testing (Configuration audit), Logging, audit, and detection (Configuration audit), Access control and least privilege (Configuration audit)
+
+### Do
+
+- Validate and canonicalize all inputs touching Configuration audit; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Configuration audit.
+- Keep dependencies patched; pin versions for Configuration audit components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Drift detection, Threat modeling and trust boundaries (Configuration
 
 Sub-topics: Debug=true, Open admin, Threat modeling and trust boundaries (Insecure defaults), Abuse cases and adversarial testing (Insecure defaults), Logging, audit, and detection (Insecure defaults)
 
+### Do
+
+- Validate and canonicalize all inputs touching Insecure defaults; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Insecure defaults.
+- Keep dependencies patched; pin versions for Insecure defaults components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Insecure defaults in Insecure defaults as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Debug=true, Open admin, Threat modeling and trust boundaries (Insecu
 ## Split knowledge
 
 Sub-topics: Shamir, M-of-N, Threat modeling and trust boundaries (Split knowledge), Abuse cases and adversarial testing (Split knowledge), Logging, audit, and detection (Split knowledge)
+
+### Do
+
+- Validate and canonicalize all inputs touching Split knowledge; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Split knowledge.
+- Keep dependencies patched; pin versions for Split knowledge components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -6,6 +6,18 @@ iOS, Android, hybrid, and mobile APIs.
 
 Sub-topics: Keychain, Keystore, SQLite, Threat modeling and trust boundaries (On-device storage), Abuse cases and adversarial testing (On-device storage)
 
+### Do
+
+- Validate and canonicalize all inputs touching On-device storage; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-device storage.
+- Keep dependencies patched; pin versions for On-device storage components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat On-device storage in On-device storage as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Keychain, Keystore, SQLite, Threat modeling and trust boundaries (On
 ## Certificate pinning
 
 Sub-topics: Bypass tools, Rotation, Threat modeling and trust boundaries (Certificate pinning), Abuse cases and adversarial testing (Certificate pinning), Logging, audit, and detection (Certificate pinning)
+
+### Do
+
+- Validate and canonicalize all inputs touching Certificate pinning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Certificate pinning.
+- Keep dependencies patched; pin versions for Certificate pinning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Bypass tools, Rotation, Threat modeling and trust boundaries (Certif
 
 Sub-topics: Obfuscation limits, Threat modeling and trust boundaries (Reverse engineering resistance), Abuse cases and adversarial testing (Reverse engineering resistance), Logging, audit, and detection (Reverse engineering resistance), Access control and least privilege (Reverse engineering resistance)
 
+### Do
+
+- Validate and canonicalize all inputs touching Reverse engineering resistance; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Reverse engineering resistance.
+- Keep dependencies patched; pin versions for Reverse engineering resistance components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Reverse engineering resistance in Reverse engineering resistance as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Obfuscation limits, Threat modeling and trust boundaries (Reverse en
 ## Deep links and intents
 
 Sub-topics: URL scheme hijack, Threat modeling and trust boundaries (Deep links and intents), Abuse cases and adversarial testing (Deep links and intents), Logging, audit, and detection (Deep links and intents), Access control and least privilege (Deep links and intents)
+
+### Do
+
+- Validate and canonicalize all inputs touching Deep links and intents; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Deep links and intents.
+- Keep dependencies patched; pin versions for Deep links and intents components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: URL scheme hijack, Threat modeling and trust boundaries (Deep links 
 
 Sub-topics: PKCE, Custom URL schemes, Threat modeling and trust boundaries (Mobile OAuth), Abuse cases and adversarial testing (Mobile OAuth), Logging, audit, and detection (Mobile OAuth)
 
+### Do
+
+- Validate and canonicalize all inputs touching Mobile OAuth; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile OAuth.
+- Keep dependencies patched; pin versions for Mobile OAuth components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Mobile OAuth in Mobile OAuth as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: PKCE, Custom URL schemes, Threat modeling and trust boundaries (Mobi
 ## Biometric APIs
 
 Sub-topics: Fallback PIN, Threat modeling and trust boundaries (Biometric APIs), Abuse cases and adversarial testing (Biometric APIs), Logging, audit, and detection (Biometric APIs), Access control and least privilege (Biometric APIs)
+
+### Do
+
+- Validate and canonicalize all inputs touching Biometric APIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Biometric APIs.
+- Keep dependencies patched; pin versions for Biometric APIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Fallback PIN, Threat modeling and trust boundaries (Biometric APIs),
 
 Sub-topics: JS interfaces, Threat modeling and trust boundaries (WebView bridges), Abuse cases and adversarial testing (WebView bridges), Logging, audit, and detection (WebView bridges), Access control and least privilege (WebView bridges)
 
+### Do
+
+- Validate and canonicalize all inputs touching WebView bridges; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebView bridges.
+- Keep dependencies patched; pin versions for WebView bridges components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat WebView bridges in WebView bridges as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: JS interfaces, Threat modeling and trust boundaries (WebView bridges
 ## Push notifications
 
 Sub-topics: Payload sensitivity, Threat modeling and trust boundaries (Push notifications), Abuse cases and adversarial testing (Push notifications), Logging, audit, and detection (Push notifications), Access control and least privilege (Push notifications)
+
+### Do
+
+- Validate and canonicalize all inputs touching Push notifications; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Push notifications.
+- Keep dependencies patched; pin versions for Push notifications components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Payload sensitivity, Threat modeling and trust boundaries (Push noti
 
 Sub-topics: DeviceCheck, Play Integrity, Threat modeling and trust boundaries (App attestation), Abuse cases and adversarial testing (App attestation), Logging, audit, and detection (App attestation)
 
+### Do
+
+- Validate and canonicalize all inputs touching App attestation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to App attestation.
+- Keep dependencies patched; pin versions for App attestation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat App attestation in App attestation as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: DeviceCheck, Play Integrity, Threat modeling and trust boundaries (A
 ## Sideloading and jailbreak
 
 Sub-topics: Root detection limits, Threat modeling and trust boundaries (Sideloading and jailbreak), Abuse cases and adversarial testing (Sideloading and jailbreak), Logging, audit, and detection (Sideloading and jailbreak), Access control and least privilege (Sideloading and jailbreak)
+
+### Do
+
+- Validate and canonicalize all inputs touching Sideloading and jailbreak; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Sideloading and jailbreak.
+- Keep dependencies patched; pin versions for Sideloading and jailbreak components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Root detection limits, Threat modeling and trust boundaries (Sideloa
 
 Sub-topics: FLAG_SECURE, Overlay attacks, Threat modeling and trust boundaries (Screenshots and overlays), Abuse cases and adversarial testing (Screenshots and overlays), Logging, audit, and detection (Screenshots and overlays)
 
+### Do
+
+- Validate and canonicalize all inputs touching Screenshots and overlays; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Screenshots and overlays.
+- Keep dependencies patched; pin versions for Screenshots and overlays components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Screenshots and overlays in Screenshots and overlays as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: FLAG_SECURE, Overlay attacks, Threat modeling and trust boundaries (
 ## Mobile SDK supply chain
 
 Sub-topics: Third-party SDKs, Threat modeling and trust boundaries (Mobile SDK supply chain), Abuse cases and adversarial testing (Mobile SDK supply chain), Logging, audit, and detection (Mobile SDK supply chain), Access control and least privilege (Mobile SDK supply chain)
+
+### Do
+
+- Validate and canonicalize all inputs touching Mobile SDK supply chain; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile SDK supply chain.
+- Keep dependencies patched; pin versions for Mobile SDK supply chain components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

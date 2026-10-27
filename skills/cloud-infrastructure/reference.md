@@ -6,6 +6,18 @@ IaaS/PaaS, IAM, storage, and networking in cloud.
 
 Sub-topics: Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
 
+### Do
+
+- Validate and canonicalize all inputs touching Cloud IAM; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud IAM.
+- Keep dependencies patched; pin versions for Cloud IAM components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Cloud IAM in Cloud IAM as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Overprivileged roles, IAM conditions, Threat modeling and trust boun
 ## Object storage buckets
 
 Sub-topics: Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
+
+### Do
+
+- Validate and canonicalize all inputs touching Object storage buckets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Object storage buckets.
+- Keep dependencies patched; pin versions for Object storage buckets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Public ACLs, Policy mistakes, Threat modeling and trust boundaries (
 
 Sub-topics: IMDSv2, SSH keys, Metadata, Threat modeling and trust boundaries (Compute instances), Abuse cases and adversarial testing (Compute instances)
 
+### Do
+
+- Validate and canonicalize all inputs touching Compute instances; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compute instances.
+- Keep dependencies patched; pin versions for Compute instances components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Compute instances in Compute instances as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: IMDSv2, SSH keys, Metadata, Threat modeling and trust boundaries (Co
 ## Managed serverless
 
 Sub-topics: Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
+
+### Do
+
+- Validate and canonicalize all inputs touching Managed serverless; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Managed serverless.
+- Keep dependencies patched; pin versions for Managed serverless components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Function URLs, Concurrency, Threat modeling and trust boundaries (Ma
 
 Sub-topics: Rotation, Access policies, Threat modeling and trust boundaries (Secrets managers), Abuse cases and adversarial testing (Secrets managers), Logging, audit, and detection (Secrets managers)
 
+### Do
+
+- Validate and canonicalize all inputs touching Secrets managers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secrets managers.
+- Keep dependencies patched; pin versions for Secrets managers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Secrets managers in Secrets managers as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Rotation, Access policies, Threat modeling and trust boundaries (Sec
 ## VPC and security groups
 
 Sub-topics: 0.0.0.0/0, Peering leaks, Threat modeling and trust boundaries (VPC and security groups), Abuse cases and adversarial testing (VPC and security groups), Logging, audit, and detection (VPC and security groups)
+
+### Do
+
+- Validate and canonicalize all inputs touching VPC and security groups; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to VPC and security groups.
+- Keep dependencies patched; pin versions for VPC and security groups components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: 0.0.0.0/0, Peering leaks, Threat modeling and trust boundaries (VPC 
 
 Sub-topics: Tampering, Retention, Threat modeling and trust boundaries (Cloud audit logs), Abuse cases and adversarial testing (Cloud audit logs), Logging, audit, and detection (Cloud audit logs)
 
+### Do
+
+- Validate and canonicalize all inputs touching Cloud audit logs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud audit logs.
+- Keep dependencies patched; pin versions for Cloud audit logs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Cloud audit logs in Cloud audit logs as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Tampering, Retention, Threat modeling and trust boundaries (Cloud au
 ## Infrastructure as code
 
 Sub-topics: State files, Drift, Threat modeling and trust boundaries (Infrastructure as code), Abuse cases and adversarial testing (Infrastructure as code), Logging, audit, and detection (Infrastructure as code)
+
+### Do
+
+- Validate and canonicalize all inputs touching Infrastructure as code; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Infrastructure as code.
+- Keep dependencies patched; pin versions for Infrastructure as code components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: State files, Drift, Threat modeling and trust boundaries (Infrastruc
 
 Sub-topics: Federation, Key sprawl, Threat modeling and trust boundaries (Multi-cloud identity), Abuse cases and adversarial testing (Multi-cloud identity), Logging, audit, and detection (Multi-cloud identity)
 
+### Do
+
+- Validate and canonicalize all inputs touching Multi-cloud identity; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-cloud identity.
+- Keep dependencies patched; pin versions for Multi-cloud identity components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Multi-cloud identity in Multi-cloud identity as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Federation, Key sprawl, Threat modeling and trust boundaries (Multi-
 ## SaaS admin consoles
 
 Sub-topics: MFA, SCIM, Threat modeling and trust boundaries (SaaS admin consoles), Abuse cases and adversarial testing (SaaS admin consoles), Logging, audit, and detection (SaaS admin consoles)
+
+### Do
+
+- Validate and canonicalize all inputs touching SaaS admin consoles; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SaaS admin consoles.
+- Keep dependencies patched; pin versions for SaaS admin consoles components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: MFA, SCIM, Threat modeling and trust boundaries (SaaS admin consoles
 
 Sub-topics: Cache deception, Origin shield, Threat modeling and trust boundaries (CDN and edge), Abuse cases and adversarial testing (CDN and edge), Logging, audit, and detection (CDN and edge)
 
+### Do
+
+- Validate and canonicalize all inputs touching CDN and edge; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CDN and edge.
+- Keep dependencies patched; pin versions for CDN and edge components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat CDN and edge in CDN and edge as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Cache deception, Origin shield, Threat modeling and trust boundaries
 ## DR and regions
 
 Sub-topics: Failover security, Data residency, Threat modeling and trust boundaries (DR and regions), Abuse cases and adversarial testing (DR and regions), Logging, audit, and detection (DR and regions)
+
+### Do
+
+- Validate and canonicalize all inputs touching DR and regions; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DR and regions.
+- Keep dependencies patched; pin versions for DR and regions components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

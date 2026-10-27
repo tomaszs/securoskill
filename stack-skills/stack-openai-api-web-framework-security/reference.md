@@ -6,299 +6,215 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 **Sub-topics:** dangerouslySetInnerHTML, useEffect fetches, Server Components, RSC leaks, Third-party hooks
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching React; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to React.
-- Keep dependencies patched; pin versions for React components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for React before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for React paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Vue.js
 
 **Sub-topics:** v-html, Template compilation, Vuex persisted state, Nuxt SSR data, Dynamic components
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Vue.js; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vue.js.
-- Keep dependencies patched; pin versions for Vue.js components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Vue.js before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for Vue.js paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Angular
 
 **Sub-topics:** DomSanitizer bypass, bypassSecurityTrust*, HttpClient CSRF, SSR transfer state, NgZone XSS
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Angular; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Angular.
-- Keep dependencies patched; pin versions for Angular components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Angular before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for Angular paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Next.js and Nuxt
 
 **Sub-topics:** API routes auth, Middleware bypass, ISR cache poisoning, Env NEXT_PUBLIC_, Server actions
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Next.js and Nuxt; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Next.js and Nuxt.
-- Keep dependencies patched; pin versions for Next.js and Nuxt components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Next.js and Nuxt before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Next.js and Nuxt paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Svelte and SvelteKit
 
 **Sub-topics:** {@html}, Form actions, Hooks auth, Adapter configs, CSR-only secrets
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Svelte and SvelteKit; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Svelte and SvelteKit.
-- Keep dependencies patched; pin versions for Svelte and SvelteKit components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Svelte and SvelteKit before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Svelte and SvelteKit paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Astro, Remix, and islands
 
 **Sub-topics:** Hybrid rendering, Endpoint auth, View transitions, MDX components, Edge configs
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Astro, Remix, and islands; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Astro, Remix, and islands.
-- Keep dependencies patched; pin versions for Astro, Remix, and islands components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Astro, Remix, and islands before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Astro, Remix, and islands paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Client state libraries
 
 **Sub-topics:** Redux persist tokens, URL state secrets, TanStack Query cache, Zustand devtools, IndexedDB sync
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Client state libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client state libraries.
-- Keep dependencies patched; pin versions for Client state libraries components.
+- Apply domain skill `security-frontend-client` requirements using openai-api supported APIs only.
+- Use the official openai-api security documentation for browser_storage controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Client state libraries before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of openai-api for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Client state libraries paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Run stack-appropriate SAST/DAST on openai-api projects in CI.
 
 ## Client routing security
 
 **Sub-topics:** Route guards only client, Lazy route leaks, Deep link auth, History state, Base href
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Client routing security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client routing security.
-- Keep dependencies patched; pin versions for Client routing security components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Client routing security before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Client routing security paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## i18n and locale
 
 **Sub-topics:** RTL injection, Locale switch CSRF, Translation XSS, Hreflang open redirect, Collation bugs
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching i18n and locale; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to i18n and locale.
-- Keep dependencies patched; pin versions for i18n and locale components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for i18n and locale before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for i18n and locale paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Design system components
 
 **Sub-topics:** Slot content XSS, Icon SVG, Toast HTML, Modal focus trap bypass, Theme injection
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Design system components; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Design system components.
-- Keep dependencies patched; pin versions for Design system components components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Design system components before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for Design system components paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Manual XSS test cases on forms and rich text.
 
 ## Storybook and dev tools
 
 **Sub-topics:** Exposed Storybook, Mock auth in prod, Addon scripts, Source maps public, Chromatic tokens
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Storybook and dev tools; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Storybook and dev tools.
-- Keep dependencies patched; pin versions for Storybook and dev tools components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Storybook and dev tools before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Storybook and dev tools paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Micro-frontends
 
 **Sub-topics:** Module federation trust, Shared dependencies, Cross-app postMessage, Shell auth, Style isolation
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Micro-frontends; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Micro-frontends.
-- Keep dependencies patched; pin versions for Micro-frontends components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-web-framework-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Micro-frontends before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Micro-frontends paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 

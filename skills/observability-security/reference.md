@@ -6,6 +6,18 @@ Traces, metrics, APM, and debug tooling.
 
 Sub-topics: Sampling, Scrubbing, Threat modeling and trust boundaries (PII in traces), Abuse cases and adversarial testing (PII in traces), Logging, audit, and detection (PII in traces)
 
+### Do
+
+- Validate and canonicalize all inputs touching PII in traces; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PII in traces.
+- Keep dependencies patched; pin versions for PII in traces components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat PII in traces in PII in traces as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Sampling, Scrubbing, Threat modeling and trust boundaries (PII in tr
 ## Metrics cardinality abuse
 
 Sub-topics: Label injection, Threat modeling and trust boundaries (Metrics cardinality abuse), Abuse cases and adversarial testing (Metrics cardinality abuse), Logging, audit, and detection (Metrics cardinality abuse), Access control and least privilege (Metrics cardinality abuse)
+
+### Do
+
+- Validate and canonicalize all inputs touching Metrics cardinality abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Metrics cardinality abuse.
+- Keep dependencies patched; pin versions for Metrics cardinality abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Label injection, Threat modeling and trust boundaries (Metrics cardi
 
 Sub-topics: Recording secrets, Threat modeling and trust boundaries (APM and session replay), Abuse cases and adversarial testing (APM and session replay), Logging, audit, and detection (APM and session replay), Access control and least privilege (APM and session replay)
 
+### Do
+
+- Validate and canonicalize all inputs touching APM and session replay; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to APM and session replay.
+- Keep dependencies patched; pin versions for APM and session replay components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat APM and session replay in APM and session replay as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Recording secrets, Threat modeling and trust boundaries (APM and ses
 ## Production debugging
 
 Sub-topics: Feature flags, Access, Threat modeling and trust boundaries (Production debugging), Abuse cases and adversarial testing (Production debugging), Logging, audit, and detection (Production debugging)
+
+### Do
+
+- Validate and canonicalize all inputs touching Production debugging; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Production debugging.
+- Keep dependencies patched; pin versions for Production debugging components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Feature flags, Access, Threat modeling and trust boundaries (Product
 
 Sub-topics: Breadcrumbs with tokens, Threat modeling and trust boundaries (Error trackers), Abuse cases and adversarial testing (Error trackers), Logging, audit, and detection (Error trackers), Access control and least privilege (Error trackers)
 
+### Do
+
+- Validate and canonicalize all inputs touching Error trackers; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Error trackers.
+- Keep dependencies patched; pin versions for Error trackers components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Error trackers in Error trackers as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Breadcrumbs with tokens, Threat modeling and trust boundaries (Error
 ## Log injection
 
 Sub-topics: CRLF, Forged entries, Threat modeling and trust boundaries (Log injection), Abuse cases and adversarial testing (Log injection), Logging, audit, and detection (Log injection)
+
+### Do
+
+- Validate and canonicalize all inputs touching Log injection; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Log injection.
+- Keep dependencies patched; pin versions for Log injection components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: CRLF, Forged entries, Threat modeling and trust boundaries (Log inje
 
 Sub-topics: SSO, Embedding, Threat modeling and trust boundaries (Dashboard access), Abuse cases and adversarial testing (Dashboard access), Logging, audit, and detection (Dashboard access)
 
+### Do
+
+- Validate and canonicalize all inputs touching Dashboard access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Dashboard access.
+- Keep dependencies patched; pin versions for Dashboard access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Dashboard access in Dashboard access as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: SSO, Embedding, Threat modeling and trust boundaries (Dashboard acce
 ## OpenTelemetry exporters
 
 Sub-topics: Endpoints, Auth, Threat modeling and trust boundaries (OpenTelemetry exporters), Abuse cases and adversarial testing (OpenTelemetry exporters), Logging, audit, and detection (OpenTelemetry exporters)
+
+### Do
+
+- Validate and canonicalize all inputs touching OpenTelemetry exporters; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to OpenTelemetry exporters.
+- Keep dependencies patched; pin versions for OpenTelemetry exporters components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Endpoints, Auth, Threat modeling and trust boundaries (OpenTelemetry
 
 Sub-topics: Heap dumps, Threat modeling and trust boundaries (Continuous profiling), Abuse cases and adversarial testing (Continuous profiling), Logging, audit, and detection (Continuous profiling), Access control and least privilege (Continuous profiling)
 
+### Do
+
+- Validate and canonicalize all inputs touching Continuous profiling; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Continuous profiling.
+- Keep dependencies patched; pin versions for Continuous profiling components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Continuous profiling in Continuous profiling as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Heap dumps, Threat modeling and trust boundaries (Continuous profili
 ## Synthetic monitoring creds
 
 Sub-topics: Stored passwords, Threat modeling and trust boundaries (Synthetic monitoring creds), Abuse cases and adversarial testing (Synthetic monitoring creds), Logging, audit, and detection (Synthetic monitoring creds), Access control and least privilege (Synthetic monitoring creds)
+
+### Do
+
+- Validate and canonicalize all inputs touching Synthetic monitoring creds; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Synthetic monitoring creds.
+- Keep dependencies patched; pin versions for Synthetic monitoring creds components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Stored passwords, Threat modeling and trust boundaries (Synthetic mo
 
 Sub-topics: Data minimization, Threat modeling and trust boundaries (RUM and client beacons), Abuse cases and adversarial testing (RUM and client beacons), Logging, audit, and detection (RUM and client beacons), Access control and least privilege (RUM and client beacons)
 
+### Do
+
+- Validate and canonicalize all inputs touching RUM and client beacons; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to RUM and client beacons.
+- Keep dependencies patched; pin versions for RUM and client beacons components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat RUM and client beacons in RUM and client beacons as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Data minimization, Threat modeling and trust boundaries (RUM and cli
 ## Alert routing secrets
 
 Sub-topics: Webhook URLs in alerts, Threat modeling and trust boundaries (Alert routing secrets), Abuse cases and adversarial testing (Alert routing secrets), Logging, audit, and detection (Alert routing secrets), Access control and least privilege (Alert routing secrets)
+
+### Do
+
+- Validate and canonicalize all inputs touching Alert routing secrets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Alert routing secrets.
+- Keep dependencies patched; pin versions for Alert routing secrets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

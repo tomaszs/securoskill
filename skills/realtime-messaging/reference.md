@@ -6,6 +6,18 @@ Chat, pub/sub, and live updates.
 
 Sub-topics: Cookie vs token, Reconnect, Threat modeling and trust boundaries (WebSocket authentication), Abuse cases and adversarial testing (WebSocket authentication), Logging, audit, and detection (WebSocket authentication)
 
+### Do
+
+- Validate and canonicalize all inputs touching WebSocket authentication; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebSocket authentication.
+- Keep dependencies patched; pin versions for WebSocket authentication components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat WebSocket authentication in WebSocket authentication as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Cookie vs token, Reconnect, Threat modeling and trust boundaries (We
 ## Room and channel authorization
 
 Sub-topics: Join tokens, Threat modeling and trust boundaries (Room and channel authorization), Abuse cases and adversarial testing (Room and channel authorization), Logging, audit, and detection (Room and channel authorization), Access control and least privilege (Room and channel authorization)
+
+### Do
+
+- Validate and canonicalize all inputs touching Room and channel authorization; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Room and channel authorization.
+- Keep dependencies patched; pin versions for Room and channel authorization components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Join tokens, Threat modeling and trust boundaries (Room and channel 
 
 Sub-topics: Signing, Ordering, Threat modeling and trust boundaries (Message integrity), Abuse cases and adversarial testing (Message integrity), Logging, audit, and detection (Message integrity)
 
+### Do
+
+- Validate and canonicalize all inputs touching Message integrity; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Message integrity.
+- Keep dependencies patched; pin versions for Message integrity components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Message integrity in Message integrity as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Signing, Ordering, Threat modeling and trust boundaries (Message int
 ## Presence leaks
 
 Sub-topics: Online status, Typing, Threat modeling and trust boundaries (Presence leaks), Abuse cases and adversarial testing (Presence leaks), Logging, audit, and detection (Presence leaks)
+
+### Do
+
+- Validate and canonicalize all inputs touching Presence leaks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Presence leaks.
+- Keep dependencies patched; pin versions for Presence leaks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Online status, Typing, Threat modeling and trust boundaries (Presenc
 
 Sub-topics: ACLs, TLS, Threat modeling and trust boundaries (MQTT and IoT protocols), Abuse cases and adversarial testing (MQTT and IoT protocols), Logging, audit, and detection (MQTT and IoT protocols)
 
+### Do
+
+- Validate and canonicalize all inputs touching MQTT and IoT protocols; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to MQTT and IoT protocols.
+- Keep dependencies patched; pin versions for MQTT and IoT protocols components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat MQTT and IoT protocols in MQTT and IoT protocols as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: ACLs, TLS, Threat modeling and trust boundaries (MQTT and IoT protoc
 ## Kafka security
 
 Sub-topics: ACLs, SASL, Threat modeling and trust boundaries (Kafka security), Abuse cases and adversarial testing (Kafka security), Logging, audit, and detection (Kafka security)
+
+### Do
+
+- Validate and canonicalize all inputs touching Kafka security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Kafka security.
+- Keep dependencies patched; pin versions for Kafka security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: ACLs, SASL, Threat modeling and trust boundaries (Kafka security), A
 
 Sub-topics: Unauthenticated instances, Threat modeling and trust boundaries (Redis pub/sub), Abuse cases and adversarial testing (Redis pub/sub), Logging, audit, and detection (Redis pub/sub), Access control and least privilege (Redis pub/sub)
 
+### Do
+
+- Validate and canonicalize all inputs touching Redis pub/sub; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Redis pub/sub.
+- Keep dependencies patched; pin versions for Redis pub/sub components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Redis pub/sub in Redis pub/sub as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Unauthenticated instances, Threat modeling and trust boundaries (Red
 ## Server-sent events
 
 Sub-topics: CSRF, Caching, Threat modeling and trust boundaries (Server-sent events), Abuse cases and adversarial testing (Server-sent events), Logging, audit, and detection (Server-sent events)
+
+### Do
+
+- Validate and canonicalize all inputs touching Server-sent events; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Server-sent events.
+- Keep dependencies patched; pin versions for Server-sent events components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: CSRF, Caching, Threat modeling and trust boundaries (Server-sent eve
 
 Sub-topics: OT/CRDT authz, Threat modeling and trust boundaries (Collaborative editing), Abuse cases and adversarial testing (Collaborative editing), Logging, audit, and detection (Collaborative editing), Access control and least privilege (Collaborative editing)
 
+### Do
+
+- Validate and canonicalize all inputs touching Collaborative editing; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Collaborative editing.
+- Keep dependencies patched; pin versions for Collaborative editing components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Collaborative editing in Collaborative editing as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: OT/CRDT authz, Threat modeling and trust boundaries (Collaborative e
 ## WebRTC
 
 Sub-topics: ICE, TURN credentials, Threat modeling and trust boundaries (WebRTC), Abuse cases and adversarial testing (WebRTC), Logging, audit, and detection (WebRTC)
+
+### Do
+
+- Validate and canonicalize all inputs touching WebRTC; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebRTC.
+- Keep dependencies patched; pin versions for WebRTC components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: ICE, TURN credentials, Threat modeling and trust boundaries (WebRTC)
 
 Sub-topics: Large rooms, Bots, Threat modeling and trust boundaries (Fan-out abuse), Abuse cases and adversarial testing (Fan-out abuse), Logging, audit, and detection (Fan-out abuse)
 
+### Do
+
+- Validate and canonicalize all inputs touching Fan-out abuse; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Fan-out abuse.
+- Keep dependencies patched; pin versions for Fan-out abuse components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Fan-out abuse in Fan-out abuse as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Large rooms, Bots, Threat modeling and trust boundaries (Fan-out abu
 ## Message retention
 
 Sub-topics: Legal hold, E2EE, Threat modeling and trust boundaries (Message retention), Abuse cases and adversarial testing (Message retention), Logging, audit, and detection (Message retention)
+
+### Do
+
+- Validate and canonicalize all inputs touching Message retention; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Message retention.
+- Keep dependencies patched; pin versions for Message retention components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -6,6 +6,18 @@ People, process, and support-channel risks in software delivery.
 
 Sub-topics: Fake npm, Malicious PR, Stolen OAuth, Slack DMs, Fake CI notifications
 
+### Do
+
+- Validate and canonicalize all inputs touching Developer phishing; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Developer phishing.
+- Keep dependencies patched; pin versions for Developer phishing components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Developer phishing in Developer phishing as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Fake npm, Malicious PR, Stolen OAuth, Slack DMs, Fake CI notificatio
 ## Customer support takeover
 
 Sub-topics: Security questions, SIM swap, Email change, Manual password reset, VIP support
+
+### Do
+
+- Validate and canonicalize all inputs touching Customer support takeover; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Customer support takeover.
+- Keep dependencies patched; pin versions for Customer support takeover components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Security questions, SIM swap, Email change, Manual password reset, V
 
 Sub-topics: CEO fraud, Vendor impersonation, Callback phishing, Deepfake calls, Help desk pressure
 
+### Do
+
+- Validate and canonicalize all inputs touching Vishing and impersonation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vishing and impersonation.
+- Keep dependencies patched; pin versions for Vishing and impersonation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Vishing and impersonation in Vishing and impersonation as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: CEO fraud, Vendor impersonation, Callback phishing, Deepfake calls, 
 ## Insider threat
 
 Sub-topics: Offboarding gaps, Privileged monitoring, Data exfil jobs, Sabotage, Whistleblower channels
+
+### Do
+
+- Validate and canonicalize all inputs touching Insider threat; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Insider threat.
+- Keep dependencies patched; pin versions for Insider threat components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Offboarding gaps, Privileged monitoring, Data exfil jobs, Sabotage, 
 
 Sub-topics: Unattended laptops, USB drops, Office tailgating, Printer rooms, Hardware tokens
 
+### Do
+
+- Validate and canonicalize all inputs touching Physical access to dev assets; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Physical access to dev assets.
+- Keep dependencies patched; pin versions for Physical access to dev assets components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Physical access to dev assets in Physical access to dev assets as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Unattended laptops, USB drops, Office tailgating, Printer rooms, Har
 ## Security awareness
 
 Sub-topics: Phishing sims, Report buttons, Metrics, Role-based training, Contractors
+
+### Do
+
+- Validate and canonicalize all inputs touching Security awareness; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security awareness.
+- Keep dependencies patched; pin versions for Security awareness components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Phishing sims, Report buttons, Metrics, Role-based training, Contrac
 
 Sub-topics: Status page accuracy, Rumor control, Legal hold comms, Customer notification, Media leaks
 
+### Do
+
+- Validate and canonicalize all inputs touching Incident communications; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Incident communications.
+- Keep dependencies patched; pin versions for Incident communications components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Incident communications in Incident communications as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Status page accuracy, Rumor control, Legal hold comms, Customer noti
 ## Bug bounty operations
 
 Sub-topics: Researcher relations, Safe harbor, Duplicate handling, SLA payouts, Disclosure timelines
+
+### Do
+
+- Validate and canonicalize all inputs touching Bug bounty operations; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Bug bounty operations.
+- Keep dependencies patched; pin versions for Bug bounty operations components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Researcher relations, Safe harbor, Duplicate handling, SLA payouts, 
 
 Sub-topics: Subpoena validation, Emergency disclosure, Transparency reports, User notice, National security
 
+### Do
+
+- Validate and canonicalize all inputs touching Law enforcement requests; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Law enforcement requests.
+- Keep dependencies patched; pin versions for Law enforcement requests components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Law enforcement requests in Law enforcement requests as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Subpoena validation, Emergency disclosure, Transparency reports, Use
 ## Social engineering of login flows
 
 Sub-topics: Fake OAuth apps, Consent screen tricks, Passwordless confusion, Magic link forwarding, QR login
+
+### Do
+
+- Validate and canonicalize all inputs touching Social engineering of login flows; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Social engineering of login flows.
+- Keep dependencies patched; pin versions for Social engineering of login flows components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Fake OAuth apps, Consent screen tricks, Passwordless confusion, Magi
 
 Sub-topics: Public Confluence, Pastebin creds, Runbooks with secrets, Architecture diagrams, Zoom recordings
 
+### Do
+
+- Validate and canonicalize all inputs touching Documentation and wiki leaks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Documentation and wiki leaks.
+- Keep dependencies patched; pin versions for Documentation and wiki leaks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Documentation and wiki leaks in Documentation and wiki leaks as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Public Confluence, Pastebin creds, Runbooks with secrets, Architectu
 ## BPO and outsourced access
 
 Sub-topics: VPN accounts, Time-bound access, Screen monitoring, Data handling, Contract clauses
+
+### Do
+
+- Validate and canonicalize all inputs touching BPO and outsourced access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to BPO and outsourced access.
+- Keep dependencies patched; pin versions for BPO and outsourced access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

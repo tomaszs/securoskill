@@ -6,6 +6,18 @@ Node, Python, Java, .NET, Go, PHP, and Ruby stacks.
 
 Sub-topics: Prototype pollution, Middleware order, JSON body limits, Cluster creds, vm module
 
+### Do
+
+- Validate and canonicalize all inputs touching Node.js and Express; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Node.js and Express.
+- Keep dependencies patched; pin versions for Node.js and Express components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Node.js and Express in Node.js and Express as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Prototype pollution, Middleware order, JSON body limits, Cluster cre
 ## NestJS and Fastify
 
 Sub-topics: Guards vs pipes, Validation decorators, GraphQL plugins, Microservices TCP, Swagger exposure
+
+### Do
+
+- Validate and canonicalize all inputs touching NestJS and Fastify; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NestJS and Fastify.
+- Keep dependencies patched; pin versions for NestJS and Fastify components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Guards vs pipes, Validation decorators, GraphQL plugins, Microservic
 
 Sub-topics: DEBUG=True, SECRET_KEY rotation, ORM extra(), Jinja autoescape, Admin URL
 
+### Do
+
+- Validate and canonicalize all inputs touching Django and Flask; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Django and Flask.
+- Keep dependencies patched; pin versions for Django and Flask components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Django and Flask in Django and Flask as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: DEBUG=True, SECRET_KEY rotation, ORM extra(), Jinja autoescape, Admi
 ## FastAPI and Starlette
 
 Sub-topics: Dependency injection auth, OpenAPI public, Background tasks, Pydantic coercion, WebSocket routes
+
+### Do
+
+- Validate and canonicalize all inputs touching FastAPI and Starlette; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to FastAPI and Starlette.
+- Keep dependencies patched; pin versions for FastAPI and Starlette components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Dependency injection auth, OpenAPI public, Background tasks, Pydanti
 
 Sub-topics: Actuator endpoints, SpEL injection, Deserialization, JPA injection, Shiro defaults
 
+### Do
+
+- Validate and canonicalize all inputs touching Spring Boot and Java; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Spring Boot and Java.
+- Keep dependencies patched; pin versions for Spring Boot and Java components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Spring Boot and Java in Spring Boot and Java as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Actuator endpoints, SpEL injection, Deserialization, JPA injection, 
 ## ASP.NET Core
 
 Sub-topics: Mass assignment, DataProtection keys, Kestrel limits, Blazor Server state, Minimal APIs auth
+
+### Do
+
+- Validate and canonicalize all inputs touching ASP.NET Core; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to ASP.NET Core.
+- Keep dependencies patched; pin versions for ASP.NET Core components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Mass assignment, DataProtection keys, Kestrel limits, Blazor Server 
 
 Sub-topics: Strong params, Mass assignment, Blade unescaped, Queue workers, Debug bar prod
 
+### Do
+
+- Validate and canonicalize all inputs touching Ruby on Rails and Laravel; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Ruby on Rails and Laravel.
+- Keep dependencies patched; pin versions for Ruby on Rails and Laravel components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Ruby on Rails and Laravel in Ruby on Rails and Laravel as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Strong params, Mass assignment, Blade unescaped, Queue workers, Debu
 ## Go net/http and Gin
 
 Sub-topics: Handler auth middleware, Template html/template, Race in handlers, pprof exposure, JWT libraries
+
+### Do
+
+- Validate and canonicalize all inputs touching Go net/http and Gin; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Go net/http and Gin.
+- Keep dependencies patched; pin versions for Go net/http and Gin components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Handler auth middleware, Template html/template, Race in handlers, p
 
 Sub-topics: unsafe blocks, SQLx literals, Tokio spawn abuse, Serde untagged, Cargo audit
 
+### Do
+
+- Validate and canonicalize all inputs touching Rust web stacks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Rust web stacks.
+- Keep dependencies patched; pin versions for Rust web stacks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Rust web stacks in Rust web stacks as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: unsafe blocks, SQLx literals, Tokio spawn abuse, Serde untagged, Car
 ## PHP and WordPress class apps
 
 Sub-topics: include paths, unserialize, upload dirs, wp-admin hardening, Composer vendors
+
+### Do
+
+- Validate and canonicalize all inputs touching PHP and WordPress class apps; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to PHP and WordPress class apps.
+- Keep dependencies patched; pin versions for PHP and WordPress class apps components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: include paths, unserialize, upload dirs, wp-admin hardening, Compose
 
 Sub-topics: Resolver authz, DataLoader leaks, Introspection prod, Query cost, Subscriptions
 
+### Do
+
+- Validate and canonicalize all inputs touching GraphQL server frameworks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to GraphQL server frameworks.
+- Keep dependencies patched; pin versions for GraphQL server frameworks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat GraphQL server frameworks in GraphQL server frameworks as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Resolver authz, DataLoader leaks, Introspection prod, Query cost, Su
 ## Serverless framework adapters
 
 Sub-topics: Chalice, Serverless.yml secrets, SAM templates, Cold start IAM, Local invoke creds
+
+### Do
+
+- Validate and canonicalize all inputs touching Serverless framework adapters; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Serverless framework adapters.
+- Keep dependencies patched; pin versions for Serverless framework adapters components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

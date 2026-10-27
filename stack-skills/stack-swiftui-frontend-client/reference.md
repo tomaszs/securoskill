@@ -6,276 +6,213 @@ Stack-specific implementation for **SwiftUI (iOS)** (Mobile). Normative rules: d
 
 **Sub-topics:** HTML injection in templates, dangerouslySetInnerHTML / v-html, URL fragment and postMessage handlers, Markdown and rich text renderers, SVG and MathML sinks
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Cross-site scripting (reflected, stored, DOM); never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cross-site scripting (reflected, stored, DOM).
-- Keep dependencies patched; pin versions for Cross-site scripting (reflected, stored, DOM) components.
+- Encode all user-controlled output at the UI sink for this stack.
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- When SwiftUI (iOS) renders HTML or rich text, use framework escaping and CSP as in security-frontend-client.
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Cross-site scripting (reflected, stored, DOM) before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not mix untrusted HTML with framework escape boundaries.
 
 ### Verify
 
-- Add automated tests for Cross-site scripting (reflected, stored, DOM) paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- Manual XSS test cases on forms and rich text.
 
 ## CSRF and clickjacking
 
 **Sub-topics:** Form posts, Cookie-based sessions, iframes, Cross-origin embeds, Threat modeling and trust boundaries (CSRF and clickjacking)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching CSRF and clickjacking; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CSRF and clickjacking.
-- Keep dependencies patched; pin versions for CSRF and clickjacking components.
+- Protect cookie-authenticated mutations with CSRF tokens or SameSite + custom headers.
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CSRF and clickjacking before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not rely on CORS alone to prevent CSRF.
 
 ### Verify
 
-- Add automated tests for CSRF and clickjacking paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- Add automated abuse-case tests for CSRF and clickjacking in SwiftUI (iOS).
+- Run SAST and dependency scans for Mobile in CI.
 
 ## localStorage, sessionStorage, IndexedDB
 
 **Sub-topics:** Token storage, PII in browser, Cache poisoning, Threat modeling and trust boundaries (localStorage, sessionStorage, IndexedDB), Abuse cases and adversarial testing (localStorage, sessionStorage, IndexedDB)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching localStorage, sessionStorage, IndexedDB; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to localStorage, sessionStorage, IndexedDB.
-- Keep dependencies patched; pin versions for localStorage, sessionStorage, IndexedDB components.
+- Apply domain skill `security-frontend-client` requirements using swiftui supported APIs only.
+- Use the official swiftui security documentation for browser_storage controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for localStorage, sessionStorage, IndexedDB before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of swiftui for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for localStorage, sessionStorage, IndexedDB paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- Run stack-appropriate SAST/DAST on swiftui projects in CI.
 
 ## Content Security Policy and security headers
 
 **Sub-topics:** CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, Threat modeling and trust boundaries (Content Security Policy and security headers)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Content Security Policy and security headers; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Content Security Policy and security headers.
-- Keep dependencies patched; pin versions for Content Security Policy and security headers components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Content Security Policy and security headers before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Content Security Policy and security headers paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## SSR and hydration security
 
 **Sub-topics:** Serialized state, HTML injection at render, Islands architecture, Threat modeling and trust boundaries (SSR and hydration security), Abuse cases and adversarial testing (SSR and hydration security)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching SSR and hydration security; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SSR and hydration security.
-- Keep dependencies patched; pin versions for SSR and hydration security components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SSR and hydration security before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for SSR and hydration security paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Web Workers and WebAssembly
 
 **Sub-topics:** Shared memory, postMessage trust, Wasm module integrity, Threat modeling and trust boundaries (Web Workers and WebAssembly), Abuse cases and adversarial testing (Web Workers and WebAssembly)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Web Workers and WebAssembly; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Web Workers and WebAssembly.
-- Keep dependencies patched; pin versions for Web Workers and WebAssembly components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Web Workers and WebAssembly before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Web Workers and WebAssembly paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Third-party scripts and tags
 
 **Sub-topics:** Analytics, Chat widgets, Tag managers, Subresource Integrity, Threat modeling and trust boundaries (Third-party scripts and tags)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Third-party scripts and tags; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Third-party scripts and tags.
-- Keep dependencies patched; pin versions for Third-party scripts and tags components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Third-party scripts and tags before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Third-party scripts and tags paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Frontend auth flows
 
 **Sub-topics:** OAuth redirects, PKCE, Implicit flow avoidance, Token in URL, Threat modeling and trust boundaries (Frontend auth flows)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Frontend auth flows; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Frontend auth flows.
-- Keep dependencies patched; pin versions for Frontend auth flows components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Frontend auth flows before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Frontend auth flows paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Client-side file upload UX
 
 **Sub-topics:** Type sniffing, Preview gadgets, Size limits, Threat modeling and trust boundaries (Client-side file upload UX), Abuse cases and adversarial testing (Client-side file upload UX)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Client-side file upload UX; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Client-side file upload UX.
-- Keep dependencies patched; pin versions for Client-side file upload UX components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Client-side file upload UX before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Client-side file upload UX paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Accessibility vs security UX
 
 **Sub-topics:** Captcha, Rate limit messaging, Screen reader safe errors, Threat modeling and trust boundaries (Accessibility vs security UX), Abuse cases and adversarial testing (Accessibility vs security UX)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Accessibility vs security UX; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Accessibility vs security UX.
-- Keep dependencies patched; pin versions for Accessibility vs security UX components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Accessibility vs security UX before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Accessibility vs security UX paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Mobile web and PWA
 
 **Sub-topics:** Service workers, Web push, App shell caching, Threat modeling and trust boundaries (Mobile web and PWA), Abuse cases and adversarial testing (Mobile web and PWA)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Mobile web and PWA; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile web and PWA.
-- Keep dependencies patched; pin versions for Mobile web and PWA components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Mobile web and PWA before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Mobile web and PWA paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 
 ## Frontend dependency risk
 
 **Sub-topics:** npm supply chain, Transitive packages, CDN compromise, Threat modeling and trust boundaries (Frontend dependency risk), Abuse cases and adversarial testing (Frontend dependency risk)
 
-### Platform rules (summary)
+### Do (use this in SwiftUI (iOS))
 
-- Validate and canonicalize all inputs touching Frontend dependency risk; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Frontend dependency risk.
-- Keep dependencies patched; pin versions for Frontend dependency risk components.
+- Store tokens in Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`.
+- Use ATS (HTTPS).
 
-### How to do this in SwiftUI (iOS)
+### Don't
 
-- Read normative rules in domain skill `security-frontend-client` / `reference.md`, then apply them using SwiftUI (iOS) APIs and deployment model.
-- Prefer framework-maintained security features in SwiftUI (iOS) over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Frontend dependency risk before merge.
-- Pin SwiftUI (iOS) dependencies; monitor CVE advisories for your stack.
+- Do not store secrets in UserDefaults.
+- Do not disable ATS globally.
 
 ### Verify
 
-- Add automated tests for Frontend dependency risk paths in SwiftUI (iOS).
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on IPA.
 

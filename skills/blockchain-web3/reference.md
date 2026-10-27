@@ -6,6 +6,18 @@ On-chain logic, wallets, and decentralized apps.
 
 Sub-topics: Reentrancy, Integer overflow, Unchecked calls, Delegatecall, Tx.origin auth
 
+### Do
+
+- Validate and canonicalize all inputs touching Smart contract vulnerabilities; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Smart contract vulnerabilities.
+- Keep dependencies patched; pin versions for Smart contract vulnerabilities components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Smart contract vulnerabilities in Smart contract vulnerabilities as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Reentrancy, Integer overflow, Unchecked calls, Delegatecall, Tx.orig
 ## On-chain access control
 
 Sub-topics:  Ownable, Roles, Timelocks, Multisig, Upgrade proxies
+
+### Do
+
+- Validate and canonicalize all inputs touching On-chain access control; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain access control.
+- Keep dependencies patched; pin versions for On-chain access control components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics:  Ownable, Roles, Timelocks, Multisig, Upgrade proxies
 
 Sub-topics: Price manipulation, Stale data, Flash loans, Bridge trust, Signature replay
 
+### Do
+
+- Validate and canonicalize all inputs touching Oracles and external data; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Oracles and external data.
+- Keep dependencies patched; pin versions for Oracles and external data components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Oracles and external data in Oracles and external data as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Price manipulation, Stale data, Flash loans, Bridge trust, Signature
 ## Wallet and key security
 
 Sub-topics: Seed phrases, Hardware wallets, Browser extensions, Phishing sites, Clipboard malware
+
+### Do
+
+- Validate and canonicalize all inputs touching Wallet and key security; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Wallet and key security.
+- Keep dependencies patched; pin versions for Wallet and key security components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Seed phrases, Hardware wallets, Browser extensions, Phishing sites, 
 
 Sub-topics: RPC endpoints, Chain ID, Wallet connect, Transaction preview, Malicious approvals
 
+### Do
+
+- Validate and canonicalize all inputs touching dApp frontends; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to dApp frontends.
+- Keep dependencies patched; pin versions for dApp frontends components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat dApp frontends in dApp frontends as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: RPC endpoints, Chain ID, Wallet connect, Transaction preview, Malici
 ## Token standards
 
 Sub-topics: ERC-20 quirks, ERC-721 callbacks, Permit signatures, Infinite approve, Fee-on-transfer
+
+### Do
+
+- Validate and canonicalize all inputs touching Token standards; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Token standards.
+- Keep dependencies patched; pin versions for Token standards components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: ERC-20 quirks, ERC-721 callbacks, Permit signatures, Infinite approv
 
 Sub-topics: Liquidity pools, Governance attacks, MEV, Sandwiching, Rug patterns
 
+### Do
+
+- Validate and canonicalize all inputs touching DeFi composability; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DeFi composability.
+- Keep dependencies patched; pin versions for DeFi composability components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat DeFi composability in DeFi composability as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Liquidity pools, Governance attacks, MEV, Sandwiching, Rug patterns
 ## NFTs and metadata
 
 Sub-topics: Off-chain metadata, IPFS pinning, Royalty bypass, Signature mint, Open redirects
+
+### Do
+
+- Validate and canonicalize all inputs touching NFTs and metadata; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to NFTs and metadata.
+- Keep dependencies patched; pin versions for NFTs and metadata components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Off-chain metadata, IPFS pinning, Royalty bypass, Signature mint, Op
 
 Sub-topics: Withdrawal delays, Sequencer trust, Bridge exploits, Finality, Replay across chains
 
+### Do
+
+- Validate and canonicalize all inputs touching L2 and bridges; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to L2 and bridges.
+- Keep dependencies patched; pin versions for L2 and bridges components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat L2 and bridges in L2 and bridges as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Withdrawal delays, Sequencer trust, Bridge exploits, Finality, Repla
 ## Audit and formal methods
 
 Sub-topics: Slither, Mythril, Invariant tests, Bug bounty, Immunefi
+
+### Do
+
+- Validate and canonicalize all inputs touching Audit and formal methods; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Audit and formal methods.
+- Keep dependencies patched; pin versions for Audit and formal methods components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Slither, Mythril, Invariant tests, Bug bounty, Immunefi
 
 Sub-topics: Address linking, Mixer legal risk, ZK proofs, Metadata leaks, KYC on ramps
 
+### Do
+
+- Validate and canonicalize all inputs touching On-chain privacy; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-chain privacy.
+- Keep dependencies patched; pin versions for On-chain privacy components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat On-chain privacy in On-chain privacy as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Address linking, Mixer legal risk, ZK proofs, Metadata leaks, KYC on
 ## Compliance and sanctions
 
 Sub-topics: OFAC lists, Travel rule, Geoblocking, Securities law, Tax reporting
+
+### Do
+
+- Validate and canonicalize all inputs touching Compliance and sanctions; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compliance and sanctions.
+- Keep dependencies patched; pin versions for Compliance and sanctions components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

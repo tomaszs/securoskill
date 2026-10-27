@@ -6,6 +6,18 @@ Electron, Tauri, OS APIs, and installed software.
 
 Sub-topics: nodeIntegration, contextIsolation, Remote module, Preload scripts, Custom protocols
 
+### Do
+
+- Validate and canonicalize all inputs touching Electron hardening; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Electron hardening.
+- Keep dependencies patched; pin versions for Electron hardening components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Electron hardening in Electron hardening as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: nodeIntegration, contextIsolation, Remote module, Preload scripts, C
 ## Tauri and hybrid native
 
 Sub-topics: IPC surface, Capability permissions, Rust side APIs, Webview updates, Deep links
+
+### Do
+
+- Validate and canonicalize all inputs touching Tauri and hybrid native; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tauri and hybrid native.
+- Keep dependencies patched; pin versions for Tauri and hybrid native components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: IPC surface, Capability permissions, Rust side APIs, Webview updates
 
 Sub-topics: Code signing, Update signatures, Downgrade attacks, CDN compromise, Delta patches
 
+### Do
+
+- Validate and canonicalize all inputs touching Auto-update channels; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Auto-update channels.
+- Keep dependencies patched; pin versions for Auto-update channels components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Auto-update channels in Auto-update channels as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Code signing, Update signatures, Downgrade attacks, CDN compromise, 
 ## OS sandbox and permissions
 
 Sub-topics: macOS sandbox, Windows capabilities, Linux portals, UAC prompts, TCC on macOS
+
+### Do
+
+- Validate and canonicalize all inputs touching OS sandbox and permissions; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to OS sandbox and permissions.
+- Keep dependencies patched; pin versions for OS sandbox and permissions components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: macOS sandbox, Windows capabilities, Linux portals, UAC prompts, TCC
 
 Sub-topics: Installer perms, DLL hijacking, Setuid helpers, Symbolic links, Shatter attacks
 
+### Do
+
+- Validate and canonicalize all inputs touching Local privilege escalation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Local privilege escalation.
+- Keep dependencies patched; pin versions for Local privilege escalation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Local privilege escalation in Local privilege escalation as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Installer perms, DLL hijacking, Setuid helpers, Symbolic links, Shat
 ## Clipboard and screen capture
 
 Sub-topics: Sensitive copy, Overlay malware, Screen recording APIs, Notification leaks, Memory scraping
+
+### Do
+
+- Validate and canonicalize all inputs touching Clipboard and screen capture; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Clipboard and screen capture.
+- Keep dependencies patched; pin versions for Clipboard and screen capture components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Sensitive copy, Overlay malware, Screen recording APIs, Notification
 
 Sub-topics: Custom scheme handlers, Path traversal open, Macro documents, Drag-drop, UNC paths
 
+### Do
+
+- Validate and canonicalize all inputs touching File handlers and URIs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to File handlers and URIs.
+- Keep dependencies patched; pin versions for File handlers and URIs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat File handlers and URIs in File handlers and URIs as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Custom scheme handlers, Path traversal open, Macro documents, Drag-d
 ## IPC between components
 
 Sub-topics: Named pipes, DBus, XPC, COM objects, Message validation
+
+### Do
+
+- Validate and canonicalize all inputs touching IPC between components; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to IPC between components.
+- Keep dependencies patched; pin versions for IPC between components components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Named pipes, DBus, XPC, COM objects, Message validation
 
 Sub-topics: Keychain, Credential Manager, Secret Service, Biometric APIs, Master password
 
+### Do
+
+- Validate and canonicalize all inputs touching OS credential storage; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to OS credential storage.
+- Keep dependencies patched; pin versions for OS credential storage components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat OS credential storage in OS credential storage as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Keychain, Credential Manager, Secret Service, Biometric APIs, Master
 ## Debug symbols and dumps
 
 Sub-topics: Crash reports PII, Core dumps, Symbol servers, Reversing resistance, Obfuscation limits
+
+### Do
+
+- Validate and canonicalize all inputs touching Debug symbols and dumps; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Debug symbols and dumps.
+- Keep dependencies patched; pin versions for Debug symbols and dumps components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Crash reports PII, Core dumps, Symbol servers, Reversing resistance,
 
 Sub-topics: MDM packages, Notarization, SmartScreen, Gatekeeper, AppLocker
 
+### Do
+
+- Validate and canonicalize all inputs touching Enterprise deployment; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Enterprise deployment.
+- Keep dependencies patched; pin versions for Enterprise deployment components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Enterprise deployment in Enterprise deployment as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: MDM packages, Notarization, SmartScreen, Gatekeeper, AppLocker
 ## Offline-first apps
 
 Sub-topics: Local DB encryption, Sync conflict, Cached tokens, Backup files, Shared machines
+
+### Do
+
+- Validate and canonicalize all inputs touching Offline-first apps; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Offline-first apps.
+- Keep dependencies patched; pin versions for Offline-first apps components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -6,275 +6,217 @@ Stack-specific implementation for **Kotlin / Jetpack Compose** (Mobile). Normati
 
 **Sub-topics:** Overprivileged roles, IAM conditions, Threat modeling and trust boundaries (Cloud IAM), Abuse cases and adversarial testing (Cloud IAM), Logging, audit, and detection (Cloud IAM)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Cloud IAM; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud IAM.
-- Keep dependencies patched; pin versions for Cloud IAM components.
+- Apply domain skill `security-cloud-infrastructure` requirements using kotlin-compose supported APIs only.
+- Use the official kotlin-compose security documentation for cloud_iam controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Cloud IAM before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of kotlin-compose for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Cloud IAM paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- Run stack-appropriate SAST/DAST on kotlin-compose projects in CI.
 
 ## Object storage buckets
 
 **Sub-topics:** Public ACLs, Policy mistakes, Threat modeling and trust boundaries (Object storage buckets), Abuse cases and adversarial testing (Object storage buckets), Logging, audit, and detection (Object storage buckets)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Object storage buckets; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Object storage buckets.
-- Keep dependencies patched; pin versions for Object storage buckets components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Object storage buckets before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Object storage buckets paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## Compute instances
 
 **Sub-topics:** IMDSv2, SSH keys, Metadata, Threat modeling and trust boundaries (Compute instances), Abuse cases and adversarial testing (Compute instances)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Compute instances; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compute instances.
-- Keep dependencies patched; pin versions for Compute instances components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Compute instances before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Compute instances paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## Managed serverless
 
 **Sub-topics:** Function URLs, Concurrency, Threat modeling and trust boundaries (Managed serverless), Abuse cases and adversarial testing (Managed serverless), Logging, audit, and detection (Managed serverless)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Managed serverless; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Managed serverless.
-- Keep dependencies patched; pin versions for Managed serverless components.
+- Apply domain skill `security-cloud-infrastructure` requirements using kotlin-compose supported APIs only.
+- Use the official kotlin-compose security documentation for serverless controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Managed serverless before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of kotlin-compose for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Managed serverless paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- Run stack-appropriate SAST/DAST on kotlin-compose projects in CI.
 
 ## Secrets managers
 
 **Sub-topics:** Rotation, Access policies, Threat modeling and trust boundaries (Secrets managers), Abuse cases and adversarial testing (Secrets managers), Logging, audit, and detection (Secrets managers)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Secrets managers; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secrets managers.
-- Keep dependencies patched; pin versions for Secrets managers components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Secrets managers before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Secrets managers paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## VPC and security groups
 
 **Sub-topics:** 0.0.0.0/0, Peering leaks, Threat modeling and trust boundaries (VPC and security groups), Abuse cases and adversarial testing (VPC and security groups), Logging, audit, and detection (VPC and security groups)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching VPC and security groups; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to VPC and security groups.
-- Keep dependencies patched; pin versions for VPC and security groups components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for VPC and security groups before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for VPC and security groups paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## Cloud audit logs
 
 **Sub-topics:** Tampering, Retention, Threat modeling and trust boundaries (Cloud audit logs), Abuse cases and adversarial testing (Cloud audit logs), Logging, audit, and detection (Cloud audit logs)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Cloud audit logs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Cloud audit logs.
-- Keep dependencies patched; pin versions for Cloud audit logs components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Cloud audit logs before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Cloud audit logs paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## Infrastructure as code
 
 **Sub-topics:** State files, Drift, Threat modeling and trust boundaries (Infrastructure as code), Abuse cases and adversarial testing (Infrastructure as code), Logging, audit, and detection (Infrastructure as code)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Infrastructure as code; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Infrastructure as code.
-- Keep dependencies patched; pin versions for Infrastructure as code components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Infrastructure as code before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Infrastructure as code paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## Multi-cloud identity
 
 **Sub-topics:** Federation, Key sprawl, Threat modeling and trust boundaries (Multi-cloud identity), Abuse cases and adversarial testing (Multi-cloud identity), Logging, audit, and detection (Multi-cloud identity)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching Multi-cloud identity; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-cloud identity.
-- Keep dependencies patched; pin versions for Multi-cloud identity components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-cloud identity before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for Multi-cloud identity paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## SaaS admin consoles
 
 **Sub-topics:** MFA, SCIM, Threat modeling and trust boundaries (SaaS admin consoles), Abuse cases and adversarial testing (SaaS admin consoles), Logging, audit, and detection (SaaS admin consoles)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching SaaS admin consoles; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SaaS admin consoles.
-- Keep dependencies patched; pin versions for SaaS admin consoles components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SaaS admin consoles before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for SaaS admin consoles paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## CDN and edge
 
 **Sub-topics:** Cache deception, Origin shield, Threat modeling and trust boundaries (CDN and edge), Abuse cases and adversarial testing (CDN and edge), Logging, audit, and detection (CDN and edge)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching CDN and edge; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CDN and edge.
-- Keep dependencies patched; pin versions for CDN and edge components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CDN and edge before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for CDN and edge paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 
 ## DR and regions
 
 **Sub-topics:** Failover security, Data residency, Threat modeling and trust boundaries (DR and regions), Abuse cases and adversarial testing (DR and regions), Logging, audit, and detection (DR and regions)
 
-### Platform rules (summary)
+### Do (use this in Kotlin / Jetpack Compose)
 
-- Validate and canonicalize all inputs touching DR and regions; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to DR and regions.
-- Keep dependencies patched; pin versions for DR and regions components.
+- Use EncryptedSharedPreferences or Keystore for secrets.
+- Set `android:usesCleartextTraffic=false`.
 
-### How to do this in Kotlin / Jetpack Compose
+### Don't
 
-- Read normative rules in domain skill `security-cloud-infrastructure` / `reference.md`, then apply them using Kotlin / Jetpack Compose APIs and deployment model.
-- Prefer framework-maintained security features in Kotlin / Jetpack Compose over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for DR and regions before merge.
-- Pin Kotlin / Jetpack Compose dependencies; monitor CVE advisories for your stack.
+- Do not store tokens in plain SharedPreferences.
+- Do not export components without permissions.
 
 ### Verify
 
-- Add automated tests for DR and regions paths in Kotlin / Jetpack Compose.
-- Run SAST/dependency scan configured for Mobile.
+- MobSF scan on APK/AAB.
 

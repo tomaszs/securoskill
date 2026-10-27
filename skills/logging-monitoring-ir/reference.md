@@ -6,6 +6,18 @@ Detect, respond, and learn from security events.
 
 Sub-topics: Correlation IDs, PII redaction, Threat modeling and trust boundaries (Structured logging), Abuse cases and adversarial testing (Structured logging), Logging, audit, and detection (Structured logging)
 
+### Do
+
+- Validate and canonicalize all inputs touching Structured logging; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Structured logging.
+- Keep dependencies patched; pin versions for Structured logging components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Structured logging in Structured logging as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Correlation IDs, PII redaction, Threat modeling and trust boundaries
 ## SIEM and alerting
 
 Sub-topics: Noise, Tuning, Threat modeling and trust boundaries (SIEM and alerting), Abuse cases and adversarial testing (SIEM and alerting), Logging, audit, and detection (SIEM and alerting)
+
+### Do
+
+- Validate and canonicalize all inputs touching SIEM and alerting; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SIEM and alerting.
+- Keep dependencies patched; pin versions for SIEM and alerting components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Noise, Tuning, Threat modeling and trust boundaries (SIEM and alerti
 
 Sub-topics: Tamper evidence, Clock sync, Threat modeling and trust boundaries (Audit trails), Abuse cases and adversarial testing (Audit trails), Logging, audit, and detection (Audit trails)
 
+### Do
+
+- Validate and canonicalize all inputs touching Audit trails; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Audit trails.
+- Keep dependencies patched; pin versions for Audit trails components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Audit trails in Audit trails as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Tamper evidence, Clock sync, Threat modeling and trust boundaries (A
 ## Incident response playbooks
 
 Sub-topics: Roles, Comms, Threat modeling and trust boundaries (Incident response playbooks), Abuse cases and adversarial testing (Incident response playbooks), Logging, audit, and detection (Incident response playbooks)
+
+### Do
+
+- Validate and canonicalize all inputs touching Incident response playbooks; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Incident response playbooks.
+- Keep dependencies patched; pin versions for Incident response playbooks components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Roles, Comms, Threat modeling and trust boundaries (Incident respons
 
 Sub-topics: Memory dumps, Chain of custody, Threat modeling and trust boundaries (Forensics readiness), Abuse cases and adversarial testing (Forensics readiness), Logging, audit, and detection (Forensics readiness)
 
+### Do
+
+- Validate and canonicalize all inputs touching Forensics readiness; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Forensics readiness.
+- Keep dependencies patched; pin versions for Forensics readiness components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Forensics readiness in Forensics readiness as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Memory dumps, Chain of custody, Threat modeling and trust boundaries
 ## Vulnerability disclosure
 
 Sub-topics: Safe harbor, SLAs, Threat modeling and trust boundaries (Vulnerability disclosure), Abuse cases and adversarial testing (Vulnerability disclosure), Logging, audit, and detection (Vulnerability disclosure)
+
+### Do
+
+- Validate and canonicalize all inputs touching Vulnerability disclosure; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vulnerability disclosure.
+- Keep dependencies patched; pin versions for Vulnerability disclosure components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Safe harbor, SLAs, Threat modeling and trust boundaries (Vulnerabili
 
 Sub-topics: Escalation, Paging hygiene, Threat modeling and trust boundaries (Security on-call), Abuse cases and adversarial testing (Security on-call), Logging, audit, and detection (Security on-call)
 
+### Do
+
+- Validate and canonicalize all inputs touching Security on-call; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security on-call.
+- Keep dependencies patched; pin versions for Security on-call components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Security on-call in Security on-call as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Escalation, Paging hygiene, Threat modeling and trust boundaries (Se
 ## Security metrics
 
 Sub-topics: MTTD, Patch latency, Threat modeling and trust boundaries (Security metrics), Abuse cases and adversarial testing (Security metrics), Logging, audit, and detection (Security metrics)
+
+### Do
+
+- Validate and canonicalize all inputs touching Security metrics; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security metrics.
+- Keep dependencies patched; pin versions for Security metrics components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: MTTD, Patch latency, Threat modeling and trust boundaries (Security 
 
 Sub-topics: Legal, Scope, Threat modeling and trust boundaries (Deception and honeypots), Abuse cases and adversarial testing (Deception and honeypots), Logging, audit, and detection (Deception and honeypots)
 
+### Do
+
+- Validate and canonicalize all inputs touching Deception and honeypots; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Deception and honeypots.
+- Keep dependencies patched; pin versions for Deception and honeypots components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Deception and honeypots in Deception and honeypots as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Legal, Scope, Threat modeling and trust boundaries (Deception and ho
 ## UEBA
 
 Sub-topics: Insider threat, False positives, Threat modeling and trust boundaries (UEBA), Abuse cases and adversarial testing (UEBA), Logging, audit, and detection (UEBA)
+
+### Do
+
+- Validate and canonicalize all inputs touching UEBA; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to UEBA.
+- Keep dependencies patched; pin versions for UEBA components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Insider threat, False positives, Threat modeling and trust boundarie
 
 Sub-topics: Blameless, Tracking, Threat modeling and trust boundaries (Post-incident review), Abuse cases and adversarial testing (Post-incident review), Logging, audit, and detection (Post-incident review)
 
+### Do
+
+- Validate and canonicalize all inputs touching Post-incident review; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Post-incident review.
+- Keep dependencies patched; pin versions for Post-incident review components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Post-incident review in Post-incident review as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Blameless, Tracking, Threat modeling and trust boundaries (Post-inci
 ## Lawful access logs
 
 Sub-topics: Subpoena, Customer notice, Threat modeling and trust boundaries (Lawful access logs), Abuse cases and adversarial testing (Lawful access logs), Logging, audit, and detection (Lawful access logs)
+
+### Do
+
+- Validate and canonicalize all inputs touching Lawful access logs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Lawful access logs.
+- Keep dependencies patched; pin versions for Lawful access logs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

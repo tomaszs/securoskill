@@ -6,6 +6,18 @@ How teams embed security before code ships.
 
 Sub-topics: Diagrams, Trust boundaries, Threat modeling and trust boundaries (STRIDE and threat models), Abuse cases and adversarial testing (STRIDE and threat models), Logging, audit, and detection (STRIDE and threat models)
 
+### Do
+
+- Validate and canonicalize all inputs touching STRIDE and threat models; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to STRIDE and threat models.
+- Keep dependencies patched; pin versions for STRIDE and threat models components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat STRIDE and threat models in STRIDE and threat models as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Diagrams, Trust boundaries, Threat modeling and trust boundaries (ST
 ## Security requirements
 
 Sub-topics: Non-functionals, Acceptance, Threat modeling and trust boundaries (Security requirements), Abuse cases and adversarial testing (Security requirements), Logging, audit, and detection (Security requirements)
+
+### Do
+
+- Validate and canonicalize all inputs touching Security requirements; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security requirements.
+- Keep dependencies patched; pin versions for Security requirements components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Non-functionals, Acceptance, Threat modeling and trust boundaries (S
 
 Sub-topics: Checklists, Sign-off, Threat modeling and trust boundaries (Design review), Abuse cases and adversarial testing (Design review), Logging, audit, and detection (Design review)
 
+### Do
+
+- Validate and canonicalize all inputs touching Design review; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Design review.
+- Keep dependencies patched; pin versions for Design review components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Design review in Design review as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Checklists, Sign-off, Threat modeling and trust boundaries (Design r
 ## Security-focused code review
 
 Sub-topics: Hotspots, Threat modeling and trust boundaries (Security-focused code review), Abuse cases and adversarial testing (Security-focused code review), Logging, audit, and detection (Security-focused code review), Access control and least privilege (Security-focused code review)
+
+### Do
+
+- Validate and canonicalize all inputs touching Security-focused code review; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security-focused code review.
+- Keep dependencies patched; pin versions for Security-focused code review components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Hotspots, Threat modeling and trust boundaries (Security-focused cod
 
 Sub-topics: Coverage maps, Threat modeling and trust boundaries (Security test planning), Abuse cases and adversarial testing (Security test planning), Logging, audit, and detection (Security test planning), Access control and least privilege (Security test planning)
 
+### Do
+
+- Validate and canonicalize all inputs touching Security test planning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Security test planning.
+- Keep dependencies patched; pin versions for Security test planning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Security test planning in Security test planning as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Coverage maps, Threat modeling and trust boundaries (Security test p
 ## Secure defaults culture
 
 Sub-topics: Templates, Golden paths, Threat modeling and trust boundaries (Secure defaults culture), Abuse cases and adversarial testing (Secure defaults culture), Logging, audit, and detection (Secure defaults culture)
+
+### Do
+
+- Validate and canonicalize all inputs touching Secure defaults culture; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Secure defaults culture.
+- Keep dependencies patched; pin versions for Secure defaults culture components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Templates, Golden paths, Threat modeling and trust boundaries (Secur
 
 Sub-topics: Labs, Phishing sims, Threat modeling and trust boundaries (Developer education), Abuse cases and adversarial testing (Developer education), Logging, audit, and detection (Developer education)
 
+### Do
+
+- Validate and canonicalize all inputs touching Developer education; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Developer education.
+- Keep dependencies patched; pin versions for Developer education components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Developer education in Developer education as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: Labs, Phishing sims, Threat modeling and trust boundaries (Developer
 ## Vendor security assessment
 
 Sub-topics: Questionnaires, Threat modeling and trust boundaries (Vendor security assessment), Abuse cases and adversarial testing (Vendor security assessment), Logging, audit, and detection (Vendor security assessment), Access control and least privilege (Vendor security assessment)
+
+### Do
+
+- Validate and canonicalize all inputs touching Vendor security assessment; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Vendor security assessment.
+- Keep dependencies patched; pin versions for Vendor security assessment components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: Questionnaires, Threat modeling and trust boundaries (Vendor securit
 
 Sub-topics: Security ADRs, Threat modeling and trust boundaries (Architecture decision records), Abuse cases and adversarial testing (Architecture decision records), Logging, audit, and detection (Architecture decision records), Access control and least privilege (Architecture decision records)
 
+### Do
+
+- Validate and canonicalize all inputs touching Architecture decision records; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Architecture decision records.
+- Keep dependencies patched; pin versions for Architecture decision records components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Architecture decision records in Architecture decision records as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Security ADRs, Threat modeling and trust boundaries (Architecture de
 ## Attack surface management
 
 Sub-topics: Inventory, Exposure, Threat modeling and trust boundaries (Attack surface management), Abuse cases and adversarial testing (Attack surface management), Logging, audit, and detection (Attack surface management)
+
+### Do
+
+- Validate and canonicalize all inputs touching Attack surface management; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Attack surface management.
+- Keep dependencies patched; pin versions for Attack surface management components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Inventory, Exposure, Threat modeling and trust boundaries (Attack su
 
 Sub-topics: Scenarios, Threat modeling and trust boundaries (Purple team exercises), Abuse cases and adversarial testing (Purple team exercises), Logging, audit, and detection (Purple team exercises), Access control and least privilege (Purple team exercises)
 
+### Do
+
+- Validate and canonicalize all inputs touching Purple team exercises; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Purple team exercises.
+- Keep dependencies patched; pin versions for Purple team exercises components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Purple team exercises in Purple team exercises as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Scenarios, Threat modeling and trust boundaries (Purple team exercis
 ## SDL metrics
 
 Sub-topics: Defect density, Lead time, Threat modeling and trust boundaries (SDL metrics), Abuse cases and adversarial testing (SDL metrics), Logging, audit, and detection (SDL metrics)
+
+### Do
+
+- Validate and canonicalize all inputs touching SDL metrics; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SDL metrics.
+- Keep dependencies patched; pin versions for SDL metrics components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

@@ -17,5 +17,5 @@ You are working in **Redis** and need concrete guidance for **zero trust and sec
 ## Workflow
 
 1. Match your feature to sub-areas in `reference.md`.
-2. Implement using stack-specific bullets under **How to do this in Redis**.
-3. Confirm verification steps before merge.
+2. Follow **Do** / **Don't** lists in `reference.md` for this stack.
+3. Confirm **Verify** steps before merge.

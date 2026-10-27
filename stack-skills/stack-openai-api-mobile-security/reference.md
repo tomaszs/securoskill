@@ -6,299 +6,227 @@ Stack-specific implementation for **OpenAI API / Agents SDK** (AI). Normative ru
 
 **Sub-topics:** Keychain, Keystore, SQLite, Threat modeling and trust boundaries (On-device storage), Abuse cases and adversarial testing (On-device storage)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching On-device storage; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to On-device storage.
-- Keep dependencies patched; pin versions for On-device storage components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for On-device storage before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for On-device storage paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Certificate pinning
 
 **Sub-topics:** Bypass tools, Rotation, Threat modeling and trust boundaries (Certificate pinning), Abuse cases and adversarial testing (Certificate pinning), Logging, audit, and detection (Certificate pinning)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Certificate pinning; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Certificate pinning.
-- Keep dependencies patched; pin versions for Certificate pinning components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Certificate pinning before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Certificate pinning paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Reverse engineering resistance
 
 **Sub-topics:** Obfuscation limits, Threat modeling and trust boundaries (Reverse engineering resistance), Abuse cases and adversarial testing (Reverse engineering resistance), Logging, audit, and detection (Reverse engineering resistance), Access control and least privilege (Reverse engineering resistance)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Reverse engineering resistance; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Reverse engineering resistance.
-- Keep dependencies patched; pin versions for Reverse engineering resistance components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Reverse engineering resistance before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Reverse engineering resistance paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Deep links and intents
 
 **Sub-topics:** URL scheme hijack, Threat modeling and trust boundaries (Deep links and intents), Abuse cases and adversarial testing (Deep links and intents), Logging, audit, and detection (Deep links and intents), Access control and least privilege (Deep links and intents)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Deep links and intents; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Deep links and intents.
-- Keep dependencies patched; pin versions for Deep links and intents components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Deep links and intents before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Deep links and intents paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Mobile OAuth
 
 **Sub-topics:** PKCE, Custom URL schemes, Threat modeling and trust boundaries (Mobile OAuth), Abuse cases and adversarial testing (Mobile OAuth), Logging, audit, and detection (Mobile OAuth)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Mobile OAuth; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile OAuth.
-- Keep dependencies patched; pin versions for Mobile OAuth components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Mobile OAuth before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Mobile OAuth paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Biometric APIs
 
 **Sub-topics:** Fallback PIN, Threat modeling and trust boundaries (Biometric APIs), Abuse cases and adversarial testing (Biometric APIs), Logging, audit, and detection (Biometric APIs), Access control and least privilege (Biometric APIs)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Biometric APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Biometric APIs.
-- Keep dependencies patched; pin versions for Biometric APIs components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Biometric APIs before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Biometric APIs paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## WebView bridges
 
 **Sub-topics:** JS interfaces, Threat modeling and trust boundaries (WebView bridges), Abuse cases and adversarial testing (WebView bridges), Logging, audit, and detection (WebView bridges), Access control and least privilege (WebView bridges)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching WebView bridges; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WebView bridges.
-- Keep dependencies patched; pin versions for WebView bridges components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WebView bridges before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for WebView bridges paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Push notifications
 
 **Sub-topics:** Payload sensitivity, Threat modeling and trust boundaries (Push notifications), Abuse cases and adversarial testing (Push notifications), Logging, audit, and detection (Push notifications), Access control and least privilege (Push notifications)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Push notifications; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Push notifications.
-- Keep dependencies patched; pin versions for Push notifications components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Push notifications before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Push notifications paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## App attestation
 
 **Sub-topics:** DeviceCheck, Play Integrity, Threat modeling and trust boundaries (App attestation), Abuse cases and adversarial testing (App attestation), Logging, audit, and detection (App attestation)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching App attestation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to App attestation.
-- Keep dependencies patched; pin versions for App attestation components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for App attestation before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for App attestation paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Sideloading and jailbreak
 
 **Sub-topics:** Root detection limits, Threat modeling and trust boundaries (Sideloading and jailbreak), Abuse cases and adversarial testing (Sideloading and jailbreak), Logging, audit, and detection (Sideloading and jailbreak), Access control and least privilege (Sideloading and jailbreak)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Sideloading and jailbreak; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Sideloading and jailbreak.
-- Keep dependencies patched; pin versions for Sideloading and jailbreak components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Sideloading and jailbreak before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Sideloading and jailbreak paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Screenshots and overlays
 
 **Sub-topics:** FLAG_SECURE, Overlay attacks, Threat modeling and trust boundaries (Screenshots and overlays), Abuse cases and adversarial testing (Screenshots and overlays), Logging, audit, and detection (Screenshots and overlays)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Screenshots and overlays; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Screenshots and overlays.
-- Keep dependencies patched; pin versions for Screenshots and overlays components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Screenshots and overlays before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Screenshots and overlays paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 
 ## Mobile SDK supply chain
 
 **Sub-topics:** Third-party SDKs, Threat modeling and trust boundaries (Mobile SDK supply chain), Abuse cases and adversarial testing (Mobile SDK supply chain), Logging, audit, and detection (Mobile SDK supply chain), Access control and least privilege (Mobile SDK supply chain)
 
-### Platform rules (summary)
+### Do (use this in OpenAI API / Agents SDK)
 
-- Validate and canonicalize all inputs touching Mobile SDK supply chain; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Mobile SDK supply chain.
-- Keep dependencies patched; pin versions for Mobile SDK supply chain components.
+- Treat retrieved documents and tool outputs as untrusted; delimit and label untrusted blocks in prompts.
+- Allowlist tools; validate JSON arguments with a strict schema before execution.
+- Run privileged tools with service accounts scoped to the requesting user/tenant.
 
-### How to do this in OpenAI API / Agents SDK
+### Don't
 
-- Treat model tool calls like RPC: allowlist tools, validate args, run with least privilege from OpenAI API / Agents SDK.
-- Strip untrusted content from RAG chunks; enforce ACL on retrieval per tenant.
-- Read normative rules in domain skill `security-mobile-security` / `reference.md`, then apply them using OpenAI API / Agents SDK APIs and deployment model.
-- Prefer framework-maintained security features in OpenAI API / Agents SDK over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Mobile SDK supply chain before merge.
-- Pin OpenAI API / Agents SDK dependencies; monitor CVE advisories for your stack.
+- Do not pass raw user chat text directly into system prompts without separation.
+- Do not give models shell, SQL, or HTTP tools without path/host allowlists.
 
 ### Verify
 
-- Add automated tests for Mobile SDK supply chain paths in OpenAI API / Agents SDK.
-- Run SAST/dependency scan configured for AI.
+- Red-team with indirect injection samples in RAG fixtures.
 

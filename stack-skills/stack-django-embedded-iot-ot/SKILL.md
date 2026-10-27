@@ -17,5 +17,5 @@ You are working in **Django** and need concrete guidance for **embedded, iot, an
 ## Workflow
 
 1. Match your feature to sub-areas in `reference.md`.
-2. Implement using stack-specific bullets under **How to do this in Django**.
-3. Confirm verification steps before merge.
+2. Follow **Do** / **Don't** lists in `reference.md` for this stack.
+3. Confirm **Verify** steps before merge.

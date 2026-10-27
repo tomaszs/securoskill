@@ -6,275 +6,234 @@ Stack-specific implementation for **Angular** (Web UI). Normative rules: domain 
 
 **Sub-topics:** Preview tokens, Draft leakage, Webhook secrets, API tokens, GraphQL CMS
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Headless CMS APIs; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Headless CMS APIs.
-- Keep dependencies patched; pin versions for Headless CMS APIs components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for cms_api controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Headless CMS APIs before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Headless CMS APIs paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## WYSIWYG editors
 
 **Sub-topics:** Paste HTML, Embed iframes, Link protocols, Image uploads, Collaborative cursors
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching WYSIWYG editors; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to WYSIWYG editors.
-- Keep dependencies patched; pin versions for WYSIWYG editors components.
+- Use default interpolation `{{ expression }}` for user-controlled text (auto-escaped).
+- For HTML snippets, run `DomSanitizer.sanitize(SecurityContext.HTML, untrusted)` before binding.
+- Use Angular's `HttpClient` and treat response bodies as data, not HTML templates.
+- Enable strict CSP at the server / `index.html` and avoid inline script except nonced.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for WYSIWYG editors before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not use `bypassSecurityTrustHtml`, `bypassSecurityTrustUrl`, or `bypassSecurityTrustResourceUrl` on user or API data.
+- Do not bind `[innerHTML]` to raw API or CMS HTML without sanitization.
+- Do not construct templates dynamically from user input (template injection).
+- Do not use `eval` or `new Function` with user-controlled strings in browser bundles.
 
 ### Verify
 
-- Add automated tests for WYSIWYG editors paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Unit-test components with XSS payloads in inputs; expect escaped output, not script execution.
+- Enable Angular ESLint security-related rules in CI.
 
 ## Publish workflows
 
 **Sub-topics:** Approver bypass, Scheduled publish, Rollback, Multi-env sync, Cache purge
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Publish workflows; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Publish workflows.
-- Keep dependencies patched; pin versions for Publish workflows components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for workflow controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Publish workflows before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Publish workflows paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## Plugins and themes
 
 **Sub-topics:** Third-party PHP, npm theme scripts, Update channels, Supply chain, Sandbox
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Plugins and themes; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Plugins and themes.
-- Keep dependencies patched; pin versions for Plugins and themes components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for supply_chain controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Plugins and themes before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Plugins and themes paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## Comments and UGC moderation
 
 **Sub-topics:** Spam, Illegal content, Reporter abuse, Auto-approve, Shadow bans
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Comments and UGC moderation; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Comments and UGC moderation.
-- Keep dependencies patched; pin versions for Comments and UGC moderation components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for content_abuse controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Comments and UGC moderation before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Comments and UGC moderation paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## SEO and metadata injection
 
 **Sub-topics:** OpenGraph XSS, Canonical hijack, Sitemap poisoning, Hreflang, Structured data
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching SEO and metadata injection; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SEO and metadata injection.
-- Keep dependencies patched; pin versions for SEO and metadata injection components.
+- Use default interpolation `{{ expression }}` for user-controlled text (auto-escaped).
+- For HTML snippets, run `DomSanitizer.sanitize(SecurityContext.HTML, untrusted)` before binding.
+- Use Angular's `HttpClient` and treat response bodies as data, not HTML templates.
+- Enable strict CSP at the server / `index.html` and avoid inline script except nonced.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for SEO and metadata injection before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not use `bypassSecurityTrustHtml`, `bypassSecurityTrustUrl`, or `bypassSecurityTrustResourceUrl` on user or API data.
+- Do not bind `[innerHTML]` to raw API or CMS HTML without sanitization.
+- Do not construct templates dynamically from user input (template injection).
+- Do not use `eval` or `new Function` with user-controlled strings in browser bundles.
 
 ### Verify
 
-- Add automated tests for SEO and metadata injection paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Unit-test components with XSS payloads in inputs; expect escaped output, not script execution.
+- Enable Angular ESLint security-related rules in CI.
 
 ## Media libraries
 
 **Sub-topics:** SVG in CMS, PDF previews, CDN paths, Alt text XSS, Hotlinking
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Media libraries; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Media libraries.
-- Keep dependencies patched; pin versions for Media libraries components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for file_upload_ui controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Media libraries before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Media libraries paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## Multi-site CMS
 
 **Sub-topics:** Site IDOR, Shared users, Domain mapping, SSL per site, Content sync
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Multi-site CMS; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Multi-site CMS.
-- Keep dependencies patched; pin versions for Multi-site CMS components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for multi_tenant controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Multi-site CMS before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Multi-site CMS paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## CMS search
 
 **Sub-topics:** Elasticsearch public, Faceted leaks, Admin search, Indexed drafts, Query injection
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching CMS search; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS search.
-- Keep dependencies patched; pin versions for CMS search components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for search_index controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS search before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS search paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## Marketing forms
 
 **Sub-topics:** Webhook spam, PII storage, Captcha bypass, Double opt-in, Export GDPR
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Marketing forms; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Marketing forms.
-- Keep dependencies patched; pin versions for Marketing forms components.
+- Use SameSite=Lax or Strict on session cookies; prefer token-based APIs with Authorization header.
+- If cookie auth: double-submit CSRF token or framework middleware on all state-changing routes.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Marketing forms before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not perform state-changing `fetch` with cookies cross-site without CSRF protection.
+- Do not store CSRF secrets only in JS-accessible storage without rotation.
 
 ### Verify
 
-- Add automated tests for Marketing forms paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Integration test cross-origin POST without token expects 403.
 
 ## Static site generators
 
 **Sub-topics:** Build-time secrets, ISR vs SSG, Decap CMS, Git-based auth, Preview servers
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching Static site generators; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Static site generators.
-- Keep dependencies patched; pin versions for Static site generators components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for ssr controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for Static site generators before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for Static site generators paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 
 ## CMS roles and SSO
 
 **Sub-topics:** Editor vs admin, SSO mis-map, API users, Impersonation, Audit trail
 
-### Platform rules (summary)
+### Do (use this in Angular)
 
-- Validate and canonicalize all inputs touching CMS roles and SSO; never trust client-side checks alone.
-- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
-- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to CMS roles and SSO.
-- Keep dependencies patched; pin versions for CMS roles and SSO components.
+- Apply domain skill `security-cms-content-platforms` requirements using angular supported APIs only.
+- Use the official angular security documentation for rbac controls.
+- Add automated tests for abuse cases before merging.
 
-### How to do this in Angular
+### Don't
 
-- Read normative rules in domain skill `security-cms-content-platforms` / `reference.md`, then apply them using Angular APIs and deployment model.
-- Prefer framework-maintained security features in Angular over custom crypto, auth, or parsers.
-- Add stack-appropriate tests (unit + integration) for CMS roles and SSO before merge.
-- Pin Angular dependencies; monitor CVE advisories for your stack.
+- Do not disable security features of angular for convenience in production.
+- Do not copy generic examples from blogs that skip validation or authz.
 
 ### Verify
 
-- Add automated tests for CMS roles and SSO paths in Angular.
-- Run SAST/dependency scan configured for Web UI.
+- Run stack-appropriate SAST/DAST on angular projects in CI.
 

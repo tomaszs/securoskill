@@ -6,6 +6,16 @@ LLMs, agents, training data, and model serving.
 
 Sub-topics: Indirect injection, Tool abuse, Threat modeling and trust boundaries (Prompt injection), Abuse cases and adversarial testing (Prompt injection), Logging, audit, and detection (Prompt injection)
 
+### Do
+
+- Separate system instructions from untrusted user and retrieved content.
+- Allowlist tools and validate tool arguments with strict schemas.
+
+### Don't
+
+- Do not pass unfiltered tool output back into the model as trusted instructions.
+- Do not give models unrestricted network, shell, or database access.
+
 ### Policy
 
 - Treat Prompt injection in Prompt injection as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +50,18 @@ Sub-topics: Indirect injection, Tool abuse, Threat modeling and trust boundaries
 ## RAG and retrieval
 
 Sub-topics: Poisoned documents, ACL on chunks, Threat modeling and trust boundaries (RAG and retrieval), Abuse cases and adversarial testing (RAG and retrieval), Logging, audit, and detection (RAG and retrieval)
+
+### Do
+
+- Validate and canonicalize all inputs touching RAG and retrieval; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to RAG and retrieval.
+- Keep dependencies patched; pin versions for RAG and retrieval components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +98,18 @@ Sub-topics: Poisoned documents, ACL on chunks, Threat modeling and trust boundar
 
 Sub-topics: Token flooding, Unbounded context, Threat modeling and trust boundaries (Model abuse and cost), Abuse cases and adversarial testing (Model abuse and cost), Logging, audit, and detection (Model abuse and cost)
 
+### Do
+
+- Validate and canonicalize all inputs touching Model abuse and cost; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Model abuse and cost.
+- Keep dependencies patched; pin versions for Model abuse and cost components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Model abuse and cost in Model abuse and cost as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +144,18 @@ Sub-topics: Token flooding, Unbounded context, Threat modeling and trust boundar
 ## Training data poisoning
 
 Sub-topics: PII in datasets, Threat modeling and trust boundaries (Training data poisoning), Abuse cases and adversarial testing (Training data poisoning), Logging, audit, and detection (Training data poisoning), Access control and least privilege (Training data poisoning)
+
+### Do
+
+- Validate and canonicalize all inputs touching Training data poisoning; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Training data poisoning.
+- Keep dependencies patched; pin versions for Training data poisoning components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +192,18 @@ Sub-topics: PII in datasets, Threat modeling and trust boundaries (Training data
 
 Sub-topics: API leakage, Threat modeling and trust boundaries (Model and weight exfiltration), Abuse cases and adversarial testing (Model and weight exfiltration), Logging, audit, and detection (Model and weight exfiltration), Access control and least privilege (Model and weight exfiltration)
 
+### Do
+
+- Validate and canonicalize all inputs touching Model and weight exfiltration; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Model and weight exfiltration.
+- Keep dependencies patched; pin versions for Model and weight exfiltration components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Model and weight exfiltration in Model and weight exfiltration as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +238,18 @@ Sub-topics: API leakage, Threat modeling and trust boundaries (Model and weight 
 ## Agent tool invocation
 
 Sub-topics: SSRF via tools, Shell tools, Threat modeling and trust boundaries (Agent tool invocation), Abuse cases and adversarial testing (Agent tool invocation), Logging, audit, and detection (Agent tool invocation)
+
+### Do
+
+- Validate and canonicalize all inputs touching Agent tool invocation; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Agent tool invocation.
+- Keep dependencies patched; pin versions for Agent tool invocation components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +286,18 @@ Sub-topics: SSRF via tools, Shell tools, Threat modeling and trust boundaries (A
 
 Sub-topics: Code execution suggestions, XSS in chat UI, Threat modeling and trust boundaries (Unsafe outputs), Abuse cases and adversarial testing (Unsafe outputs), Logging, audit, and detection (Unsafe outputs)
 
+### Do
+
+- Validate and canonicalize all inputs touching Unsafe outputs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Unsafe outputs.
+- Keep dependencies patched; pin versions for Unsafe outputs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Unsafe outputs in Unsafe outputs as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +332,18 @@ Sub-topics: Code execution suggestions, XSS in chat UI, Threat modeling and trus
 ## Red teaming LLMs
 
 Sub-topics: Jailbreaks, Benchmarks, Threat modeling and trust boundaries (Red teaming LLMs), Abuse cases and adversarial testing (Red teaming LLMs), Logging, audit, and detection (Red teaming LLMs)
+
+### Do
+
+- Validate and canonicalize all inputs touching Red teaming LLMs; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Red teaming LLMs.
+- Keep dependencies patched; pin versions for Red teaming LLMs components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +380,18 @@ Sub-topics: Jailbreaks, Benchmarks, Threat modeling and trust boundaries (Red te
 
 Sub-topics: Tenant isolation, Threat modeling and trust boundaries (Fine-tuning access), Abuse cases and adversarial testing (Fine-tuning access), Logging, audit, and detection (Fine-tuning access), Access control and least privilege (Fine-tuning access)
 
+### Do
+
+- Validate and canonicalize all inputs touching Fine-tuning access; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Fine-tuning access.
+- Keep dependencies patched; pin versions for Fine-tuning access components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Fine-tuning access in Fine-tuning access as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +426,18 @@ Sub-topics: Tenant isolation, Threat modeling and trust boundaries (Fine-tuning 
 ## Embeddings privacy
 
 Sub-topics: Membership inference, Threat modeling and trust boundaries (Embeddings privacy), Abuse cases and adversarial testing (Embeddings privacy), Logging, audit, and detection (Embeddings privacy), Access control and least privilege (Embeddings privacy)
+
+### Do
+
+- Validate and canonicalize all inputs touching Embeddings privacy; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Embeddings privacy.
+- Keep dependencies patched; pin versions for Embeddings privacy components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +474,18 @@ Sub-topics: Membership inference, Threat modeling and trust boundaries (Embeddin
 
 Sub-topics: OAuth to tools, Scope, Threat modeling and trust boundaries (MCP and external tools), Abuse cases and adversarial testing (MCP and external tools), Logging, audit, and detection (MCP and external tools)
 
+### Do
+
+- Validate and canonicalize all inputs touching MCP and external tools; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to MCP and external tools.
+- Keep dependencies patched; pin versions for MCP and external tools components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat MCP and external tools in MCP and external tools as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +520,18 @@ Sub-topics: OAuth to tools, Scope, Threat modeling and trust boundaries (MCP and
 ## AI governance
 
 Sub-topics: Human review, Logging prompts, Threat modeling and trust boundaries (AI governance), Abuse cases and adversarial testing (AI governance), Logging, audit, and detection (AI governance)
+
+### Do
+
+- Validate and canonicalize all inputs touching AI governance; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to AI governance.
+- Keep dependencies patched; pin versions for AI governance components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 

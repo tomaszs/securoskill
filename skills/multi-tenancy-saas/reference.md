@@ -6,6 +6,18 @@ Tenant boundaries, noisy neighbors, and B2B SaaS data separation.
 
 Sub-topics: Subdomain routing, Header spoofing, JWT tenant claim, Shared login portals, Cross-tenant IDs
 
+### Do
+
+- Validate and canonicalize all inputs touching Tenant identification; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant identification.
+- Keep dependencies patched; pin versions for Tenant identification components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Tenant identification in Tenant identification as in-scope for threat modeling and security requirements before implementation.
@@ -40,6 +52,18 @@ Sub-topics: Subdomain routing, Header spoofing, JWT tenant claim, Shared login p
 ## Data isolation models
 
 Sub-topics: Separate DB, Shared schema RLS, Shard keys, Cache namespacing, Search index isolation
+
+### Do
+
+- Validate and canonicalize all inputs touching Data isolation models; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Data isolation models.
+- Keep dependencies patched; pin versions for Data isolation models components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -76,6 +100,18 @@ Sub-topics: Separate DB, Shared schema RLS, Shard keys, Cache namespacing, Searc
 
 Sub-topics: Admin impersonation, Support access, API keys per tenant, Role templates, Guest users
 
+### Do
+
+- Validate and canonicalize all inputs touching Tenant-scoped authorization; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant-scoped authorization.
+- Keep dependencies patched; pin versions for Tenant-scoped authorization components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Tenant-scoped authorization in Tenant-scoped authorization as in-scope for threat modeling and security requirements before implementation.
@@ -110,6 +146,18 @@ Sub-topics: Admin impersonation, Support access, API keys per tenant, Role templ
 ## Billing and plan enforcement
 
 Sub-topics: Feature flags per plan, Usage metering, Trial abuse, Seat limits, Upgrade bypass
+
+### Do
+
+- Validate and canonicalize all inputs touching Billing and plan enforcement; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Billing and plan enforcement.
+- Keep dependencies patched; pin versions for Billing and plan enforcement components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -146,6 +194,18 @@ Sub-topics: Feature flags per plan, Usage metering, Trial abuse, Seat limits, Up
 
 Sub-topics: Domain verification, Cert provisioning, Host header attacks, Tenant vanity URLs, DNS takeover
 
+### Do
+
+- Validate and canonicalize all inputs touching Custom domains and TLS; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Custom domains and TLS.
+- Keep dependencies patched; pin versions for Custom domains and TLS components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Custom domains and TLS in Custom domains and TLS as in-scope for threat modeling and security requirements before implementation.
@@ -180,6 +240,18 @@ Sub-topics: Domain verification, Cert provisioning, Host header attacks, Tenant 
 ## Tenant export and backup
 
 Sub-topics: Bulk export IDOR, Scheduled exports, Restore to wrong tenant, GDPR per tenant, Retention per tenant
+
+### Do
+
+- Validate and canonicalize all inputs touching Tenant export and backup; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant export and backup.
+- Keep dependencies patched; pin versions for Tenant export and backup components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -216,6 +288,18 @@ Sub-topics: Bulk export IDOR, Scheduled exports, Restore to wrong tenant, GDPR p
 
 Sub-topics: OAuth app installs, Webhook endpoints, SCIM provisioning, API rate per tenant, Third-party tokens
 
+### Do
+
+- Validate and canonicalize all inputs touching Per-tenant integrations; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Per-tenant integrations.
+- Keep dependencies patched; pin versions for Per-tenant integrations components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Per-tenant integrations in Per-tenant integrations as in-scope for threat modeling and security requirements before implementation.
@@ -250,6 +334,18 @@ Sub-topics: OAuth app installs, Webhook endpoints, SCIM provisioning, API rate p
 ## Noisy neighbor and quotas
 
 Sub-topics: CPU limits, Queue fairness, DB connection pools, Rate limits, Burst abuse
+
+### Do
+
+- Validate and canonicalize all inputs touching Noisy neighbor and quotas; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Noisy neighbor and quotas.
+- Keep dependencies patched; pin versions for Noisy neighbor and quotas components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -286,6 +382,18 @@ Sub-topics: CPU limits, Queue fairness, DB connection pools, Rate limits, Burst 
 
 Sub-topics: Self-signup abuse, Email domain verification, Invite flows, Default permissions, Sandbox tenants
 
+### Do
+
+- Validate and canonicalize all inputs touching Tenant onboarding; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant onboarding.
+- Keep dependencies patched; pin versions for Tenant onboarding components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Tenant onboarding in Tenant onboarding as in-scope for threat modeling and security requirements before implementation.
@@ -320,6 +428,18 @@ Sub-topics: Self-signup abuse, Email domain verification, Invite flows, Default 
 ## Tenant offboarding
 
 Sub-topics: Data deletion, Legal hold, Reactivation, Orphan resources, Subprocessor notice
+
+### Do
+
+- Validate and canonicalize all inputs touching Tenant offboarding; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Tenant offboarding.
+- Keep dependencies patched; pin versions for Tenant offboarding components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
@@ -356,6 +476,18 @@ Sub-topics: Data deletion, Legal hold, Reactivation, Orphan resources, Subproces
 
 Sub-topics: Data residency, Audit logs per tenant, DPA variants, HIPAA BAA, SOC reports
 
+### Do
+
+- Validate and canonicalize all inputs touching Compliance per tenant; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to Compliance per tenant.
+- Keep dependencies patched; pin versions for Compliance per tenant components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
+
 ### Policy
 
 - Treat Compliance per tenant in Compliance per tenant as in-scope for threat modeling and security requirements before implementation.
@@ -390,6 +522,18 @@ Sub-topics: Data residency, Audit logs per tenant, DPA variants, HIPAA BAA, SOC 
 ## SaaS penetration patterns
 
 Sub-topics: Horizontal privilege, Vertical to platform admin, Cross-tenant file access, Report IDOR, Shared infrastructure
+
+### Do
+
+- Validate and canonicalize all inputs touching SaaS penetration patterns; never trust client-side checks alone.
+- Use parameterized queries / safe APIs; avoid string concatenation for queries and commands.
+- Encode output appropriately for the sink (HTML, URL, JS, SQL) relevant to SaaS penetration patterns.
+- Keep dependencies patched; pin versions for SaaS penetration patterns components.
+
+### Don't
+
+- Do not skip server-side validation for this sub-area.
+- Do not disable security controls for performance without review.
 
 ### Policy
 
