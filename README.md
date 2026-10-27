@@ -1,6 +1,10 @@
-# Secure Software Engineering Skills for AI Agents
+<p align="center">
+  <img src="assets/securoskill-logo.jpg" alt="Securoskill logo" width="280" />
+</p>
 
-**Free structured security skills for Cursor, Claude Code, Copilot, and other AI coding agents.**  
+# Securoskill
+
+**Security agent skills for Cursor, Claude Code, Copilot, and other AI coding agents.**  
 Cover **secure coding**, **application security**, **cloud security**, **DevSecOps**, and **AI security** with checklists an agent can follow while it writes and reviews code.
 
 Use of this repository is subject to the [LICENSE](LICENSE).
