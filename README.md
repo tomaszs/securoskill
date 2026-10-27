@@ -1,81 +1,128 @@
-# Secure Software Engineering Skills
+# Secure Software Engineering Skills for AI Agents
 
-**Agent-ready security skills for software engineering.**  
-Give Cursor, Claude Code, or other AI agents a structured map of what to secure, from frontend XSS to cloud IAM, plus layered rules humans and models can follow in code review and implementation.
+**Free structured security skills for Cursor, Claude Code, Copilot, and other AI coding agents.**  
+Cover **secure coding**, **application security**, **cloud security**, **DevSecOps**, and **AI security** with checklists an agent can follow while it writes and reviews code.
 
-## Why this repo
+> Personal, non-commercial use only. See [LICENSE](LICENSE) before copying or installing.
 
-Generic “be secure” prompts fail in practice. This collection spans **22 domains** and hundreds of sub-topics, each with rules at five levels:
+## What you get
 
-| Level | Focus |
-|-------|--------|
-| Policy | Scope, ownership, risk, compliance |
-| Design | Architecture, trust boundaries, defaults |
-| Implementation | Code, crypto, validation, dependencies |
-| Verification | Tests, SAST/DAST, manual abuse cases |
-| Operations | Logging, monitoring, incident response |
+| | |
+|--|--|
+| **34 security domains** | Frontend, backend, APIs, identity, data, crypto, network, cloud, Kubernetes, CI/CD, supply chain, privacy, mobile, AI/ML, payments, Web3, IoT, desktop, frameworks, and more |
+| **408 sub-areas** | Each with concrete topics (SQL injection, XSS, SSRF, IDOR, prompt injection, tenant isolation, presigned URLs, smart contract reentrancy, Electron hardening, etc.) |
+| **1,200+ fine-grained topics** | Nested sub-topics with actionable rules |
+| **5 rule layers** | Policy, design, implementation, verification, and operations for every sub-area |
 
-Examples covered in depth: **SQL injection**, **XSS**, **SSRF**, **IDOR**, **secrets in CI**, **Kubernetes RBAC**, **prompt injection**, **Stripe webhooks**, **GDPR erasure**, and more.
+Skills use the open **[Cursor Agent Skills](https://cursor.com/docs/context/skills)** format (`SKILL.md` + reference files) so tools can discover when to load them.
 
-## Quick start for AI agents
+## Benefits
 
-1. Add this repo to your agent’s skills path, or copy the folders you need.
-2. Start with the parent skill: [`secure-software-engineering/SKILL.md`](secure-software-engineering/SKILL.md).
-3. Load a domain skill when your task matches, for example:
-   - `skills/backend-server/` for server-side injection and authorization
-   - `skills/frontend-client/` for CSP, XSS, and browser storage
-   - `skills/identity-access/` for authn, authz, MFA, SSO
-   - `skills/ai-ml-security/` for LLM agents, RAG, and tool use
+- **Fewer missed vulnerabilities:** Agents get domain-specific rules instead of generic “write secure code” prompts.
+- **Faster reviews:** `rules.md` files work as PR checklists for humans and as context for agents.
+- **Consistent depth:** Same five-level structure everywhere, from governance to production monitoring.
+- **Stack-aware:** Dedicated skills for **React, Vue, Angular, Next.js**, **Django, Spring, .NET, Node**, and other common frameworks.
+- **Modern risks included:** LLM prompt injection, RAG ACLs, multi-tenant SaaS isolation, serverless denial-of-wallet, and observability data leaks.
+- **Works offline:** Clone once; no API or subscription required to use the markdown skills.
 
-Each domain folder contains:
+## How to install and use
 
-- `SKILL.md` – when to use, workflow, sub-area index  
-- `rules.md` – full rule lists for every sub-area  
+### Cursor
+
+1. Clone this repository (or download a zip for personal use).
+2. Copy `secure-software-engineering/` and the `skills/` folders into your personal skills directory, for example `~/.cursor/skills/` on macOS/Linux or `%USERPROFILE%\.cursor\skills\` on Windows.
+3. In chat, reference the parent skill or a domain skill, for example: “Use **secure-software-engineering** and **security-backend-server** for this API change.”
+4. For each task, open the matching `skills/<domain>/rules.md` and apply rules from policy through operations.
+
+### Claude Code, Codex, or other agents
+
+1. Add the repo (or selected `skills/<domain>/` folders) to the agent’s skill, rules, or project knowledge path.
+2. Start with [`secure-software-engineering/SKILL.md`](secure-software-engineering/SKILL.md) to pick domains.
+3. Load only the domains relevant to the current file or feature to save context.
+
+### Suggested workflow
+
+1. **Scope:** List components touched (UI, API, database, infra, third-party).
+2. **Map:** Match components to domain folders (table below).
+3. **Apply:** For each matching sub-area in `rules.md`, check implementation and tests.
+4. **Cross-cut:** Always consider `identity-access`, `secrets-config`, and `logging-monitoring-ir` when auth, credentials, or logs are involved.
+
+### Example prompts
+
+- “Follow `security-frontend-client` while building this React form.”
+- “Review this PR using `security-api-integration` and `security-data-databases`.”
+- “Threat-model this SaaS feature with `security-multi-tenancy-saas` and `security-business-logic-abuse`.”
 
 ## Domain index
 
-| Folder | Topic |
-|--------|--------|
-| `skills/frontend-client` | Frontend and client-side |
-| `skills/backend-server` | Backend and server-side |
-| `skills/api-integration` | APIs, GraphQL, webhooks |
-| `skills/identity-access` | Identity and access control |
-| `skills/data-databases` | Data and databases |
-| `skills/cryptography` | Cryptography and keys |
-| `skills/network-transport` | Network and transport |
-| `skills/cloud-infrastructure` | Cloud infrastructure |
-| `skills/containers-k8s` | Containers and Kubernetes |
-| `skills/devsecops-cicd` | DevSecOps and CI/CD |
-| `skills/supply-chain` | Software supply chain |
-| `skills/secrets-config` | Secrets and configuration |
-| `skills/logging-monitoring-ir` | Logging, monitoring, IR |
-| `skills/privacy-compliance` | Privacy and compliance |
-| `skills/mobile-security` | Mobile applications |
-| `skills/ai-ml-security` | AI and ML systems |
-| `skills/business-logic-abuse` | Business logic and abuse |
-| `skills/sdlc-threat-modeling` | SDLC and threat modeling |
-| `skills/email-notifications` | Email and notifications |
-| `skills/realtime-messaging` | Real-time and messaging |
-| `skills/payments-fintech` | Payments and fintech |
-| `skills/observability-security` | Observability security |
+| Skill folder | Security focus |
+|--------------|----------------|
+| `skills/frontend-client` | Browser, SPA, SSR, CSP, XSS, CSRF |
+| `skills/backend-server` | Injection, authz, sessions, file I/O, jobs |
+| `skills/api-integration` | REST, GraphQL, gRPC, webhooks, OAuth APIs |
+| `skills/identity-access` | Authn, MFA, SSO, RBAC, IDOR, zero trust identity |
+| `skills/data-databases` | SQL/NoSQL, encryption, backups, RLS |
+| `skills/cryptography` | TLS, keys, JWT, hashing, KMS |
+| `skills/network-transport` | SSRF, DNS, WAF, mTLS, email transport |
+| `skills/cloud-infrastructure` | IAM, S3, VPC, IaC, SaaS admin |
+| `skills/containers-k8s` | Images, RBAC, network policy, runtime |
+| `skills/devsecops-cicd` | SAST, DAST, secrets in CI, signing |
+| `skills/supply-chain` | Dependencies, SBOM, CVE response |
+| `skills/secrets-config` | Env vars, rotation, feature flags |
+| `skills/logging-monitoring-ir` | SIEM, audit, incident response |
+| `skills/privacy-compliance` | GDPR, PCI, HIPAA-aligned controls |
+| `skills/mobile-security` | iOS, Android, WebView, attestation |
+| `skills/ai-ml-security` | Prompt injection, RAG, agents, tools |
+| `skills/business-logic-abuse` | Fraud, workflows, bots, IDOR |
+| `skills/sdlc-threat-modeling` | STRIDE, secure design, purple team |
+| `skills/email-notifications` | SPF/DKIM, templates, SMS/push |
+| `skills/realtime-messaging` | WebSocket, Kafka, WebRTC |
+| `skills/payments-fintech` | PCI, Stripe webhooks, ledger |
+| `skills/observability-security` | Traces, APM, session replay |
+| `skills/multi-tenancy-saas` | Tenant isolation, custom domains, plans |
+| `skills/serverless-edge` | Lambda, workers, event triggers, cost abuse |
+| `skills/file-object-storage` | Uploads, presigned URLs, malware scan |
+| `skills/zero-trust-access` | ZTNA, device posture, workload identity |
+| `skills/blockchain-web3` | Smart contracts, wallets, DeFi |
+| `skills/embedded-iot-ot` | Firmware, MQTT, OT/SCADA |
+| `skills/desktop-native` | Electron, Tauri, auto-update, OS APIs |
+| `skills/web-framework-security` | React, Vue, Angular, Next, Nuxt, Svelte |
+| `skills/server-framework-security` | Node, Django, Spring, .NET, Go, PHP |
+| `skills/data-engineering-analytics` | Warehouses, ETL, BI, notebooks |
+| `skills/cms-content-platforms` | Headless CMS, WYSIWYG, publishing |
+| `skills/human-factors-abuse` | Phishing, support takeover, insiders |
 
-## For humans
+Parent orchestrator: [`secure-software-engineering/SKILL.md`](secure-software-engineering/SKILL.md)
 
-Use domain `rules.md` files as **review checklists** in PRs and pair them with your own threat models for new features.
+## Who this is for
 
-## Format
+- Developers using **AI pair programmers** who need reliable security guardrails  
+- Security champions building **lightweight AppSec** playbooks  
+- Students and hobbyists learning **secure software engineering** topics in context  
+- Anyone searching for **Cursor security skills**, **AI agent secure coding rules**, or **application security checklists**
 
-Skills follow the [Cursor Agent Skills](https://cursor.com/docs/context/skills) layout: YAML frontmatter (`name`, `description`) plus actionable markdown. Descriptions are written for **discovery** so agents know when to load each skill.
+## FAQ
+
+**Is this a replacement for a professional penetration test?**  
+No. These skills improve everyday coding and review; they do not replace legal advice, compliance audits, or hired security testing.
+
+**Can I use this at work?**  
+The [LICENSE](LICENSE) allows **personal, non-commercial** use only. Commercial or team use requires separate permission from the copyright holder.
+
+**Can I redistribute or sell these skills?**  
+No. Reuploading, mirroring, selling, or distributing derivatives is prohibited. Breach penalty: **USD $5,000** per violation under the license.
+
+**How are skills structured?**  
+Each domain has `SKILL.md` (when to use, workflow) and `rules.md` (full rules for every sub-area).
 
 ## License
 
-**Restricted use only.** See [LICENSE](LICENSE).
+**Restricted use only.** [LICENSE](LICENSE)
 
 | Allowed | Not allowed |
 |---------|-------------|
 | Personal, non-commercial use by a **human** | Commercial use (including employer/client work) |
 | Using skills with **your own** AI agents privately | Reuploading, mirroring, or public redistribution |
 | Keeping a private copy for that personal use | Selling, licensing, or offering **derivatives** |
-| | Reselling content or forked skill packs |
 
-**Breach penalty:** USD **$5,000** per violation under the license (plus other remedies). Do not fork for redistribution; request written permission for any use beyond personal AI-agent use.
+**Breach penalty:** USD **$5,000** per violation (plus other remedies). Request written permission for any use beyond personal AI-agent use.

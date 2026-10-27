@@ -1,17 +1,14 @@
 ---
 name: secure-software-engineering
 description: >-
-  Orchestrates secure software engineering across frontend, backend, APIs, identity, data,
-  cloud, containers, CI/CD, supply chain, privacy, mobile, AI, payments, and SDLC. Use when
-  building or reviewing software for security, threat modeling, or preparing security
-  checklists for AI agents and human developers.
+  Orchestrates secure software engineering across frontend, backend, APIs, identity, data, cloud, serverless, multi-tenancy, frameworks, databases, Web3, IoT, desktop, AI, payments, and SDLC. Use when building or reviewing software for security, threat modeling, or preparing security checklists for AI agents and human developers.
 ---
 
 # Secure software engineering
 
 ## Purpose
 
-Structured security guidance for AI coding agents and engineers: **22 domains**, **264 sub-areas**, and layered rules from policy through operations.
+Structured security guidance for AI coding agents and engineers: **34 domains**, **408 sub-areas**, and layered rules from policy through operations.
 
 ## How to use
 
@@ -46,6 +43,18 @@ Structured security guidance for AI coding agents and engineers: **22 domains**,
 | `skills/realtime-messaging/` | Real-time, WebSocket, and messaging |
 | `skills/payments-fintech/` | Payments and financial flows |
 | `skills/observability-security/` | Observability and debugging security |
+| `skills/multi-tenancy-saas/` | Multi-tenancy and SaaS isolation |
+| `skills/serverless-edge/` | Serverless, edge, and FaaS security |
+| `skills/file-object-storage/` | File, blob, and object storage security |
+| `skills/zero-trust-access/` | Zero trust and secure access |
+| `skills/blockchain-web3/` | Blockchain, Web3, and smart contracts |
+| `skills/embedded-iot-ot/` | Embedded, IoT, and operational technology |
+| `skills/desktop-native/` | Desktop and native application security |
+| `skills/web-framework-security/` | Web UI framework security |
+| `skills/server-framework-security/` | Server framework and runtime security |
+| `skills/data-engineering-analytics/` | Data engineering, analytics, and BI security |
+| `skills/cms-content-platforms/` | CMS, content platforms, and publishing |
+| `skills/human-factors-abuse/` | Human factors, social engineering, and support abuse |
 
 ## Rule levels (every sub-area)
 
